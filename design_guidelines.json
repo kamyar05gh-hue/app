@@ -1,0 +1,164 @@
+{
+  "project_context": {
+    "brand_name": "Planmove",
+    "app_type": "landing_page",
+    "target_audience": "Swiss cleaning/moving/handyman companies. Time-poor, mobile-first.",
+    "emotional_tone": "Premium, efficient, bold, modern, trustworthy.",
+    "language": "Swiss-German business German (Schriftdeutsch)"
+  },
+  "theme": {
+    "mode": "light",
+    "rationale": "The provided logo is a black wordmark, necessitating a light or high-contrast theme to ensure visibility and premium feel. We will use an Awwwards-style Brutalist/Luxury light theme with Tech Cobalt Blue accents.",
+    "colors": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "text_primary": "#09090B",
+      "text_secondary": "#52525B",
+      "accent_primary": "#0047FF",
+      "accent_hover": "#0035CC",
+      "border": "rgba(9, 9, 11, 0.1)"
+    },
+    "typography": {
+      "headings": {
+        "family": "Outfit, sans-serif",
+        "weight": "800",
+        "tracking": "tracking-tighter",
+        "line_height": "leading-[0.9]"
+      },
+      "body": {
+        "family": "Manrope, sans-serif",
+        "weight": "400",
+        "tracking": "tracking-normal",
+        "line_height": "leading-relaxed"
+      },
+      "numbers": {
+        "family": "Outfit, sans-serif",
+        "weight": "300",
+        "style": "Used for numbered manifesto chapters"
+      }
+    }
+  },
+  "layout_and_grids": {
+    "spacing_philosophy": "Generous Spacing (p-12 to p-32). Extreme negative space to elevate the premium feel.",
+    "container": "max-w-[1400px] mx-auto px-6 md:px-12",
+    "grids": {
+      "bento": "grid-cols-1 md:grid-cols-12 gap-8",
+      "features": "grid-cols-1 md:grid-cols-2 gap-16"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-white/70 border-b border-black/5",
+    "borders": "1px solid border-black/10",
+    "shadows": "shadow-[0_8px_32px_rgba(0,71,255,0.08)] for primary buttons and elevated cards",
+    "image_treatment": "Clipped frames (rounded-2xl or arched), spotlight effects using subtle radial gradients."
+  },
+  "motion": {
+    "scroll_library": "lenis",
+    "animation_library": "framer-motion",
+    "hero_reveal": "Masked line-by-line reveal. Text inside overflow-hidden spans, translating y from 100% to 0 over 0.8s with cubic-bezier ease.",
+    "scroll_reveals": "Sections fade in and translate up slightly on scroll using Framer Motion (whileInView).",
+    "parallax": "Subtle y-axis translation on the hero iPhone mockup using Framer Motion useScroll.",
+    "marquee": "react-fast-marquee for slow, continuous editorial typography ribbon."
+  },
+  "accessibility": {
+    "contrast": "APCA compliant. White text on Cobalt Blue has high contrast.",
+    "testing": "All interactive elements (buttons, inputs, accordions) MUST include data-testid attribute in kebab-case."
+  },
+  "structure_and_components": [
+    {
+      "section": "Header",
+      "description": "Sticky navigation with glassmorphism.",
+      "components": ["Logo (Image)", "Primary CTA Button (Pill shaped, Cobalt Blue, 'App kostenlos testen')"]
+    },
+    {
+      "section": "Hero",
+      "description": "Large kinetic typography. 'Offerten & Rechnungen in 5 Sekunden. Nur mit deiner Stimme.'",
+      "components": [
+        "Line-by-line animated H1",
+        "Trust Badges ('100% Swiss Made | DSGVO Konform') styled as subtle pills",
+        "iPhone Mockup: A CSS/HTML constructed phone frame containing voice-recording UI, layered with parallax."
+      ]
+    },
+    {
+      "section": "Editorial Marquee",
+      "description": "A slow-moving typographic ribbon to break sections.",
+      "content": "Offerte • Rechnung • KMU • Handwerker • Reinigung • Umzug"
+    },
+    {
+      "section": "Problem / Manifesto",
+      "description": "'Verlierst du auch Kunden, weil die Offerte zu spät kommt?'",
+      "layout": "3-column asymmetrical grid with large elegant numbers (01, 02, 03).",
+      "items": ["Time", "Speed", "Language barrier"]
+    },
+    {
+      "section": "Solution",
+      "description": "'Die Lösung: Dein digitaler Assistent in der Hosentasche.'",
+      "layout": "Alternating two-column layout with real product photography in clipped frames.",
+      "features": ["Voice-to-Document", "Multi-Channel Sending (Email/WhatsApp)", "Automated Follow-ups", "Zero Typing"]
+    },
+    {
+      "section": "Testimonials",
+      "description": "Social proof with minimalist typography and stark borders.",
+      "layout": "Horizontal scrolling or simple grid."
+    },
+    {
+      "section": "FAQ",
+      "description": "Accordion component for common objections.",
+      "component_path": "shadcn/ui accordion"
+    },
+    {
+      "section": "CTA / Waitlist",
+      "description": "Final dramatic push. 'Hol dir deinen Feierabend zurück.'",
+      "components": ["Waitlist Email Input (Shadcn Input)", "Submit Button (frontend-only)"]
+    },
+    {
+      "section": "Footer",
+      "description": "Minimalist legal links.",
+      "links": ["Impressum", "Datenschutz", "AGB"]
+    }
+  ],
+  "image_urls": {
+    "brand_logo": {
+      "url": "https://customer-assets-agu9un31.emergentagent.net/job_cf060cf6-d7cf-4598-9ee3-a05dfc575c30/artifacts/j8as6dwd_Planmove.jpg",
+      "description": "Planmove Black Wordmark Logo",
+      "category": "Header and Footer"
+    },
+    "hero_context": {
+      "url": "https://images.unsplash.com/photo-1621905253185-95614217f357?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxoYW5keW1hbiUyMHVzaW5nJTIwcGhvbmV8ZW58MHx8fHwxNzg0NDA5NzE5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Tradesperson in plaid shirt and yellow hat using a mobile phone.",
+      "category": "Hero Section (Background of mockup or secondary visual)"
+    },
+    "solution_movers": {
+      "url": "https://images.pexels.com/photos/7464401/pexels-photo-7464401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Two professional movers beside a moving van.",
+      "category": "Solution Feature (Multi-Channel Sending / Field work)"
+    },
+    "solution_cleaners": {
+      "url": "https://images.pexels.com/photos/6195131/pexels-photo-6195131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Three cleaners in uniform in a modern interior.",
+      "category": "Solution Feature (Automated Follow-ups / Zero Typing)"
+    }
+  },
+  "instructions_to_main_agent": [
+    "INSTALL REQUIRED PACKAGES: Run `yarn add framer-motion @studio-freight/lenis react-fast-marquee @phosphor-icons/react`.",
+    "FONTS: Import `Outfit` (weights 300, 400, 600, 800) and `Manrope` (weights 400, 500, 600) from Google Fonts in index.css or via next/font if applicable. Apply to the CSS variables.",
+    "HERO REVEAL: Implement the signature on-load moment using Framer Motion. Split the H1 into lines, wrap each in an overflow-hidden span, and animate a child motion.span translating Y from 100% to 0%.",
+    "SMOOTH SCROLLING: Initialize Lenis at the root of the app to provide momentum scrolling. This is critical for the premium Awwwards feel.",
+    "IPHONE MOCKUP: Do not just use a static image of an iPhone. Build a CSS frame (rounded-[3rem], border-8 border-black) or use an SVG frame, and place the voice-app UI and background image inside it. Apply a useScroll parallax effect to this entire container.",
+    "DATA-TESTID: Ensure EVERY button, input, and interactive element has a data-testid property (e.g., data-testid='hero-cta-button', data-testid='waitlist-input').",
+    "COMPONENTS: Use Shadcn UI for Input, Button, and Accordion. Customize them heavily to remove default Vercel aesthetics—use the Cobalt Blue accent and generous padding.",
+    "Ensure all `.js`/`.jsx` files are used if this is a standard React setup, avoiding `.tsx` if Typescript is not configured."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts. Use asymmetrical grids (Bento style) and extreme negative space.",
+    "Create depth through layered design elements with z-index hierarchy and glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (e.g., transition: all). Always add transitions for specific properties.",
+    "You MUST NOT center align the app container, i.e. do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use Phosphor Icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Missing categories (especially logos) = you must use the provided image URLs. NEVER use placeholder text."
+  ]
+}
