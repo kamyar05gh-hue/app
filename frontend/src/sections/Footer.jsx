@@ -150,8 +150,8 @@ export const Footer = () => {
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-8 md:py-10 overflow-hidden">
           <div
             aria-hidden
-            className="font-display font-extrabold tracking-[-0.05em] leading-[0.9] text-white/95 select-none whitespace-nowrap"
-            style={{ fontSize: "clamp(64px, 20vw, 288px)" }}
+            className="font-display font-extrabold tracking-[-0.055em] leading-[0.9] text-white/95 select-none whitespace-nowrap"
+            style={{ fontSize: "clamp(48px, 12.5vw, 280px)" }}
           >
             PLANMOVE
           </div>

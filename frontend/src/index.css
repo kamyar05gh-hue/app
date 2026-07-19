@@ -214,13 +214,13 @@ html.lenis body {
 /* ---- Simple WhatsApp button (no glow, no movement, slide-fill on hover) ---- */
 .pm-wa-btn {
     background-color: #25d366;
-    transition: color 300ms ease-in-out;
+    transition: color 600ms ease-in-out;
 }
 .pm-wa-fill {
     background-color: #168222;
     transform: translate3d(-101%, 0, 0);
     will-change: transform;
-    transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .pm-wa-btn:hover .pm-wa-fill {
     transform: translate3d(0, 0, 0);

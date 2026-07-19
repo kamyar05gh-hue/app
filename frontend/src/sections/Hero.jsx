@@ -34,7 +34,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[11px] md:text-[12px] uppercase tracking-[0.22em] font-mono-pm text-[#1EB955] font-semibold"
+              className="text-[11px] md:text-[12px] uppercase tracking-[0.22em] text-[#1EB955] font-semibold"
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
