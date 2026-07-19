@@ -194,7 +194,7 @@ export const V_FollowUp = () => (
               Auto-Erinnerung
             </p>
             <p className="text-[14px] font-semibold text-white">
-              PlanMove fasst nach.
+              MOMO fasst nach.
             </p>
           </div>
         </div>
@@ -247,7 +247,7 @@ export const V_Anrufe = () => (
             Eingehender Anruf
           </p>
           <p className="mt-2 font-display font-extrabold text-[18px] text-white">Unbekannt</p>
-          <p className="mt-1 text-[10px] text-white/50">wird von PlanMove entgegengenommen…</p>
+          <p className="mt-1 text-[10px] text-white/50">wird von MOMO entgegengenommen…</p>
           <div className="mt-auto mb-6 flex gap-4">
             <span className="grid place-items-center h-11 w-11 rounded-full bg-red-500 text-white">
               <PhoneIncoming className="h-4 w-4 rotate-[135deg]" />

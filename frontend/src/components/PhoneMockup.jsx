@@ -1,7 +1,7 @@
 import { Mic, Check, Send, Sparkles } from "lucide-react";
 
 /**
- * Static premium iPhone mockup with PlanMove voice UI.
+ * Static premium iPhone mockup with MOMO voice UI.
  * (Parallax removed — the image sits in one place.)
  */
 export const PhoneMockup = () => {
@@ -40,7 +40,7 @@ export const PhoneMockup = () => {
               <h4 className="font-display text-[20px] md:text-[22px] font-extrabold tracking-tight leading-[1.05] mt-2">
                 Sprich einfach.
                 <br />
-                PlanMove tippt.
+                MOMO tippt.
               </h4>
             </div>
 

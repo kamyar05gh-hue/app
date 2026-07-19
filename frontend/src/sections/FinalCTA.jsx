@@ -51,7 +51,7 @@ export const FinalCTA = () => {
           </Reveal>
 
           <Reveal delay={260} as="p" className="mt-6 md:mt-8 max-w-xl mx-auto text-[14px] md:text-[18px] leading-relaxed text-black/60">
-            Erfahren Sie, wie PlanMove Ihren Arbeitsalltag einfacher macht und
+            Erfahren Sie, wie MOMO Ihren Arbeitsalltag einfacher macht und
             sicherstellt, dass Ihnen keine Anfragen und Aufträge mehr entgehen.
           </Reveal>
 

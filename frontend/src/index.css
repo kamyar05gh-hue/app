@@ -247,6 +247,41 @@ html.lenis body {
     }
 }
 
+/* ---- Mobile menu (perf: transform + opacity, always mounted) ---- */
+.pm-mobile-menu {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    will-change: transform, opacity;
+    transition:
+        transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 260ms ease-out,
+        visibility 0s linear 380ms;
+}
+.pm-mobile-menu-open {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+        transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 260ms ease-out,
+        visibility 0s linear 0s;
+}
+.pm-menu-item {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+    transition:
+        opacity 350ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+}
+.pm-mobile-menu-open .pm-menu-item {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
 /* ---- Mobile: disable sticky stack + reduce motion complexity ---- */
 @media (max-width: 767px) {
     .pm-sticky-card {

@@ -62,7 +62,7 @@ export const Hero = () => {
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 md:mt-8 max-w-xl text-[14px] md:text-[17px] leading-relaxed text-black/65"
             >
-              PlanMove ist Ihr intelligenter Assistent, der Anfragen beantwortet,
+              MOMO ist Ihr intelligenter Assistent, der Anfragen beantwortet,
               Offerten schreibt, Termine vereinbart und Ihre Kundenkommunikation
               komplett übernimmt — 24/7, in jeder Sprache.
             </motion.p>

@@ -2,47 +2,84 @@ import { motion } from "framer-motion";
 import { Check, Mic, Mail, MessageCircle, CalendarClock, FileText } from "lucide-react";
 import { CARD_VISUALS } from "@/components/CardVisuals";
 
+const H = (text) => (
+  <span className="underline decoration-2 underline-offset-4 decoration-[#25D366] text-[#1EB955] font-semibold">
+    {text}
+  </span>
+);
+
 const problems = [
   {
     n: "01",
     tag: "Reaktionszeit",
     title: "Jede unbeantwortete Anfrage kostet Sie Kunden – und viel Geld.",
-    body: "Kunden warten nicht. Wenn Sie zu spät antworten, gehen sie zur Konkurrenz. PlanMove antwortet innerhalb weniger Sekunden – 24/7.",
+    body: (
+      <>
+        Kunden warten nicht. Wenn Sie zu spät antworten, gehen sie zur
+        Konkurrenz. MOMO antwortet {H("innerhalb weniger Sekunden")} – {H("24/7")}.
+      </>
+    ),
     Visual: CARD_VISUALS.reaktion,
   },
   {
     n: "02",
     tag: "Muttersprache",
     title: "Deutsch ist nicht Ihre Muttersprache? Kein Problem.",
-    body: "Sprechen Sie einfach in Ihrer Sprache. PlanMove schreibt professionelle E-Mails, Offerten und Nachrichten auf perfektem Deutsch, Französisch oder nach Wunsch.",
+    body: (
+      <>
+        Sprechen Sie einfach in Ihrer Sprache. MOMO schreibt {H("professionelle E-Mails, Offerten und Nachrichten")}{" "}
+        auf perfektem Deutsch, Französisch oder nach Wunsch.
+      </>
+    ),
     Visual: CARD_VISUALS.sprache,
   },
   {
     n: "03",
     tag: "Feierabend",
     title: "Nach einem langen Arbeitstag wartet die Büroarbeit.",
-    body: "Offerten, E-Mails, WhatsApp, Rechnungen, Einsatzplanung… Viele Unternehmer bleiben bis spät wach, nur um keine Anfrage zu verpassen. PlanMove erledigt alles.",
+    body: (
+      <>
+        Offerten, E-Mails, WhatsApp, Rechnungen, Einsatzplanung… Viele
+        Unternehmer bleiben bis spät wach, nur um keine Anfrage zu verpassen.{" "}
+        MOMO {H("erledigt alles")}.
+      </>
+    ),
     Visual: CARD_VISUALS.feierabend,
   },
   {
     n: "04",
     tag: "Follow-up",
     title: "Sie verschicken Offerten und vergessen nachzufassen.",
-    body: "Viele Unternehmer verlieren den Überblick — und damit auch Kunden und Geld. PlanMove erinnert automatisch nach – per Nachricht oder Anruf.",
+    body: (
+      <>
+        Viele Unternehmer verlieren den Überblick — und damit auch Kunden und
+        Geld. MOMO {H("erinnert automatisch nach")} – per Nachricht oder Anruf.
+      </>
+    ),
     Visual: CARD_VISUALS.followup,
   },
   {
     n: "05",
     tag: "Anrufe",
     title: "Das Telefon klingelt, während Sie arbeiten.",
-    body: "Sie können nicht rangehen? Kein Problem. PlanMove nimmt Anrufe entgegen, sammelt alle Infos und vereinbart auf Wunsch Termine.",
+    body: (
+      <>
+        Sie können nicht rangehen? Kein Problem. MOMO {H("nimmt Anrufe entgegen")},
+        sammelt alle Infos und vereinbart auf Wunsch Termine.
+      </>
+    ),
     Visual: CARD_VISUALS.anrufe,
   },
   {
     n: "06",
     tag: "Kanäle",
     title: "So viele Nachrichten. So wenig Zeit.",
-    body: "WhatsApp, E-Mail, Telefon — alles kommt zur gleichen Zeit. PlanMove beantwortet, organisiert und bringt alles an einen Ort zusammen.",
+    body: (
+      <>
+        WhatsApp, E-Mail, Telefon — alles kommt zur gleichen Zeit. MOMO{" "}
+        {H("beantwortet, organisiert und bringt alles an einen Ort zusammen")}.
+      </>
+    ),
     Visual: CARD_VISUALS.kanaele,
   },
 ];
@@ -75,7 +112,7 @@ const StickyCard = ({ p, index }) => {
 
           {/* Copy */}
           <div className={`lg:col-span-6 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/[0.12] mb-3 md:mb-4">
+            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/25 mb-3 md:mb-4">
               {p.n}
             </span>
             <h3 className="font-display font-extrabold tracking-[-0.03em] text-[22px] sm:text-[26px] md:text-[38px] leading-[1.08] text-black">
@@ -86,7 +123,7 @@ const StickyCard = ({ p, index }) => {
             </p>
             <div className="mt-5 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
               <Check className="h-4 w-4" strokeWidth={3} />
-              PlanMove löst das
+              MOMO löst das
             </div>
           </div>
         </div>
@@ -135,7 +172,7 @@ const ClimaxVisual = ({ bars, notifications }) => (
           ))}
         </div>
         <p className="mt-2 font-display italic text-[11px] md:text-[13px] text-white/85 leading-snug">
-          {`„PlanMove, erstelle eine Offerte für Herr Müller…"`}
+          {`„MOMO, erstelle eine Offerte für Herr Müller…"`}
         </p>
       </div>
 
@@ -216,14 +253,14 @@ const ClimaxCard = () => {
               <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-white/60 px-3 py-1.5 text-[10px] uppercase tracking-widest">
                 <span className="chapter-num text-[14px]">07</span>
                 <span className="h-3 w-px bg-black/20" />
-                <span>Die PlanMove-Magie</span>
+                <span>Die MOMO-Magie</span>
               </div>
             </div>
           </div>
 
           {/* Copy */}
           <div className="lg:col-span-6 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/[0.12] mb-3 md:mb-4">
+            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/25 mb-3 md:mb-4">
               07
             </span>
             <h3 className="font-display font-extrabold tracking-[-0.03em] text-[22px] sm:text-[26px] md:text-[38px] leading-[1.08] text-black">
@@ -232,13 +269,13 @@ const ClimaxCard = () => {
               <span className="text-[#25D366]">Alles</span> ist erledigt.
             </h3>
             <p className="mt-4 text-[14px] md:text-[16px] leading-relaxed text-black/60 max-w-md">
-              Keine Notizen, keine Excel-Listen, keine langen Abende. PlanMove
+              Keine Notizen, keine Excel-Listen, keine langen Abende. MOMO
               hört zu, versteht — und handelt in Sekunden. Offerten,
               Nachrichten, Rechnungen und Termine — automatisch.
             </p>
             <div className="mt-5 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
               <Check className="h-4 w-4" strokeWidth={3} />
-              PlanMove erledigt alles
+              MOMO erledigt alles
             </div>
           </div>
         </div>
