@@ -195,6 +195,22 @@ html.lenis body {
     animation-play-state: paused;
 }
 
+/* Hardware-accelerated sticky cards (perf-critical for the 7-problems stack) */
+.pm-sticky-card {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.pm-card {
+    box-shadow: 0 20px 45px -25px rgba(0, 0, 0, 0.18);
+    contain: layout paint;
+}
+.pm-card-dark {
+    box-shadow: 0 40px 90px -30px rgba(37, 211, 102, 0.25);
+    contain: layout paint;
+}
+
 /* Accordion smooth */
 [data-state="open"] .acc-icon {
     transform: rotate(45deg);

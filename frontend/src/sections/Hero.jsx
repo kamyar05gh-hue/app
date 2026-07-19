@@ -101,9 +101,9 @@ export const Hero = () => {
               className="mt-10 flex flex-col items-start gap-4"
             >
               <WhatsAppButton size="lg" testId="hero-cta-button" />
-              <span className="inline-flex items-center gap-2 text-[13px] font-medium text-black/70">
-                <span className="grid place-items-center h-5 w-5 rounded-full bg-[#25D366]/15 text-[#1EB955]">
-                  <Check className="h-3 w-3" strokeWidth={3} />
+              <span className="inline-flex items-center gap-2.5 text-[14px] font-medium text-black/75">
+                <span className="grid place-items-center h-6 w-6 rounded-full bg-[#25D366]/15 text-[#1EB955]">
+                  <Check className="h-4 w-4" strokeWidth={2.5} />
                 </span>
                 Antwort innerhalb weniger Minuten
               </span>

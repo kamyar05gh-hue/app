@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Check, Mic, Mail, MessageCircle, CalendarClock, FileText, Sparkles } from "lucide-react";
 import { CARD_VISUALS } from "@/components/CardVisuals";
 
@@ -48,37 +47,25 @@ const problems = [
   },
 ];
 
-// ---------- Sticky Stack Card ----------
-const StickyCard = ({ p, index, total }) => {
-  const ref = useRef(null);
-  // Card's own scroll progress — from when it becomes sticky until the next card overtakes.
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [1, 0.85, 0.5]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, -20]);
-
-  const topOffset = 120 + index * 18; // subtle stagger for the peek effect
+// ---------- Sticky Stack Card (perf-optimized: CSS only, no per-card useScroll) ----------
+const StickyCard = ({ p, index }) => {
+  const topOffset = 120 + index * 16;
 
   return (
     <div
-      ref={ref}
-      className="sticky"
+      className="sticky pm-sticky-card"
       style={{ top: `${topOffset}px`, zIndex: 10 + index }}
       data-testid={`problem-card-${p.n}`}
     >
-      <motion.article
-        style={{ scale, opacity, y }}
-        className="relative mx-auto max-w-[1200px] rounded-[2rem] border border-black/[0.06] bg-white/95 backdrop-blur-xl shadow-[0_40px_120px_-40px_rgba(0,0,0,0.28)] overflow-hidden group hover:shadow-[0_50px_140px_-40px_rgba(37,211,102,0.35)] transition-shadow duration-700"
+      <article
+        className="pm-card relative mx-auto max-w-[1200px] rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12">
           {/* Visual */}
           <div className={`lg:col-span-6 relative h-[300px] lg:h-[520px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
             <p.Visual />
             <div className="absolute top-5 left-5 z-10">
-              <div className="inline-flex items-center gap-2 rounded-full backdrop-blur-xl bg-white/85 border border-white/50 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-white/60 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest">
                 <span className="chapter-num text-[14px]">{p.n}</span>
                 <span className="h-3 w-px bg-black/20" />
                 <span>{p.tag}</span>
@@ -88,7 +75,7 @@ const StickyCard = ({ p, index, total }) => {
 
           {/* Copy */}
           <div className={`lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-            <span className="chapter-num text-[54px] md:text-[72px] leading-none text-black/12 mb-4">
+            <span className="chapter-num text-[54px] md:text-[72px] leading-none text-black/[0.12] mb-4">
               {p.n}
             </span>
             <h3 className="font-display font-extrabold tracking-[-0.03em] text-[26px] md:text-[38px] leading-[1.05] text-black">
@@ -98,12 +85,12 @@ const StickyCard = ({ p, index, total }) => {
               {p.body}
             </p>
             <div className="mt-6 inline-flex items-center gap-2 text-[12px] font-mono-pm uppercase tracking-widest text-[#1EB955]">
-              <Check className="h-3.5 w-3.5" strokeWidth={3} />
+              <Check className="h-4 w-4" strokeWidth={3} />
               PlanMove löst das
             </div>
           </div>
         </div>
-      </motion.article>
+      </article>
     </div>
   );
 };
@@ -120,7 +107,7 @@ const ClimaxCard = () => {
 
   return (
     <div
-      className="sticky"
+      className="sticky pm-sticky-card"
       style={{ top: "140px", zIndex: 20 }}
       data-testid="problem-card-07"
     >
@@ -128,18 +115,17 @@ const ClimaxCard = () => {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto max-w-[1200px] rounded-[2rem] overflow-hidden border border-white/10 bg-[#0A0A0C] text-white shadow-[0_60px_160px_-40px_rgba(37,211,102,0.35)]"
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        className="pm-card-dark relative mx-auto max-w-[1200px] rounded-[2rem] overflow-hidden border border-white/10 bg-[#0A0A0C] text-white"
       >
-        {/* Ambient glow */}
         <div
           aria-hidden
           className="absolute -top-40 left-1/2 -translate-x-1/2 h-[520px] w-[520px] rounded-full blur-3xl pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(37,211,102,0.35), transparent 60%)" }}
+          style={{ background: "radial-gradient(circle, rgba(37,211,102,0.30), transparent 60%)" }}
         />
         <div
           aria-hidden
-          className="absolute inset-0 opacity-[0.08] pointer-events-none"
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
@@ -148,10 +134,9 @@ const ClimaxCard = () => {
         />
 
         <div className="relative p-8 md:p-14">
-          {/* Section header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-md px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest text-white/70">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest text-white/70">
                 <span className="chapter-num text-[14px] text-[#25D366]">07</span>
                 <span className="h-3 w-px bg-white/20" />
                 Die PlanMove-Magie
@@ -168,32 +153,29 @@ const ClimaxCard = () => {
             </p>
           </div>
 
-          {/* Split — voice UI vs cascade */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
             {/* LEFT — Glowing voice recorder */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="lg:col-span-6 relative rounded-[1.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-black to-[#0F1613] p-8"
             >
-              {/* Halo */}
               <div
                 aria-hidden
-                className="absolute -inset-6 pointer-events-none opacity-70"
+                className="absolute -inset-6 pointer-events-none opacity-60"
                 style={{
                   background:
                     "radial-gradient(60% 40% at 50% 60%, rgba(37,211,102,0.25), transparent 70%)",
                 }}
               />
               <div className="relative">
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3 py-1 text-[10px] uppercase tracking-widest font-mono-pm text-white/60">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/10 px-3 py-1 text-[10px] uppercase tracking-widest font-mono-pm text-white/60">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] animate-pulse" />
                   Aufnahme läuft
                 </div>
 
-                {/* Wave */}
                 <div className="mt-8 flex items-end justify-center gap-[3px] h-24">
                   {bars.map((_, i) => (
                     <span
@@ -207,7 +189,7 @@ const ClimaxCard = () => {
                   ))}
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl px-5 py-4">
+                <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4">
                   <p className="text-[11px] uppercase tracking-widest text-white/45 font-mono-pm">
                     Sie sagen
                   </p>
@@ -216,16 +198,12 @@ const ClimaxCard = () => {
                   </p>
                 </div>
 
-                <button
-                  type="button"
-                  aria-label="Aufnahme"
-                  className="mt-6 group relative inline-flex items-center gap-3 rounded-full bg-[#25D366] text-white pl-3 pr-5 py-2.5 shadow-[0_20px_50px_-15px_rgba(37,211,102,0.55)]"
-                >
+                <span className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#25D366] text-white pl-3 pr-5 py-2.5">
                   <span className="grid place-items-center h-8 w-8 rounded-full bg-white/20">
                     <Mic className="h-4 w-4" />
                   </span>
                   <span className="text-[13px] font-semibold">Sprachbefehl aktiv</span>
-                </button>
+                </span>
               </div>
             </motion.div>
 
@@ -236,11 +214,11 @@ const ClimaxCard = () => {
               viewport={{ once: true, margin: "-80px" }}
               variants={{
                 hidden: {},
-                visible: { transition: { staggerChildren: 0.15, delayChildren: 0.35 } },
+                visible: { transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
               }}
               className="lg:col-span-6 relative rounded-[1.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-[#0B0E10] to-[#141B1C] p-8"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3 py-1 text-[10px] uppercase tracking-widest font-mono-pm text-white/60">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/10 px-3 py-1 text-[10px] uppercase tracking-widest font-mono-pm text-white/60">
                 <Sparkles className="h-3 w-3 text-[#25D366]" />
                 PlanMove reagiert
               </div>
@@ -250,26 +228,25 @@ const ClimaxCard = () => {
                   <motion.div
                     key={i}
                     variants={{
-                      hidden: { opacity: 0, y: 24, filter: "blur(6px)" },
+                      hidden: { opacity: 0, y: 20 },
                       visible: {
                         opacity: 1,
                         y: 0,
-                        filter: "blur(0px)",
-                        transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+                        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
                       },
                     }}
                     data-testid={`climax-noti-${i}`}
-                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.05] backdrop-blur-xl px-4 py-3.5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]"
+                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3.5"
                   >
                     <span className="grid place-items-center h-10 w-10 rounded-full bg-[#25D366] text-white">
-                      <Check className="h-4 w-4" strokeWidth={3} />
+                      <Check className="h-5 w-5" strokeWidth={3} />
                     </span>
                     <div className="flex-1 min-w-0">
                       <p className="text-[10px] font-mono-pm uppercase tracking-widest text-white/45">
                         {n.tag}
                       </p>
                       <p className="text-[14px] font-semibold text-white truncate flex items-center gap-2">
-                        <n.icon className="h-3.5 w-3.5 text-[#25D366]" />
+                        <n.icon className="h-4 w-4 text-[#25D366]" />
                         {n.label}
                       </p>
                     </div>
@@ -280,11 +257,10 @@ const ClimaxCard = () => {
                 ))}
               </div>
 
-              {/* Time chip */}
               <motion.div
                 variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.9 } },
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.7 } },
                 }}
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#25D366]/12 border border-[#25D366]/30 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest text-[#8EF5B0]"
               >
@@ -308,7 +284,6 @@ export const Problems = () => {
       data-testid="problems-section"
     >
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        {/* Section head */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -333,9 +308,9 @@ export const Problems = () => {
       {/* Sticky stacking cards */}
       <div id="loesungen" className="relative">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-          <div className="relative space-y-10 md:space-y-16 pb-[50vh]">
+          <div className="relative space-y-10 md:space-y-16 pb-[40vh]">
             {problems.map((p, i) => (
-              <StickyCard key={p.n} p={p} index={i} total={problems.length} />
+              <StickyCard key={p.n} p={p} index={i} />
             ))}
             <ClimaxCard />
           </div>

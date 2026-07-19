@@ -1,80 +1,176 @@
+import { motion } from "framer-motion";
 import { LOGO_URL } from "@/lib/constants";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { ArrowUpRight } from "lucide-react";
 
 export const Footer = () => {
   return (
     <footer
-      className="relative bg-[#0A0A0C] text-white/70 border-t border-white/10"
+      className="relative bg-[#0A0A0A] text-white overflow-hidden"
       data-testid="site-footer"
     >
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-14 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-6">
-            <img
-              src={LOGO_URL}
-              alt="PlanMove"
-              className="h-10 w-auto object-contain brightness-0 invert"
-            />
-            <p className="mt-5 max-w-md text-[14px] leading-relaxed text-white/60">
-              PlanMove ist der intelligente Assistent für Schweizer Umzugs- und
-              Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.
-            </p>
-          </div>
+      {/* Ambient green wash */}
+      <div
+        aria-hidden
+        className="absolute -top-40 left-1/2 -translate-x-1/2 h-[560px] w-[900px] rounded-full blur-3xl pointer-events-none opacity-70"
+        style={{ background: "radial-gradient(circle, rgba(37,211,102,0.22), transparent 60%)" }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+        }}
+      />
 
-          <div className="md:col-span-3">
-            <p className="text-[10px] uppercase tracking-widest font-mono-pm text-white/40">
-              Rechtliches
-            </p>
-            <ul className="mt-4 space-y-2 text-[14px]">
-              <li>
-                <a href="#" data-testid="footer-impressum" className="pm-link hover:text-white transition-colors">
-                  Impressum
-                </a>
-              </li>
-              <li>
-                <a href="#" data-testid="footer-datenschutz" className="pm-link hover:text-white transition-colors">
-                  Datenschutz
-                </a>
-              </li>
-              <li>
-                <a href="#" data-testid="footer-agb" className="pm-link hover:text-white transition-colors">
-                  AGB
-                </a>
-              </li>
-            </ul>
-          </div>
+      {/* GRAND STATEMENT */}
+      <div className="relative mx-auto max-w-[1400px] px-6 md:px-10 pt-24 md:pt-40 pb-16 md:pb-24">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50"
+        >
+          <span className="inline-flex items-center gap-2">
+            <span className="h-px w-6 bg-white/40" />
+            Ihr nächster Schritt
+          </span>
+        </motion.p>
 
-          <div className="md:col-span-3">
-            <p className="text-[10px] uppercase tracking-widest font-mono-pm text-white/40">
-              Kontakt
-            </p>
-            <ul className="mt-4 space-y-2 text-[14px]">
-              <li>
-                <a
-                  href="mailto:hallo@planmove.ch"
-                  data-testid="footer-email"
-                  className="pm-link hover:text-white transition-colors"
-                >
-                  hallo@planmove.ch
-                </a>
-              </li>
-              <li className="text-white/50">Schweiz</li>
-            </ul>
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          data-testid="footer-headline"
+          className="mt-6 font-display font-extrabold tracking-[-0.045em] text-[56px] sm:text-[80px] md:text-[120px] lg:text-[152px] leading-[0.9]"
+        >
+          Bereit für
+          <br />
+          mehr <span className="italic font-light text-[#25D366]">Umsatz?</span>
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-14 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+        >
+          <p className="max-w-md text-[15px] md:text-[17px] leading-relaxed text-white/65">
+            Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne
+            Verpflichtung. Erfahren Sie in fünf Minuten, wie PlanMove Ihr KMU
+            verändert.
+          </p>
+          <WhatsAppButton size="lg" testId="footer-cta-button" />
+        </motion.div>
+      </div>
+
+      {/* MINI GRID */}
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-14 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+            <div className="md:col-span-5">
+              <img
+                src={LOGO_URL}
+                alt="PlanMove"
+                className="h-9 w-auto object-contain brightness-0 invert"
+              />
+              <p className="mt-6 max-w-md text-[14px] leading-relaxed text-white/55">
+                PlanMove ist der intelligente Assistent für Schweizer Umzugs- und
+                Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.
+              </p>
+            </div>
+
+            <div className="md:col-span-3">
+              <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+                Navigation
+              </p>
+              <ul className="mt-5 space-y-3 text-[14px]">
+                <li>
+                  <a href="#hero" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    Für wen?
+                  </a>
+                </li>
+                <li>
+                  <a href="#probleme" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    Probleme
+                  </a>
+                </li>
+                <li>
+                  <a href="#loesungen" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    Lösungen
+                  </a>
+                </li>
+                <li>
+                  <a href="#vorteile" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    Vorteile
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="md:col-span-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+                Rechtliches
+              </p>
+              <ul className="mt-5 space-y-3 text-[14px]">
+                <li>
+                  <a href="#" data-testid="footer-impressum" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    Impressum
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-testid="footer-datenschutz" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    Datenschutz
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-testid="footer-agb" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                    AGB
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="md:col-span-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+                Kontakt
+              </p>
+              <ul className="mt-5 space-y-3 text-[14px]">
+                <li>
+                  <a
+                    href="mailto:hallo@planmove.ch"
+                    data-testid="footer-email"
+                    className="pm-link text-white/80 hover:text-white transition-colors duration-500 inline-flex items-center gap-1"
+                  >
+                    hallo@planmove.ch <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                </li>
+                <li className="text-white/55">Schweiz</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="mt-14 md:mt-20 border-t border-white/10 pt-8">
+      {/* WORDMARK */}
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-10">
           <div
-            className="font-display font-extrabold tracking-[-0.045em] leading-none text-white/95 select-none"
-            style={{ fontSize: "clamp(80px, 18vw, 260px)" }}
             aria-hidden
+            className="font-display font-extrabold tracking-[-0.05em] leading-[0.9] text-white/95 select-none"
+            style={{ fontSize: "clamp(84px, 20vw, 288px)" }}
           >
             PLANMOVE
           </div>
-        </div>
-
-        <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[11px] uppercase tracking-widest font-mono-pm text-white/40">
-          <span>© {new Date().getFullYear()} PlanMove — 100% Swiss Made</span>
-          <span>Für Umzug & Reinigung</span>
+          <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[11px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+            <span>© {new Date().getFullYear()} PlanMove — 100% Swiss Made</span>
+            <span>Für Umzug & Reinigung · DSGVO Konform</span>
+          </div>
         </div>
       </div>
     </footer>

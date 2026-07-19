@@ -1,5 +1,3 @@
-import { useRef, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
@@ -9,37 +7,18 @@ export const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
 );
 
 /**
- * Magnetic CTA — element subtly follows cursor within its bounds.
- * Also emits a pulsing glow.
+ * Static WhatsApp CTA.
+ * - No transforms on hover (does NOT move)
+ * - Slow 500ms color easing
+ * - Darker rich green on hover (#168222)
+ * - Subtle static glow (no animation on scroll to keep it cheap)
  */
 export const WhatsAppButton = ({
   size = "md",
   label = "Jetzt auf WhatsApp schreiben",
   testId = "whatsapp-cta",
   className = "",
-  magnetic = true,
 }) => {
-  const ref = useRef(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const sx = useSpring(x, { stiffness: 240, damping: 20, mass: 0.6 });
-  const sy = useSpring(y, { stiffness: 240, damping: 20, mass: 0.6 });
-  const [hover, setHover] = useState(false);
-
-  const onMove = (e) => {
-    if (!magnetic || !ref.current) return;
-    const r = ref.current.getBoundingClientRect();
-    const dx = (e.clientX - (r.left + r.width / 2)) * 0.18;
-    const dy = (e.clientY - (r.top + r.height / 2)) * 0.28;
-    x.set(dx);
-    y.set(dy);
-  };
-  const onLeave = () => {
-    setHover(false);
-    x.set(0);
-    y.set(0);
-  };
-
   const sizes = {
     sm: "px-4 py-2.5 text-[13px] gap-2",
     md: "px-6 py-3.5 text-[14px] gap-2.5",
@@ -47,34 +26,22 @@ export const WhatsAppButton = ({
   };
 
   return (
-    <motion.a
-      ref={ref}
+    <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       data-testid={testId}
-      onMouseMove={onMove}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={onLeave}
-      style={{ x: sx, y: sy }}
-      className={`pm-btn group relative inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:text-white hover:bg-[#1EB955] transition-colors duration-300 ${sizes[size]} ${className}`}
+      style={{
+        boxShadow:
+          "0 20px 45px -18px rgba(37, 211, 102, 0.55), 0 0 0 0 rgba(37, 211, 102, 0)",
+      }}
+      className={`inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:bg-[#168222] hover:text-white transition-colors duration-500 ease-in-out ${sizes[size]} ${className}`}
     >
-      {/* Pulsing glow layers */}
-      <span
-        aria-hidden
-        className={`absolute inset-0 rounded-full pointer-events-none transition-opacity duration-500 ${
-          hover ? "opacity-100" : "opacity-60"
-        }`}
-        style={{
-          boxShadow: "0 0 0 rgba(37,211,102,0)",
-          animation: "pmGlow 2.8s ease-in-out infinite",
-        }}
-      />
-      <span className="relative">{label}</span>
-      <span className="relative grid place-items-center h-7 w-7 rounded-full bg-white/20">
+      <span>{label}</span>
+      <span className="grid place-items-center h-7 w-7 rounded-full bg-white/20 transition-colors duration-500 ease-in-out">
         <WhatsAppIcon className="h-3.5 w-3.5" />
       </span>
-    </motion.a>
+    </a>
   );
 };
 

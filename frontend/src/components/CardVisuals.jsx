@@ -43,15 +43,6 @@ const Canvas = ({ children, from = "#0F1013", to = "#1A1D22", accent }) => (
         backgroundSize: "48px 48px",
       }}
     />
-    {/* Grain */}
-    <div
-      aria-hidden
-      className="absolute inset-0 pointer-events-none opacity-[0.12] mix-blend-overlay"
-      style={{
-        backgroundImage:
-          "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
-      }}
-    />
     <div className="relative h-full w-full grid place-items-center p-8">
       {children}
     </div>
@@ -60,7 +51,7 @@ const Canvas = ({ children, from = "#0F1013", to = "#1A1D22", accent }) => (
 
 const Chip = ({ children, className = "" }) => (
   <div
-    className={`inline-flex items-center gap-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/15 px-3 py-1.5 text-[11px] font-medium text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] ${className}`}
+    className={`inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-[11px] font-medium text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] ${className}`}
   >
     {children}
   </div>
@@ -82,7 +73,7 @@ export const V_Reaktion = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 * i, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative rounded-2xl backdrop-blur-xl bg-white/[0.08] border border-white/10 px-4 py-3 mb-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]"
+          className="relative rounded-2xl bg-white/[0.08] border border-white/10 px-4 py-3 mb-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]"
         >
           <div className="flex items-start gap-3">
             <span className="mt-0.5 grid place-items-center h-8 w-8 rounded-full bg-[#25D366]/20 text-[#25D366]">
@@ -124,7 +115,7 @@ export const V_Sprache = () => (
           viewport={{ once: true }}
           transition={{ delay: 0.12 * i, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           style={{ marginLeft: b.ml || 0 }}
-          className={`inline-flex items-center gap-2 rounded-2xl backdrop-blur-xl border border-white/12 bg-gradient-to-br ${b.tone} px-3.5 py-2.5 mb-2.5 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.55)]`}
+          className={`inline-flex items-center gap-2 rounded-2xl border border-white/12 bg-gradient-to-br ${b.tone} px-3.5 py-2.5 mb-2.5 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.55)]`}
         >
           <span className="text-[16px]" aria-hidden>
             {b.flag}
@@ -138,7 +129,7 @@ export const V_Sprache = () => (
         Übersetzt · Deutsch
         <span className="h-px flex-1 bg-white/25" />
       </div>
-      <div className="rounded-2xl bg-[#25D366]/15 border border-[#25D366]/30 backdrop-blur-xl px-4 py-3">
+      <div className="rounded-2xl bg-[#25D366]/15 border border-[#25D366]/30 px-4 py-3">
         <div className="flex items-center gap-2 text-white">
           <Languages className="h-4 w-4 text-[#25D366]" />
           <span className="text-[13px] font-medium">Guten Tag, gerne senden wir Ihnen eine Offerte.</span>
@@ -157,7 +148,7 @@ export const V_Feierabend = () => (
         <Moon className="h-3.5 w-3.5" />
         23:47 · Immer noch am Schreibtisch
       </Chip>
-      <div className="rounded-2xl backdrop-blur-xl bg-white/[0.05] border border-white/10 overflow-hidden">
+      <div className="rounded-2xl bg-white/[0.05] border border-white/10 overflow-hidden">
         <div className="px-4 py-2 border-b border-white/10 flex items-center justify-between">
           <span className="text-[10px] font-mono-pm uppercase tracking-widest text-white/50">
             Offerten · 47 offen
@@ -192,7 +183,7 @@ export const V_FollowUp = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="rounded-2xl backdrop-blur-xl bg-white/[0.08] border border-white/10 p-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]"
+        className="rounded-2xl bg-white/[0.08] border border-white/10 p-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]"
       >
         <div className="flex items-center gap-3">
           <span className="grid place-items-center h-9 w-9 rounded-full bg-[#25D366] text-white">
@@ -286,7 +277,7 @@ export const V_Kanaele = () => (
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.05 * i, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className={`grid place-items-center rounded-2xl backdrop-blur-xl bg-white/[0.06] border border-white/10 aspect-square ${
+              className={`grid place-items-center rounded-2xl bg-white/[0.06] border border-white/10 aspect-square ${
                 i === 4 ? "opacity-0" : ""
               }`}
             >
