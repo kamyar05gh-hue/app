@@ -7,12 +7,10 @@ export const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
 );
 
 /**
- * Premium WhatsApp CTA:
- * - Subtle scale on hover (1.03) using hardware-accelerated transform
- * - Expanding glowing drop-shadow
- * - Diagonal shine sweep overlay
- * - Elegant 300ms ease-out timing
- * - Darker hover green (#168222)
+ * Simple, elegant WhatsApp CTA:
+ * - No glow / lighting effect
+ * - No scale / no movement on hover
+ * - Darker green (#168222) slides in from the left as a fill
  */
 export const WhatsAppButton = ({
   size = "md",
@@ -32,13 +30,10 @@ export const WhatsAppButton = ({
       target="_blank"
       rel="noopener noreferrer"
       data-testid={testId}
-      className={`pm-wa-btn group relative isolate inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:bg-[#168222] hover:text-white overflow-hidden ${sizes[size]} ${className}`}
+      className={`pm-wa-btn group relative isolate inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:text-white overflow-hidden ${sizes[size]} ${className}`}
     >
-      {/* Diagonal shine sweep */}
-      <span
-        aria-hidden
-        className="pm-wa-shine pointer-events-none absolute inset-0 -z-0"
-      />
+      {/* Slide-in dark-green fill */}
+      <span aria-hidden className="pm-wa-fill pointer-events-none absolute inset-0" />
       <span className="relative z-10">{label}</span>
       <span className="relative z-10 grid place-items-center h-7 w-7 rounded-full bg-white/20">
         <WhatsAppIcon className="h-3.5 w-3.5" />

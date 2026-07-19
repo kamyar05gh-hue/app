@@ -62,9 +62,9 @@ const StickyCard = ({ p, index }) => {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12">
           {/* Visual */}
-          <div className={`lg:col-span-6 relative h-[300px] lg:h-[520px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+          <div className={`lg:col-span-6 relative h-[220px] sm:h-[280px] lg:h-[520px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
             <p.Visual />
-            <div className="absolute top-5 left-5 z-10">
+            <div className="absolute top-4 left-4 z-10">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-white/60 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest">
                 <span className="chapter-num text-[14px]">{p.n}</span>
                 <span className="h-3 w-px bg-black/20" />
@@ -74,17 +74,17 @@ const StickyCard = ({ p, index }) => {
           </div>
 
           {/* Copy */}
-          <div className={`lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-            <span className="chapter-num text-[54px] md:text-[72px] leading-none text-black/[0.12] mb-4">
+          <div className={`lg:col-span-6 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/[0.12] mb-3 md:mb-4">
               {p.n}
             </span>
-            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[26px] md:text-[38px] leading-[1.05] text-black">
+            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[22px] sm:text-[26px] md:text-[38px] leading-[1.08] text-black">
               {p.title}
             </h3>
-            <p className="mt-5 text-[15px] md:text-[16px] leading-relaxed text-black/60 max-w-md">
+            <p className="mt-4 text-[14px] md:text-[16px] leading-relaxed text-black/60 max-w-md">
               {p.body}
             </p>
-            <div className="mt-6 inline-flex items-center gap-2 text-[12px] font-mono-pm uppercase tracking-widest text-[#1EB955]">
+            <div className="mt-5 inline-flex items-center gap-2 text-[11px] md:text-[12px] font-mono-pm uppercase tracking-widest text-[#1EB955]">
               <Check className="h-4 w-4" strokeWidth={3} />
               PlanMove löst das
             </div>
@@ -133,7 +133,7 @@ const ClimaxCard = () => {
           }}
         />
 
-        <div className="relative p-8 md:p-14">
+        <div className="relative p-6 sm:p-8 md:p-14">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest text-white/70">
@@ -141,7 +141,7 @@ const ClimaxCard = () => {
                 <span className="h-3 w-px bg-white/20" />
                 Die PlanMove-Magie
               </div>
-              <h3 className="mt-6 font-display font-extrabold tracking-[-0.03em] text-[32px] md:text-[54px] leading-[0.98] max-w-2xl">
+              <h3 className="mt-6 font-display font-extrabold tracking-[-0.03em] text-[26px] sm:text-[32px] md:text-[54px] leading-[1.02] max-w-2xl">
                 Ein Satz sagen.
                 <br />
                 <span className="text-[#25D366]">Alles</span> ist erledigt.
@@ -295,20 +295,22 @@ export const Problems = () => {
             <span className="h-px w-6 bg-black/40" />
             Kapitel Eins — Die 7 Probleme
           </span>
-          <h2 className="mt-6 font-display font-extrabold tracking-[-0.035em] text-[38px] md:text-[64px] leading-[0.98]">
+          <h2 className="mt-6 font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[64px] leading-[1.02]">
             Die <span className="text-[#25D366]">7 grössten Probleme</span>
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             im Alltag von Umzug &
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             Reinigung Unternehmern.
           </h2>
         </motion.div>
       </div>
 
-      {/* Sticky stacking cards */}
+      {/* Sticky stacking cards (disabled on mobile — plain stacked layout) */}
       <div id="loesungen" className="relative">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-          <div className="relative space-y-10 md:space-y-16 pb-[40vh]">
+          <div className="relative space-y-6 md:space-y-16 md:pb-[40vh]">
             {problems.map((p, i) => (
               <StickyCard key={p.n} p={p} index={i} />
             ))}

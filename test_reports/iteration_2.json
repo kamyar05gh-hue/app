@@ -1,0 +1,32 @@
+{
+  "summary": "Verified all 3 latest fixes on PlanMove landing (mobile responsiveness/no sticky, static hero visual, simplified WA hover). All acceptance criteria pass on both mobile (390x844) and desktop (1440x900).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Footer headline", "issues": ["'Bereit für<br>mehr Umsatz?' — the <br> is used with no whitespace between 'für' and 'mehr' spans; textContent yields 'fürmehr Umsatz?'. Visually fine (line break renders as newline), but reads as one word for screen readers. Minor a11y concern only."]}
+    ]
+  },
+  "verified_requirements": {
+    "page_loads_no_console_errors": true,
+    "hero_static_visual": "PASS — hero-section, hero-cta-button, phone-mockup present; hero-card-req/wa/mail/answered ABSENT; phone transform stays 'none' before/after lenis.scrollTo(200).",
+    "wa_button_hover_no_glow": "PASS — pre/post hover boxShadow='none', transform='none' (identity). bg=rgb(37,211,102), .pm-wa-fill bg=rgb(22,130,34). Fill translateX -330px -> 0 (slide from left).",
+    "mobile_no_sticky_stack": "PASS — .pm-sticky-card position='static' on mobile; problem-card-01 scroll delta=-400 (moves with scroll, not pinned). All 7 problem cards present.",
+    "desktop_sticky_preserved": "PASS — .pm-sticky-card position='sticky' at 1440.",
+    "mobile_simpler_layout": "PASS — <nav> parent display='none' at 390 (nav-probleme not visible, offsetParent null); header-logo & header-cta-button visible; h1 38px mobile vs 86px desktop; no horizontal overflow (scrollWidth=innerWidth=390).",
+    "mobile_load_perf": "domContentLoadedEventEnd ~296ms, loadEventEnd ~297ms; no console errors.",
+    "footer_and_final_cta": "PASS — site-footer, footer-headline, footer-cta-button, final-cta-button all render."
+  },
+  "test_report_links": [],
+  "action_items": [
+    "(Optional/minor) In Footer.jsx line 43, replace 'Bereit für<br/>mehr' with 'Bereit für <br/>mehr' (or use whitespace) so textContent reads 'Bereit für mehr Umsatz?' for a11y/SEO."
+  ],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A", "frontend": "100% (all latest fix requirements pass)"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "All three iteration-2 fixes verified. Only cosmetic a11y note about missing space around <br> in footer headline. Baselines from iteration_1 (data-testids for cards 01-07, footer, CTAs) remain intact."
+}

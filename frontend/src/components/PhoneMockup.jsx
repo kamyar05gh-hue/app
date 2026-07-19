@@ -1,42 +1,26 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { Mic, Check, Send, Sparkles } from "lucide-react";
 
 /**
- * Premium iPhone mockup with PlanMove voice UI.
- * Uses framer-motion parallax on scroll.
+ * Static premium iPhone mockup with PlanMove voice UI.
+ * (Parallax removed — the image sits in one place.)
  */
 export const PhoneMockup = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], [30, -60]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [-1.5, 1.5]);
-
   const bars = Array.from({ length: 24 });
 
   return (
-    <div ref={ref} className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center">
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(60% 45% at 50% 45%, rgba(37,211,102,0.14), transparent 65%)",
+            "radial-gradient(60% 45% at 50% 45%, rgba(37,211,102,0.12), transparent 65%)",
         }}
       />
 
-      <motion.div
-        style={{ y, rotate }}
-        className="relative"
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
-      >
+      <div className="relative">
         <div
-          className="relative w-[280px] sm:w-[320px] md:w-[340px] aspect-[9/19] rounded-[3.2rem] bg-[#0a0a0c] p-[10px] shadow-[0_45px_90px_-25px_rgba(0,0,0,0.4),0_25px_50px_-15px_rgba(37,211,102,0.25)]"
+          className="relative w-[260px] sm:w-[300px] md:w-[340px] aspect-[9/19] rounded-[3.2rem] bg-[#0a0a0c] p-[10px] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)]"
           data-testid="phone-mockup"
         >
           <div className="absolute left-1/2 top-3 -translate-x-1/2 z-20 h-6 w-24 rounded-full bg-black" />
@@ -51,9 +35,9 @@ export const PhoneMockup = () => {
                 <span className="text-[11px] tracking-widest uppercase text-black/50 font-mono-pm">
                   Neue Anfrage
                 </span>
-                <span className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-[#25D366]" />
               </div>
-              <h4 className="font-display text-[22px] font-extrabold tracking-tight leading-[1.05] mt-2">
+              <h4 className="font-display text-[20px] md:text-[22px] font-extrabold tracking-tight leading-[1.05] mt-2">
                 Sprich einfach.
                 <br />
                 PlanMove tippt.
@@ -122,7 +106,7 @@ export const PhoneMockup = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -211,39 +211,19 @@ html.lenis body {
     contain: layout paint;
 }
 
-/* ---- Premium WhatsApp button ---- */
+/* ---- Simple WhatsApp button (no glow, no movement, slide-fill on hover) ---- */
 .pm-wa-btn {
-    will-change: transform, box-shadow;
-    transform: translate3d(0, 0, 0) scale(1);
-    box-shadow: 0 8px 20px -8px rgba(37, 211, 102, 0.35);
-    transition:
-        transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
-        box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
-        background-color 500ms ease-in-out;
+    background-color: #25d366;
+    transition: color 300ms ease-in-out;
 }
-.pm-wa-btn:hover {
-    transform: translate3d(0, 0, 0) scale(1.03);
-    box-shadow: 0 14px 40px -6px rgba(37, 211, 102, 0.55),
-        0 0 0 4px rgba(37, 211, 102, 0.08);
+.pm-wa-fill {
+    background-color: #168222;
+    transform: translate3d(-101%, 0, 0);
+    will-change: transform;
+    transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.pm-wa-btn:active {
-    transform: translate3d(0, 0, 0) scale(1.01);
-}
-.pm-wa-shine {
-    background: linear-gradient(
-        115deg,
-        transparent 0%,
-        transparent 38%,
-        rgba(255, 255, 255, 0.28) 50%,
-        transparent 62%,
-        transparent 100%
-    );
-    background-size: 220% 100%;
-    background-position: 120% 0;
-    transition: background-position 900ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-.pm-wa-btn:hover .pm-wa-shine {
-    background-position: -20% 0;
+.pm-wa-btn:hover .pm-wa-fill {
+    transform: translate3d(0, 0, 0);
 }
 
 /* ---- Reveal on scroll (IntersectionObserver-driven) ---- */
@@ -264,6 +244,26 @@ html.lenis body {
         opacity: 1;
         transform: none;
         transition: none;
+    }
+}
+
+/* ---- Mobile: disable sticky stack + reduce motion complexity ---- */
+@media (max-width: 767px) {
+    .pm-sticky-card {
+        position: static !important;
+        top: auto !important;
+        will-change: auto;
+    }
+    .pm-reveal {
+        transform: translate3d(0, 24px, 0);
+        transition-duration: 600ms;
+    }
+    /* Reduce heavy shadows on mobile for perf */
+    .pm-card {
+        box-shadow: 0 10px 25px -18px rgba(0, 0, 0, 0.18);
+    }
+    .pm-card-dark {
+        box-shadow: 0 20px 40px -20px rgba(37, 211, 102, 0.25);
     }
 }
 
