@@ -1,6 +1,6 @@
 /**
- * MOMO wordmark logo — text-based, uses the display font (Outfit).
- * Small green dot after the "O" for a subtle brand mark.
+ * PlanMove wordmark logo — text-based, uses the display font (Outfit).
+ * Small green dot after the "e" for a subtle brand mark.
  */
 export const Logo = ({
   className = "",
@@ -11,9 +11,9 @@ export const Logo = ({
   return (
     <span
       className={`inline-flex items-center gap-1.5 font-display font-extrabold tracking-[-0.04em] ${color} ${className}`}
-      aria-label="MOMO"
+      aria-label="PlanMove"
     >
-      <span>MOMO</span>
+      <span>PlanMove</span>
       {showDot && (
         <span
           aria-hidden

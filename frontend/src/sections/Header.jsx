@@ -21,7 +21,7 @@ const NAV = [
   { id: "probleme", label: "Probleme" },
   { id: "loesungen", label: "Lösungen" },
   { id: "vorteile", label: "Vorteile" },
-  { id: "ueber", label: "Über MOMO" },
+  { id: "ueber", label: "Über PlanMove" },
 ];
 
 export const Header = () => {
@@ -73,7 +73,7 @@ export const Header = () => {
                   onClick={() => scrollTo("hero")}
                   data-testid="header-logo"
                   className="flex items-center gap-2 group"
-                  aria-label="MOMO"
+                  aria-label="PlanMove"
                 >
                   <Logo className="text-[20px] md:text-[22px]" />
                 </button>

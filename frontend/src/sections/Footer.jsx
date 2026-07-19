@@ -127,11 +127,11 @@ export const Footer = () => {
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
                 <li>
                   <a
-                    href="mailto:hallo@momo.ch"
+                    href="mailto:hallo@planmove.ch"
                     data-testid="footer-email"
                     className="pm-link text-white/80 hover:text-white transition-colors duration-500 inline-flex items-center gap-1 break-all"
                   >
-                    hallo@momo.ch <ArrowUpRight className="h-3 w-3 shrink-0" />
+                    hallo@planmove.ch <ArrowUpRight className="h-3 w-3 shrink-0" />
                   </a>
                 </li>
                 <li className="text-white/55">Schweiz</li>
