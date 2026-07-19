@@ -211,6 +211,62 @@ html.lenis body {
     contain: layout paint;
 }
 
+/* ---- Premium WhatsApp button ---- */
+.pm-wa-btn {
+    will-change: transform, box-shadow;
+    transform: translate3d(0, 0, 0) scale(1);
+    box-shadow: 0 8px 20px -8px rgba(37, 211, 102, 0.35);
+    transition:
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 500ms ease-in-out;
+}
+.pm-wa-btn:hover {
+    transform: translate3d(0, 0, 0) scale(1.03);
+    box-shadow: 0 14px 40px -6px rgba(37, 211, 102, 0.55),
+        0 0 0 4px rgba(37, 211, 102, 0.08);
+}
+.pm-wa-btn:active {
+    transform: translate3d(0, 0, 0) scale(1.01);
+}
+.pm-wa-shine {
+    background: linear-gradient(
+        115deg,
+        transparent 0%,
+        transparent 38%,
+        rgba(255, 255, 255, 0.28) 50%,
+        transparent 62%,
+        transparent 100%
+    );
+    background-size: 220% 100%;
+    background-position: 120% 0;
+    transition: background-position 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pm-wa-btn:hover .pm-wa-shine {
+    background-position: -20% 0;
+}
+
+/* ---- Reveal on scroll (IntersectionObserver-driven) ---- */
+.pm-reveal {
+    opacity: 0;
+    transform: translate3d(0, 48px, 0);
+    will-change: transform, opacity;
+    transition:
+        opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pm-reveal.pm-in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .pm-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* Accordion smooth */
 [data-state="open"] .acc-icon {
     transform: rotate(45deg);

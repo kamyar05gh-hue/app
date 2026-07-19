@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import { LOGO_URL } from "@/lib/constants";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Reveal from "@/components/Reveal";
 import { ArrowUpRight } from "lucide-react";
 
 export const Footer = () => {
@@ -27,46 +27,34 @@ export const Footer = () => {
 
       {/* GRAND STATEMENT */}
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10 pt-24 md:pt-40 pb-16 md:pb-24">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
-          className="text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50"
-        >
+        <Reveal as="p" className="text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50">
           <span className="inline-flex items-center gap-2">
             <span className="h-px w-6 bg-white/40" />
             Ihr nächster Schritt
           </span>
-        </motion.p>
+        </Reveal>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          data-testid="footer-headline"
-          className="mt-6 font-display font-extrabold tracking-[-0.045em] text-[56px] sm:text-[80px] md:text-[120px] lg:text-[152px] leading-[0.9]"
-        >
-          Bereit für
-          <br />
-          mehr <span className="italic font-light text-[#25D366]">Umsatz?</span>
-        </motion.h2>
+        <Reveal delay={120}>
+          <h2
+            data-testid="footer-headline"
+            className="mt-6 font-display font-extrabold tracking-[-0.045em] text-[56px] sm:text-[80px] md:text-[120px] lg:text-[152px] leading-[0.9]"
+          >
+            Bereit für
+            <br />
+            mehr <span className="italic font-light text-[#25D366]">Umsatz?</span>
+          </h2>
+        </Reveal>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-14 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
-        >
-          <p className="max-w-md text-[15px] md:text-[17px] leading-relaxed text-white/65">
+        <div className="mt-14 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <Reveal delay={240} as="p" className="max-w-md text-[15px] md:text-[17px] leading-relaxed text-white/65">
             Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne
             Verpflichtung. Erfahren Sie in fünf Minuten, wie PlanMove Ihr KMU
             verändert.
-          </p>
-          <WhatsAppButton size="lg" testId="footer-cta-button" />
-        </motion.div>
+          </Reveal>
+          <Reveal delay={360}>
+            <WhatsAppButton size="lg" testId="footer-cta-button" />
+          </Reveal>
+        </div>
       </div>
 
       {/* MINI GRID */}
