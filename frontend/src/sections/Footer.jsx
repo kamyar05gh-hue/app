@@ -39,7 +39,7 @@ export const Footer = () => {
             data-testid="footer-headline"
             className="mt-6 font-display font-extrabold tracking-[-0.045em] text-[56px] sm:text-[80px] md:text-[120px] lg:text-[152px] leading-[0.9]"
           >
-            Bereit für
+            Bereit für{" "}
             <br />
             mehr <span className="italic font-light text-[#25D366]">Umsatz?</span>
           </h2>
