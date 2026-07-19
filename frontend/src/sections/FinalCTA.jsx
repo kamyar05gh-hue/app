@@ -8,7 +8,7 @@ export const FinalCTA = () => {
   return (
     <section
       id="ueber"
-      className="relative py-24 md:py-40 bg-white overflow-hidden"
+      className="relative py-16 md:py-40 bg-white overflow-hidden"
       data-testid="final-cta-section"
     >
       <div
@@ -26,8 +26,8 @@ export const FinalCTA = () => {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1200px] px-6 md:px-10">
-        <Reveal className="flex items-center justify-center gap-3 mb-8">
+      <div className="relative mx-auto max-w-[1200px] px-5 md:px-10">
+        <Reveal className="flex items-center justify-center gap-3 mb-6 md:mb-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-[0.22em] text-black/60">
             <Truck className="h-3.5 w-3.5" strokeWidth={2} />
             Umzug
@@ -41,7 +41,7 @@ export const FinalCTA = () => {
 
         <div className="text-center">
           <Reveal delay={120}>
-            <h2 className="font-display font-extrabold tracking-[-0.035em] text-[38px] md:text-[68px] lg:text-[80px] leading-[0.98]">
+            <h2 className="font-display font-extrabold tracking-[-0.035em] text-[30px] sm:text-[42px] md:text-[68px] lg:text-[80px] leading-[1.02]">
               Weniger Büro.
               <br />
               Mehr Zeit. Mehr Kunden.
@@ -50,12 +50,12 @@ export const FinalCTA = () => {
             </h2>
           </Reveal>
 
-          <Reveal delay={260} as="p" className="mt-8 max-w-xl mx-auto text-[16px] md:text-[18px] leading-relaxed text-black/60">
+          <Reveal delay={260} as="p" className="mt-6 md:mt-8 max-w-xl mx-auto text-[14px] md:text-[18px] leading-relaxed text-black/60">
             Erfahren Sie, wie PlanMove Ihren Arbeitsalltag einfacher macht und
             sicherstellt, dass Ihnen keine Anfragen und Aufträge mehr entgehen.
           </Reveal>
 
-          <Reveal delay={380} className="mt-12 flex justify-center">
+          <Reveal delay={380} className="mt-8 md:mt-12 flex justify-center">
             <WhatsAppButton size="lg" testId="final-cta-button" />
           </Reveal>
 

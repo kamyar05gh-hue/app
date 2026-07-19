@@ -19,9 +19,9 @@ export const WhatsAppButton = ({
   className = "",
 }) => {
   const sizes = {
-    sm: "px-4 py-2.5 text-[13px] gap-2",
-    md: "px-6 py-3.5 text-[14px] gap-2.5",
-    lg: "px-8 py-5 text-[16px] gap-3",
+    sm: "px-3.5 py-2 text-[12px] md:text-[13px] gap-1.5 md:gap-2",
+    md: "px-5 py-3 md:px-6 md:py-3.5 text-[13px] md:text-[14px] gap-2 md:gap-2.5",
+    lg: "px-5 py-3 md:px-8 md:py-5 text-[13px] md:text-[16px] gap-2 md:gap-3",
   };
 
   return (
@@ -35,8 +35,8 @@ export const WhatsAppButton = ({
       {/* Slide-in dark-green fill */}
       <span aria-hidden className="pm-wa-fill pointer-events-none absolute inset-0" />
       <span className="relative z-10">{label}</span>
-      <span className="relative z-10 grid place-items-center h-7 w-7 rounded-full bg-white/20">
-        <WhatsAppIcon className="h-3.5 w-3.5" />
+      <span className="relative z-10 grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full bg-white/20">
+        <WhatsAppIcon className="h-3 w-3 md:h-3.5 md:w-3.5" />
       </span>
     </a>
   );

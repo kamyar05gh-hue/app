@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative pt-28 md:pt-40 pb-16 md:pb-24 overflow-hidden"
+      className="relative pt-24 md:pt-40 pb-14 md:pb-24 overflow-hidden"
       data-testid="hero-section"
     >
       <div
@@ -26,8 +26,8 @@ export const Hero = () => {
         style={{ background: "radial-gradient(circle, rgba(37,211,102,0.18), transparent 60%)" }}
       />
 
-      <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-8 items-center">
           {/* LEFT — Copy */}
           <div className="lg:col-span-6 relative z-10">
             <motion.p

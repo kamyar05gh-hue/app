@@ -26,8 +26,8 @@ export const Footer = () => {
       />
 
       {/* GRAND STATEMENT */}
-      <div className="relative mx-auto max-w-[1400px] px-6 md:px-10 pt-24 md:pt-40 pb-16 md:pb-24">
-        <Reveal as="p" className="text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50">
+      <div className="relative mx-auto max-w-[1400px] px-5 md:px-10 pt-16 md:pt-40 pb-12 md:pb-24">
+        <Reveal as="p" className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50">
           <span className="inline-flex items-center gap-2">
             <span className="h-px w-6 bg-white/40" />
             Ihr nächster Schritt
@@ -37,7 +37,7 @@ export const Footer = () => {
         <Reveal delay={120}>
           <h2
             data-testid="footer-headline"
-            className="mt-6 font-display font-extrabold tracking-[-0.045em] text-[56px] sm:text-[80px] md:text-[120px] lg:text-[152px] leading-[0.9]"
+            className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.045em] text-[44px] sm:text-[64px] md:text-[120px] lg:text-[152px] leading-[0.92]"
           >
             Bereit für{" "}
             <br />
@@ -45,8 +45,8 @@ export const Footer = () => {
           </h2>
         </Reveal>
 
-        <div className="mt-14 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          <Reveal delay={240} as="p" className="max-w-md text-[15px] md:text-[17px] leading-relaxed text-white/65">
+        <div className="mt-10 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
+          <Reveal delay={240} as="p" className="max-w-md text-[14px] md:text-[17px] leading-relaxed text-white/65">
             Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne
             Verpflichtung. Erfahren Sie in fünf Minuten, wie PlanMove Ihr KMU
             verändert.
@@ -59,15 +59,15 @@ export const Footer = () => {
 
       {/* MINI GRID */}
       <div className="relative border-t border-white/10">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-14 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div className="md:col-span-5">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-10 md:py-20">
+          <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-10">
+            <div className="col-span-2 md:col-span-5">
               <img
                 src={LOGO_URL}
                 alt="PlanMove"
-                className="h-9 w-auto object-contain brightness-0 invert"
+                className="h-8 md:h-9 w-auto object-contain brightness-0 invert"
               />
-              <p className="mt-6 max-w-md text-[14px] leading-relaxed text-white/55">
+              <p className="mt-4 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 PlanMove ist der intelligente Assistent für Schweizer Umzugs- und
                 Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.
               </p>
@@ -77,7 +77,7 @@ export const Footer = () => {
               <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
                 Navigation
               </p>
-              <ul className="mt-5 space-y-3 text-[14px]">
+              <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
                 <li>
                   <a href="#hero" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
                     Für wen?
@@ -105,7 +105,7 @@ export const Footer = () => {
               <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
                 Rechtliches
               </p>
-              <ul className="mt-5 space-y-3 text-[14px]">
+              <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
                 <li>
                   <a href="#" data-testid="footer-impressum" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
                     Impressum
@@ -124,18 +124,18 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="md:col-span-2">
+            <div className="col-span-2 md:col-span-2">
               <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
                 Kontakt
               </p>
-              <ul className="mt-5 space-y-3 text-[14px]">
+              <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
                 <li>
                   <a
                     href="mailto:hallo@planmove.ch"
                     data-testid="footer-email"
-                    className="pm-link text-white/80 hover:text-white transition-colors duration-500 inline-flex items-center gap-1"
+                    className="pm-link text-white/80 hover:text-white transition-colors duration-500 inline-flex items-center gap-1 break-all"
                   >
-                    hallo@planmove.ch <ArrowUpRight className="h-3 w-3" />
+                    hallo@planmove.ch <ArrowUpRight className="h-3 w-3 shrink-0" />
                   </a>
                 </li>
                 <li className="text-white/55">Schweiz</li>
@@ -147,15 +147,15 @@ export const Footer = () => {
 
       {/* WORDMARK */}
       <div className="relative border-t border-white/10">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-10">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-8 md:py-10 overflow-hidden">
           <div
             aria-hidden
-            className="font-display font-extrabold tracking-[-0.05em] leading-[0.9] text-white/95 select-none"
-            style={{ fontSize: "clamp(84px, 20vw, 288px)" }}
+            className="font-display font-extrabold tracking-[-0.05em] leading-[0.9] text-white/95 select-none whitespace-nowrap"
+            style={{ fontSize: "clamp(64px, 20vw, 288px)" }}
           >
             PLANMOVE
           </div>
-          <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[11px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+          <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
             <span>© {new Date().getFullYear()} PlanMove — 100% Swiss Made</span>
             <span>Für Umzug & Reinigung · DSGVO Konform</span>
           </div>

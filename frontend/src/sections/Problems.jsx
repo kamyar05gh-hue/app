@@ -160,7 +160,7 @@ const ClimaxCard = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:col-span-6 relative rounded-[1.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-black to-[#0F1613] p-8"
+              className="lg:col-span-6 relative rounded-[1.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-black to-[#0F1613] p-5 sm:p-6 md:p-8"
             >
               <div
                 aria-hidden
@@ -176,11 +176,11 @@ const ClimaxCard = () => {
                   Aufnahme läuft
                 </div>
 
-                <div className="mt-8 flex items-end justify-center gap-[3px] h-24">
+                <div className="mt-5 md:mt-8 flex items-end justify-center gap-[3px] h-16 md:h-24">
                   {bars.map((_, i) => (
                     <span
                       key={i}
-                      className="voice-bar w-[5px] rounded-full bg-gradient-to-t from-[#0F5F1E] to-[#25D366]"
+                      className="voice-bar w-[4px] md:w-[5px] rounded-full bg-gradient-to-t from-[#0F5F1E] to-[#25D366]"
                       style={{
                         height: `${25 + ((i * 17) % 75)}%`,
                         animationDelay: `${(i % 12) * 0.08}s`,
@@ -189,20 +189,20 @@ const ClimaxCard = () => {
                   ))}
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4">
-                  <p className="text-[11px] uppercase tracking-widest text-white/45 font-mono-pm">
+                <div className="mt-5 md:mt-8 rounded-2xl border border-white/10 bg-white/[0.03] px-4 md:px-5 py-3 md:py-4">
+                  <p className="text-[10px] md:text-[11px] uppercase tracking-widest text-white/45 font-mono-pm">
                     Sie sagen
                   </p>
-                  <p className="mt-2 font-display italic text-[17px] md:text-[19px] text-white/95 leading-snug">
+                  <p className="mt-1.5 md:mt-2 font-display italic text-[15px] md:text-[19px] text-white/95 leading-snug">
                     {`„PlanMove, erstelle eine Offerte für Herr Müller und schick sie per WhatsApp."`}
                   </p>
                 </div>
 
-                <span className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#25D366] text-white pl-3 pr-5 py-2.5">
-                  <span className="grid place-items-center h-8 w-8 rounded-full bg-white/20">
-                    <Mic className="h-4 w-4" />
+                <span className="mt-4 md:mt-6 inline-flex items-center gap-2.5 md:gap-3 rounded-full bg-[#25D366] text-white pl-2.5 md:pl-3 pr-4 md:pr-5 py-2 md:py-2.5">
+                  <span className="grid place-items-center h-7 w-7 md:h-8 md:w-8 rounded-full bg-white/20">
+                    <Mic className="h-3.5 w-3.5 md:h-4 md:w-4" />
                   </span>
-                  <span className="text-[13px] font-semibold">Sprachbefehl aktiv</span>
+                  <span className="text-[12px] md:text-[13px] font-semibold">Sprachbefehl aktiv</span>
                 </span>
               </div>
             </motion.div>
@@ -214,16 +214,16 @@ const ClimaxCard = () => {
               viewport={{ once: true, margin: "-80px" }}
               variants={{
                 hidden: {},
-                visible: { transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
+                visible: { transition: { staggerChildren: 0.12, delayChildren: 0.25 } },
               }}
-              className="lg:col-span-6 relative rounded-[1.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-[#0B0E10] to-[#141B1C] p-8"
+              className="lg:col-span-6 relative rounded-[1.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-[#0B0E10] to-[#141B1C] p-5 sm:p-6 md:p-8"
             >
               <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/10 px-3 py-1 text-[10px] uppercase tracking-widest font-mono-pm text-white/60">
                 <Sparkles className="h-3 w-3 text-[#25D366]" />
                 PlanMove reagiert
               </div>
 
-              <div className="mt-6 space-y-3">
+              <div className="mt-4 md:mt-6 space-y-2 md:space-y-3">
                 {notifications.map((n, i) => (
                   <motion.div
                     key={i}
@@ -232,25 +232,25 @@ const ClimaxCard = () => {
                       visible: {
                         opacity: 1,
                         y: 0,
-                        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+                        transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
                       },
                     }}
                     data-testid={`climax-noti-${i}`}
-                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3.5"
+                    className="flex items-center gap-3 md:gap-4 rounded-2xl border border-white/10 bg-white/[0.05] px-3 md:px-4 py-2.5 md:py-3.5"
                   >
-                    <span className="grid place-items-center h-10 w-10 rounded-full bg-[#25D366] text-white">
-                      <Check className="h-5 w-5" strokeWidth={3} />
+                    <span className="grid place-items-center h-8 w-8 md:h-10 md:w-10 rounded-full bg-[#25D366] text-white shrink-0">
+                      <Check className="h-4 w-4 md:h-5 md:w-5" strokeWidth={3} />
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[10px] font-mono-pm uppercase tracking-widest text-white/45">
+                      <p className="text-[9px] md:text-[10px] font-mono-pm uppercase tracking-widest text-white/45">
                         {n.tag}
                       </p>
-                      <p className="text-[14px] font-semibold text-white truncate flex items-center gap-2">
-                        <n.icon className="h-4 w-4 text-[#25D366]" />
-                        {n.label}
+                      <p className="text-[12px] md:text-[14px] font-semibold text-white truncate flex items-center gap-1.5 md:gap-2">
+                        <n.icon className="h-3.5 w-3.5 md:h-4 md:w-4 text-[#25D366] shrink-0" />
+                        <span className="truncate">{n.label}</span>
                       </p>
                     </div>
-                    <span className="text-[10px] font-mono-pm uppercase tracking-widest text-white/50">
+                    <span className="text-[9px] md:text-[10px] font-mono-pm uppercase tracking-widest text-white/50 shrink-0">
                       {n.ts}
                     </span>
                   </motion.div>
@@ -260,9 +260,9 @@ const ClimaxCard = () => {
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 10 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.7 } },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } },
                 }}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#25D366]/12 border border-[#25D366]/30 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest text-[#8EF5B0]"
+                className="mt-4 md:mt-6 inline-flex items-center gap-2 rounded-full bg-[#25D366]/12 border border-[#25D366]/30 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest text-[#8EF5B0]"
               >
                 <Sparkles className="h-3 w-3" />
                 4.8 Sekunden · Zero Klicks
@@ -280,16 +280,16 @@ export const Problems = () => {
   return (
     <section
       id="probleme"
-      className="relative py-24 md:py-32 bg-[#F5F4EF]"
+      className="relative py-16 md:py-32 bg-[#F5F4EF]"
       data-testid="problems-section"
     >
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10">
+      <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl mb-16 md:mb-24"
+          className="max-w-3xl mb-10 md:mb-24"
         >
           <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] font-mono-pm text-black/55">
             <span className="h-px w-6 bg-black/40" />
@@ -309,8 +309,8 @@ export const Problems = () => {
 
       {/* Sticky stacking cards (disabled on mobile — plain stacked layout) */}
       <div id="loesungen" className="relative">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-          <div className="relative space-y-6 md:space-y-16 md:pb-[40vh]">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className="relative space-y-5 md:space-y-16 md:pb-[40vh]">
             {problems.map((p, i) => (
               <StickyCard key={p.n} p={p} index={i} />
             ))}
