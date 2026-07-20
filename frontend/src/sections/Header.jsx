@@ -19,10 +19,21 @@ export const Header = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    setTimeout(() => setMounted(true), 200);
-    return () => window.removeEventListener("scroll", onScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 20);
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const t = setTimeout(() => setMounted(true), 200);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(t);
+    };
   }, []);
 
   return (
@@ -36,10 +47,10 @@ export const Header = () => {
             className="mx-auto max-w-[1400px] px-4 md:px-10 mt-3 md:mt-6"
           >
             <div
-              className={`flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-2 md:py-3 border border-black/10 transition-colors duration-500 ${
+              className={`flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-2 md:py-3 border border-black/10 transition-[background-color,box-shadow] duration-500 ${
                 scrolled
-                  ? "bg-white/85 backdrop-blur-xl shadow-[0_12px_40px_-15px_rgba(0,0,0,0.15)]"
-                  : "bg-white/60 backdrop-blur-md"
+                  ? "bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.15)]"
+                  : "bg-white/85"
               }`}
             >
               <button

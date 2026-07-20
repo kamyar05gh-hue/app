@@ -33,9 +33,9 @@ export const TrustBar = () => {
               data-testid={`trust-item-${i}`}
             >
               <span className="grid place-items-center h-8 w-8 md:h-16 md:w-16 rounded-full bg-white border border-black/[0.06] text-[#1EB955]">
-                <it.icon className="h-3.5 w-3.5 md:h-7 md:w-7" strokeWidth={1.8} />
+                <it.icon className="h-4 w-4 md:h-7 md:w-7" strokeWidth={1.8} />
               </span>
-              <p className="mt-2 md:mt-4 text-[10px] md:text-[15px] font-medium tracking-tight text-black/70 leading-snug">
+              <p className="mt-2 md:mt-4 text-[11px] md:text-[15px] font-medium tracking-tight text-black/70 leading-snug">
                 {it.label}
               </p>
             </Reveal>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Mic, Mail, MessageCircle, CalendarClock, FileText } from "lucide-react";
-import { CARD_VISUALS } from "@/components/CardVisuals";
+import { IMG } from "@/lib/constants";
 
 const H = (text) => (
   <span className="underline decoration-2 underline-offset-4 decoration-[#25D366] text-[#1EB955] font-semibold">
@@ -19,7 +19,7 @@ const problems = [
         Konkurrenz. MOMO antwortet {H("innerhalb weniger Sekunden")} – {H("24/7")}.
       </>
     ),
-    Visual: CARD_VISUALS.reaktion,
+    img: IMG.problems[0],
   },
   {
     n: "02",
@@ -31,7 +31,7 @@ const problems = [
         auf perfektem Deutsch, Französisch oder nach Wunsch.
       </>
     ),
-    Visual: CARD_VISUALS.sprache,
+    img: IMG.problems[1],
   },
   {
     n: "03",
@@ -44,7 +44,7 @@ const problems = [
         MOMO {H("erledigt alles")}.
       </>
     ),
-    Visual: CARD_VISUALS.feierabend,
+    img: IMG.problems[2],
   },
   {
     n: "04",
@@ -56,7 +56,7 @@ const problems = [
         Geld. MOMO {H("erinnert automatisch nach")} – per Nachricht oder Anruf.
       </>
     ),
-    Visual: CARD_VISUALS.followup,
+    img: IMG.problems[3],
   },
   {
     n: "05",
@@ -68,7 +68,7 @@ const problems = [
         sammelt alle Infos und vereinbart auf Wunsch Termine.
       </>
     ),
-    Visual: CARD_VISUALS.anrufe,
+    img: IMG.problems[4],
   },
   {
     n: "06",
@@ -80,32 +80,73 @@ const problems = [
         {H("beantwortet, organisiert und bringt alles an einen Ort zusammen")}.
       </>
     ),
-    Visual: CARD_VISUALS.kanaele,
+    img: IMG.problems[5],
   },
 ];
 
-// ---------- Plain Card (no sticky, alternating image/text) ----------
+// ---------- Photo visual (matches the reference UI mockup) ----------
+const PhotoVisual = ({ src, alt, tag, n }) => (
+  <div className="relative h-full w-full overflow-hidden bg-[#0F1013]">
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className="absolute inset-0 h-full w-full object-cover"
+      style={{ transform: "translateZ(0)" }}
+    />
+    {/* Subtle darken + green tint for cohesion */}
+    <div
+      aria-hidden
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(10,10,12,0.05) 0%, rgba(10,10,12,0.35) 100%)",
+      }}
+    />
+    {/* Tag chip — top-left */}
+    <div className="absolute top-3 left-3 md:top-4 md:left-4 inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-[2px] px-2.5 md:px-3 py-1 md:py-1.5 shadow-[0_10px_25px_-15px_rgba(0,0,0,0.4)]">
+      <span className="font-mono-pm text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-black/50">
+        {n}
+      </span>
+      <span className="h-1 w-1 rounded-full bg-black/25" />
+      <span className="font-mono-pm text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-[#1EB955] font-semibold">
+        {tag}
+      </span>
+    </div>
+  </div>
+);
+
+// ---------- Plain Card (alternating image/text) ----------
 const ProblemCard = ({ p, index }) => {
   const imgLeft = index % 2 === 0;
   return (
     <article
       data-testid={`problem-card-${p.n}`}
-      className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] transition-shadow duration-500"
+      className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)]"
     >
       <div className="grid grid-cols-5 md:grid-cols-12">
-        {/* Visual — smaller share */}
-        <div className={`col-span-2 md:col-span-4 relative min-h-[180px] sm:min-h-[220px] md:min-h-[300px] ${imgLeft ? "" : "order-2"}`}>
-          <p.Visual />
+        {/* Visual — realistic photo */}
+        <div
+          className={`col-span-2 md:col-span-5 relative min-h-[210px] sm:min-h-[260px] md:min-h-[360px] ${
+            imgLeft ? "" : "md:order-2"
+          }`}
+        >
+          <PhotoVisual src={p.img.src} alt={p.img.alt} tag={p.tag} n={p.n} />
         </div>
         {/* Copy — larger share */}
-        <div className={`col-span-3 md:col-span-8 p-5 sm:p-7 md:p-10 flex flex-col justify-center ${imgLeft ? "" : "order-1"}`}>
-          <h3 className="font-display font-extrabold tracking-[-0.03em] text-[19px] sm:text-[24px] md:text-[34px] leading-[1.1] text-black">
+        <div
+          className={`col-span-3 md:col-span-7 p-6 sm:p-8 md:p-11 flex flex-col justify-center ${
+            imgLeft ? "" : "md:order-1"
+          }`}
+        >
+          <h3 className="font-display font-extrabold tracking-[-0.03em] text-[20px] sm:text-[26px] md:text-[36px] leading-[1.08] text-black">
             {p.title}
           </h3>
-          <p className="mt-3 md:mt-4 text-[13px] sm:text-[15px] md:text-[17px] leading-relaxed text-black/70">
+          <p className="mt-3 md:mt-5 text-[14px] sm:text-[15px] md:text-[17px] leading-relaxed text-black/70">
             {p.body}
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
+          <div className="mt-5 md:mt-6 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
             <Check className="h-4 w-4" strokeWidth={3} />
             MOMO löst das
           </div>
@@ -115,13 +156,16 @@ const ProblemCard = ({ p, index }) => {
   );
 };
 
-// ---------- Magic Climax Card 07 (same template as other problem cards) ----------
+// ---------- Magic Climax Card 07 ----------
 const ClimaxVisual = ({ bars, notifications }) => (
   <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-[#0A0A0C] to-[#0F1613] p-4 sm:p-5 md:p-6">
     <div
       aria-hidden
-      className="absolute -top-24 -right-24 h-72 w-72 rounded-full blur-3xl pointer-events-none opacity-60"
-      style={{ background: "radial-gradient(circle, rgba(37,211,102,0.35), transparent 60%)" }}
+      className="absolute -top-24 -right-24 h-72 w-72 rounded-full pointer-events-none opacity-60"
+      style={{
+        background: "radial-gradient(circle, rgba(37,211,102,0.35), transparent 60%)",
+        filter: "blur(60px)",
+      }}
     />
     <div
       aria-hidden
@@ -216,10 +260,7 @@ const ClimaxCard = () => {
   const bars = Array.from({ length: 24 });
 
   return (
-    <div
-      className="mb-6 md:mb-10"
-      data-testid="problem-card-07"
-    >
+    <div className="mb-6 md:mb-10" data-testid="problem-card-07">
       <motion.article
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +274,7 @@ const ClimaxCard = () => {
             <ClimaxVisual bars={bars} notifications={notifications} />
           </div>
 
-          {/* Copy — MOMO bot with ticks */}
+          {/* Copy */}
           <div className="lg:col-span-5 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-center bg-white">
             <div className="inline-flex items-center gap-2 text-[10px] md:text-[11px] uppercase tracking-widest text-[#1EB955] font-semibold mb-3 md:mb-4">
               <span className="grid place-items-center h-6 w-6 rounded-full bg-[#25D366]/15">
@@ -301,10 +342,10 @@ export const Problems = () => {
         </motion.div>
       </div>
 
-      {/* 2-col grid on desktop, single-col on mobile. No sticky. */}
+      {/* 2-col grid on desktop, single-col on mobile. */}
       <div id="loesungen" className="relative">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 mb-6 md:mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-10">
             {problems.map((p, i) => (
               <ProblemCard key={p.n} p={p} index={i} />
             ))}

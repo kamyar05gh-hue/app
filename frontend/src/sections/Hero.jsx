@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative pt-24 md:pt-40 pb-14 md:pb-24 overflow-hidden"
+      className="relative pt-20 md:pt-28 pb-14 md:pb-20 overflow-hidden"
       data-testid="hero-section"
     >
       <div
@@ -44,8 +44,8 @@ export const Hero = () => {
                   style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.15)" }}
                 >
                   <span className="relative flex items-center justify-center">
-                    <span className="absolute h-[2px] w-3 bg-white" />
-                    <span className="absolute w-[2px] h-3 bg-white" />
+                    <span className="absolute h-[3px] w-3.5 bg-white rounded-[1px]" />
+                    <span className="absolute w-[3px] h-3.5 bg-white rounded-[1px]" />
                   </span>
                 </span>
                 <span className="text-[#0a2540]">Für Umzug & Reinigung Unternehmer gemacht</span>
@@ -96,12 +96,6 @@ export const Hero = () => {
               className="mt-8 md:mt-10 flex flex-col items-start gap-4"
             >
               <WhatsAppButton size="lg" testId="hero-cta-button" />
-              <span className="inline-flex items-center gap-2.5 text-[13px] md:text-[14px] font-medium text-black/75">
-                <span className="grid place-items-center h-6 w-6 rounded-full bg-[#25D366]/15 text-[#1EB955]">
-                  <Check className="h-4 w-4" strokeWidth={2.5} />
-                </span>
-                Antwort innerhalb weniger Minuten
-              </span>
             </motion.div>
           </div>
 

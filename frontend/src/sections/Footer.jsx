@@ -152,7 +152,7 @@ export const Footer = () => {
             PlanMove
           </div>
           <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
-            <span>© {new Date().getFullYear()} MOMO — 100% Swiss Made</span>
+            <span>© {new Date().getFullYear()} MOMO</span>
             <span>Für Umzug & Reinigung · DSGVO Konform</span>
           </div>
         </div>
