@@ -90,7 +90,7 @@ const ClimaxCard = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-12">
           {/* LEFT: Image — stressed man crossed out */}
-          <div className="md:col-span-4 relative min-h-[280px] md:min-h-[520px] overflow-hidden bg-[#F5F4EF]">
+          <div className="md:col-span-4 relative min-h-[220px] sm:min-h-[280px] md:min-h-[520px] overflow-hidden bg-[#F5F4EF]">
             <SmoothImage
               src="/images/card-07.jpg"
               alt={c.imageAlt}
@@ -140,7 +140,7 @@ const ClimaxCard = () => {
           </div>
 
           {/* MIDDLE: Copy + Voice commands */}
-          <div className="md:col-span-5 p-6 sm:p-8 md:p-10 flex flex-col justify-center border-t md:border-t-0 md:border-l md:border-r border-black/[0.05]">
+          <div className="md:col-span-5 p-5 sm:p-8 md:p-10 flex flex-col justify-center border-t md:border-t-0 md:border-l md:border-r border-black/[0.05]">
             <h3 className="font-display font-extrabold tracking-[-0.02em] text-[22px] sm:text-[26px] md:text-[30px] leading-[1.1] text-black">
               {c.titleA}<span className="text-[#1EB955]">{c.titleHighlight}</span>
               <br className="hidden sm:block" />
@@ -151,11 +151,11 @@ const ClimaxCard = () => {
               <Segs segs={c.sub} hlClass="text-[#1EB955] font-semibold" />
             </p>
 
-            <ul className="mt-5 md:mt-6 space-y-2.5" data-testid="climax-voice-commands">
+            <ul className="mt-4 md:mt-6 grid grid-cols-1 gap-2.5" data-testid="climax-voice-commands">
               {c.voiceCommands.map((text, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 rounded-xl bg-[#F5F4EF] px-3.5 py-2.5"
+                  className="flex items-start gap-3 rounded-xl bg-[#F5F4EF] px-3 py-2.5 md:px-3.5"
                 >
                   <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
                     <Check className="h-3 w-3" strokeWidth={3.5} />
@@ -169,10 +169,10 @@ const ClimaxCard = () => {
           </div>
 
           {/* RIGHT: MOMO Bot + services checklist */}
-          <div className="md:col-span-3 p-6 sm:p-8 md:p-10 flex flex-col items-center md:items-start justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
+          <div className="md:col-span-3 p-5 sm:p-8 md:p-10 flex flex-col items-center md:items-start justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
             {/* Bot mascot */}
             <div className="relative">
-              <div className="grid place-items-center h-[110px] w-[110px] md:h-[140px] md:w-[140px] rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
+              <div className="grid place-items-center h-[96px] w-[96px] md:h-[140px] md:w-[140px] rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
                 <div
                   aria-hidden
                   className="absolute inset-0 pointer-events-none"
@@ -181,18 +181,18 @@ const ClimaxCard = () => {
                       "radial-gradient(circle at 50% 40%, rgba(37,211,102,0.35), transparent 55%)",
                   }}
                 />
-                <Bot className="relative h-14 w-14 md:h-16 md:w-16 text-[#25D366]" strokeWidth={1.6} />
+                <Bot className="relative h-12 w-12 md:h-16 md:w-16 text-[#25D366]" strokeWidth={1.6} />
               </div>
               <span className="mt-3 block font-display font-extrabold text-center md:text-left text-[15px] md:text-[17px] tracking-tight text-black">
                 {c.momoRestA} <span className="text-black/50 font-medium">{c.momoRestB}</span>
               </span>
             </div>
 
-            <ul className="mt-5 md:mt-6 space-y-2 w-full max-w-[200px]">
+            <ul className="mt-4 md:mt-6 grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-2 w-full max-w-[260px] md:max-w-[200px]">
               {c.services.map((s, i) => (
                 <li
                   key={i}
-                  className="flex items-center gap-2.5 text-[12.5px] md:text-[13.5px] font-medium text-black/80"
+                  className="flex items-center gap-2 text-[12px] md:text-[13.5px] font-medium text-black/80"
                 >
                   <span className="grid place-items-center h-4 w-4 rounded-full bg-[#25D366] text-white shrink-0">
                     <Check className="h-2.5 w-2.5" strokeWidth={4} />

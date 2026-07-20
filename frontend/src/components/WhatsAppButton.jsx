@@ -31,7 +31,7 @@ export const WhatsAppButton = ({
       target="_blank"
       rel="noopener noreferrer"
       data-testid={testId}
-      className={`pm-wa-btn group relative isolate inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:text-white overflow-hidden whitespace-nowrap ${sizes[size]} ${className}`}
+      className={`pm-wa-btn group relative isolate inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:text-white overflow-hidden whitespace-normal sm:whitespace-nowrap ${sizes[size]} ${className}`}
     >
       {/* Slide-in dark-green fill */}
       <span aria-hidden className="pm-wa-fill pointer-events-none absolute inset-0" />
