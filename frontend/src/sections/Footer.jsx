@@ -147,9 +147,9 @@ export const Footer = () => {
           <div
             aria-hidden
             className="font-display font-extrabold tracking-[-0.055em] leading-[0.9] text-white/95 select-none whitespace-nowrap"
-            style={{ fontSize: "clamp(80px, 22vw, 320px)" }}
+            style={{ fontSize: "clamp(60px, 17vw, 260px)" }}
           >
-            MOMO
+            PlanMove
           </div>
           <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
             <span>© {new Date().getFullYear()} MOMO — 100% Swiss Made</span>

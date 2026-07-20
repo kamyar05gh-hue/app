@@ -1,4 +1,4 @@
-import { Check, Truck, SprayCan, Sparkles } from "lucide-react";
+import { Check, Truck, SprayCan } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Reveal from "@/components/Reveal";
 
@@ -68,11 +68,6 @@ export const FinalCTA = () => {
                 {s}
               </li>
             ))}
-          </Reveal>
-
-          <Reveal delay={620} className="mt-10 inline-flex items-center gap-2 text-[11px] font-mono-pm uppercase tracking-[0.25em] text-black/45">
-            <Sparkles className="h-3 w-3 text-[#25D366]" />
-            100% Swiss Made · DSGVO Konform · Hosting CH
           </Reveal>
         </div>
       </div>

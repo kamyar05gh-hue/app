@@ -104,21 +104,16 @@ const StickyCard = ({ p, index }) => {
             <div className="absolute top-4 left-4 z-10">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-white/60 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest">
                 <span className="chapter-num text-[14px]">{p.n}</span>
-                <span className="h-3 w-px bg-black/20" />
-                <span>{p.tag}</span>
               </div>
             </div>
           </div>
 
           {/* Copy */}
-          <div className={`lg:col-span-6 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/25 mb-3 md:mb-4">
-              {p.n}
-            </span>
-            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[22px] sm:text-[26px] md:text-[38px] leading-[1.08] text-black">
+          <div className={`lg:col-span-6 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-start pt-10 md:pt-14 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[26px] sm:text-[30px] md:text-[44px] leading-[1.05] text-black">
               {p.title}
             </h3>
-            <p className="mt-4 text-[14px] md:text-[16px] leading-relaxed text-black/60 max-w-md">
+            <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-black/65 max-w-md">
               {p.body}
             </p>
             <div className="mt-5 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
@@ -300,11 +295,7 @@ export const Problems = () => {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mb-10 md:mb-24"
         >
-          <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] font-mono-pm text-black/55">
-            <span className="h-px w-6 bg-black/40" />
-            Kapitel Eins — Die 7 Probleme
-          </span>
-          <h2 className="mt-6 font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[64px] leading-[1.02]">
+          <h2 className="font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[64px] leading-[1.02]">
             Die <span className="text-[#25D366]">7 grössten Probleme</span>
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
@@ -319,7 +310,7 @@ export const Problems = () => {
       {/* Sticky stacking cards (disabled on mobile — plain stacked layout) */}
       <div id="loesungen" className="relative">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="relative space-y-5 md:space-y-16 md:pb-[40vh]">
+          <div className="relative space-y-5 md:space-y-16 md:pb-8">
             {problems.map((p, i) => (
               <StickyCard key={p.n} p={p} index={i} />
             ))}

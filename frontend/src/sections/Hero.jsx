@@ -34,11 +34,11 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[11px] md:text-[12px] uppercase tracking-[0.22em] text-[#1EB955] font-semibold"
+              className="text-[15px] md:text-[18px] tracking-tight text-[#0a2540] font-bold"
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                <span className="inline-block text-[16px] md:text-[20px] leading-none" aria-hidden>🇨🇭</span>
                 Für Umzug & Reinigung Unternehmer gemacht
               </span>
             </motion.p>
@@ -56,16 +56,26 @@ export const Hero = () => {
               ]}
             />
 
-            <motion.p
+            <motion.ul
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 md:mt-8 max-w-xl text-[14px] md:text-[17px] leading-relaxed text-black/65"
+              className="mt-6 md:mt-8 max-w-xl space-y-2.5 md:space-y-3 text-[15px] md:text-[17px] leading-relaxed text-black/75"
             >
-              MOMO ist Ihr intelligenter Assistent, der Anfragen beantwortet,
-              Offerten schreibt, Termine vereinbart und Ihre Kundenkommunikation
-              komplett übernimmt — 24/7, in jeder Sprache.
-            </motion.p>
+              {[
+                "Einfach in Ihrer Muttersprache sprechen – MOMO erledigt alles auf Deutsch.",
+                "Offerten in wenigen Sekunden – einfach sprechen, MOMO schreibt perfektes Deutsch.",
+                "Rechnungen sofort erstellen und versenden.",
+                "Deutsche Briefe & E-Mails verstehen und beantworten.",
+              ].map((line, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="mt-1 grid place-items-center h-5 w-5 rounded-full bg-[#25D366]/15 text-[#1EB955] shrink-0">
+                    <Check className="h-3 w-3" strokeWidth={3} />
+                  </span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </motion.ul>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
