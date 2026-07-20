@@ -1,18 +1,22 @@
 import { motion } from "framer-motion";
-import { Check, Mic, Mail, MessageCircle, CalendarClock, FileText } from "lucide-react";
+import { Check, Bot, Sparkles } from "lucide-react";
 import { IMG } from "@/lib/constants";
 
+// Highlighted keyword — bold + green
 const H = (text) => (
-  <span className="underline decoration-2 underline-offset-4 decoration-[#25D366] text-[#1EB955] font-semibold">
-    {text}
-  </span>
+  <span className="text-[#1EB955] font-semibold">{text}</span>
 );
 
 const problems = [
   {
-    n: "01",
+    n: 1,
     tag: "Reaktionszeit",
-    title: "Jede unbeantwortete Anfrage kostet Sie Kunden – und viel Geld.",
+    title: (
+      <>
+        Jede <span className="text-[#1EB955]">unbeantwortete</span> Anfrage
+        kostet Sie Kunden – und viel Geld.
+      </>
+    ),
     body: (
       <>
         Kunden warten nicht. Wenn Sie zu spät antworten, gehen sie zur
@@ -22,21 +26,32 @@ const problems = [
     img: IMG.problems[0],
   },
   {
-    n: "02",
+    n: 2,
     tag: "Muttersprache",
-    title: "Deutsch ist nicht Ihre Muttersprache? Kein Problem.",
+    title: (
+      <>
+        <span className="text-[#1EB955]">Deutsch</span> ist nicht Ihre
+        Muttersprache? Kein Problem.
+      </>
+    ),
     body: (
       <>
-        Sprechen Sie einfach in Ihrer Sprache. MOMO schreibt {H("professionelle E-Mails, Offerten und Nachrichten")}{" "}
-        auf perfektem Deutsch, Französisch oder nach Wunsch.
+        Sprechen Sie einfach in Ihrer Sprache. MOMO schreibt{" "}
+        {H("professionelle E-Mails, Offerten und Nachrichten")} auf perfektem
+        Deutsch, Französisch oder nach Wunsch.
       </>
     ),
     img: IMG.problems[1],
   },
   {
-    n: "03",
+    n: 3,
     tag: "Feierabend",
-    title: "Nach einem langen Arbeitstag wartet die Büroarbeit.",
+    title: (
+      <>
+        Nach einem langen Arbeitstag wartet die{" "}
+        <span className="text-[#1EB955]">Büroarbeit</span>.
+      </>
+    ),
     body: (
       <>
         Offerten, E-Mails, WhatsApp, Rechnungen, Einsatzplanung… Viele
@@ -47,9 +62,14 @@ const problems = [
     img: IMG.problems[2],
   },
   {
-    n: "04",
+    n: 4,
     tag: "Follow-up",
-    title: "Sie verschicken Offerten und vergessen nachzufassen.",
+    title: (
+      <>
+        Sie verschicken Offerten und vergessen{" "}
+        <span className="text-[#1EB955]">nachzufassen</span>.
+      </>
+    ),
     body: (
       <>
         Viele Unternehmer verlieren den Überblick — und damit auch Kunden und
@@ -59,9 +79,14 @@ const problems = [
     img: IMG.problems[3],
   },
   {
-    n: "05",
+    n: 5,
     tag: "Anrufe",
-    title: "Das Telefon klingelt, während Sie arbeiten.",
+    title: (
+      <>
+        Das <span className="text-[#1EB955]">Telefon klingelt</span>, während
+        Sie arbeiten.
+      </>
+    ),
     body: (
       <>
         Sie können nicht rangehen? Kein Problem. MOMO {H("nimmt Anrufe entgegen")},
@@ -71,9 +96,14 @@ const problems = [
     img: IMG.problems[4],
   },
   {
-    n: "06",
+    n: 6,
     tag: "Kanäle",
-    title: "So viele Nachrichten. So wenig Zeit.",
+    title: (
+      <>
+        So viele Nachrichten. So{" "}
+        <span className="text-[#1EB955]">wenig Zeit</span>.
+      </>
+    ),
     body: (
       <>
         WhatsApp, E-Mail, Telefon — alles kommt zur gleichen Zeit. MOMO{" "}
@@ -84,183 +114,64 @@ const problems = [
   },
 ];
 
-// ---------- Photo visual (matches the reference UI mockup) ----------
-const PhotoVisual = ({ src, alt, tag, n }) => (
-  <div className="relative h-full w-full overflow-hidden bg-[#0F1013]">
-    <img
-      src={src}
-      alt={alt}
-      loading="lazy"
-      decoding="async"
-      className="absolute inset-0 h-full w-full object-cover"
-      style={{ transform: "translateZ(0)" }}
-    />
-    {/* Subtle darken + green tint for cohesion */}
-    <div
-      aria-hidden
-      className="absolute inset-0 pointer-events-none"
-      style={{
-        background:
-          "linear-gradient(180deg, rgba(10,10,12,0.05) 0%, rgba(10,10,12,0.35) 100%)",
-      }}
-    />
-    {/* Tag chip — top-left */}
-    <div className="absolute top-3 left-3 md:top-4 md:left-4 inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-[2px] px-2.5 md:px-3 py-1 md:py-1.5 shadow-[0_10px_25px_-15px_rgba(0,0,0,0.4)]">
-      <span className="font-mono-pm text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-black/50">
-        {n}
-      </span>
-      <span className="h-1 w-1 rounded-full bg-black/25" />
-      <span className="font-mono-pm text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-[#1EB955] font-semibold">
-        {tag}
-      </span>
-    </div>
-  </div>
-);
-
-// ---------- Plain Card (alternating image/text) ----------
-const ProblemCard = ({ p, index }) => {
-  const imgLeft = index % 2 === 0;
+// ---------- Problem Card (image top + text bottom) ----------
+const ProblemCard = ({ p }) => {
   return (
     <article
-      data-testid={`problem-card-${p.n}`}
-      className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] h-full"
+      data-testid={`problem-card-0${p.n}`}
+      className="pm-card group relative rounded-[1.5rem] md:rounded-[1.75rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] flex flex-col h-full"
     >
-      <div className="grid grid-cols-5 md:grid-cols-12 h-full min-h-[380px] md:min-h-[440px]">
-        {/* Visual — realistic photo */}
-        <div
-          className={`col-span-2 md:col-span-5 relative min-h-[210px] sm:min-h-[260px] md:min-h-[360px] ${
-            imgLeft ? "" : "md:order-2"
-          }`}
+      {/* Image */}
+      <div className="relative aspect-[16/11] overflow-hidden bg-[#0F1013]">
+        <img
+          src={p.img.src}
+          alt={p.img.alt}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+        />
+        {/* Number badge — top-left */}
+        <span
+          className="absolute top-4 left-4 grid place-items-center h-9 w-9 md:h-10 md:w-10 rounded-full bg-[#25D366] text-white font-display font-extrabold text-[16px] md:text-[17px] shadow-[0_10px_25px_-8px_rgba(37,211,102,0.6)] tabular-nums"
+          aria-hidden
         >
-          <PhotoVisual src={p.img.src} alt={p.img.alt} tag={p.tag} n={p.n} />
-        </div>
-        {/* Copy — larger share */}
-        <div
-          className={`col-span-3 md:col-span-7 p-6 sm:p-8 md:p-11 flex flex-col justify-center ${
-            imgLeft ? "" : "md:order-1"
-          }`}
-        >
-          <h3 className="font-display font-extrabold tracking-[-0.03em] text-[20px] sm:text-[26px] md:text-[36px] leading-[1.08] text-black">
-            {p.title}
-          </h3>
-          <p className="mt-3 md:mt-5 text-[14px] sm:text-[15px] md:text-[17px] leading-relaxed text-black/70">
-            {p.body}
-          </p>
-          <div className="mt-5 md:mt-6 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
-            <Check className="h-4 w-4" strokeWidth={3} />
-            MOMO löst das
-          </div>
-        </div>
+          {p.n}
+        </span>
+      </div>
+
+      {/* Copy */}
+      <div className="flex flex-col flex-1 p-5 sm:p-6 md:p-7">
+        <h3 className="font-display font-extrabold tracking-[-0.02em] text-[19px] sm:text-[21px] md:text-[22px] leading-[1.15] text-black">
+          {p.title}
+        </h3>
+        <p className="mt-3 md:mt-4 text-[13.5px] md:text-[14.5px] leading-relaxed text-black/60">
+          {p.body}
+        </p>
       </div>
     </article>
   );
 };
 
-// ---------- Magic Climax Card 07 ----------
-const ClimaxVisual = ({ bars, notifications }) => (
-  <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-[#0A0A0C] to-[#0F1613] p-4 sm:p-5 md:p-6">
-    <div
-      aria-hidden
-      className="absolute -top-24 -right-24 h-72 w-72 rounded-full pointer-events-none opacity-60"
-      style={{
-        background: "radial-gradient(circle, rgba(37,211,102,0.35), transparent 60%)",
-        filter: "blur(60px)",
-      }}
-    />
-    <div
-      aria-hidden
-      className="absolute inset-0 opacity-[0.06] pointer-events-none"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-        backgroundSize: "48px 48px",
-      }}
-    />
-    <div className="relative h-full flex flex-col gap-2.5 md:gap-3 justify-center">
-      {/* Voice recorder — compact */}
-      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 md:p-4">
-        <div className="flex items-center justify-between">
-          <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/60">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] animate-pulse" />
-            Aufnahme läuft
-          </div>
-          <Mic className="h-3.5 w-3.5 text-[#25D366]" />
-        </div>
-        <div className="mt-2 flex items-end justify-center gap-[3px] h-9 md:h-11">
-          {bars.map((_, i) => (
-            <span
-              key={i}
-              className="voice-bar w-[3px] md:w-[4px] rounded-full bg-gradient-to-t from-[#0F5F1E] to-[#25D366]"
-              style={{
-                height: `${25 + ((i * 17) % 75)}%`,
-                animationDelay: `${(i % 12) * 0.08}s`,
-              }}
-            />
-          ))}
-        </div>
-        <p className="mt-2 font-display italic text-[11px] md:text-[13px] text-white/85 leading-snug">
-          {`„MOMO, erstelle eine Offerte für Herr Müller…"`}
-        </p>
-      </div>
-
-      {/* Notification cascade — compact */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.11, delayChildren: 0.15 } },
-        }}
-        className="space-y-1.5"
-      >
-        {notifications.map((n, i) => (
-          <motion.div
-            key={i}
-            variants={{
-              hidden: { opacity: 0, y: 14 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-              },
-            }}
-            data-testid={`climax-noti-${i}`}
-            className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.05] px-2.5 md:px-3 py-1.5 md:py-2"
-          >
-            <span className="grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full bg-[#25D366] text-white shrink-0">
-              <Check className="h-3 w-3 md:h-3.5 md:w-3.5" strokeWidth={3} />
-            </span>
-            <div className="flex-1 min-w-0">
-              <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/45">
-                {n.tag}
-              </p>
-              <p className="text-[11px] md:text-[13px] font-semibold text-white truncate flex items-center gap-1.5">
-                <n.icon className="h-3 w-3 md:h-3.5 md:w-3.5 text-[#25D366] shrink-0" />
-                <span className="truncate">{n.label}</span>
-              </p>
-            </div>
-            <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/50 shrink-0">
-              {n.ts}
-            </span>
-          </motion.div>
-        ))}
-      </motion.div>
-    </div>
-  </div>
-);
-
+// ---------- Climax Card 07 — full-width, 3-column composition ----------
 const ClimaxCard = () => {
-  const notifications = [
-    { icon: FileText, tag: "Offerte", label: "Offerte erstellt", ts: "in 4.8s" },
-    { icon: MessageCircle, tag: "WhatsApp", label: "Nachricht gesendet", ts: "jetzt" },
-    { icon: Mail, tag: "E-Mail", label: "Bestätigung versandt", ts: "jetzt" },
-    { icon: CalendarClock, tag: "Kalender", label: "Termin gebucht", ts: "Fr 08:00" },
+  const voiceCommands = [
+    { icon: Check, text: "MOMO, erstelle eine Offerte für Herr Müller." },
+    { icon: Check, text: "Schick Frau Meier die Offerte per E-Mail." },
+    { icon: Check, text: "Schreibe dem Kunden auf WhatsApp, dass wir morgen um 08:00 Uhr kommen." },
+    { icon: Check, text: "Erstelle die Rechnung und sende sie an den Kunden." },
   ];
-  const bars = Array.from({ length: 24 });
+  const services = [
+    "Offerten",
+    "Nachrichten",
+    "Rechnungen",
+    "Termine",
+    "Anrufe",
+    "Übersetzungen",
+    "und vieles mehr…",
+  ];
 
   return (
-    <div className="mb-6 md:mb-10" data-testid="problem-card-07">
+    <div className="mt-6 md:mt-10" data-testid="problem-card-07">
       <motion.article
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -268,45 +179,122 @@ const ClimaxCard = () => {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-          {/* Visual — larger climax visual */}
-          <div className="lg:col-span-7 relative h-[280px] sm:h-[360px] lg:h-[620px]">
-            <ClimaxVisual bars={bars} notifications={notifications} />
+        <div className="grid grid-cols-1 md:grid-cols-12">
+          {/* LEFT: Image — stressed man crossed out */}
+          <div className="md:col-span-4 relative min-h-[280px] md:min-h-[520px] overflow-hidden bg-[#F5F4EF]">
+            <img
+              src={IMG.problems[2].src}
+              alt="Vergessen Sie Papierkram"
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            {/* Green X overlay */}
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <svg
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                className="absolute inset-0 h-full w-full"
+              >
+                <line
+                  x1="8"
+                  y1="10"
+                  x2="92"
+                  y2="90"
+                  stroke="#25D366"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  opacity="0.9"
+                />
+                <line
+                  x1="92"
+                  y1="10"
+                  x2="8"
+                  y2="90"
+                  stroke="#25D366"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  opacity="0.9"
+                />
+              </svg>
+            </div>
+            {/* Number badge */}
+            <span
+              className="absolute top-4 left-4 grid place-items-center h-10 w-10 rounded-full bg-[#25D366] text-white font-display font-extrabold text-[17px] shadow-[0_10px_25px_-8px_rgba(37,211,102,0.6)] tabular-nums"
+              aria-hidden
+            >
+              7
+            </span>
           </div>
 
-          {/* Copy */}
-          <div className="lg:col-span-5 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-center bg-white">
-            <div className="inline-flex items-center gap-2 text-[10px] md:text-[11px] uppercase tracking-widest text-[#1EB955] font-semibold mb-3 md:mb-4">
-              <span className="grid place-items-center h-6 w-6 rounded-full bg-[#25D366]/15">
-                <Check className="h-3.5 w-3.5" strokeWidth={3} />
-              </span>
-              Die MOMO-Magie
-            </div>
-            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[26px] sm:text-[32px] md:text-[46px] leading-[1.02] text-black">
-              Ein Satz sagen.
-              <br />
-              <span className="text-[#25D366]">Alles</span> ist erledigt.
+          {/* MIDDLE: Copy + Voice commands */}
+          <div className="md:col-span-5 p-6 sm:p-8 md:p-10 flex flex-col justify-center border-t md:border-t-0 md:border-l md:border-r border-black/[0.05]">
+            <h3 className="font-display font-extrabold tracking-[-0.02em] text-[22px] sm:text-[26px] md:text-[30px] leading-[1.1] text-black">
+              Vergessen Sie <span className="text-[#1EB955]">Papierkram</span>
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>
+              und komplizierte Programme.
             </h3>
-            <p className="mt-4 md:mt-5 text-[14px] md:text-[17px] leading-relaxed text-black/70 max-w-md">
-              Keine Notizen, keine Excel-Listen, keine langen Abende. MOMO hört zu,
-              versteht — und handelt in Sekunden.
+            <p className="mt-3 md:mt-4 text-[13.5px] md:text-[15px] leading-relaxed text-black/60 max-w-md">
+              Keine Notizen, keine Excel-Listen, keine langen Abende am Computer.
+              Sagen Sie einfach:
             </p>
 
-            <ul className="mt-6 md:mt-8 space-y-3">
-              {[
-                "Offerten & Rechnungen erstellen",
-                "WhatsApp & E-Mails beantworten",
-                "Termine automatisch buchen",
-                "Kunden nachfassen ohne Aufwand",
-              ].map((t, i) => (
-                <li key={i} className="flex items-start gap-3 text-[14px] md:text-[15px] font-medium text-black/85">
+            <ul className="mt-5 md:mt-6 space-y-2.5" data-testid="climax-voice-commands">
+              {voiceCommands.map((cmd, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-3 rounded-xl bg-[#F5F4EF] px-3.5 py-2.5"
+                >
                   <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
-                    <Check className="h-3 w-3" strokeWidth={3} />
+                    <Check className="h-3 w-3" strokeWidth={3.5} />
                   </span>
-                  {t}
+                  <span className="text-[12.5px] md:text-[13.5px] font-medium text-black/85 leading-snug italic">
+                    {`„${cmd.text}"`}
+                  </span>
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* RIGHT: MOMO Bot + services checklist */}
+          <div className="md:col-span-3 p-6 sm:p-8 md:p-10 flex flex-col items-center md:items-start justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
+            {/* Bot mascot */}
+            <div className="relative">
+              <div className="grid place-items-center h-[110px] w-[110px] md:h-[140px] md:w-[140px] rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
+                <div
+                  aria-hidden
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 40%, rgba(37,211,102,0.35), transparent 55%)",
+                  }}
+                />
+                <Bot className="relative h-14 w-14 md:h-16 md:w-16 text-[#25D366]" strokeWidth={1.6} />
+              </div>
+              <span className="mt-3 block font-display font-extrabold text-center md:text-left text-[15px] md:text-[17px] tracking-tight text-black">
+                MOMO <span className="text-black/50 font-medium">erledigt den Rest.</span>
+              </span>
+            </div>
+
+            <ul className="mt-5 md:mt-6 space-y-2 w-full max-w-[200px]">
+              {services.map((s, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-2.5 text-[12.5px] md:text-[13.5px] font-medium text-black/80"
+                >
+                  <span className="grid place-items-center h-4 w-4 rounded-full bg-[#25D366] text-white shrink-0">
+                    <Check className="h-2.5 w-2.5" strokeWidth={4} />
+                  </span>
+                  {s}
+                </li>
+              ))}
+            </ul>
+
+            <span className="mt-5 inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.22em] text-[#1EB955] font-semibold">
+              <Sparkles className="h-3 w-3" />
+              Die MOMO-Magie
+            </span>
           </div>
         </div>
       </motion.article>
@@ -319,7 +307,7 @@ export const Problems = () => {
   return (
     <section
       id="probleme"
-      className="relative py-16 md:py-32 bg-[#F5F4EF]"
+      className="relative py-16 md:py-28 bg-[#F5F4EF]"
       data-testid="problems-section"
     >
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
@@ -328,26 +316,19 @@ export const Problems = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl mb-10 md:mb-24"
+          className="text-center max-w-4xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[64px] leading-[1.02]">
-            Die <span className="text-[#25D366]">7 grössten Probleme</span>
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            im Alltag von Umzug &
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            Reinigung Unternehmern.
+          <h2 className="font-display font-extrabold tracking-[-0.035em] text-[30px] sm:text-[42px] md:text-[54px] leading-[1.05]">
+            Die <span className="text-[#25D366]">7 grössten Probleme</span> im
+            Alltag von Umzug &amp; Reinigung Unternehmern.
           </h2>
         </motion.div>
-      </div>
 
-      {/* 2-col grid on desktop, single-col on mobile. */}
-      <div id="loesungen" className="relative">
-        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-10 items-stretch">
-            {problems.map((p, i) => (
-              <ProblemCard key={p.n} p={p} index={i} />
+        <div id="loesungen" className="relative">
+          {/* 3-col grid on desktop, single on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 items-stretch">
+            {problems.map((p) => (
+              <ProblemCard key={p.n} p={p} />
             ))}
           </div>
           <ClimaxCard />

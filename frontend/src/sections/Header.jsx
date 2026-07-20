@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { WhatsAppButton, WhatsAppIcon } from "@/components/WhatsAppButton";
 import { WHATSAPP_URL } from "@/lib/constants";
 import { Logo } from "@/components/Logo";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -63,6 +64,7 @@ export const Header = () => {
               </button>
 
               <div className="flex items-center gap-2 md:gap-3">
+                <LanguageSwitcher />
                 <div className="hidden md:block">
                   <WhatsAppButton size="sm" testId="header-cta-button" />
                 </div>

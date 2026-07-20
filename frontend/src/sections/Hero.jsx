@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import RevealText from "@/components/RevealText";
-import PhoneMockup from "@/components/PhoneMockup";
+import HeroVisual from "@/components/HeroVisual";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const Hero = () => {
@@ -27,14 +27,14 @@ export const Hero = () => {
       />
 
       <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-10 items-center">
           {/* LEFT — Copy */}
           <div className="lg:col-span-6 relative z-10">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[15px] md:text-[18px] tracking-tight text-[#0a2540] font-bold"
+              className="text-[13px] md:text-[15px] tracking-[0.1em] uppercase font-bold text-[#0047ff]"
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
@@ -48,7 +48,7 @@ export const Hero = () => {
                     <span className="absolute w-[3px] h-3.5 bg-white rounded-[1px]" />
                   </span>
                 </span>
-                <span className="text-[#0a2540]">Für Umzug & Reinigung Unternehmer gemacht</span>
+                <span>Für Umzug &amp; Reinigung Unternehmer gemacht</span>
               </span>
             </motion.p>
 
@@ -70,6 +70,7 @@ export const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 md:mt-8 max-w-xl space-y-2.5 md:space-y-3 text-[15px] md:text-[17px] leading-relaxed text-black/75"
+              data-testid="hero-benefits-list"
             >
               {[
                 "Einfach in Ihrer Muttersprache sprechen – MOMO erledigt alles auf Deutsch.",
@@ -78,11 +79,8 @@ export const Hero = () => {
                 "Deutsche Briefe & E-Mails verstehen und beantworten.",
               ].map((line, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span
-                    className="mt-1 grid place-items-center h-5 w-5 rounded-full bg-[#25D366]/15 text-[#1EB955] shrink-0"
-                    style={{ boxShadow: "0 0 14px 2px rgba(37,211,102,0.35)" }}
-                  >
-                    <Check className="h-3 w-3" strokeWidth={3} />
+                  <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
+                    <Check className="h-3 w-3" strokeWidth={3.5} />
                   </span>
                   <span>{line}</span>
                 </li>
@@ -93,20 +91,64 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 md:mt-10 flex flex-col items-start gap-4"
+              className="mt-8 md:mt-10 flex flex-col items-start gap-5"
             >
               <WhatsAppButton size="lg" testId="hero-cta-button" />
+
+              {/* Google Review chip */}
+              <div
+                className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 pl-2 pr-3.5 py-1.5"
+                data-testid="hero-google-review"
+              >
+                <span className="grid place-items-center h-7 w-7 rounded-full bg-white shadow-[0_2px_6px_-2px_rgba(0,0,0,0.25)]">
+                  <GoogleGIcon />
+                </span>
+                <span className="flex items-center gap-0.5" aria-label="4.9 von 5 Sternen">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-3.5 w-3.5 fill-[#25D366] text-[#25D366]"
+                    />
+                  ))}
+                </span>
+                <span className="font-mono-pm text-[11px] md:text-[12px] tracking-[0.04em] text-black/70">
+                  <span className="font-bold text-black">4.9/5</span>
+                  <span className="text-black/40"> · </span>
+                  120+ Bewertungen
+                </span>
+              </div>
             </motion.div>
           </div>
 
-          {/* RIGHT — Static phone (no floating cards) */}
+          {/* RIGHT — Hero composite visual */}
           <div className="lg:col-span-6 relative flex justify-center">
-            <PhoneMockup />
+            <HeroVisual />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+const GoogleGIcon = () => (
+  <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden focusable="false">
+    <path
+      d="M22.5 12.27c0-.86-.08-1.7-.22-2.5H12v4.72h5.9a5.05 5.05 0 0 1-2.2 3.32v2.75h3.55c2.08-1.92 3.25-4.75 3.25-8.29z"
+      fill="#4285F4"
+    />
+    <path
+      d="M12 23c2.97 0 5.46-.98 7.28-2.67l-3.55-2.75c-.98.66-2.24 1.06-3.73 1.06-2.87 0-5.3-1.94-6.17-4.55H2.15v2.85A11 11 0 0 0 12 23z"
+      fill="#34A853"
+    />
+    <path
+      d="M5.83 14.09a6.6 6.6 0 0 1 0-4.18V7.06H2.15a11 11 0 0 0 0 9.88l3.68-2.85z"
+      fill="#FBBC04"
+    />
+    <path
+      d="M12 5.38c1.62 0 3.07.56 4.21 1.65l3.15-3.15C17.45 2.05 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.68 2.85C6.7 7.32 9.13 5.38 12 5.38z"
+      fill="#EA4335"
+    />
+  </svg>
+);
 
 export default Hero;
