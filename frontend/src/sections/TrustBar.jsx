@@ -30,20 +30,19 @@ export const TrustBar = () => {
       data-testid="trust-bar"
     >
       <div className="mx-auto max-w-[1400px] px-4 md:px-10 py-8 md:py-20">
-        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 md:gap-x-8 gap-y-8 md:gap-y-10">
           {items.map((label, i) => (
             <Reveal
               key={i}
               as="li"
               delay={i * 60}
+              className="flex flex-col items-center text-center"
               data-testid={`trust-item-${i}`}
             >
-              <div className="group flex flex-col items-center text-center h-full rounded-2xl md:rounded-[1.5rem] bg-white border border-black/[0.06] px-4 py-6 md:px-5 md:py-8 shadow-[0_6px_20px_-12px_rgba(0,0,0,0.12)] transition-all duration-500 hover:shadow-[0_20px_45px_-18px_rgba(37,211,102,0.35)] hover:border-[#25D366]/30 hover:-translate-y-1">
-                <GlowTickIcon />
-                <p className="mt-4 md:mt-5 text-[12px] md:text-[15px] font-semibold tracking-tight text-black/80 leading-snug">
-                  {label}
-                </p>
-              </div>
+              <GlowTickIcon />
+              <p className="mt-4 md:mt-5 text-[12px] md:text-[16px] font-semibold tracking-tight text-black/80 leading-snug max-w-[180px]">
+                {label}
+              </p>
             </Reveal>
           ))}
         </ul>

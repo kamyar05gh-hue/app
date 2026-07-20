@@ -46,10 +46,10 @@ export const Header = () => {
             initial={{ y: -60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto max-w-[1400px] px-4 md:px-10 mt-3 md:mt-6"
+            className="mx-auto max-w-[1400px] px-4 md:px-10 mt-2 md:mt-4"
           >
             <div
-              className={`flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-2 md:py-3 border border-black/10 transition-[background-color,box-shadow] duration-500 ${
+              className={`flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-1.5 md:py-2.5 border border-black/10 transition-[background-color,box-shadow] duration-500 ${
                 scrolled
                   ? "bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.15)]"
                   : "bg-white/85"

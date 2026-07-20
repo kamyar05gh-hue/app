@@ -122,7 +122,7 @@ export const BeforeAfter = () => {
                   className="flex items-start gap-3"
                 >
                   <GlowCross />
-                  <span className="text-[15px] md:text-[17px] leading-snug text-white/60">
+                  <span className="text-[15px] md:text-[17px] leading-snug text-white/80">
                     {item.before}
                   </span>
                 </motion.li>

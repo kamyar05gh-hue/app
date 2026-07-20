@@ -11,7 +11,7 @@ export const Logo = ({
   const color = variant === "light" ? "text-white" : "text-black";
   return (
     <span
-      className={`inline-flex items-center gap-1.5 font-display font-extrabold tracking-[-0.04em] ${color} ${className}`}
+      className={`inline-flex items-center gap-1 font-display font-extrabold tracking-[-0.04em] ${color} ${className}`}
       aria-label="PlanMove"
     >
       {showImage && (
