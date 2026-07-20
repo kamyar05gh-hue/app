@@ -62,7 +62,7 @@ export const Footer = () => {
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-10 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <div className="md:col-span-8">
-              <Logo variant="light" className="text-[26px] md:text-[32px]" showImage />
+              <Logo variant="light" className="text-[30px] md:text-[36px]" showImage />
               <p className="mt-4 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
@@ -78,10 +78,10 @@ export const Footer = () => {
                     href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
                     data-testid="footer-phone"
                     aria-label={t.footer.phoneAria}
-                    className="pm-link text-white/90 hover:text-white transition-colors duration-500 inline-flex items-center gap-2.5 text-[15px] md:text-[17px] font-medium"
+                    className="pm-link text-white/90 hover:text-white transition-colors duration-500 inline-flex items-center gap-2.5 text-[15px] md:text-[17px] font-medium leading-none"
                   >
-                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0" strokeWidth={1.8} />
-                    {t.footer.phone}
+                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0 align-middle" strokeWidth={1.8} />
+                    <span className="leading-none">{t.footer.phone}</span>
                   </a>
                 </li>
               </ul>
@@ -100,9 +100,9 @@ export const Footer = () => {
           >
             PlanMove
           </div>
-          <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
-            <span>© {new Date().getFullYear()} PlanMove</span>
-            <span>{t.footer.bottomNote}</span>
+          <div className="mt-8 md:mt-10 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] leading-none text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
+            <span className="leading-none">© {new Date().getFullYear()} PlanMove</span>
+            <span className="leading-none">{t.footer.bottomNote}</span>
           </div>
         </div>
       </div>

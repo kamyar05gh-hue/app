@@ -6,6 +6,7 @@ import Testimonials from "@/sections/Testimonials";
 import FinalCTA from "@/sections/FinalCTA";
 import FAQ from "@/sections/FAQ";
 import Footer from "@/sections/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Landing() {
   return (
@@ -18,6 +19,7 @@ export default function Landing() {
       <FinalCTA />
       <FAQ />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }

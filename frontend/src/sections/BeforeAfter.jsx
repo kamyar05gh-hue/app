@@ -2,26 +2,51 @@ import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+// Deep-glow red cross — same treatment as the green glowing ticks
+const GlowCross = () => (
+  <span className="relative grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full shrink-0 mt-0.5">
+    <span
+      aria-hidden
+      className="absolute -inset-1.5 rounded-full"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(239,68,68,0.55) 0%, rgba(239,68,68,0.18) 50%, transparent 72%)",
+        filter: "blur(4px)",
+      }}
+    />
+    <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#F87171] to-[#DC2626] shadow-[0_6px_16px_-6px_rgba(239,68,68,0.7),inset_0_1px_1px_rgba(255,255,255,0.3)]">
+      <X className="h-3 w-3 md:h-3.5 md:w-3.5 text-white" strokeWidth={3.2} />
+    </span>
+  </span>
+);
+
+// Deep-glow green check
+const GlowCheck = () => (
+  <span className="relative grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full shrink-0 mt-0.5">
+    <span
+      aria-hidden
+      className="absolute -inset-1.5 rounded-full"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(37,211,102,0.55) 0%, rgba(37,211,102,0.18) 50%, transparent 72%)",
+        filter: "blur(4px)",
+      }}
+    />
+    <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#25D366] to-[#15924A] shadow-[0_6px_16px_-6px_rgba(37,211,102,0.7),inset_0_1px_1px_rgba(255,255,255,0.3)]">
+      <Check className="h-3 w-3 md:h-3.5 md:w-3.5 text-white" strokeWidth={3.2} />
+    </span>
+  </span>
+);
+
 export const BeforeAfter = () => {
   const { t } = useLanguage();
   const data = t.beforeAfter;
 
   return (
     <section
-      className="relative py-16 md:py-24 bg-[#0A0A0A] overflow-hidden"
+      className="relative py-16 md:py-24 bg-[#F5F4EF] overflow-hidden"
       data-testid="before-after-section"
     >
-      {/* Subtle grid */}
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-      />
-
       <div className="relative mx-auto max-w-[1200px] px-5 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,26 +55,57 @@ export const BeforeAfter = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-10 md:mb-14"
         >
-          <h2 className="font-display font-extrabold tracking-[-0.03em] text-[28px] sm:text-[38px] md:text-[52px] leading-[1.05] text-white">
+          <h2 className="font-display font-extrabold tracking-[-0.03em] text-[28px] sm:text-[38px] md:text-[52px] leading-[1.05] text-black">
             {data.headingBefore}
             <span className="text-[#25D366]"> → </span>
             {data.headingAfter}
           </h2>
         </motion.div>
 
-        {/* Two-column comparison frame */}
+        {/* Two-column comparison frame — black canvas, green ambient glow */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[2rem] border border-white/10 bg-white/[0.02] overflow-hidden"
+          className="relative grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[2rem] border border-white/10 bg-[#0A0A0A] overflow-hidden shadow-[0_40px_80px_-40px_rgba(0,0,0,0.5)]"
         >
+          {/* Ambient green gradient wash */}
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(60% 55% at 85% 15%, rgba(37,211,102,0.22), transparent 60%), radial-gradient(45% 40% at 15% 90%, rgba(37,211,102,0.10), transparent 65%)",
+            }}
+          />
+          {/* Subtle grid texture */}
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-[0.05] pointer-events-none"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+              backgroundSize: "64px 64px",
+            }}
+          />
+
           {/* Before column */}
-          <div className="p-6 sm:p-8 md:p-10 border-b md:border-b-0 md:border-r border-white/10">
-            <div className="flex items-center gap-3 mb-6 md:mb-8">
-              <span className="grid place-items-center h-10 w-10 rounded-full bg-red-500/15 text-red-400">
-                <X className="h-5 w-5" strokeWidth={2.5} />
+          <div className="relative p-6 sm:p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10">
+            <div className="flex items-center gap-3 mb-7 md:mb-9">
+              <span className="relative grid place-items-center h-10 w-10 md:h-11 md:w-11 rounded-full shrink-0">
+                <span
+                  aria-hidden
+                  className="absolute -inset-1.5 rounded-full"
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(239,68,68,0.5) 0%, rgba(239,68,68,0.16) 50%, transparent 72%)",
+                    filter: "blur(5px)",
+                  }}
+                />
+                <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#F87171] to-[#DC2626] shadow-[0_8px_20px_-6px_rgba(239,68,68,0.7)]">
+                  <X className="h-4 w-4 md:h-5 md:w-5 text-white" strokeWidth={3} />
+                </span>
               </span>
               <h3 className="font-display font-bold text-[20px] md:text-[24px] text-white">
                 {data.headingBefore}
@@ -65,10 +121,8 @@ export const BeforeAfter = () => {
                   transition={{ duration: 0.4, delay: i * 0.04 }}
                   className="flex items-start gap-3"
                 >
-                  <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-red-500/15 text-red-400 shrink-0">
-                    <X className="h-3 w-3" strokeWidth={2.5} />
-                  </span>
-                  <span className="text-[15px] md:text-[17px] leading-snug text-white/55 line-through decoration-white/20">
+                  <GlowCross />
+                  <span className="text-[15px] md:text-[17px] leading-snug text-white/60">
                     {item.before}
                   </span>
                 </motion.li>
@@ -77,10 +131,21 @@ export const BeforeAfter = () => {
           </div>
 
           {/* After column */}
-          <div className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#25D366]/[0.06] to-transparent">
-            <div className="flex items-center gap-3 mb-6 md:mb-8">
-              <span className="grid place-items-center h-10 w-10 rounded-full bg-[#25D366]/20 text-[#25D366]">
-                <Check className="h-5 w-5" strokeWidth={2.5} />
+          <div className="relative p-6 sm:p-8 md:p-12 bg-gradient-to-br from-[#25D366]/[0.08] to-transparent">
+            <div className="flex items-center gap-3 mb-7 md:mb-9">
+              <span className="relative grid place-items-center h-10 w-10 md:h-11 md:w-11 rounded-full shrink-0">
+                <span
+                  aria-hidden
+                  className="absolute -inset-1.5 rounded-full"
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(37,211,102,0.55) 0%, rgba(37,211,102,0.18) 50%, transparent 72%)",
+                    filter: "blur(5px)",
+                  }}
+                />
+                <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#25D366] to-[#15924A] shadow-[0_8px_20px_-6px_rgba(37,211,102,0.7)]">
+                  <Check className="h-4 w-4 md:h-5 md:w-5 text-white" strokeWidth={3} />
+                </span>
               </span>
               <h3 className="font-display font-bold text-[20px] md:text-[24px] text-white">
                 {data.headingAfter}
@@ -96,9 +161,7 @@ export const BeforeAfter = () => {
                   transition={{ duration: 0.4, delay: i * 0.04 }}
                   className="flex items-start gap-3"
                 >
-                  <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366]/20 text-[#25D366] shrink-0">
-                    <Check className="h-3 w-3" strokeWidth={2.5} />
-                  </span>
+                  <GlowCheck />
                   <span className="text-[15px] md:text-[17px] leading-snug text-white font-medium">
                     {item.after}
                   </span>

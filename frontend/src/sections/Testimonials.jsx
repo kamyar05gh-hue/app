@@ -1,30 +1,17 @@
 import Reveal from "@/components/Reveal";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const gradients = [
-  "from-emerald-400 to-teal-500",
-  "from-blue-400 to-indigo-500",
-  "from-amber-400 to-orange-500",
-  "from-rose-400 to-pink-500",
-  "from-violet-400 to-purple-500",
-  "from-cyan-400 to-sky-500",
-  "from-lime-400 to-green-500",
-  "from-fuchsia-400 to-purple-500",
-  "from-yellow-400 to-amber-500",
-];
-
-const Avatar = ({ name, index }) => {
+const Avatar = ({ name }) => {
   const initials = name
     .split(" ")
     .slice(0, 2)
     .map((n) => n[0])
     .join("")
     .toUpperCase();
-  const gradient = gradients[index % gradients.length];
   return (
     <span
-      className={`inline-grid place-items-center h-11 w-11 rounded-full bg-gradient-to-br ${gradient} text-white font-bold text-[13px] shadow-md shrink-0`}
+      className="inline-grid place-items-center h-11 w-11 md:h-12 md:w-12 rounded-full bg-gradient-to-br from-[#25D366] to-[#15924A] text-white font-bold text-[13px] md:text-[14px] shadow-[0_8px_18px_-6px_rgba(37,211,102,0.5)] shrink-0"
       aria-hidden
     >
       {initials}
@@ -53,25 +40,34 @@ export const Testimonials = () => {
           </h2>
         </Reveal>
 
-        <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {items.map((tr, i) => (
             <Reveal
               key={i}
               delay={i * 70}
-              className="relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-[#FAFBF8] p-6 md:p-8 flex flex-col"
+              className="group relative rounded-[1.5rem] md:rounded-[1.75rem] border border-black/[0.06] bg-white p-6 md:p-8 flex flex-col transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)]"
               data-testid={`testimonial-${i}`}
             >
+              {/* Quote glyph watermark */}
+              <Quote
+                aria-hidden
+                className="absolute top-5 right-5 md:top-6 md:right-6 h-8 w-8 md:h-10 md:w-10 text-[#25D366]/15"
+                fill="currentColor"
+                strokeWidth={0}
+              />
+
               <div className="flex items-center gap-1 text-[#FBBF24]">
                 {Array.from({ length: 5 }).map((_, k) => (
                   <Star key={k} className="h-4 w-4 fill-current" />
                 ))}
               </div>
+
               <p className="mt-5 md:mt-6 font-display font-semibold tracking-tight text-[16px] md:text-[18px] leading-[1.4] text-black/85 flex-1">
                 {tr.quote}
               </p>
 
               <div className="mt-6 pt-5 border-t border-black/10 flex items-center gap-3">
-                <Avatar name={tr.name} index={i} />
+                <Avatar name={tr.name} />
                 <div className="min-w-0">
                   <p className="text-[14px] md:text-[15px] font-bold text-black truncate">
                     {tr.name}
