@@ -49,12 +49,17 @@ export const Header = () => {
             className="mx-auto max-w-[1400px] px-4 md:px-10 mt-2 md:mt-4"
           >
             <div
-              className={`flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-1.5 md:py-2.5 border border-black/10 transition-[background-color,box-shadow] duration-500 ${
-                scrolled
-                  ? "bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.15)]"
-                  : "bg-white/85"
-              }`}
+              className={`relative flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-1.5 md:py-2.5 border border-white/40 backdrop-blur-xl bg-white/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-500 overflow-hidden`}
             >
+              {/* Liquid-glass glossy highlight */}
+              <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none rounded-full"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0) 60%)",
+                }}
+              />
               <button
                 onClick={() => scrollTo("hero")}
                 data-testid="header-logo"
