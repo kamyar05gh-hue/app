@@ -28,7 +28,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] lg:min-h-0 lg:h-[calc(100vh-24px)] pt-24 md:pt-32 lg:pt-36 pb-12 md:pb-20 lg:pb-24 overflow-hidden flex items-center"
+      className="relative min-h-[100svh] lg:min-h-0 lg:h-[calc(100vh-24px)] pt-28 md:pt-36 lg:pt-40 pb-12 md:pb-20 lg:pb-24 overflow-hidden flex items-center"
       data-testid="hero-section"
     >
       <div

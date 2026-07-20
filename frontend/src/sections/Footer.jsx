@@ -47,7 +47,7 @@ export const Footer = () => {
           </h2>
         </Reveal>
 
-        <div className="mt-10 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
+        <div className="mt-10 md:mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
           <Reveal delay={240} as="p" className="max-w-md text-[14px] md:text-[17px] leading-relaxed text-white/65">
             {t.footer.paragraph}
           </Reveal>
@@ -59,29 +59,29 @@ export const Footer = () => {
 
       {/* MINI GRID */}
       <div className="relative border-t border-white/10">
-        <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-10 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-12 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
             <div className="md:col-span-8">
               <Logo variant="light" className="text-[30px] md:text-[36px]" showImage />
-              <p className="mt-4 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
+              <p className="mt-5 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
             </div>
 
-            <div className="md:col-span-4">
+            <div className="md:col-span-4 md:text-right">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
                 {t.footer.contactHeading}
               </p>
-              <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                <li>
+              <ul className="mt-5 md:mt-6 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
+                <li className="md:flex md:justify-end">
                   <a
                     href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
                     data-testid="footer-phone"
                     aria-label={t.footer.phoneAria}
-                    className="pm-link text-white/90 hover:text-white transition-colors duration-500 inline-flex items-center gap-2.5 text-[15px] md:text-[17px] font-medium leading-none"
+                    className="pm-link text-white/90 hover:text-white transition-colors duration-500 inline-flex flex-nowrap items-center gap-2.5 text-[15px] md:text-[17px] font-medium leading-none whitespace-nowrap"
                   >
-                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0 align-middle" strokeWidth={1.8} />
-                    <span className="leading-none">{t.footer.phone}</span>
+                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0" strokeWidth={1.8} />
+                    <span className="leading-none whitespace-nowrap">{t.footer.phone}</span>
                   </a>
                 </li>
               </ul>
@@ -100,7 +100,7 @@ export const Footer = () => {
           >
             PlanMove
           </div>
-          <div className="mt-8 md:mt-10 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] leading-none text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
+          <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] leading-none text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
             <span className="leading-none">© {new Date().getFullYear()} PlanMove</span>
             <span className="leading-none">{t.footer.bottomNote}</span>
           </div>
