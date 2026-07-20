@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WhatsAppButton, WhatsAppIcon } from "@/components/WhatsAppButton";
-import { WHATSAPP_URL } from "@/lib/constants";
 import { Logo } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -18,6 +18,7 @@ const scrollTo = (id) => {
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     let ticking = false;
@@ -69,7 +70,7 @@ export const Header = () => {
                   <WhatsAppButton size="sm" testId="header-cta-button" />
                 </div>
                 <a
-                  href={WHATSAPP_URL}
+                  href={t.whatsapp.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="header-cta-button-mobile"

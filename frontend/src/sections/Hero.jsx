@@ -3,12 +3,14 @@ import { Check, Star } from "lucide-react";
 import RevealText from "@/components/RevealText";
 import HeroVisual from "@/components/HeroVisual";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section
       id="hero"
-      className="relative pt-20 md:pt-28 pb-14 md:pb-20 overflow-hidden"
+      className="relative pt-24 md:pt-32 pb-8 md:pb-12 overflow-hidden"
       data-testid="hero-section"
     >
       <div
@@ -27,7 +29,7 @@ export const Hero = () => {
       />
 
       <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* LEFT — Copy */}
           <div className="lg:col-span-6 relative z-10">
             <motion.p
@@ -39,7 +41,7 @@ export const Hero = () => {
             >
               <span className="inline-flex items-center gap-2">
                 <span
-                  aria-label="Schweiz"
+                  aria-label={t.hero.flagAria}
                   className="inline-grid place-items-center h-5 w-5 md:h-6 md:w-6 rounded-[4px] bg-[#D52B1E] text-white text-[10px] md:text-[11px] font-black tracking-wide"
                   style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.15)" }}
                 >
@@ -48,19 +50,19 @@ export const Hero = () => {
                     <span className="absolute w-[3px] h-3.5 bg-white rounded-[1px]" />
                   </span>
                 </span>
-                <span>Für Umzug &amp; Reinigung Unternehmer gemacht</span>
+                <span>{t.hero.tagline}</span>
               </span>
             </motion.p>
 
             <RevealText
               as="h1"
-              className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.035em] text-[38px] sm:text-[54px] md:text-[76px] lg:text-[86px] leading-[0.95]"
+              className="mt-8 md:mt-10 font-display font-extrabold tracking-[-0.035em] text-[34px] sm:text-[46px] md:text-[60px] lg:text-[68px] leading-[0.88]"
               lines={[
-                <>Mehr Kunden.</>,
-                <>Mehr Zeit.</>,
-                <>Mehr Geld.</>,
+                ...t.hero.headlines.map((line, i) => (
+                  <span key={`l${i}`}>{line}</span>
+                )),
                 <span className="text-[#25D366]" key="l4">
-                  Weniger Stress.
+                  {t.hero.headlineHighlight}
                 </span>,
               ]}
             />
@@ -69,15 +71,10 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 md:mt-8 max-w-xl space-y-2.5 md:space-y-3 text-[15px] md:text-[17px] leading-relaxed text-black/75"
+              className="mt-5 md:mt-6 max-w-xl space-y-2 md:space-y-2.5 text-[14px] md:text-[15.5px] leading-relaxed text-black/75"
               data-testid="hero-benefits-list"
             >
-              {[
-                "Einfach in Ihrer Muttersprache sprechen – MOMO erledigt alles auf Deutsch.",
-                "Offerten in wenigen Sekunden – einfach sprechen, MOMO schreibt perfektes Deutsch.",
-                "Rechnungen sofort erstellen und versenden.",
-                "Deutsche Briefe & E-Mails verstehen und beantworten.",
-              ].map((line, i) => (
+              {t.hero.benefits.map((line, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
                     <Check className="h-3 w-3" strokeWidth={3.5} />
@@ -91,10 +88,8 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 md:mt-10 flex flex-col items-start gap-5"
+              className="mt-6 md:mt-7 flex flex-col items-start gap-4"
             >
-              <WhatsAppButton size="lg" testId="hero-cta-button" />
-
               {/* Google Review chip */}
               <div
                 className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 pl-2 pr-3.5 py-1.5"
@@ -103,7 +98,7 @@ export const Hero = () => {
                 <span className="grid place-items-center h-7 w-7 rounded-full bg-white shadow-[0_2px_6px_-2px_rgba(0,0,0,0.25)]">
                   <GoogleGIcon />
                 </span>
-                <span className="flex items-center gap-0.5" aria-label="4.9 von 5 Sternen">
+                <span className="flex items-center gap-0.5" aria-label={t.hero.starsAria}>
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
@@ -111,12 +106,14 @@ export const Hero = () => {
                     />
                   ))}
                 </span>
-                <span className="font-mono-pm text-[11px] md:text-[12px] tracking-[0.04em] text-black/70">
+                <span className="font-helvetica text-[11px] md:text-[12px] tracking-[0.04em] text-black/70">
                   <span className="font-bold text-black">4.9/5</span>
                   <span className="text-black/40"> · </span>
-                  120+ Bewertungen
+                  {t.hero.reviews}
                 </span>
               </div>
+
+              <WhatsAppButton size="lg" testId="hero-cta-button" />
             </motion.div>
           </div>
 

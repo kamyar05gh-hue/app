@@ -44,6 +44,10 @@ body {
     font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
+.font-helvetica {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* Selection */
 ::selection {
     background: #0047ff;
@@ -355,5 +359,24 @@ html.lenis body {
 @layer base {
     * {
         @apply border-border;
+    }
+}
+
+/* Respect reduced-motion preferences and simplify animations on small screens */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .reveal-line {
+        padding: 0;
+        margin: 0;
+    }
+    .reveal-line + .reveal-line {
+        margin-top: 0;
     }
 }

@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from "@/lib/constants";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
   <svg viewBox="0 0 32 32" fill="currentColor" className={className} aria-hidden>
@@ -14,10 +14,11 @@ export const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
  */
 export const WhatsAppButton = ({
   size = "md",
-  label = "Jetzt auf WhatsApp schreiben",
+  label,
   testId = "whatsapp-cta",
   className = "",
 }) => {
+  const { t } = useLanguage();
   const sizes = {
     sm: "px-3.5 py-2 text-[12px] md:text-[13px] gap-1.5 md:gap-2",
     md: "px-5 py-3 md:px-6 md:py-3.5 text-[13px] md:text-[14px] gap-2 md:gap-2.5",
@@ -26,15 +27,15 @@ export const WhatsAppButton = ({
 
   return (
     <a
-      href={WHATSAPP_URL}
+      href={t.whatsapp.url}
       target="_blank"
       rel="noopener noreferrer"
       data-testid={testId}
-      className={`pm-wa-btn group relative isolate inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:text-white overflow-hidden ${sizes[size]} ${className}`}
+      className={`pm-wa-btn group relative isolate inline-flex items-center justify-center rounded-full font-semibold tracking-tight text-white bg-[#25D366] hover:text-white overflow-hidden whitespace-nowrap ${sizes[size]} ${className}`}
     >
       {/* Slide-in dark-green fill */}
       <span aria-hidden className="pm-wa-fill pointer-events-none absolute inset-0" />
-      <span className="relative z-10">{label}</span>
+      <span className="relative z-10">{label ?? t.whatsappButton.label}</span>
       <span className="relative z-10 grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full bg-white/20">
         <WhatsAppIcon className="h-3 w-3 md:h-3.5 md:w-3.5" />
       </span>

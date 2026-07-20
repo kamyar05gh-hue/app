@@ -2,8 +2,12 @@ import { Logo } from "@/components/Logo";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Reveal from "@/components/Reveal";
 import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+  const navHrefs = ["#hero", "#probleme", "#loesungen", "#vorteile"];
+  const legalTestIds = ["footer-impressum", "footer-datenschutz", "footer-agb"];
   return (
     <footer
       className="relative bg-[#0A0A0A] text-white overflow-hidden"
@@ -30,7 +34,7 @@ export const Footer = () => {
         <Reveal as="p" className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50">
           <span className="inline-flex items-center gap-2">
             <span className="h-px w-6 bg-white/40" />
-            Ihr nächster Schritt
+            {t.footer.kicker}
           </span>
         </Reveal>
 
@@ -39,17 +43,15 @@ export const Footer = () => {
             data-testid="footer-headline"
             className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.045em] text-[44px] sm:text-[64px] md:text-[120px] lg:text-[152px] leading-[0.92]"
           >
-            Bereit für{" "}
+            {t.footer.headlineA}
             <br />
-            mehr <span className="italic font-light text-[#25D366]">Umsatz?</span>
+            {t.footer.headlineB}<span className="italic font-light text-[#25D366]">{t.footer.headlineHighlight}</span>
           </h2>
         </Reveal>
 
         <div className="mt-10 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
           <Reveal delay={240} as="p" className="max-w-md text-[14px] md:text-[17px] leading-relaxed text-white/65">
-            Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne
-            Verpflichtung. Erfahren Sie in fünf Minuten, wie MOMO Ihr KMU
-            verändert.
+            {t.footer.paragraph}
           </Reveal>
           <Reveal delay={360}>
             <WhatsAppButton size="lg" testId="footer-cta-button" />
@@ -64,65 +66,43 @@ export const Footer = () => {
             <div className="col-span-2 md:col-span-5">
               <Logo variant="light" className="text-[26px] md:text-[32px]" />
               <p className="mt-4 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
-                MOMO ist der intelligente Assistent für Schweizer Umzugs- und
-                Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.
+                {t.footer.brandDescription}
               </p>
             </div>
 
             <div className="md:col-span-3">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
-                Navigation
+                {t.footer.navHeading}
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                <li>
-                  <a href="#hero" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    Für wen?
-                  </a>
-                </li>
-                <li>
-                  <a href="#probleme" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    Probleme
-                  </a>
-                </li>
-                <li>
-                  <a href="#loesungen" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    Lösungen
-                  </a>
-                </li>
-                <li>
-                  <a href="#vorteile" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    Vorteile
-                  </a>
-                </li>
+                {t.footer.navLinks.map((label, i) => (
+                  <li key={i}>
+                    <a href={navHrefs[i]} className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                      {label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="md:col-span-2">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
-                Rechtliches
+                {t.footer.legalHeading}
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                <li>
-                  <a href="#" data-testid="footer-impressum" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    Impressum
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-testid="footer-datenschutz" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    Datenschutz
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-testid="footer-agb" className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                    AGB
-                  </a>
-                </li>
+                {t.footer.legalLinks.map((label, i) => (
+                  <li key={i}>
+                    <a href="#" data-testid={legalTestIds[i]} className="pm-link text-white/80 hover:text-white transition-colors duration-500">
+                      {label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="col-span-2 md:col-span-2">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
-                Kontakt
+                {t.footer.contactHeading}
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
                 <li>
@@ -134,7 +114,7 @@ export const Footer = () => {
                     hallo@planmove.ch <ArrowUpRight className="h-3 w-3 shrink-0" />
                   </a>
                 </li>
-                <li className="text-white/55">Schweiz</li>
+                <li className="text-white/55">{t.footer.country}</li>
               </ul>
             </div>
           </div>
@@ -153,7 +133,7 @@ export const Footer = () => {
           </div>
           <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
             <span>© {new Date().getFullYear()} MOMO</span>
-            <span>Für Umzug & Reinigung · DSGVO Konform</span>
+            <span>{t.footer.bottomNote}</span>
           </div>
         </div>
       </div>

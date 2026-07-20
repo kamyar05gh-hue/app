@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Check } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 /**
  * Slick language switcher — DE (default), FR, IT.
- * UI-only for now (no i18n wiring). Persists selection to localStorage.
+ * Wired to LanguageContext: selection translates the whole site and
+ * persists to localStorage (pm_lang).
  * Responsive: pill on desktop, compact icon-only on mobile.
  */
 const LANGS = [
@@ -54,13 +56,8 @@ const FLAG_ICONS = {
 
 export const LanguageSwitcher = () => {
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState("DE");
+  const { lang, setLang, t } = useLanguage();
   const ref = useRef(null);
-
-  useEffect(() => {
-    const saved = typeof window !== "undefined" && localStorage.getItem("pm_lang");
-    if (saved && ["DE", "FR", "IT"].includes(saved)) setLang(saved);
-  }, []);
 
   useEffect(() => {
     const onClick = (e) => {
@@ -78,11 +75,6 @@ export const LanguageSwitcher = () => {
   const selectLang = (code) => {
     setLang(code);
     setOpen(false);
-    try {
-      localStorage.setItem("pm_lang", code);
-    } catch (e) {
-      // ignore
-    }
   };
 
   return (
@@ -93,11 +85,11 @@ export const LanguageSwitcher = () => {
         data-testid="language-switcher-trigger"
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={`Sprache wechseln — aktuell ${lang}`}
+        aria-label={t.languageSwitcher.ariaLabel(lang)}
         className="inline-flex items-center gap-1.5 md:gap-2 h-9 md:h-10 pl-2 pr-2.5 md:pl-2.5 md:pr-3 rounded-full bg-white border border-black/10 hover:border-black/25 transition-colors duration-300"
       >
         {FLAG_ICONS[lang]}
-        <span className="font-mono-pm text-[11px] md:text-[12px] font-semibold tracking-[0.05em] text-black/80">
+        <span className="font-helvetica text-[11px] md:text-[12px] font-semibold tracking-[0.05em] text-black/80">
           {lang}
         </span>
         <ChevronDown
@@ -140,7 +132,7 @@ export const LanguageSwitcher = () => {
                     >
                       {l.label}
                     </span>
-                    <span className="font-mono-pm text-[10px] tracking-[0.08em] text-black/40">
+                    <span className="font-helvetica text-[10px] tracking-[0.08em] text-black/40">
                       {l.code}
                     </span>
                     {active && (
