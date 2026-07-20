@@ -78,7 +78,7 @@ export const Footer = () => {
                     href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
                     data-testid="footer-phone"
                     aria-label={t.footer.phoneAria}
-                    className="pm-link text-white/90 hover:text-white transition-colors duration-500 inline-flex flex-nowrap items-center gap-2.5 text-[15px] md:text-[17px] font-medium leading-none whitespace-nowrap"
+                    className="text-white/90 hover:text-white transition-colors duration-500 !inline-flex flex-row flex-nowrap items-center gap-2.5 text-[15px] md:text-[17px] font-medium leading-none whitespace-nowrap"
                   >
                     <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0" strokeWidth={1.8} />
                     <span className="leading-none whitespace-nowrap">{t.footer.phone}</span>
