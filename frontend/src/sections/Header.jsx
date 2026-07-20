@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { WhatsAppButton, WhatsAppIcon } from "@/components/WhatsAppButton";
 import { Logo } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/i18n/LanguageContext";
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -18,7 +16,6 @@ const scrollTo = (id) => {
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { t } = useLanguage();
 
   useEffect(() => {
     let ticking = false;
@@ -49,7 +46,7 @@ export const Header = () => {
             className="mx-auto max-w-[1400px] px-4 md:px-10 mt-2 md:mt-4"
           >
             <div
-              className={`relative flex items-center justify-between rounded-full pl-4 pr-2 md:pl-6 md:pr-3 py-1.5 md:py-2.5 border border-white/40 backdrop-blur-xl bg-white/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-500 overflow-hidden`}
+              className={`relative flex items-center justify-between rounded-full px-4 md:px-6 py-2 border border-white/40 backdrop-blur-xl bg-white/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-500 overflow-hidden`}
             >
               {/* Liquid-glass glossy highlight */}
               <div
@@ -71,19 +68,6 @@ export const Header = () => {
 
               <div className="flex items-center gap-2 md:gap-3">
                 <LanguageSwitcher />
-                <div className="hidden md:block">
-                  <WhatsAppButton size="sm" testId="header-cta-button" />
-                </div>
-                <a
-                  href={t.whatsapp.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid="header-cta-button-mobile"
-                  aria-label="WhatsApp"
-                  className="md:hidden grid place-items-center h-9 w-9 rounded-full bg-[#25D366] hover:bg-[#168222] text-white transition-colors duration-500"
-                >
-                  <WhatsAppIcon className="h-4 w-4" />
-                </a>
               </div>
             </div>
           </motion.div>
