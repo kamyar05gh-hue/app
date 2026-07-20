@@ -4,6 +4,7 @@
  * background to avoid blank/white flashes and layout shifts.
  */
 import { useState, useRef, useEffect } from "react";
+import { ImageIcon } from "lucide-react";
 
 export const SmoothImage = ({
   src,
@@ -17,13 +18,13 @@ export const SmoothImage = ({
   placeholderClassName = "bg-[#E9E4DA]",
 }) => {
   const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
   const imgRef = useRef(null);
 
   useEffect(() => {
     const img = imgRef.current;
-    if (img && img.complete) {
-      setLoaded(true);
-    }
+    if (!img) return;
+    setLoaded(img.complete && img.naturalHeight !== 0);
   }, [src]);
 
   return (
@@ -31,10 +32,16 @@ export const SmoothImage = ({
       {/* Placeholder / skeleton */}
       <div
         aria-hidden
-        className={`absolute inset-0 transition-opacity duration-700 ${
-          loaded ? "opacity-0" : "opacity-100 animate-pulse"
-        } ${placeholderClassName}`}
-      />
+        className={`absolute inset-0 z-0 transition-opacity duration-700 ${
+          loaded && !failed ? "opacity-0" : "opacity-100"
+        } ${failed ? "bg-[#E9E4DA]" : placeholderClassName}`}
+      >
+        {failed && (
+          <span className="absolute inset-0 flex items-center justify-center text-black/20">
+            <ImageIcon className="h-8 w-8" />
+          </span>
+        )}
+      </div>
       <img
         ref={imgRef}
         src={src}
@@ -44,7 +51,8 @@ export const SmoothImage = ({
         loading={loading}
         decoding={decoding}
         onLoad={() => setLoaded(true)}
-        className={`relative z-10 h-full w-full object-cover transition-[opacity,transform] duration-700 ${
+        onError={() => setFailed(true)}
+        className={`relative z-10 h-full w-full object-cover bg-[#E9E4DA] transition-[opacity,transform] duration-700 ${
           loaded ? "opacity-100" : "opacity-0"
         } ${className}`}
       />

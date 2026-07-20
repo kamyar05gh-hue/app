@@ -246,7 +246,9 @@ export const Problems = () => {
           <ClimaxCard />
         </div>
       </div>
-      <BeforeAfter />
+      <div className="mt-12 md:mt-20">
+        <BeforeAfter />
+      </div>
     </section>
   );
 };

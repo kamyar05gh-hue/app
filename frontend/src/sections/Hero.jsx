@@ -5,12 +5,30 @@ import HeroVisual from "@/components/HeroVisual";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+const GlowTick = () => (
+  <span className="mt-0.5 grid place-items-center h-5 w-5 md:h-6 md:w-6 rounded-full shrink-0 relative">
+    {/* Deep green glow ring */}
+    <span
+      aria-hidden
+      className="absolute inset-0 rounded-full"
+      style={{
+        background: "radial-gradient(circle, rgba(37,211,102,0.55) 0%, rgba(37,211,102,0.18) 45%, transparent 70%)",
+        filter: "blur(4px)",
+      }}
+    />
+    {/* Solid gradient check background */}
+    <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#25D366] to-[#1EB955] shadow-[0_4px_14px_-4px_rgba(37,211,102,0.6)]">
+      <Check className="h-2.5 w-2.5 md:h-3 md:w-3 text-white" strokeWidth={3.5} />
+    </span>
+  </span>
+);
+
 export const Hero = () => {
   const { t } = useLanguage();
   return (
     <section
       id="hero"
-      className="relative pt-24 md:pt-32 pb-8 md:pb-12 overflow-hidden"
+      className="relative min-h-[100svh] lg:min-h-0 lg:h-[calc(100vh-24px)] pt-20 md:pt-24 lg:pt-28 pb-6 md:pb-8 overflow-hidden flex items-center"
       data-testid="hero-section"
     >
       <div
@@ -28,15 +46,15 @@ export const Hero = () => {
         style={{ background: "radial-gradient(circle, rgba(37,211,102,0.18), transparent 60%)" }}
       />
 
-      <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="relative mx-auto max-w-[1400px] px-5 md:px-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* LEFT — Copy */}
           <div className="lg:col-span-6 relative z-10">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[13px] md:text-[15px] tracking-[0.1em] uppercase font-bold text-[#0047ff]"
+              className="text-[12px] md:text-[14px] tracking-[0.1em] uppercase font-bold text-[#0047ff]"
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
@@ -56,7 +74,7 @@ export const Hero = () => {
 
             <RevealText
               as="h1"
-              className="mt-8 md:mt-10 font-display font-extrabold tracking-[-0.035em] text-[34px] sm:text-[46px] md:text-[60px] lg:text-[68px] leading-[0.88]"
+              className="mt-5 md:mt-6 lg:mt-7 font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[54px] lg:text-[60px] leading-[0.9]"
               lines={[
                 ...t.hero.headlines.map((line, i) => (
                   <span key={`l${i}`}>{line}</span>
@@ -71,14 +89,12 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-5 md:mt-6 max-w-xl space-y-2 md:space-y-2.5 text-[14px] md:text-[15.5px] leading-relaxed text-black/75"
+              className="mt-4 md:mt-5 max-w-xl space-y-1.5 md:space-y-2 text-[13px] md:text-[14.5px] leading-relaxed text-black/75"
               data-testid="hero-benefits-list"
             >
               {t.hero.benefits.map((line, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
-                    <Check className="h-3 w-3" strokeWidth={3.5} />
-                  </span>
+                  <GlowTick />
                   <span>{line}</span>
                 </li>
               ))}
@@ -88,7 +104,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 md:mt-7 flex flex-col items-start gap-4"
+              className="mt-5 md:mt-6 flex flex-col items-start gap-3"
             >
               {/* Google Review chip */}
               <div
@@ -118,7 +134,7 @@ export const Hero = () => {
           </div>
 
           {/* RIGHT — Hero composite visual (desktop only) */}
-          <div className="hidden lg:flex lg:col-span-6 relative justify-center">
+          <div className="hidden lg:flex lg:col-span-6 relative justify-center h-full items-center">
             <HeroVisual />
           </div>
         </div>

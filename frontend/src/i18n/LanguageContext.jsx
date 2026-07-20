@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import translations from "./translations";
 
 const STORAGE_KEY = "pm_lang";
-const LANG_CODES = ["DE", "IT", "ES", "SQ", "KU"];
+const LANG_CODES = ["DE", "IT"];
 
 const getInitialLang = () => {
   if (typeof window === "undefined") return "DE";
