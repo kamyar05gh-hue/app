@@ -206,7 +206,7 @@ html.lenis body {
     box-shadow: 0 20px 45px -25px rgba(0, 0, 0, 0.18);
     contain: layout paint;
     content-visibility: auto;
-    contain-intrinsic-size: 1px 400px;
+    contain-intrinsic-size: 1px 480px;
 }
 .pm-card-dark {
     box-shadow: 0 40px 90px -30px rgba(37, 211, 102, 0.25);

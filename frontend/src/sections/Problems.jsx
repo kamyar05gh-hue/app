@@ -123,9 +123,9 @@ const ProblemCard = ({ p, index }) => {
   return (
     <article
       data-testid={`problem-card-${p.n}`}
-      className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)]"
+      className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] h-full"
     >
-      <div className="grid grid-cols-5 md:grid-cols-12">
+      <div className="grid grid-cols-5 md:grid-cols-12 h-full min-h-[380px] md:min-h-[440px]">
         {/* Visual — realistic photo */}
         <div
           className={`col-span-2 md:col-span-5 relative min-h-[210px] sm:min-h-[260px] md:min-h-[360px] ${
@@ -345,7 +345,7 @@ export const Problems = () => {
       {/* 2-col grid on desktop, single-col on mobile. */}
       <div id="loesungen" className="relative">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-10 items-stretch">
             {problems.map((p, i) => (
               <ProblemCard key={p.n} p={p} index={i} />
             ))}
