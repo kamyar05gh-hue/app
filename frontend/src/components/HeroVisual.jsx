@@ -1,11 +1,10 @@
 import { useLanguage } from "@/i18n/LanguageContext";
+import SmoothImage from "@/components/SmoothImage";
 
 /**
- * Hero visual — vertical portrait image of the MOMO assistant at a
- * stressed entrepreneur's desk. The notification cards are part of the
- * artwork itself, so no HTML overlays are rendered on top.
- *
- * Ambient green glow + rounded frame. Static (no scroll animations).
+ * Hero visual — matches the hero image's natural 13:10 ratio.
+ * The notification cards are part of the artwork itself, so no HTML
+ * overlays are rendered on top. Ambient green glow + rounded frame.
  */
 export const HeroVisual = () => {
   const { t } = useLanguage();
@@ -24,14 +23,14 @@ export const HeroVisual = () => {
       {/* Photo canvas — matches the hero image's natural 13:10 ratio */}
       <div className="relative w-full max-w-[620px] md:max-w-[680px] aspect-[13/10]">
         <div className="relative h-full w-full rounded-[1.75rem] md:rounded-[2rem] overflow-hidden bg-[#E9E4DA] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.25)]">
-          <img
+          <SmoothImage
             src="/images/hero-momo.jpg"
             alt={t.hero.visualAlt}
-            loading="eager"
-            decoding="async"
             width="1430"
             height="1100"
-            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+            decoding="async"
+            containerClassName="absolute inset-0 h-full w-full"
           />
         </div>
       </div>

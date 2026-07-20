@@ -1,6 +1,7 @@
 import { Check, Truck, SprayCan } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Reveal from "@/components/Reveal";
+import SmoothImage from "@/components/SmoothImage";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export const FinalCTA = () => {
@@ -34,14 +35,15 @@ export const FinalCTA = () => {
           <div className="hidden lg:block lg:col-span-3">
             <Reveal delay={120}>
               <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] bg-[#F5F4EF]">
-                <img
+                <SmoothImage
                   src="/images/final-cta-01.jpg"
                   alt=""
-                  loading="lazy"
-                  decoding="async"
                   width="450"
                   height="560"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                  containerClassName="absolute inset-0 h-full w-full"
+                  placeholderClassName="bg-[#F5F4EF]"
                 />
               </div>
             </Reveal>
@@ -95,14 +97,15 @@ export const FinalCTA = () => {
           <div className="hidden lg:block lg:col-span-3">
             <Reveal delay={200}>
               <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] bg-[#F5F4EF]">
-                <img
+                <SmoothImage
                   src="/images/final-cta-02.jpg"
                   alt=""
-                  loading="lazy"
-                  decoding="async"
                   width="450"
                   height="560"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                  containerClassName="absolute inset-0 h-full w-full"
+                  placeholderClassName="bg-[#F5F4EF]"
                 />
               </div>
             </Reveal>

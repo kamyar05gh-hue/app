@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Check, Bot, Sparkles } from "lucide-react";
 import { IMG } from "@/lib/constants";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SmoothImage from "@/components/SmoothImage";
 
 // Renders a translation segment array: plain strings as-is,
 // { hl: "..." } wrapped in a highlight span with the given class.
@@ -35,14 +36,16 @@ const ProblemCard = ({ p, card }) => {
     >
       {/* Image */}
       <div className="relative aspect-[16/9] overflow-hidden bg-[#0F1013]">
-        <img
+        <SmoothImage
           src={p.img.src}
           alt={card.alt}
-          loading="lazy"
-          decoding="async"
           width="800"
           height="450"
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+          loading="lazy"
+          decoding="async"
+          containerClassName="absolute inset-0 h-full w-full"
+          placeholderClassName="bg-[#0F1013]"
+          className="group-hover:scale-[1.03]"
         />
         {/* Number badge — top-left */}
         <span
@@ -82,14 +85,15 @@ const ClimaxCard = () => {
         <div className="grid grid-cols-1 md:grid-cols-12">
           {/* LEFT: Image — stressed man crossed out */}
           <div className="md:col-span-4 relative min-h-[280px] md:min-h-[520px] overflow-hidden bg-[#F5F4EF]">
-            <img
+            <SmoothImage
               src="/images/card-07.jpg"
               alt={c.imageAlt}
-              loading="lazy"
-              decoding="async"
               width="400"
               height="520"
-              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
+              containerClassName="absolute inset-0 h-full w-full"
+              placeholderClassName="bg-[#F5F4EF]"
             />
             {/* Green X overlay */}
             <div aria-hidden className="absolute inset-0 pointer-events-none">
