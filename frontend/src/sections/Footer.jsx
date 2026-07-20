@@ -70,7 +70,7 @@ export const Footer = () => {
             </div>
 
             <div className="md:col-span-3">
-              <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
                 Navigation
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
@@ -98,7 +98,7 @@ export const Footer = () => {
             </div>
 
             <div className="md:col-span-2">
-              <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
                 Rechtliches
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
@@ -121,7 +121,7 @@ export const Footer = () => {
             </div>
 
             <div className="col-span-2 md:col-span-2">
-              <p className="text-[10px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
                 Kontakt
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
@@ -151,7 +151,7 @@ export const Footer = () => {
           >
             PlanMove
           </div>
-          <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] font-mono-pm text-white/40">
+          <div className="mt-6 md:mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
             <span>© {new Date().getFullYear()} MOMO — 100% Swiss Made</span>
             <span>Für Umzug & Reinigung · DSGVO Konform</span>
           </div>

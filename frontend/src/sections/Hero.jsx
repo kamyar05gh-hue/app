@@ -38,8 +38,17 @@ export const Hero = () => {
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
-                <span className="inline-block text-[16px] md:text-[20px] leading-none" aria-hidden>🇨🇭</span>
-                Für Umzug & Reinigung Unternehmer gemacht
+                <span
+                  aria-label="Schweiz"
+                  className="inline-grid place-items-center h-5 w-5 md:h-6 md:w-6 rounded-[4px] bg-[#D52B1E] text-white text-[10px] md:text-[11px] font-black tracking-wide"
+                  style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.15)" }}
+                >
+                  <span className="relative flex items-center justify-center">
+                    <span className="absolute h-[2px] w-3 bg-white" />
+                    <span className="absolute w-[2px] h-3 bg-white" />
+                  </span>
+                </span>
+                <span className="text-[#0a2540]">Für Umzug & Reinigung Unternehmer gemacht</span>
               </span>
             </motion.p>
 
@@ -69,7 +78,10 @@ export const Hero = () => {
                 "Deutsche Briefe & E-Mails verstehen und beantworten.",
               ].map((line, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="mt-1 grid place-items-center h-5 w-5 rounded-full bg-[#25D366]/15 text-[#1EB955] shrink-0">
+                  <span
+                    className="mt-1 grid place-items-center h-5 w-5 rounded-full bg-[#25D366]/15 text-[#1EB955] shrink-0"
+                    style={{ boxShadow: "0 0 14px 2px rgba(37,211,102,0.35)" }}
+                  >
                     <Check className="h-3 w-3" strokeWidth={3} />
                   </span>
                   <span>{line}</span>

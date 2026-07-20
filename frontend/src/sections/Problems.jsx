@@ -84,46 +84,34 @@ const problems = [
   },
 ];
 
-// ---------- Sticky Stack Card (perf-optimized: CSS only, no per-card useScroll) ----------
-const StickyCard = ({ p, index }) => {
-  const topOffset = 120 + index * 16;
-
+// ---------- Plain Card (no sticky, alternating image/text) ----------
+const ProblemCard = ({ p, index }) => {
+  const imgLeft = index % 2 === 0;
   return (
-    <div
-      className="sticky pm-sticky-card"
-      style={{ top: `${topOffset}px`, zIndex: 10 + index }}
+    <article
       data-testid={`problem-card-${p.n}`}
+      className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] transition-shadow duration-500"
     >
-      <article
-        className="pm-card relative mx-auto max-w-[1200px] rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-          {/* Visual */}
-          <div className={`lg:col-span-6 relative h-[220px] sm:h-[280px] lg:h-[520px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-            <p.Visual />
-            <div className="absolute top-4 left-4 z-10">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-white/60 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-widest">
-                <span className="chapter-num text-[14px]">{p.n}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Copy */}
-          <div className={`lg:col-span-6 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-start pt-10 md:pt-14 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[26px] sm:text-[30px] md:text-[44px] leading-[1.05] text-black">
-              {p.title}
-            </h3>
-            <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-black/65 max-w-md">
-              {p.body}
-            </p>
-            <div className="mt-5 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
-              <Check className="h-4 w-4" strokeWidth={3} />
-              MOMO löst das
-            </div>
+      <div className="grid grid-cols-5 md:grid-cols-12">
+        {/* Visual — smaller share */}
+        <div className={`col-span-2 md:col-span-4 relative min-h-[180px] sm:min-h-[220px] md:min-h-[300px] ${imgLeft ? "" : "order-2"}`}>
+          <p.Visual />
+        </div>
+        {/* Copy — larger share */}
+        <div className={`col-span-3 md:col-span-8 p-5 sm:p-7 md:p-10 flex flex-col justify-center ${imgLeft ? "" : "order-1"}`}>
+          <h3 className="font-display font-extrabold tracking-[-0.03em] text-[19px] sm:text-[24px] md:text-[34px] leading-[1.1] text-black">
+            {p.title}
+          </h3>
+          <p className="mt-3 md:mt-4 text-[13px] sm:text-[15px] md:text-[17px] leading-relaxed text-black/70">
+            {p.body}
+          </p>
+          <div className="mt-4 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
+            <Check className="h-4 w-4" strokeWidth={3} />
+            MOMO löst das
           </div>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
   );
 };
 
@@ -229,8 +217,7 @@ const ClimaxCard = () => {
 
   return (
     <div
-      className="sticky pm-sticky-card"
-      style={{ top: "216px", zIndex: 20 }}
+      className="mb-6 md:mb-10"
       data-testid="problem-card-07"
     >
       <motion.article
@@ -238,40 +225,47 @@ const ClimaxCard = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="pm-card relative mx-auto max-w-[1200px] rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden"
+        className="pm-card relative rounded-[1.5rem] md:rounded-[2rem] border border-black/[0.06] bg-white overflow-hidden"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12">
-          {/* Visual */}
-          <div className="lg:col-span-6 relative h-[340px] sm:h-[380px] lg:h-[520px]">
+          {/* Visual — larger climax visual */}
+          <div className="lg:col-span-7 relative h-[280px] sm:h-[360px] lg:h-[620px]">
             <ClimaxVisual bars={bars} notifications={notifications} />
-            <div className="absolute top-4 left-4 z-10">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-white/60 px-3 py-1.5 text-[10px] uppercase tracking-widest">
-                <span className="chapter-num text-[14px]">07</span>
-                <span className="h-3 w-px bg-black/20" />
-                <span>Die MOMO-Magie</span>
-              </div>
-            </div>
           </div>
 
-          {/* Copy */}
-          <div className="lg:col-span-6 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-            <span className="chapter-num text-[42px] md:text-[72px] leading-none text-black/25 mb-3 md:mb-4">
-              07
-            </span>
-            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[22px] sm:text-[26px] md:text-[38px] leading-[1.08] text-black">
+          {/* Copy — MOMO bot with ticks */}
+          <div className="lg:col-span-5 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-center bg-white">
+            <div className="inline-flex items-center gap-2 text-[10px] md:text-[11px] uppercase tracking-widest text-[#1EB955] font-semibold mb-3 md:mb-4">
+              <span className="grid place-items-center h-6 w-6 rounded-full bg-[#25D366]/15">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+              </span>
+              Die MOMO-Magie
+            </div>
+            <h3 className="font-display font-extrabold tracking-[-0.03em] text-[26px] sm:text-[32px] md:text-[46px] leading-[1.02] text-black">
               Ein Satz sagen.
               <br />
               <span className="text-[#25D366]">Alles</span> ist erledigt.
             </h3>
-            <p className="mt-4 text-[14px] md:text-[16px] leading-relaxed text-black/60 max-w-md">
-              Keine Notizen, keine Excel-Listen, keine langen Abende. MOMO
-              hört zu, versteht — und handelt in Sekunden. Offerten,
-              Nachrichten, Rechnungen und Termine — automatisch.
+            <p className="mt-4 md:mt-5 text-[14px] md:text-[17px] leading-relaxed text-black/70 max-w-md">
+              Keine Notizen, keine Excel-Listen, keine langen Abende. MOMO hört zu,
+              versteht — und handelt in Sekunden.
             </p>
-            <div className="mt-5 inline-flex items-center gap-2 text-[11px] md:text-[12px] uppercase tracking-widest text-[#1EB955] font-semibold">
-              <Check className="h-4 w-4" strokeWidth={3} />
-              MOMO erledigt alles
-            </div>
+
+            <ul className="mt-6 md:mt-8 space-y-3">
+              {[
+                "Offerten & Rechnungen erstellen",
+                "WhatsApp & E-Mails beantworten",
+                "Termine automatisch buchen",
+                "Kunden nachfassen ohne Aufwand",
+              ].map((t, i) => (
+                <li key={i} className="flex items-start gap-3 text-[14px] md:text-[15px] font-medium text-black/85">
+                  <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
+                    <Check className="h-3 w-3" strokeWidth={3} />
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </motion.article>
@@ -307,15 +301,15 @@ export const Problems = () => {
         </motion.div>
       </div>
 
-      {/* Sticky stacking cards (disabled on mobile — plain stacked layout) */}
+      {/* 2-col grid on desktop, single-col on mobile. No sticky. */}
       <div id="loesungen" className="relative">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="relative space-y-5 md:space-y-16 md:pb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 mb-6 md:mb-10">
             {problems.map((p, i) => (
-              <StickyCard key={p.n} p={p} index={i} />
+              <ProblemCard key={p.n} p={p} index={i} />
             ))}
-            <ClimaxCard />
           </div>
+          <ClimaxCard />
         </div>
       </div>
     </section>
