@@ -44,6 +44,25 @@ Stack: React 18 · Tailwind CSS · framer-motion (mount animations only) · luci
 
 ## Implementation History
 
+### 2026-07-20 — Iteration 5 (Msg after 354 — big visual overhaul + language switcher)
+- **NEW `LanguageSwitcher.jsx`**: slick pill dropdown in Header showing DE (Swiss cross), FR, IT flags. UI-only (no functional i18n yet). Persists selection to `localStorage['pm_lang']`. Closes on ESC / outside-click. Responsive.
+- **NEW `HeroVisual.jsx`**: replaces `PhoneMockup` in Hero. Photo canvas (Pexels 3184296) + 3 floating chat cards on right ("Neue Anfrage 23:47", "WhatsApp Nachricht", "E-Mail von Herr Müller") + bottom-right "MOMO hat geantwortet · Professionell. Schnell. Automatisch." confirmation card + MOMO pill badge on photo. Matches user's mockup composition.
+- **Hero rewrite**:
+  - Tagline color changed from black to **blue `#0047ff`**, uppercase + `text-[13px] md:text-[15px]` (smaller, tighter tracking)
+  - Added **Google Review chip** — inline Google G SVG + 5 green stars (same Star icon as Testimonials) + `4.9/5 · 120+ Bewertungen`
+  - All benefit-list ticks converted from outline (`bg-[#25D366]/15 text-[#1EB955]`) to **filled** (`bg-[#25D366] text-white`) — matching Card 07 style
+  - Swiss flag Plus icon kept thick (3px bars)
+- **Problems section restructured** (major refactor):
+  - Was: alternating 2-col grid with side-by-side image/text.
+  - Now: **3-column grid** (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`), each card is **image-top / text-bottom** with aspect-16/11 image + green circular **number badge** (1-6) in top-left.
+  - Headlines highlight key words in green (e.g. *unbeantwortete*, *Deutsch*, *Büroarbeit*).
+  - Cards `items-stretch` → uniform row heights.
+- **Card 07 restructured** to match mockup 1-to-1:
+  - LEFT (col-4): photo with big SVG **green X overlay** + "7" number badge
+  - MIDDLE (col-5): "Vergessen Sie **Papierkram**…" heading + subhead + 4 voice-command pills (each in bone-colored pill with filled green tick + italic quote)
+  - RIGHT (col-3): dark rounded square with **Bot mascot** (green glow radial) + "MOMO erledigt den Rest." + 7 filled-tick services checklist + "Die MOMO-Magie" label
+- **Testing**: `testing_agent_v3_fork` iteration 5 → **100% pass** (22 checks, 0 bugs, 0 console errors, no horizontal overflow at 1920/768/390).
+
 ### 2026-07-20 — Iteration 4 (Msg 354 batch)
 - **Hero**: reduced desktop top-padding `pt-40 → pt-28` (higher above the fold); removed "Antwort innerhalb weniger Minuten" span; thickened Swiss flag plus bars from 2px → 3px.
 - **TrustBar**: mobile icon circles enlarged `h-8 w-8 → h-10 w-10`; icons `h-4 w-4`; label `text-[11px]`.
