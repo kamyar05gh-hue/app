@@ -44,7 +44,7 @@ const ProblemCard = ({ p, card }) => {
           loading="lazy"
           decoding="async"
           containerClassName="absolute inset-0 h-full w-full"
-          placeholderClassName="bg-[#0F1013]"
+          placeholderClassName="bg-[#E9E4DA]"
           className="group-hover:scale-[1.03]"
         />
         {/* Number badge — top-left */}
@@ -93,7 +93,7 @@ const ClimaxCard = () => {
               loading="lazy"
               decoding="async"
               containerClassName="absolute inset-0 h-full w-full"
-              placeholderClassName="bg-[#F5F4EF]"
+              placeholderClassName="bg-[#E9E4DA]"
             />
             {/* Green X overlay */}
             <div aria-hidden className="absolute inset-0 pointer-events-none">
