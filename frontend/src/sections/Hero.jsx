@@ -102,7 +102,7 @@ export const Hero = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className="h-3.5 w-3.5 fill-[#25D366] text-[#25D366]"
+                      className="h-3.5 w-3.5 pm-star-gold"
                     />
                   ))}
                 </span>
@@ -117,8 +117,8 @@ export const Hero = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT — Hero composite visual */}
-          <div className="lg:col-span-6 relative flex justify-center">
+          {/* RIGHT — Hero composite visual (desktop only) */}
+          <div className="hidden lg:flex lg:col-span-6 relative justify-center">
             <HeroVisual />
           </div>
         </div>

@@ -48,6 +48,12 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* Golden stars for reviews and testimonials */
+.pm-star-gold {
+    color: #FBBF24;
+    fill: #FBBF24;
+}
+
 /* Selection */
 ::selection {
     background: #0047ff;

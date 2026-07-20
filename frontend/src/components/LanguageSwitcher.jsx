@@ -3,15 +3,17 @@ import { ChevronDown, Check } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 /**
- * Slick language switcher — DE (default), FR, IT.
+ * Slick language switcher — DE (default), IT, ES, SQ, KU.
  * Wired to LanguageContext: selection translates the whole site and
  * persists to localStorage (pm_lang).
  * Responsive: pill on desktop, compact icon-only on mobile.
  */
 const LANGS = [
   { code: "DE", label: "Deutsch", flagBg: "#D52B1E", flagText: "CH" },
-  { code: "FR", label: "Français", flagBg: "#0055A4", flagText: "FR" },
   { code: "IT", label: "Italiano", flagBg: "#008C45", flagText: "IT" },
+  { code: "ES", label: "Español", flagBg: "#AA151B", flagText: "ES" },
+  { code: "SQ", label: "Shqip", flagBg: "#E41E20", flagText: "AL" },
+  { code: "KU", label: "Kurdî", flagBg: "#ED2024", flagText: "KU" },
 ];
 
 const SwissFlag = () => (
@@ -26,17 +28,6 @@ const SwissFlag = () => (
   </span>
 );
 
-const FrenchFlag = () => (
-  <span
-    className="inline-flex h-4 w-5 overflow-hidden rounded-[3px] border border-black/10"
-    aria-hidden
-  >
-    <span className="h-full w-1/3 bg-[#0055A4]" />
-    <span className="h-full w-1/3 bg-white" />
-    <span className="h-full w-1/3 bg-[#EF4135]" />
-  </span>
-);
-
 const ItalianFlag = () => (
   <span
     className="inline-flex h-4 w-5 overflow-hidden rounded-[3px] border border-black/10"
@@ -48,10 +39,52 @@ const ItalianFlag = () => (
   </span>
 );
 
+const SpanishFlag = () => (
+  <span
+    className="inline-flex flex-col h-4 w-5 overflow-hidden rounded-[3px] border border-black/10"
+    aria-hidden
+  >
+    <span className="h-[25%] w-full bg-[#AA151B]" />
+    <span className="h-[50%] w-full bg-[#F1BF00]" />
+    <span className="h-[25%] w-full bg-[#AA151B]" />
+  </span>
+);
+
+const AlbanianFlag = () => (
+  <span
+    className="inline-grid place-items-center h-4 w-5 overflow-hidden rounded-[3px] border border-black/10 bg-[#E41E20]"
+    aria-hidden
+  >
+    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="black">
+      <path d="M12 2l2.5 7.5h7.5l-6 4.5 2.5 7.5-6-4.5-6 4.5 2.5-7.5-6-4.5h7.5z" />
+    </svg>
+  </span>
+);
+
+const KurdishFlag = () => (
+  <span
+    className="inline-flex flex-col h-4 w-5 overflow-hidden rounded-[3px] border border-black/10"
+    aria-hidden
+  >
+    <span className="h-1/3 w-full bg-[#ED2024]" />
+    <span className="h-1/3 w-full bg-[#F6E827] relative">
+      <span className="absolute inset-0 flex items-center justify-center">
+        <svg viewBox="0 0 24 24" className="h-2.5 w-2.5" fill="#ED2024">
+          <circle cx="12" cy="12" r="5" />
+          <path d="M12 7l1 5 5 1-5 1-1 5-1-5-5-1 5-1z" fill="#F6E827" />
+        </svg>
+      </span>
+    </span>
+    <span className="h-1/3 w-full bg-[#00923F]" />
+  </span>
+);
+
 const FLAG_ICONS = {
   DE: <SwissFlag />,
-  FR: <FrenchFlag />,
   IT: <ItalianFlag />,
+  ES: <SpanishFlag />,
+  SQ: <AlbanianFlag />,
+  KU: <KurdishFlag />,
 };
 
 export const LanguageSwitcher = () => {

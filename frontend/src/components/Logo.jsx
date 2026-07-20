@@ -1,11 +1,12 @@
 /**
  * PlanMove wordmark logo — text-based, uses the display font (Outfit).
- * Small green dot after the "e" for a subtle brand mark.
+ * Optionally shows the brand mark image left of the wordmark.
  */
 export const Logo = ({
   className = "",
   variant = "dark", // "dark" = black on light bg, "light" = white on dark bg
   showDot = true,
+  showImage = true,
 }) => {
   const color = variant === "light" ? "text-white" : "text-black";
   return (
@@ -13,6 +14,14 @@ export const Logo = ({
       className={`inline-flex items-center gap-1.5 font-display font-extrabold tracking-[-0.04em] ${color} ${className}`}
       aria-label="PlanMove"
     >
+      {showImage && (
+        <img
+          src="/images/logo.png"
+          alt=""
+          aria-hidden
+          className="h-[1.1em] w-auto object-contain"
+        />
+      )}
       <span>PlanMove</span>
     </span>
   );

@@ -4,16 +4,22 @@ import { Check, Bot, Sparkles } from "lucide-react";
 import { IMG } from "@/lib/constants";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SmoothImage from "@/components/SmoothImage";
+import BeforeAfter from "@/sections/BeforeAfter";
 
 // Renders a translation segment array: plain strings as-is,
-// { hl: "..." } wrapped in a highlight span with the given class.
-const Segs = ({ segs, hlClass }) =>
+// { hl: "..." } wrapped in a green highlight span,
+// { b: "..." } wrapped in a black bold span.
+const Segs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
   segs.map((s, i) =>
     typeof s === "string" ? (
       <Fragment key={i}>{s}</Fragment>
-    ) : (
+    ) : s.hl ? (
       <span key={i} className={hlClass}>
         {s.hl}
+      </span>
+    ) : (
+      <span key={i} className={bClass}>
+        {s.b}
       </span>
     )
   );
@@ -142,7 +148,7 @@ const ClimaxCard = () => {
               {c.titleB}
             </h3>
             <p className="mt-3 md:mt-4 text-[13.5px] md:text-[15px] leading-relaxed text-black/60 max-w-md">
-              {c.sub}
+              <Segs segs={c.sub} hlClass="text-[#1EB955] font-semibold" />
             </p>
 
             <ul className="mt-5 md:mt-6 space-y-2.5" data-testid="climax-voice-commands">
@@ -240,6 +246,7 @@ export const Problems = () => {
           <ClimaxCard />
         </div>
       </div>
+      <BeforeAfter />
     </section>
   );
 };

@@ -1,13 +1,11 @@
 import { Logo } from "@/components/Logo";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Reveal from "@/components/Reveal";
-import { ArrowUpRight } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Footer = () => {
   const { t } = useLanguage();
-  const navHrefs = ["#hero", "#probleme", "#loesungen", "#vorteile"];
-  const legalTestIds = ["footer-impressum", "footer-datenschutz", "footer-agb"];
   return (
     <footer
       className="relative bg-[#0A0A0A] text-white overflow-hidden"
@@ -62,59 +60,30 @@ export const Footer = () => {
       {/* MINI GRID */}
       <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-10 md:py-20">
-          <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-10">
-            <div className="col-span-2 md:col-span-5">
-              <Logo variant="light" className="text-[26px] md:text-[32px]" />
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+            <div className="md:col-span-8">
+              <Logo variant="light" className="text-[26px] md:text-[32px]" showImage />
               <p className="mt-4 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
             </div>
 
-            <div className="md:col-span-3">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
-                {t.footer.navHeading}
-              </p>
-              <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                {t.footer.navLinks.map((label, i) => (
-                  <li key={i}>
-                    <a href={navHrefs[i]} className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="md:col-span-2">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
-                {t.footer.legalHeading}
-              </p>
-              <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                {t.footer.legalLinks.map((label, i) => (
-                  <li key={i}>
-                    <a href="#" data-testid={legalTestIds[i]} className="pm-link text-white/80 hover:text-white transition-colors duration-500">
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="col-span-2 md:col-span-2">
+            <div className="md:col-span-4">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
                 {t.footer.contactHeading}
               </p>
               <ul className="mt-4 md:mt-5 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
                 <li>
                   <a
-                    href="mailto:hallo@planmove.ch"
-                    data-testid="footer-email"
-                    className="pm-link text-white/80 hover:text-white transition-colors duration-500 inline-flex items-center gap-1 break-all"
+                    href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
+                    data-testid="footer-phone"
+                    aria-label={t.footer.phoneAria}
+                    className="pm-link text-white/80 hover:text-white transition-colors duration-500 inline-flex items-center gap-1.5"
                   >
-                    hallo@planmove.ch <ArrowUpRight className="h-3 w-3 shrink-0" />
+                    <Phone className="h-3.5 w-3.5 shrink-0" />
+                    {t.footer.phone}
                   </a>
                 </li>
-                <li className="text-white/55">{t.footer.country}</li>
               </ul>
             </div>
           </div>

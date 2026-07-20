@@ -1,14 +1,8 @@
-import {
-  ShieldCheck,
-  TrendingUp,
-  FileText,
-  Coffee,
-  Wallet,
-} from "lucide-react";
+import { Check } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const icons = [ShieldCheck, TrendingUp, FileText, Coffee, Wallet];
+const icons = [Check, Check, Check, Check, Check];
 
 export const TrustBar = () => {
   const { t } = useLanguage();

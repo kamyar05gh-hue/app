@@ -4,6 +4,7 @@ import TrustBar from "@/sections/TrustBar";
 import Problems from "@/sections/Problems";
 import Testimonials from "@/sections/Testimonials";
 import FinalCTA from "@/sections/FinalCTA";
+import FAQ from "@/sections/FAQ";
 import Footer from "@/sections/Footer";
 
 export default function Landing() {
@@ -15,6 +16,7 @@ export default function Landing() {
       <Problems />
       <Testimonials />
       <FinalCTA />
+      <FAQ />
       <Footer />
     </main>
   );
