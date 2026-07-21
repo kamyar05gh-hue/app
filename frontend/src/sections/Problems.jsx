@@ -192,7 +192,7 @@ const ClimaxCard = () => {
           {/* RIGHT: MOMO Bot + services checklist */}
           <div className="md:col-span-3 p-5 sm:p-8 md:p-10 flex flex-col items-center text-center md:items-start md:text-left justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
             {/* Bot mascot */}
-            <div className="relative">
+            <div className="relative self-center">
               <div className="grid place-items-center h-[96px] w-[96px] md:h-[140px] md:w-[140px] rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
                 <div
                   aria-hidden
@@ -204,7 +204,7 @@ const ClimaxCard = () => {
                 />
                 <Bot className="relative h-12 w-12 md:h-16 md:w-16 text-[#25D366]" strokeWidth={1.6} />
               </div>
-              <span className="mt-3 block font-display font-extrabold text-center md:text-left text-[15px] md:text-[17px] tracking-tight text-black">
+              <span className="mt-3 block font-display font-extrabold text-center text-[15px] md:text-[17px] tracking-tight text-black">
                 {c.momoRestA} <span className="text-black/50 font-medium">{c.momoRestB}</span>
               </span>
             </div>
