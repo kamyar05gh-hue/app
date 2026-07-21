@@ -30,7 +30,7 @@ export const Footer = () => {
 
       {/* GRAND STATEMENT */}
       <div className="relative mx-auto max-w-[1400px] px-5 md:px-10 pt-16 md:pt-40 pb-12 md:pb-24">
-        <Reveal as="p" className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] font-mono-pm text-white/50">
+        <Reveal as="p" className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] font-helvetica text-white/50 text-center md:text-left">
           <span className="inline-flex items-center gap-2">
             <span className="h-px w-6 bg-white/40" />
             {t.footer.kicker}
