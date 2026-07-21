@@ -29,7 +29,7 @@ export const TrustBar = () => {
       className="relative bg-[#F9FAFB] border-b border-black/[0.06]"
       data-testid="trust-bar"
     >
-      <div className="mx-auto max-w-[1400px] px-4 md:px-10 py-8 md:py-14">
+      <div className="mx-auto max-w-[1400px] px-4 md:px-10 py-6 md:py-14">
         <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-x-4 md:gap-x-8 gap-y-8 md:gap-y-10">
           {items.map((label, i) => (
             <Reveal
