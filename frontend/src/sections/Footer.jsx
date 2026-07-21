@@ -64,8 +64,8 @@ export const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 items-start text-center sm:text-left">
             {/* Brand */}
             <div className="flex flex-col items-center sm:items-start">
-              <Logo variant="light" className="text-[30px] md:text-[38px]" showImage />
-              <p className="mt-3 md:mt-4 max-w-xs text-[13px] md:text-[14px] leading-relaxed text-white/55">
+              <Logo variant="light" className="text-[14px] md:text-[16px]" showImage />
+              <p className="mt-2 md:mt-3 max-w-xs text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
             </div>
