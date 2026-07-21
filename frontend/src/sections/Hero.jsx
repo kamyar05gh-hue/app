@@ -77,7 +77,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-2 md:mt-4 max-w-xl space-y-1 md:space-y-1.5 text-[12px] md:text-[15px] leading-snug md:leading-relaxed text-black/75"
+              className="mt-2 md:mt-4 max-w-xl space-y-1 md:space-y-1.5 text-[12px] md:text-[15px] leading-snug md:leading-relaxed text-black/75 font-semibold"
               data-testid="hero-benefits-list"
             >
               {t.hero.benefits.map((line, i) => (
@@ -86,6 +86,10 @@ export const Hero = () => {
                   <span>{line}</span>
                 </li>
               ))}
+              <li className="flex items-start gap-3">
+                <GlowTick />
+                <span>MOMO erstellt Offerten, Rechnungen & Antworten</span>
+              </li>
             </motion.ul>
 
             <motion.div
