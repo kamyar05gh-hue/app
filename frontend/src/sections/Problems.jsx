@@ -193,7 +193,7 @@ const ClimaxCard = () => {
           <div className="md:col-span-3 p-5 sm:p-8 md:p-10 flex flex-col items-center text-center md:items-start md:text-left justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
             {/* Bot mascot */}
             <div className="relative self-center">
-              <div className="grid place-items-center h-[96px] w-[96px] md:h-[140px] md:w-[140px] rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
+              <div className="mx-auto grid place-items-center h-[96px] w-[96px] md:h-[140px] md:w-[140px] rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
                 <div
                   aria-hidden
                   className="absolute inset-0 pointer-events-none"
