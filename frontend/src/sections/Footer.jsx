@@ -65,7 +65,7 @@ export const Footer = () => {
             {/* Brand */}
             <div className="flex flex-col items-center sm:items-start">
               <Logo variant="light" className="text-[30px] md:text-[38px]" showImage />
-              <p className="mt-5 md:mt-6 max-w-xs text-[13px] md:text-[14px] leading-relaxed text-white/55">
+              <p className="mt-3 md:mt-4 max-w-xs text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
             </div>
@@ -115,12 +115,12 @@ export const Footer = () => {
                 </p>
               </div>
               <a
-                href="tel:+41794880011"
+                href="tel:+41798000810"
                 data-testid="footer-phone"
                 aria-label={t.footer.phoneAria}
                 className="text-[15px] md:text-[16px] font-medium text-white/90 hover:text-white transition-colors duration-300"
               >
-                <span className="leading-none whitespace-nowrap">+41 79 488 00 11</span>
+                <span className="leading-none whitespace-nowrap">+41 79 800 08 10</span>
               </a>
             </div>
           </div>

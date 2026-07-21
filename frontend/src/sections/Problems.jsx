@@ -35,7 +35,8 @@ const BodySegs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
             part === "MOMO" ? (
               <Fragment key={j}>
                 <br className="hidden md:block" />
-                <span className="md:mt-1 inline-block">{part}</span>
+                <br className="hidden md:block" />
+                <span className="inline-block">{part}</span>
               </Fragment>
             ) : (
               part
@@ -52,7 +53,8 @@ const BodySegs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
             part === "MOMO" ? (
               <Fragment key={j}>
                 <br className="hidden md:block" />
-                <span className="md:mt-1 inline-block">{part}</span>
+                <br className="hidden md:block" />
+                <span className="inline-block">{part}</span>
               </Fragment>
             ) : (
               part

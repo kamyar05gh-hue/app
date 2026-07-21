@@ -35,7 +35,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-[18px] md:text-[22px] font-display font-bold text-white mb-4">1. Geltungsbereich</h2>
               <p>
-                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle über die Website von PLANMOVE oder direkt bei der Future Media Leuenberger GmbH abgeschlossenen Verträge für die Nutzung der PLANMOVE-Software und der damit verbundenen Dienstleistungen.
+                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle über die Website von Planmove oder direkt bei Planmove abgeschlossenen Verträge für die Nutzung der PLANMOVE-Software und der damit verbundenen Dienstleistungen.
               </p>
             </section>
 

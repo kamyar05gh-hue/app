@@ -69,7 +69,7 @@ export const BeforeAfter = () => {
           />
 
           {/* Before column */}
-          <div className="relative p-6 sm:p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10">
+          <div className="relative p-6 sm:p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 bg-gradient-to-br from-red-500/[0.08] to-transparent">
             <div className="flex items-center gap-3 mb-7 md:mb-9">
               <span className="relative grid place-items-center h-10 w-10 md:h-11 md:w-11 rounded-full shrink-0">
                 <span

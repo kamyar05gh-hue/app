@@ -58,19 +58,14 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-[18px] md:text-[22px] font-display font-bold text-white mb-4">2. Kontaktinformationen</h2>
               <p className="text-white">
-                Future Media Leuenberger GmbH<br />
+                Planmove<br />
                 Weltpoststrasse 5, 3015 Bern<br />
                 Hardstrasse 201, 8005 Zürich<br />
                 Schweiz
               </p>
               <p className="mt-4">
                 E-Mail: <a href="mailto:info@planmove.ch" className="text-[#25D366] hover:underline">info@planmove.ch</a><br />
-                Telefon: <a href="tel:+41794880011" className="text-[#25D366] hover:underline">+41 79 488 00 11</a>
-              </p>
-              <p className="mt-4 text-white">
-                Datenschutzverantwortliche Person:<br />
-                Livia Leuenberger<br />
-                <a href="mailto:info@planmove.ch" className="text-[#25D366] hover:underline">info@planmove.ch</a>
+                Telefon: <a href="tel:+41798000810" className="text-[#25D366] hover:underline">+41 79 800 08 10</a>
               </p>
             </section>
 
