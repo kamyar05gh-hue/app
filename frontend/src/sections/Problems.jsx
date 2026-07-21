@@ -169,6 +169,12 @@ const ClimaxCard = () => {
             </p>
 
             <ul className="mt-4 md:mt-6 grid grid-cols-1 gap-2.5" data-testid="climax-voice-commands">
+              <li className="flex items-start gap-3 rounded-xl bg-[#F5F4EF] px-3 py-2.5 md:px-3.5">
+                <Check className="mt-0.5 h-4 w-4 lg:h-3.5 lg:w-3.5 text-[#25D366] shrink-0" strokeWidth={3.5} />
+                <span className="text-[12.5px] md:text-[13.5px] font-medium text-black/85 leading-snug italic">
+                  MOMO erstellt Offerten, Rechnungen & Antworten
+                </span>
+              </li>
               {c.voiceCommands.map((text, i) => (
                 <li
                   key={i}
