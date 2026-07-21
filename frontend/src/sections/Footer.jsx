@@ -78,7 +78,7 @@ export const Footer = () => {
                   Standorte
                 </p>
               </div>
-              <div className="space-y-4 text-[14px] md:text-[15px] leading-relaxed text-white/80">
+              <div className="space-y-4 text-[15px] md:text-[16px] leading-relaxed text-white/90">
                 <p>
                   Weltpoststrasse 5<br />
                   3015 Bern
@@ -100,7 +100,7 @@ export const Footer = () => {
               </div>
               <a
                 href="mailto:info@planmove.ch"
-                className="text-[15px] md:text-[17px] text-white/90 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors duration-300"
+                className="text-[15px] md:text-[16px] text-white/90 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors duration-300"
               >
                 info@planmove.ch
               </a>
@@ -110,7 +110,7 @@ export const Footer = () => {
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex items-center gap-2 mb-4 md:mb-5">
                 <Phone className="h-4 w-4 text-[#25D366]" strokeWidth={2} />
-                <p className="text-[14px] md:text-[16px] uppercase tracking-[0.18em] text-white font-bold">
+                <p className="text-[12px] md:text-[13px] uppercase tracking-[0.2em] text-white/40 font-semibold">
                   Telefon
                 </p>
               </div>
@@ -118,7 +118,7 @@ export const Footer = () => {
                 href="tel:+41794880011"
                 data-testid="footer-phone"
                 aria-label={t.footer.phoneAria}
-                className="inline-flex items-center gap-2.5 text-[17px] md:text-[20px] font-medium text-white/90 hover:text-white transition-colors duration-300"
+                className="text-[15px] md:text-[16px] font-medium text-white/90 hover:text-white transition-colors duration-300"
               >
                 <span className="leading-none whitespace-nowrap">+41 79 488 00 11</span>
               </a>
