@@ -39,7 +39,7 @@ export const Footer = () => {
         <Reveal delay={120}>
           <h2
             data-testid="footer-headline"
-            className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.045em] text-[44px] sm:text-[64px] md:text-[120px] lg:text-[152px] leading-[0.92] break-words"
+            className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.045em] text-[44px] sm:text-[64px] md:text-[120px] lg:text-[152px] leading-[0.92] break-words text-center md:text-left"
           >
             {t.footer.headlineA}
             <br />
@@ -47,7 +47,7 @@ export const Footer = () => {
           </h2>
         </Reveal>
 
-        <div className="mt-10 md:mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
+        <div className="mt-10 md:mt-16 flex flex-col items-center md:flex-row md:items-center md:justify-between gap-6 md:gap-8 text-center md:text-left">
           <Reveal delay={240} as="p" className="max-w-md text-[14px] md:text-[17px] leading-relaxed text-white/65">
             {t.footer.paragraph}
           </Reveal>
@@ -78,9 +78,9 @@ export const Footer = () => {
                     href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
                     data-testid="footer-phone"
                     aria-label={t.footer.phoneAria}
-                    className="text-white/90 hover:text-white transition-colors duration-500 !inline-flex flex-row flex-nowrap items-center gap-2.5 text-[15px] md:text-[17px] font-medium leading-none whitespace-nowrap"
+                    className="text-white/90 hover:text-white transition-colors duration-500 inline-flex items-center gap-2.5 text-[15px] md:text-[17px] font-medium whitespace-nowrap"
                   >
-                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0" strokeWidth={1.8} />
+                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0 -mt-0.5" strokeWidth={1.8} />
                     <span className="leading-none whitespace-nowrap">{t.footer.phone}</span>
                   </a>
                 </li>
@@ -95,13 +95,13 @@ export const Footer = () => {
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-8 md:py-10 overflow-hidden">
           <div
             aria-hidden
-            className="font-display font-extrabold tracking-[-0.055em] leading-[0.9] text-white/95 select-none"
+            className="font-display font-extrabold tracking-[-0.055em] leading-[0.9] text-white/95 select-none uppercase"
             style={{ fontSize: "clamp(60px, 17vw, 260px)" }}
           >
-            PlanMove
+            PLANMOVE
           </div>
           <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] leading-none text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
-            <span className="leading-none">© {new Date().getFullYear()} PlanMove</span>
+            <span className="leading-none">© {new Date().getFullYear()} PLANMOVE</span>
             <span className="leading-none">{t.footer.bottomNote}</span>
           </div>
         </div>

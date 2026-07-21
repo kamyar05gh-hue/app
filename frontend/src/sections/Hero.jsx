@@ -6,20 +6,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const GlowTick = () => (
-  <span className="mt-0.5 grid place-items-center h-5 w-5 md:h-6 md:w-6 rounded-full shrink-0 relative">
-    {/* Deep green glow ring */}
-    <span
-      aria-hidden
-      className="absolute inset-0 rounded-full"
-      style={{
-        background: "radial-gradient(circle, rgba(37,211,102,0.55) 0%, rgba(37,211,102,0.18) 45%, transparent 70%)",
-        filter: "blur(4px)",
-      }}
-    />
-    {/* Solid gradient check background */}
-    <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#25D366] to-[#1EB955] shadow-[0_4px_14px_-4px_rgba(37,211,102,0.6)]">
-      <Check className="h-2.5 w-2.5 md:h-3 md:w-3 text-white" strokeWidth={3.5} />
-    </span>
+  <span className="mt-0.5 grid place-items-center h-5 w-5 md:h-6 md:w-6 shrink-0 text-[#25D366]">
+    <Check className="h-5 w-5 md:h-6 md:w-6" strokeWidth={3} />
   </span>
 );
 

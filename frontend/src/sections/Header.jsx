@@ -61,7 +61,7 @@ export const Header = () => {
                 onClick={() => scrollTo("hero")}
                 data-testid="header-logo"
                 className="flex items-center gap-2 group"
-                aria-label="PlanMove"
+                aria-label="PLANMOVE"
               >
                 <Logo className="text-[24px] md:text-[27px]" showImage />
               </button>

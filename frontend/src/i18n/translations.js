@@ -1,5 +1,5 @@
 /**
- * All user-facing UI strings for PlanMove/MOMO, per language.
+ * All user-facing UI strings for PLANMOVE/MOMO, per language.
  *
  * Structure notes:
  * - Strings that contain highlighted <span>s in JSX are split into
@@ -7,7 +7,7 @@
  *   { hl: "..." } are rendered inside the green highlight span,
  *   { b: "..." } are rendered inside a black bold span.
  * - Quote characters („…", «…») are part of the translated strings.
- * - Brand names "MOMO" and "PlanMove" stay untranslated.
+ * - Brand names "MOMO" and "PLANMOVE" stay untranslated.
  */
 
 const waUrl = (text) =>
@@ -17,7 +17,7 @@ export const translations = {
   de: {
     whatsapp: {
       url: waUrl(
-        "Hallo PlanMove! Ich möchte mehr über MOMO, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
+        "Hallo PLANMOVE! Ich möchte mehr über MOMO, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
       ),
     },
     whatsappButton: {
@@ -161,7 +161,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "Vergessen Sie Papierkram",
+        imageAlt: "MOMO erledigt die Reinigung",
         titleA: "Vergessen Sie ",
         titleHighlight: "Papierkram",
         titleB: " und komplizierte Programme.",
@@ -192,7 +192,7 @@ export const translations = {
     testimonials: {
       headingLine1: "Umzug & Reinigung",
       headingLine2a: "mit ",
-      headingLine2Highlight: "PlanMove.",
+      headingLine2Highlight: "PLANMOVE.",
       items: [
         {
           name: "Markus H.",
@@ -241,7 +241,7 @@ export const translations = {
           name: "Adrian S.",
           role: "Geschäftsführer · Transportunternehmen",
           quote:
-            "„Seit PlanMove verpasse ich keine Anfrage mehr. Selbst wenn ich unterwegs bin, antwortet MOMO sofort professionell.“",
+            "„Seit PLANMOVE verpasse ich keine Anfrage mehr. Selbst wenn ich unterwegs bin, antwortet MOMO sofort professionell.“",
         },
         {
           name: "Lena T.",
@@ -252,8 +252,8 @@ export const translations = {
       ],
     },
     beforeAfter: {
-      headingBefore: "Vor PlanMove",
-      headingAfter: "Mit PlanMove",
+      headingBefore: "Vor PLANMOVE",
+      headingAfter: "Mit PLANMOVE",
       items: [
         { before: "Deutsch war ein Problem.", after: "Einfach sprechen – MOMO schreibt perfektes Deutsch." },
         { before: "Offerten haben viel Zeit gekostet.", after: "Offerten in wenigen Sekunden." },
@@ -310,10 +310,10 @@ export const translations = {
       paragraph:
         "Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne Verpflichtung. Erfahren Sie in fünf Minuten, wie MOMO Ihr KMU verändert.",
       brandDescription:
-        "PlanMove ist der intelligente Assistent für Schweizer Umzugs- und Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.",
+        "PLANMOVE ist der intelligente Assistent für Schweizer Umzugs- und Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.",
       contactHeading: "Kontakt",
       phone: "+41779800810",
-      phoneAria: "PlanMove anrufen",
+      phoneAria: "PLANMOVE anrufen",
       bottomNote: "Für Umzug & Reinigung · DSGVO Konform",
     },
     phoneMockup: {
@@ -368,7 +368,7 @@ export const translations = {
   fr: {
     whatsapp: {
       url: waUrl(
-        "Bonjour PlanMove ! J'aimerais en savoir plus sur MOMO, l'assistant pour mon entreprise de déménagement/nettoyage."
+        "Bonjour PLANMOVE ! J'aimerais en savoir plus sur MOMO, l'assistant pour mon entreprise de déménagement/nettoyage."
       ),
     },
     whatsappButton: {
@@ -513,7 +513,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "Oubliez la paperasse",
+        imageAlt: "MOMO s'occupe du nettoyage",
         titleA: "Oubliez la ",
         titleHighlight: "paperasse",
         titleB: " et les programmes compliqués.",
@@ -544,7 +544,7 @@ export const translations = {
     testimonials: {
       headingLine1: "Déménagement & nettoyage",
       headingLine2a: "avec ",
-      headingLine2Highlight: "PlanMove.",
+      headingLine2Highlight: "PLANMOVE.",
       items: [
         {
           name: "Marc H.",
@@ -593,7 +593,7 @@ export const translations = {
           name: "Adrian S.",
           role: "Directeur · Entreprise de transport",
           quote:
-            "« Depuis PlanMove, je ne manque plus aucune demande. Même quand je suis en déplacement, MOMO répond immédiatement et professionnellement. »",
+            "« Depuis PLANMOVE, je ne manque plus aucune demande. Même quand je suis en déplacement, MOMO répond immédiatement et professionnellement. »",
         },
         {
           name: "Lena T.",
@@ -604,8 +604,8 @@ export const translations = {
       ],
     },
     beforeAfter: {
-      headingBefore: "Avant PlanMove",
-      headingAfter: "Avec PlanMove",
+      headingBefore: "Avant PLANMOVE",
+      headingAfter: "Avec PLANMOVE",
       items: [
         { before: "L'allemand était un problème.", after: "Parlez simplement — MOMO écrit un allemand parfait." },
         { before: "Les devis prenaient beaucoup de temps.", after: "Des devis en quelques secondes." },
@@ -662,10 +662,10 @@ export const translations = {
       paragraph:
         "Une courte conversation sur WhatsApp — personnelle, gratuite et sans engagement. Découvrez en cinq minutes comment MOMO transforme votre PME.",
       brandDescription:
-        "PlanMove est l'assistant intelligent des entreprises suisses de déménagement et de nettoyage. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
+        "PLANMOVE est l'assistant intelligent des entreprises suisses de déménagement et de nettoyage. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
       contactHeading: "Contact",
       phone: "+41779800810",
-      phoneAria: "Appeler PlanMove",
+      phoneAria: "Appeler PLANMOVE",
       bottomNote: "Pour le déménagement & le nettoyage · Conforme au RGPD",
     },
     phoneMockup: {
@@ -720,7 +720,7 @@ export const translations = {
   it: {
     whatsapp: {
       url: waUrl(
-        "Ciao PlanMove! Vorrei saperne di più su MOMO, l'assistente per la mia azienda di traslochi/pulizie."
+        "Ciao PLANMOVE! Vorrei saperne di più su MOMO, l'assistente per la mia azienda di traslochi/pulizie."
       ),
     },
     whatsappButton: {
@@ -865,7 +865,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "Dimentichi la burocrazia",
+        imageAlt: "MOMO si occupa della pulizia",
         titleA: "Dimentichi la ",
         titleHighlight: "burocrazia",
         titleB: " e i programmi complicati.",
@@ -896,7 +896,7 @@ export const translations = {
     testimonials: {
       headingLine1: "Traslochi & pulizie",
       headingLine2a: "con ",
-      headingLine2Highlight: "PlanMove.",
+      headingLine2Highlight: "PLANMOVE.",
       items: [
         {
           name: "Marco H.",
@@ -945,7 +945,7 @@ export const translations = {
           name: "Adrian S.",
           role: "Direttore · Azienda di trasporti",
           quote:
-            "«Da quando uso PlanMove non perdo più nessuna richiesta. Anche quando sono in giro, MOMO risponde subito in modo professionale.»",
+            "«Da quando uso PLANMOVE non perdo più nessuna richiesta. Anche quando sono in giro, MOMO risponde subito in modo professionale.»",
         },
         {
           name: "Lena T.",
@@ -956,8 +956,8 @@ export const translations = {
       ],
     },
     beforeAfter: {
-      headingBefore: "Prima di PlanMove",
-      headingAfter: "Con PlanMove",
+      headingBefore: "Prima di PLANMOVE",
+      headingAfter: "Con PLANMOVE",
       items: [
         { before: "Il tedesco era un problema.", after: "Parla semplicemente — MOMO scrive un tedesco perfetto." },
         { before: "I preventivi richiedevano molto tempo.", after: "Preventivi in pochi secondi." },
@@ -1014,10 +1014,10 @@ export const translations = {
       paragraph:
         "Una breve conversazione su WhatsApp — personale, gratuita e senza impegno. Scopra in cinque minuti come MOMO trasforma la Sua PMI.",
       brandDescription:
-        "PlanMove è l'assistente intelligente per le aziende svizzere di traslochi e pulizie. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
+        "PLANMOVE è l'assistente intelligente per le aziende svizzere di traslochi e pulizie. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
       contactHeading: "Contatto",
       phone: "+41779800810",
-      phoneAria: "Chiama PlanMove",
+      phoneAria: "Chiama PLANMOVE",
       bottomNote: "Per traslochi & pulizie · Conforme al GDPR",
     },
     phoneMockup: {
@@ -1072,7 +1072,7 @@ export const translations = {
   es: {
     whatsapp: {
       url: waUrl(
-        "Hola PlanMove. Me gustaría saber más sobre MOMO, el asistente para mi empresa de mudanzas/limpieza."
+        "Hola PLANMOVE. Me gustaría saber más sobre MOMO, el asistente para mi empresa de mudanzas/limpieza."
       ),
     },
     whatsappButton: {
@@ -1217,7 +1217,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "Olvídese del papeleo",
+        imageAlt: "MOMO se encarga de la limpieza",
         titleA: "Olvídese del ",
         titleHighlight: "papeleo",
         titleB: " y los programas complicados.",
@@ -1248,7 +1248,7 @@ export const translations = {
     testimonials: {
       headingLine1: "Mudanzas y limpieza",
       headingLine2a: "con ",
-      headingLine2Highlight: "PlanMove.",
+      headingLine2Highlight: "PLANMOVE.",
       items: [
         {
           name: "Marco H.",
@@ -1297,7 +1297,7 @@ export const translations = {
           name: "Adrián S.",
           role: "Director · Empresa de transportes",
           quote:
-            "«Desde PlanMove no pierdo ninguna consulta. Incluso cuando estoy fuera, MOMO responde inmediatamente de forma profesional.»",
+            "«Desde PLANMOVE no pierdo ninguna consulta. Incluso cuando estoy fuera, MOMO responde inmediatamente de forma profesional.»",
         },
         {
           name: "Lena T.",
@@ -1308,8 +1308,8 @@ export const translations = {
       ],
     },
     beforeAfter: {
-      headingBefore: "Antes de PlanMove",
-      headingAfter: "Con PlanMove",
+      headingBefore: "Antes de PLANMOVE",
+      headingAfter: "Con PLANMOVE",
       items: [
         { before: "El alemán era un problema.", after: "Hable simplemente — MOMO escribe alemán perfecto." },
         { before: "Los presupuestos tardaban mucho.", after: "Presupuestos en pocos segundos." },
@@ -1366,10 +1366,10 @@ export const translations = {
       paragraph:
         "Una breve conversación por WhatsApp — personal, gratuita y sin compromiso. Descubra en cinco minutos cómo MOMO transforma su PYME.",
       brandDescription:
-        "PlanMove es el asistente inteligente para empresas suizas de mudanzas y limpieza. Disponible 24/7. En todos los idiomas.",
+        "PLANMOVE es el asistente inteligente para empresas suizas de mudanzas y limpieza. Disponible 24/7. En todos los idiomas.",
       contactHeading: "Contacto",
       phone: "+41779800810",
-      phoneAria: "Llamar a PlanMove",
+      phoneAria: "Llamar a PLANMOVE",
       bottomNote: "Para mudanzas y limpieza · Conforme al RGPD",
     },
     phoneMockup: {
@@ -1424,7 +1424,7 @@ export const translations = {
   sq: {
     whatsapp: {
       url: waUrl(
-        "Përshëndetje PlanMove. Do të doja të dija më shumë për MOMO, asistentin për kompaninë time të zhvendosjeve/pastrimit."
+        "Përshëndetje PLANMOVE. Do të doja të dija më shumë për MOMO, asistentin për kompaninë time të zhvendosjeve/pastrimit."
       ),
     },
     whatsappButton: {
@@ -1569,7 +1569,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "Harroni punët e zyrës",
+        imageAlt: "MOMO merret me pastrimin",
         titleA: "Harroni ",
         titleHighlight: "burokracinë",
         titleB: " dhe programet e ndërlikuara.",
@@ -1600,7 +1600,7 @@ export const translations = {
     testimonials: {
       headingLine1: "Zhvendosje & pastrim",
       headingLine2a: "me ",
-      headingLine2Highlight: "PlanMove.",
+      headingLine2Highlight: "PLANMOVE.",
       items: [
         {
           name: "Mark H.",
@@ -1649,7 +1649,7 @@ export const translations = {
           name: "Adrian S.",
           role: "Drejtues · Kompania e transportit",
           quote:
-            "«Që nga PlanMove nuk humbas më asnjë kërkesë. Edhe kur jam në lëvizje, MOMO përgjigjet menjëherë profesionalisht.»",
+            "«Që nga PLANMOVE nuk humbas më asnjë kërkesë. Edhe kur jam në lëvizje, MOMO përgjigjet menjëherë profesionalisht.»",
         },
         {
           name: "Lena T.",
@@ -1660,8 +1660,8 @@ export const translations = {
       ],
     },
     beforeAfter: {
-      headingBefore: "Para PlanMove",
-      headingAfter: "Me PlanMove",
+      headingBefore: "Para PLANMOVE",
+      headingAfter: "Me PLANMOVE",
       items: [
         { before: "Gjermanishtja ishte problem.", after: "Fol thjesht — MOMO shkruan gjermanisht të përsosur." },
         { before: "Ofertat kushtonin shumë kohë.", after: "Oferta në pak sekonda." },
@@ -1718,10 +1718,10 @@ export const translations = {
       paragraph:
         "Një bisedë e shkurtër në WhatsApp — personale, falas dhe pa angazhim. Mësoni në pesë minuta se si MOMO transformon biznesin tuaj.",
       brandDescription:
-        "PlanMove është asistenti inteligjent për kompanitë zvicerane të zhvendosjeve dhe pastrimit. I arritshëm 24/7. Në çdo gjuhë.",
+        "PLANMOVE është asistenti inteligjent për kompanitë zvicerane të zhvendosjeve dhe pastrimit. I arritshëm 24/7. Në çdo gjuhë.",
       contactHeading: "Kontakt",
       phone: "+41779800810",
-      phoneAria: "Telefono PlanMove",
+      phoneAria: "Telefono PLANMOVE",
       bottomNote: "Për zhvendosje & pastrim · Në përputhje me GDPR",
     },
     phoneMockup: {
@@ -1776,7 +1776,7 @@ export const translations = {
   ku: {
     whatsapp: {
       url: waUrl(
-        "Slav PlanMove. Ez dixwazim li ser MOMO, asîstana ji bo şirketa min a koçberkirinê/paqijkirinê, bêtir bizanim."
+        "Slav PLANMOVE. Ez dixwazim li ser MOMO, asîstana ji bo şirketa min a koçberkirinê/paqijkirinê, bêtir bizanim."
       ),
     },
     whatsappButton: {
@@ -1921,7 +1921,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "Karê ofîsê ji bîr bike",
+        imageAlt: "MOMO paqijkirinê dike",
         titleA: "",
         titleHighlight: "Burokrasî",
         titleB: " û bernameyên tevlihev ji bîr bike.",
@@ -1952,7 +1952,7 @@ export const translations = {
     testimonials: {
       headingLine1: "Koçberkirin & paqijkirin",
       headingLine2a: "bi ",
-      headingLine2Highlight: "PlanMove.",
+      headingLine2Highlight: "PLANMOVE.",
       items: [
         {
           name: "Mark H.",
@@ -2001,7 +2001,7 @@ export const translations = {
           name: "Adrian S.",
           role: "Rêveber · Şirketa wergirtinê",
           quote:
-            "«Ji PlanMove pê ve ez tu pirsên winda nakim. Hingê ku ez li rê me, MOMO rasterast bi awayekî profesyonel bersiv dide.»",
+            "«Ji PLANMOVE pê ve ez tu pirsên winda nakim. Hingê ku ez li rê me, MOMO rasterast bi awayekî profesyonel bersiv dide.»",
         },
         {
           name: "Lena T.",
@@ -2012,8 +2012,8 @@ export const translations = {
       ],
     },
     beforeAfter: {
-      headingBefore: "Berî PlanMove",
-      headingAfter: "Bi PlanMove",
+      headingBefore: "Berî PLANMOVE",
+      headingAfter: "Bi PLANMOVE",
       items: [
         { before: "Almanî pirsgirêk bû.", after: "Hingê biaxive — MOMO bi bêkêmasî Almanî dinivîse." },
         { before: "Pêşniyar demek zêde digirt.", after: "Pêşniyar di çend saniyeyan de." },
@@ -2070,10 +2070,10 @@ export const translations = {
       paragraph:
         "Gotûbajek kurt li WhatsAppê — şexsî, bêpere û bê berpirsiyarî. Di pênc deqîqeyan de bibînin ka MOMO çawa karsaziya we diguherîne.",
       brandDescription:
-        "PlanMove asîstana zîrek e ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê. 24/7 berdest. Bi her zimanî.",
+        "PLANMOVE asîstana zîrek e ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê. 24/7 berdest. Bi her zimanî.",
       contactHeading: "Têkilî",
       phone: "+41779800810",
-      phoneAria: "PlanMove bi telefonê gazî bike",
+      phoneAria: "PLANMOVE bi telefonê gazî bike",
       bottomNote: "Ji bo koçberkirinê & paqijkirinê · Li gorî GDPR",
     },
     phoneMockup: {

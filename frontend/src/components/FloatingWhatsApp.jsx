@@ -32,7 +32,7 @@ export const FloatingWhatsApp = () => {
       rel="noopener noreferrer"
       data-testid="floating-whatsapp"
       aria-label={t.whatsappButton.label}
-      className={`fixed bottom-5 right-5 md:bottom-7 md:right-7 z-40 group grid place-items-center h-14 w-14 md:h-16 md:w-16 rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,0.7)] transition-all duration-500 hover:bg-[#168222] ${
+      className={`fixed bottom-4 right-4 md:bottom-7 md:right-7 z-40 group grid place-items-center h-11 w-11 md:h-16 md:w-16 rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,0.7)] transition-all duration-500 hover:bg-[#168222] ${
         visible
           ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 translate-y-4 pointer-events-none"
@@ -53,7 +53,7 @@ export const FloatingWhatsApp = () => {
           filter: "blur(8px)",
         }}
       />
-      <WhatsAppIcon className="relative h-7 w-7 md:h-8 md:w-8" />
+      <WhatsAppIcon className="relative h-5 w-5 md:h-8 md:w-8" />
       <style>{`
         @keyframes pingSlow {
           0% { transform: scale(1); opacity: 0.55; }

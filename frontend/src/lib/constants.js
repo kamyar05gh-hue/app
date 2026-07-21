@@ -1,4 +1,4 @@
-export const BRAND = "PlanMove";
+export const BRAND = "PLANMOVE";
 
 export const LOGO_URL =
   "https://customer-assets-jt897jd0.emergentagent.net/job_voice-offerten/artifacts/b3y8bxbl_photo_2026-07-19_13-37-36.jpg";
@@ -6,7 +6,7 @@ export const LOGO_URL =
 export const WHATSAPP_URL =
   "https://wa.me/41780000000?text=" +
   encodeURIComponent(
-    "Hallo PlanMove! Ich möchte mehr über MOMO, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
+    "Hallo PLANMOVE! Ich möchte mehr über MOMO, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
   );
 
 /**
@@ -23,32 +23,32 @@ export const IMG = {
     {
       key: "unanswered",
       src: "/images/card-01.jpg",
-      alt: "Verpasste Anfrage",
+      alt: "Umzugshelfer tragen Kartons in eine neue Wohnung",
     },
     {
       key: "language",
       src: "/images/card-02.jpg",
-      alt: "Sprachhürde",
+      alt: "Umzugskarton mit Schlüssel",
     },
     {
       key: "exhausted",
       src: "/images/card-03.jpg",
-      alt: "Papierkram nach Feierabend",
+      alt: "Professioneller Reinigungswagen mit Equipment",
     },
     {
       key: "followup",
       src: "/images/card-04.jpg",
-      alt: "Vergessene Follow-ups",
+      alt: "Industrielle Hochdruckreinigung",
     },
     {
       key: "phonering",
       src: "/images/card-05.jpg",
-      alt: "Anruf während der Arbeit",
+      alt: "Reinigungskraft bei der Hochdruckreinigung",
     },
     {
       key: "channels",
       src: "/images/card-06.jpg",
-      alt: "Viele Kanäle auf einmal",
+      alt: "Gebäudereiniger beim Bodenwischen",
     },
   ],
 };

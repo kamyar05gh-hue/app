@@ -7,12 +7,14 @@ import { Toaster } from "@/components/ui/sonner";
 
 function useLenis() {
   useEffect(() => {
+    const isMobile = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: isMobile ? 0.85 : 1.05,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
       wheelMultiplier: 1,
-      touchMultiplier: 1.4,
+      touchMultiplier: isMobile ? 1 : 1.2,
+      syncTouch: isMobile,
     });
     // Expose for programmatic scroll (nav clicks, testing)
     if (typeof window !== "undefined") window.__lenis = lenis;

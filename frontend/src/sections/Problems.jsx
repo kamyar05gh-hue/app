@@ -140,7 +140,7 @@ const ClimaxCard = () => {
           </div>
 
           {/* RIGHT: MOMO Bot + services checklist */}
-          <div className="md:col-span-3 p-5 sm:p-8 md:p-10 flex flex-col items-center md:items-start justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
+          <div className="md:col-span-3 p-5 sm:p-8 md:p-10 flex flex-col items-center text-center md:items-start md:text-left justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
             {/* Bot mascot */}
             <div className="relative">
               <div className="grid place-items-center h-[96px] w-[96px] md:h-[140px] md:w-[140px] rounded-[1.5rem] md:rounded-[2rem] bg-[#0A0A0C] shadow-[0_25px_50px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden">
@@ -163,7 +163,7 @@ const ClimaxCard = () => {
               {c.services.map((s, i) => (
                 <li
                   key={i}
-                  className="flex items-center justify-center md:justify-start gap-2 text-[12px] md:text-[13.5px] font-medium text-black/80"
+                  className="flex items-center justify-center md:justify-start gap-2 text-center md:text-left text-[12px] md:text-[13.5px] font-medium text-black/80"
                 >
                   <span className="grid place-items-center h-4 w-4 rounded-full bg-[#25D366] text-white shrink-0">
                     <Check className="h-2.5 w-2.5" strokeWidth={4} />

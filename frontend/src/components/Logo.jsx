@@ -1,28 +1,25 @@
 /**
- * PlanMove wordmark logo — text-based, uses the display font (Outfit).
- * Optionally shows the brand mark image left of the wordmark.
+ * PlanMove wordmark logo — uses the supplied PNG wordmark (icon + PLANMOVE text).
+ * The image already contains the full uppercase wordmark, so no separate text is rendered.
  */
 export const Logo = ({
   className = "",
   variant = "dark", // "dark" = black on light bg, "light" = white on dark bg
-  showDot = true,
   showImage = true,
 }) => {
-  const color = variant === "light" ? "text-white" : "text-black";
+  const filter = variant === "light" ? "invert" : "";
   return (
     <span
-      className={`inline-flex items-center gap-1 font-display font-extrabold tracking-[-0.04em] ${color} ${className}`}
-      aria-label="PlanMove"
+      className={`inline-flex items-center ${className}`}
+      aria-label="PLANMOVE"
     >
       {showImage && (
         <img
           src="/images/logo.png"
-          alt=""
-          aria-hidden
-          className="h-[1.5em] w-auto object-contain brightness-0"
+          alt="PLANMOVE"
+          className={`h-[1.5em] w-auto object-contain ${filter}`}
         />
       )}
-      <span>PlanMove</span>
     </span>
   );
 };

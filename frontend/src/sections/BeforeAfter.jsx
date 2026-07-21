@@ -2,39 +2,17 @@ import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// Deep-glow red cross — same treatment as the green glowing ticks
+// Plain red cross — no circular frame
 const GlowCross = () => (
-  <span className="relative grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full shrink-0 mt-0.5">
-    <span
-      aria-hidden
-      className="absolute -inset-1.5 rounded-full"
-      style={{
-        background:
-          "radial-gradient(circle, rgba(239,68,68,0.55) 0%, rgba(239,68,68,0.18) 50%, transparent 72%)",
-        filter: "blur(4px)",
-      }}
-    />
-    <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#F87171] to-[#DC2626] shadow-[0_6px_16px_-6px_rgba(239,68,68,0.7),inset_0_1px_1px_rgba(255,255,255,0.3)]">
-      <X className="h-3 w-3 md:h-3.5 md:w-3.5 text-white" strokeWidth={3.2} />
-    </span>
+  <span className="mt-0.5 grid place-items-center h-6 w-6 md:h-7 md:w-7 shrink-0 text-red-500">
+    <X className="h-6 w-6 md:h-7 md:w-7" strokeWidth={2.8} />
   </span>
 );
 
-// Deep-glow green check
+// Plain green check — no circular frame
 const GlowCheck = () => (
-  <span className="relative grid place-items-center h-6 w-6 md:h-7 md:w-7 rounded-full shrink-0 mt-0.5">
-    <span
-      aria-hidden
-      className="absolute -inset-1.5 rounded-full"
-      style={{
-        background:
-          "radial-gradient(circle, rgba(37,211,102,0.55) 0%, rgba(37,211,102,0.18) 50%, transparent 72%)",
-        filter: "blur(4px)",
-      }}
-    />
-    <span className="relative grid place-items-center h-full w-full rounded-full bg-gradient-to-br from-[#25D366] to-[#15924A] shadow-[0_6px_16px_-6px_rgba(37,211,102,0.7),inset_0_1px_1px_rgba(255,255,255,0.3)]">
-      <Check className="h-3 w-3 md:h-3.5 md:w-3.5 text-white" strokeWidth={3.2} />
-    </span>
+  <span className="mt-0.5 grid place-items-center h-6 w-6 md:h-7 md:w-7 shrink-0 text-[#25D366]">
+    <Check className="h-6 w-6 md:h-7 md:w-7" strokeWidth={2.8} />
   </span>
 );
 
@@ -122,7 +100,7 @@ export const BeforeAfter = () => {
                   className="flex items-start gap-3"
                 >
                   <GlowCross />
-                  <span className="text-[15px] md:text-[17px] leading-snug text-white/80">
+                  <span className="text-[15px] md:text-[17px] leading-snug text-white/95">
                     {item.before}
                   </span>
                 </motion.li>

@@ -312,6 +312,17 @@ html.lenis body {
     .pm-card-dark {
         box-shadow: 0 20px 40px -20px rgba(37, 211, 102, 0.25);
     }
+    /* Reduce expensive backdrop-blur on mobile */
+    .backdrop-blur-xl,
+    .backdrop-blur-md,
+    .backdrop-blur-sm {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    /* Disable grain texture on mobile for perf */
+    .grain::after {
+        display: none;
+    }
 }
 
 /* Accordion smooth */
