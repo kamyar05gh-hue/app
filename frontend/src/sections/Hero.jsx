@@ -16,7 +16,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-fit md:min-h-[100svh] lg:min-h-[calc(100vh-24px)] pt-14 md:pt-32 lg:pt-36 pb-6 md:pb-20 lg:pb-24 overflow-hidden flex items-center"
+      className="relative min-h-fit md:min-h-[100svh] lg:min-h-[calc(100vh-24px)] pt-20 md:pt-32 lg:pt-36 pb-6 md:pb-20 lg:pb-24 overflow-hidden flex items-center"
       data-testid="hero-section"
     >
       <div
@@ -62,7 +62,7 @@ export const Hero = () => {
 
             <RevealText
               as="h1"
-              className="mt-3 md:mt-5 lg:mt-6 font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[54px] lg:text-[58px] leading-[0.9]"
+              className="mt-3 md:mt-5 lg:mt-6 font-display font-extrabold tracking-[-0.035em] text-[36px] sm:text-[42px] md:text-[54px] lg:text-[58px] leading-[0.9]"
               lines={[
                 ...t.hero.headlines.map((line, i) => (
                   <span key={`l${i}`}>{line}</span>
@@ -77,7 +77,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-2 md:mt-4 max-w-xl space-y-1 md:space-y-1.5 text-[12px] md:text-[15px] leading-snug md:leading-relaxed text-black/75 font-semibold"
+              className="mt-4 md:mt-4 max-w-xl space-y-2 md:space-y-1.5 text-[13px] md:text-[15px] leading-relaxed md:leading-relaxed text-black/75 font-semibold"
               data-testid="hero-benefits-list"
             >
               {t.hero.benefits.map((line, i) => (
@@ -92,7 +92,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-3 md:mt-5 flex flex-col items-start gap-2 md:gap-2.5"
+              className="mt-5 md:mt-5 flex flex-col items-start gap-3 md:gap-2.5"
             >
               {/* Google Review chip */}
               <div
