@@ -64,7 +64,7 @@ export const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 items-start text-center sm:text-left">
             {/* Brand */}
             <div className="flex flex-col items-center sm:items-start">
-              <Logo variant="light" className="text-[22px] md:text-[26px]" showImage />
+              <Logo variant="light" className="text-[28px] md:text-[34px] relative -top-1" showImage />
               <p className="mt-2 md:mt-3 max-w-xs text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
@@ -100,7 +100,7 @@ export const Footer = () => {
               </div>
               <a
                 href="mailto:info@planmove.ch"
-                className="text-[15px] md:text-[16px] font-medium text-[#25D366] hover:text-[#1EB955] transition-colors duration-300"
+                className="text-[15px] md:text-[16px] font-medium text-white/90 hover:text-white transition-colors duration-300"
               >
                 info@planmove.ch
               </a>
@@ -118,7 +118,7 @@ export const Footer = () => {
                 href="tel:+41798000810"
                 data-testid="footer-phone"
                 aria-label={t.footer.phoneAria}
-                className="text-[15px] md:text-[16px] font-medium text-[#25D366] hover:text-[#1EB955] transition-colors duration-300"
+                className="text-[15px] md:text-[16px] font-medium text-white/90 hover:text-white transition-colors duration-300"
               >
                 <span className="leading-none whitespace-nowrap">+41 79 800 08 10</span>
               </a>
