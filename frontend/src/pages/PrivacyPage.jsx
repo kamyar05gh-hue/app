@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           <div className="space-y-10 md:space-y-14 text-white/70 leading-relaxed text-[14px] md:text-[16px]">
             <section>
               <p>
-                Wir legen grossen Wert darauf, dass der Umgang mit Personendaten transparent ist. Diese Datenschutzerklärung gibt Auskunft darüber, welche personenbezogenen Daten wir sammeln, zu welchem Zweck und an wen wir sie weitergeben.
+                Wir legen grossen Wert darauf, dass der Umgang mit Personendaten transparent ist. Diese Datenschutzerklärung gibt Auskunft darüber, welche personenbezogenen Daten wir als Planmove sammeln, wie wir sie im Rahmen der PLANMOVE-Software für Umzugs- und Reinigungsunternehmen verarbeiten und an wen wir sie gegebenenfalls weitergeben.
               </p>
             </section>
 
@@ -101,10 +101,10 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-[18px] md:text-[22px] font-display font-bold text-white mb-4">4. Einzelne Datenverarbeitungsvorgänge</h2>
               <p>
-                Beim Besuch unserer Website werden automatisch bestimmte Daten zu Zwecken der Systemadministration, Statistik und Sicherheit gespeichert (z.B. IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs).
+                Beim Besuch unserer Website und bei der Nutzung der PLANMOVE-Software werden automatisch bestimmte Daten zu Zwecken der Systemadministration, Statistik und Sicherheit gespeichert (z.B. IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs).
               </p>
               <p className="mt-4">
-                Für die von uns eingesetzten Drittdienste (Google Ads, Meta Ads, TikTok Pixel, Google Analytics, Google Tag Manager, Calendly, Google My Business, Wix) gelten die Datenschutzrichtlinien der jeweiligen Anbieter. Weitere Informationen finden Sie in deren Datenschutzerklärungen.
+                Für die von uns eingesetzten Drittdienste (Google Ads, Meta Ads, TikTok Pixel, Google Analytics, Google Tag Manager, Calendly, Google My Business, Wix) gelten die Datenschutzrichtlinien der jeweiligen Anbieter. Die durch PLANMOVE verarbeiteten Kundendaten verbleiben grundsätzlich in Ihrer Kontrolle und werden nur zur Erbringung der Dienstleistung genutzt.
               </p>
             </section>
 

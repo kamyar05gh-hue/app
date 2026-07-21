@@ -12,12 +12,13 @@ function useLenis() {
   useEffect(() => {
     const isMobile = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
     const lenis = new Lenis({
-      duration: isMobile ? 0.85 : 1.05,
+      duration: isMobile ? 0.75 : 0.95,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: isMobile ? 1 : 1.2,
+      wheelMultiplier: 1.15,
+      touchMultiplier: isMobile ? 1.15 : 1.35,
       syncTouch: isMobile,
+      lerp: 0.08,
     });
     // Expose for programmatic scroll (nav clicks, testing)
     if (typeof window !== "undefined") window.__lenis = lenis;
