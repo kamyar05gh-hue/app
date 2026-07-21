@@ -86,10 +86,6 @@ export const Hero = () => {
                   <span>{line}</span>
                 </li>
               ))}
-              <li className="flex items-start gap-3">
-                <GlowTick />
-                <span>MOMO erstellt Offerten, Rechnungen & Antworten</span>
-              </li>
             </motion.ul>
 
             <motion.div

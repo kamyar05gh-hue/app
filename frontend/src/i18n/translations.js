@@ -45,11 +45,11 @@ export const translations = {
     },
     trustBar: {
       items: [
+        "MOMO erstellt Offerten, Rechnungen & Antworten",
         "Keine Kunden verlieren",
         "Mehr Aufträge",
         "Einfach in Ihrer Muttersprache sprechen",
         "Mehr Freizeit",
-        "Mehr Umsatz",
       ],
     },
     problems: {
@@ -377,11 +377,11 @@ export const translations = {
     },
     trustBar: {
       items: [
+        "MOMO crée devis, factures & réponses",
         "Ne perdez plus de clients",
         "Plus de mandats",
         "Parlez simplement dans votre langue",
         "Plus de temps libre",
-        "Plus de chiffre d'affaires",
       ],
     },
     problems: {
@@ -710,11 +710,11 @@ export const translations = {
     },
     trustBar: {
       items: [
+        "MOMO crea preventivi, fatture e risposte",
         "Non perdere più clienti",
         "Più incarichi",
         "Parla semplicemente nella Tua lingua",
         "Più tempo libero",
-        "Più fatturato",
       ],
     },
     problems: {
@@ -1043,11 +1043,11 @@ export const translations = {
     },
     trustBar: {
       items: [
+        "MOMO crea presupuestos, facturas y respuestas",
         "No perder clientes",
         "Más encargos",
         "Hable simplemente en su idioma",
         "Más tiempo libre",
-        "Más facturación",
       ],
     },
     problems: {
@@ -1376,11 +1376,11 @@ export const translations = {
     },
     trustBar: {
       items: [
+        "MOMO krijon oferta, fatura dhe përgjigje",
         "Mos humb klientë",
         "Më shumë punë",
         "Fol thjesht në gjuhën tënde",
         "Më shumë kohë të lirë",
-        "Më shumë fitim",
       ],
     },
     problems: {
@@ -1709,11 +1709,11 @@ export const translations = {
     },
     trustBar: {
       items: [
+        "MOMO pêşniyar, fatûre û bersivan çêdike",
         "Xerîdar winda neke",
         "Bêhtir kar",
         "Hingê bi zimanê xwe biaxive",
         "Bêhtir dema azad",
-        "Bêhtir dahat",
       ],
     },
     problems: {
