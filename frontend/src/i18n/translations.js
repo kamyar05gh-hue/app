@@ -50,6 +50,7 @@ export const translations = {
         "Mehr Aufträge",
         "Einfach in Ihrer Muttersprache sprechen",
         "Mehr Freizeit",
+        "Mehr Umsatz",
       ],
     },
     problems: {
@@ -382,6 +383,7 @@ export const translations = {
         "Plus de mandats",
         "Parlez simplement dans votre langue",
         "Plus de temps libre",
+        "Plus de chiffre d'affaires",
       ],
     },
     problems: {
@@ -715,6 +717,7 @@ export const translations = {
         "Più incarichi",
         "Parla semplicemente nella Tua lingua",
         "Più tempo libero",
+        "Più fatturato",
       ],
     },
     problems: {
@@ -1048,6 +1051,7 @@ export const translations = {
         "Más encargos",
         "Hable simplemente en su idioma",
         "Más tiempo libre",
+        "Más facturación",
       ],
     },
     problems: {
@@ -1381,6 +1385,7 @@ export const translations = {
         "Më shumë punë",
         "Fol thjesht në gjuhën tënde",
         "Më shumë kohë të lirë",
+        "Më shumë fitim",
       ],
     },
     problems: {
@@ -1714,6 +1719,7 @@ export const translations = {
         "Bêhtir kar",
         "Hingê bi zimanê xwe biaxive",
         "Bêhtir dema azad",
+        "Bêhtir dahat",
       ],
     },
     problems: {
