@@ -39,7 +39,7 @@ export const Footer = () => {
         <Reveal delay={120}>
           <h2
             data-testid="footer-headline"
-            className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.045em] text-[44px] sm:text-[64px] md:text-[120px] lg:text-[152px] leading-[0.92]"
+            className="mt-5 md:mt-6 font-display font-extrabold tracking-[-0.045em] text-[44px] sm:text-[64px] md:text-[120px] lg:text-[152px] leading-[0.92] break-words"
           >
             {t.footer.headlineA}
             <br />
@@ -61,19 +61,19 @@ export const Footer = () => {
       <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-12 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
-            <div className="md:col-span-8">
+            <div className="md:col-span-8 text-center md:text-left">
               <Logo variant="light" className="text-[30px] md:text-[36px]" showImage />
-              <p className="mt-5 md:mt-6 max-w-md text-[13px] md:text-[14px] leading-relaxed text-white/55">
+              <p className="mt-5 md:mt-6 max-w-md mx-auto md:mx-0 text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
             </div>
 
-            <div className="md:col-span-4 md:text-right">
+            <div className="md:col-span-4 text-center md:text-right">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
                 {t.footer.contactHeading}
               </p>
               <ul className="mt-5 md:mt-6 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                <li className="md:flex md:justify-end">
+                <li className="flex justify-center md:justify-end">
                   <a
                     href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
                     data-testid="footer-phone"
@@ -95,7 +95,7 @@ export const Footer = () => {
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-8 md:py-10 overflow-hidden">
           <div
             aria-hidden
-            className="font-display font-extrabold tracking-[-0.055em] leading-[0.9] text-white/95 select-none whitespace-nowrap"
+            className="font-display font-extrabold tracking-[-0.055em] leading-[0.9] text-white/95 select-none"
             style={{ fontSize: "clamp(60px, 17vw, 260px)" }}
           >
             PlanMove

@@ -29,6 +29,7 @@ export const HeroVisual = () => {
             height="1500"
             loading="eager"
             decoding="async"
+            fetchpriority="high"
             containerClassName="absolute inset-0 h-full w-full"
           />
         </div>

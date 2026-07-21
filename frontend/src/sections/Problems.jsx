@@ -101,35 +101,6 @@ const ClimaxCard = () => {
               containerClassName="absolute inset-0 h-full w-full"
               placeholderClassName="bg-[#E9E4DA]"
             />
-            {/* Green X overlay */}
-            <div aria-hidden className="absolute inset-0 pointer-events-none">
-              <svg
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                className="absolute inset-0 h-full w-full"
-              >
-                <line
-                  x1="8"
-                  y1="10"
-                  x2="92"
-                  y2="90"
-                  stroke="#25D366"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  opacity="0.9"
-                />
-                <line
-                  x1="92"
-                  y1="10"
-                  x2="8"
-                  y2="90"
-                  stroke="#25D366"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  opacity="0.9"
-                />
-              </svg>
-            </div>
             {/* Number badge */}
             <span
               className="absolute top-4 left-4 grid place-items-center h-10 w-10 rounded-full bg-[#25D366] text-white font-display font-extrabold text-[17px] shadow-[0_10px_25px_-8px_rgba(37,211,102,0.6)] tabular-nums"
@@ -188,11 +159,11 @@ const ClimaxCard = () => {
               </span>
             </div>
 
-            <ul className="mt-4 md:mt-6 grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-2 w-full max-w-[260px] md:max-w-[200px]">
+            <ul className="mt-4 md:mt-6 grid grid-cols-1 place-items-center md:place-items-start gap-2.5 w-full max-w-[260px]">
               {c.services.map((s, i) => (
                 <li
                   key={i}
-                  className="flex items-center gap-2 text-[12px] md:text-[13.5px] font-medium text-black/80"
+                  className="flex items-center justify-center md:justify-start gap-2 text-[12px] md:text-[13.5px] font-medium text-black/80"
                 >
                   <span className="grid place-items-center h-4 w-4 rounded-full bg-[#25D366] text-white shrink-0">
                     <Check className="h-2.5 w-2.5" strokeWidth={4} />

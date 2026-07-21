@@ -19,7 +19,7 @@ export const Logo = ({
           src="/images/logo.png"
           alt=""
           aria-hidden
-          className="h-[1.5em] w-auto object-contain"
+          className="h-[1.5em] w-auto object-contain brightness-0"
         />
       )}
       <span>PlanMove</span>

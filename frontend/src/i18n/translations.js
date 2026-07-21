@@ -21,7 +21,7 @@ export const translations = {
       ),
     },
     whatsappButton: {
-      label: "Fragen? Schreiben Sie uns auf WhatsApp.",
+      label: "Fragen? Schreiben Sie uns auf WhatsApp",
     },
     languageSwitcher: {
       ariaLabel: (lang) => `Sprache wechseln — aktuell ${lang}`,
@@ -372,7 +372,7 @@ export const translations = {
       ),
     },
     whatsappButton: {
-      label: "Des questions ? Écrivez-nous sur WhatsApp.",
+      label: "Des questions ? Écrivez-nous sur WhatsApp",
     },
     languageSwitcher: {
       ariaLabel: (lang) => `Changer de langue — actuellement ${lang}`,
@@ -724,7 +724,7 @@ export const translations = {
       ),
     },
     whatsappButton: {
-      label: "Domande? Scrivici su WhatsApp.",
+      label: "Domande? Scrivici su WhatsApp",
     },
     languageSwitcher: {
       ariaLabel: (lang) => `Cambia lingua — attualmente ${lang}`,
@@ -1076,7 +1076,7 @@ export const translations = {
       ),
     },
     whatsappButton: {
-      label: "¿Preguntas? Escríbenos por WhatsApp.",
+      label: "¿Preguntas? Escríbenos por WhatsApp",
     },
     languageSwitcher: {
       ariaLabel: (lang) => `Cambiar idioma — actualmente ${lang}`,
@@ -1428,7 +1428,7 @@ export const translations = {
       ),
     },
     whatsappButton: {
-      label: "Pyetje? Na shkruani në WhatsApp.",
+      label: "Pyetje? Na shkruani në WhatsApp",
     },
     languageSwitcher: {
       ariaLabel: (lang) => `Ndrysho gjuhën — aktualisht ${lang}`,
@@ -1780,7 +1780,7 @@ export const translations = {
       ),
     },
     whatsappButton: {
-      label: "Pirs? Li WhatsAppê binivîsin me.",
+      label: "Pirs? Li WhatsAppê binivîsin me",
     },
     languageSwitcher: {
       ariaLabel: (lang) => `Ziman biguherîne — niha ${lang}`,

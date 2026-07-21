@@ -13,6 +13,7 @@ export const SmoothImage = ({
   height,
   loading = "lazy",
   decoding = "async",
+  fetchpriority = "auto",
   containerClassName = "",
   className = "",
   placeholderClassName = "bg-[#E9E4DA]",
@@ -50,6 +51,7 @@ export const SmoothImage = ({
         height={height}
         loading={loading}
         decoding={decoding}
+        fetchpriority={fetchpriority}
         onLoad={() => setLoaded(true)}
         onError={() => setFailed(true)}
         className={`relative z-10 h-full w-full object-cover bg-[#E9E4DA] transition-[opacity,transform] duration-700 ${
