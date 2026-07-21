@@ -24,6 +24,50 @@ const Segs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
     )
   );
 
+// Same as Segs, but inserts a desktop-only line break before each "MOMO".
+const BodySegs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
+  segs.map((s, i) => {
+    if (typeof s === "string") {
+      const parts = s.split(/(MOMO)/g);
+      return (
+        <Fragment key={i}>
+          {parts.map((part, j) =>
+            part === "MOMO" ? (
+              <Fragment key={j}>
+                <br className="hidden md:block" />
+                <span className="md:mt-1 inline-block">{part}</span>
+              </Fragment>
+            ) : (
+              part
+            )
+          )}
+        </Fragment>
+      );
+    }
+    if (s.hl) {
+      const parts = s.hl.split(/(MOMO)/g);
+      return (
+        <span key={i} className={hlClass}>
+          {parts.map((part, j) =>
+            part === "MOMO" ? (
+              <Fragment key={j}>
+                <br className="hidden md:block" />
+                <span className="md:mt-1 inline-block">{part}</span>
+              </Fragment>
+            ) : (
+              part
+            )
+          )}
+        </span>
+      );
+    }
+    return (
+      <span key={i} className={bClass}>
+        {s.b}
+      </span>
+    );
+  });
+
 const problems = [
   { n: 1, img: IMG.problems[0] },
   { n: 2, img: IMG.problems[1] },
@@ -68,7 +112,7 @@ const ProblemCard = ({ p, card }) => {
           <Segs segs={card.title} hlClass="text-[#1EB955]" />
         </h3>
         <p className="mt-5 md:mt-6 text-[16px] md:text-[18px] leading-[1.7] text-black/60 max-w-[540px]">
-          <Segs segs={card.body} hlClass="text-[#1EB955] font-semibold" />
+          <BodySegs segs={card.body} hlClass="text-[#1EB955] font-semibold" />
         </p>
       </div>
     </article>
@@ -128,9 +172,7 @@ const ClimaxCard = () => {
                   key={i}
                   className="flex items-start gap-3 rounded-xl bg-[#F5F4EF] px-3 py-2.5 md:px-3.5"
                 >
-                  <span className="mt-0.5 grid place-items-center h-5 w-5 rounded-full bg-[#25D366] text-white shrink-0">
-                    <Check className="h-3 w-3" strokeWidth={3.5} />
-                  </span>
+                  <Check className="mt-0.5 h-4 w-4 lg:h-3.5 lg:w-3.5 text-[#25D366] shrink-0" strokeWidth={3.5} />
                   <span className="text-[12.5px] md:text-[13.5px] font-medium text-black/85 leading-snug italic">
                     {text}
                   </span>
@@ -165,9 +207,7 @@ const ClimaxCard = () => {
                   key={i}
                   className="flex items-center justify-center md:justify-start gap-2 text-center md:text-left text-[12px] md:text-[13.5px] font-medium text-black/80"
                 >
-                  <span className="grid place-items-center h-4 w-4 rounded-full bg-[#25D366] text-white shrink-0">
-                    <Check className="h-2.5 w-2.5" strokeWidth={4} />
-                  </span>
+                  <Check className="h-3.5 w-3.5 text-[#25D366] shrink-0" strokeWidth={3.5} />
                   {s}
                 </li>
               ))}

@@ -1,8 +1,9 @@
 import { Logo } from "@/components/Logo";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Reveal from "@/components/Reveal";
-import { Phone } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -57,40 +58,76 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* MINI GRID */}
+      {/* CONTACT GRID */}
       <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-12 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
-            <div className="md:col-span-8 text-center md:text-left">
-              <Logo variant="light" className="text-[30px] md:text-[36px]" showImage />
-              <p className="mt-5 md:mt-6 max-w-md mx-auto md:mx-0 text-[13px] md:text-[14px] leading-relaxed text-white/55">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 items-start text-center sm:text-left">
+            {/* Brand */}
+            <div className="flex flex-col items-center sm:items-start">
+              <Logo variant="light" className="text-[30px] md:text-[38px]" showImage />
+              <p className="mt-5 md:mt-6 max-w-xs text-[13px] md:text-[14px] leading-relaxed text-white/55">
                 {t.footer.brandDescription}
               </p>
             </div>
 
-            <div className="md:col-span-4 text-center md:text-right">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
-                {t.footer.contactHeading}
-              </p>
-              <ul className="mt-5 md:mt-6 space-y-2.5 md:space-y-3 text-[13px] md:text-[14px]">
-                <li className="flex justify-center md:justify-end">
-                  <a
-                    href={`tel:${t.footer.phone.replace(/\s/g, "")}`}
-                    data-testid="footer-phone"
-                    aria-label={t.footer.phoneAria}
-                    className="text-white/90 hover:text-white transition-colors duration-500 inline-flex items-center gap-2.5 text-[15px] md:text-[17px] font-medium whitespace-nowrap"
-                  >
-                    <Phone className="h-5 w-5 md:h-6 md:w-6 shrink-0 -mt-0.5" strokeWidth={1.8} />
-                    <span className="leading-none whitespace-nowrap">{t.footer.phone}</span>
-                  </a>
-                </li>
-              </ul>
+            {/* Standorte */}
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="flex items-center gap-2 mb-4 md:mb-5">
+                <MapPin className="h-4 w-4 text-[#25D366]" strokeWidth={2} />
+                <p className="text-[12px] md:text-[13px] uppercase tracking-[0.2em] text-white/40 font-semibold">
+                  Standorte
+                </p>
+              </div>
+              <div className="space-y-4 text-[14px] md:text-[15px] leading-relaxed text-white/80">
+                <p>
+                  Weltpoststrasse 5<br />
+                  3015 Bern
+                </p>
+                <p>
+                  Hardstrasse 201<br />
+                  8005 Zürich
+                </p>
+              </div>
+            </div>
+
+            {/* E-Mail */}
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="flex items-center gap-2 mb-4 md:mb-5">
+                <Mail className="h-4 w-4 text-[#25D366]" strokeWidth={2} />
+                <p className="text-[12px] md:text-[13px] uppercase tracking-[0.2em] text-white/40 font-semibold">
+                  E-Mail
+                </p>
+              </div>
+              <a
+                href="mailto:info@planmove.ch"
+                className="text-[15px] md:text-[17px] text-white/90 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors duration-300"
+              >
+                info@planmove.ch
+              </a>
+            </div>
+
+            {/* Telefon */}
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="flex items-center gap-2 mb-4 md:mb-5">
+                <Phone className="h-4 w-4 text-[#25D366]" strokeWidth={2} />
+                <p className="text-[14px] md:text-[16px] uppercase tracking-[0.18em] text-white font-bold">
+                  Telefon
+                </p>
+              </div>
+              <a
+                href="tel:+41794880011"
+                data-testid="footer-phone"
+                aria-label={t.footer.phoneAria}
+                className="inline-flex items-center gap-2.5 text-[17px] md:text-[20px] font-medium text-white/90 hover:text-white transition-colors duration-300"
+              >
+                <span className="leading-none whitespace-nowrap">+41 79 488 00 11</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* WORDMARK */}
+      {/* WORDMARK + LEGAL */}
       <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 py-8 md:py-10 overflow-hidden">
           <div
@@ -100,9 +137,13 @@ export const Footer = () => {
           >
             PLANMOVE
           </div>
-          <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.24em] leading-none text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
+          <div className="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-3 text-[11px] md:text-[12px] tracking-[0.04em] text-white/40" style={{ fontFamily: 'Helvetica, "Helvetica Neue", Arial, sans-serif' }}>
             <span className="leading-none">© {new Date().getFullYear()} PLANMOVE</span>
-            <span className="leading-none">{t.footer.bottomNote}</span>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+              <Link to="/impressum" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">Impressum</Link>
+              <Link to="/datenschutz" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">Datenschutzerklärung</Link>
+              <Link to="/agb" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">AGB's</Link>
+            </div>
           </div>
         </div>
       </div>

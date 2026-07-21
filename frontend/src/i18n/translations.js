@@ -32,7 +32,8 @@ export const translations = {
       headlines: ["Mehr Kunden.", "Mehr Zeit.", "Mehr Geld."],
       headlineHighlight: "Weniger Stress.",
       benefits: [
-        "Sprechen Sie einfach in Ihrer Muttersprache – MOMO erstellt Offerten, Rechnungen und Antworten auf perfektem Deutsch oder in Ihrer gewünschten Sprache.",
+        "MOMO erstellt Offerten, Rechnungen & Antworten – einfach per Sprache oder WhatsApp.",
+        "Sprechen Sie einfach in Ihrer Muttersprache – MOMO schreibt perfektes Deutsch oder die Sprache Ihres Kunden.",
         "E-Mails und Briefe in Sekunden erledigen – MOMO erklärt den Inhalt und erstellt sofort eine professionelle Antwort.",
         "Nie wieder bis spät abends im Büro sitzen – MOMO beantwortet Anfragen und erledigt Ihre Büroarbeit für Sie.",
         "Kein Kunde geht mehr vergessen – MOMO erinnert Kunden automatisch an offene Offerten.",
@@ -196,63 +197,44 @@ export const translations = {
       items: [
         {
           name: "Markus H.",
-          role: "Inhaber · Umzugsfirma Zürich",
+          role: "Umzugsunternehmer",
           quote:
             "„Früher zwei Stunden Papierkram nach Feierabend. Heute spreche ich 40 Sekunden ins Handy — fertig. Ich habe meinen Feierabend zurück.“",
         },
         {
           name: "Elena B.",
-          role: "Geschäftsführerin · Reinigungsservice",
+          role: "Reinigungsunternehmerin",
           quote:
             "„Ich bin in Portugal aufgewachsen. MOMO versteht meine Muttersprache und schreibt sauberes Deutsch. Meine Kunden merken den Unterschied.“",
         },
         {
           name: "Thomas K.",
-          role: "Geschäftsführer · Umzug & Transport",
+          role: "Transportunternehmer",
           quote:
             "„Der Auto-Follow-up hat mir letzten Monat drei Aufträge gerettet, die ich sonst vergessen hätte. MOMO zahlt sich mehrfach aus.“",
         },
         {
           name: "Sara M.",
-          role: "Inhaberin · Reinigungsunternehmen",
+          role: "Reinigungsunternehmerin",
           quote:
-            "„Ich führe ein Reinigungsunternehmen in Genf. MOMO beantwortet Anfragen nachts und am Wochenende — das gibt mir echte Ruhe.“",
+            "„MOMO beantwortet Anfragen nachts und am Wochenende — das gibt mir echte Ruhe.“",
         },
         {
           name: "David R.",
-          role: "Betriebsleiter · Umzugsservice",
+          role: "Umzugsunternehmer",
           quote:
             "„Seit wir MOMO nutzen, schreiben wir professionelle Offerten in Minutensache. Das spart Zeit und wirkt viel seriöser gegenüber Kunden.“",
         },
         {
           name: "Team Primemove",
-          role: "Umzugsunternehmen · Schweiz",
+          role: "Primemove",
           quote:
             "„MOMO hat unseren Büroalltag komplett verändert. Mehr Zeit, weniger Stress, zufriedene Kunden.“",
-          company: "Primemove",
-        },
-        {
-          name: "Julia W.",
-          role: "Inhaberin · Umzug & Reinigung",
-          quote:
-            "„Ich spreche einfach die Anfrage ins Handy — MOMO erledigt den Rest. Ich habe pro Woche mindestens zehn Stunden gewonnen.“",
-        },
-        {
-          name: "Adrian S.",
-          role: "Geschäftsführer · Transportunternehmen",
-          quote:
-            "„Seit PLANMOVE verpasse ich keine Anfrage mehr. Selbst wenn ich unterwegs bin, antwortet MOMO sofort professionell.“",
-        },
-        {
-          name: "Lena T.",
-          role: "Inhaberin · Reinigungsservice",
-          quote:
-            "„Endlich weniger Stress im Büro. MOMO organisiert Termine, Rechnungen und Nachfragen — alles aus einer Hand.“",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Vor PLANMOVE",
+      headingBefore: "Ohne PLANMOVE",
       headingAfter: "Mit PLANMOVE",
       items: [
         { before: "Deutsch war ein Problem.", after: "Einfach sprechen – MOMO schreibt perfektes Deutsch." },
@@ -287,8 +269,8 @@ export const translations = {
           a: "Ja. Sie nutzen MOMO bequem auf Ihrem Smartphone per WhatsApp oder Sprachnachricht — egal ob im Büro, unterwegs oder auf dem Bau.",
         },
         {
-          q: "Ist meine Daten sicher?",
-          a: "Ja. Wir setzen auf Schweizer Server, verschlüsselte Verbindungen und DSGVO-konforme Abläufe. Ihre Kundendaten bleiben geschützt.",
+          q: "Welche Sprachen spricht MOMO?",
+          a: "MOMO spricht mit Ihnen in Ihrer Muttersprache — ganz egal, welche das ist. Und schreibt professionelle Antworten auf Deutsch, Französisch, Italienisch oder in der Sprache Ihres Kunden.",
         },
       ],
     },
@@ -310,11 +292,11 @@ export const translations = {
       paragraph:
         "Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne Verpflichtung. Erfahren Sie in fünf Minuten, wie MOMO Ihr KMU verändert.",
       brandDescription:
-        "PLANMOVE ist der intelligente Assistent für Schweizer Umzugs- und Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.",
+        "MOMO ist der KI-Assistent für Schweizer Umzugs- und Reinigungsunternehmen. PLANMOVE ist die Software. 24/7 erreichbar. In jeder Sprache.",
       contactHeading: "Kontakt",
       phone: "+41779800810",
       phoneAria: "PLANMOVE anrufen",
-      bottomNote: "Für Umzug & Reinigung · DSGVO Konform",
+      bottomNote: "",
     },
     phoneMockup: {
       newRequest: "Neue Anfrage",
@@ -383,7 +365,8 @@ export const translations = {
       headlines: ["Plus de clients.", "Plus de temps.", "Plus d'argent."],
       headlineHighlight: "Moins de stress.",
       benefits: [
-        "Parlez simplement dans votre langue maternelle — MOMO crée des devis, factures et réponses en allemand parfait ou dans la langue souhaitée.",
+        "MOMO crée des devis, factures et réponses — simplement par la voix ou WhatsApp.",
+        "Parlez simplement dans votre langue maternelle — MOMO écrit en allemand parfait ou dans la langue de votre client.",
         "E-mails et lettres réglés en quelques secondes — MOMO explique le contenu et rédige immédiatement une réponse professionnelle.",
         "Ne restez plus tard au bureau — MOMO répond aux demandes et fait votre travail de bureau pour vous.",
         "Aucun client n'est oublié — MOMO rappelle automatiquement aux clients les devis en attente.",
@@ -548,63 +531,44 @@ export const translations = {
       items: [
         {
           name: "Marc H.",
-          role: "Propriétaire · Entreprise de déménagement",
+          role: "Entrepreneur de déménagement",
           quote:
             "« Avant, deux heures de paperasse après le travail. Aujourd'hui, je parle 40 secondes dans mon téléphone — terminé. J'ai retrouvé mes soirées. »",
         },
         {
           name: "Elena B.",
-          role: "Directrice · Service de nettoyage",
+          role: "Entrepreneure de nettoyage",
           quote:
             "« J'ai grandi au Portugal. MOMO comprend ma langue maternelle et rédige un allemand impeccable. Mes clients voient la différence. »",
         },
         {
           name: "Thomas K.",
-          role: "Directeur · Déménagement & transport",
+          role: "Entrepreneur de transport",
           quote:
             "« La relance automatique m'a sauvé trois mandats le mois dernier, que j'aurais sinon oubliés. MOMO est largement rentabilisé. »",
         },
         {
           name: "Sara M.",
-          role: "Propriétaire · Entreprise de nettoyage",
+          role: "Entrepreneure de nettoyage",
           quote:
-            "« Je dirige une entreprise de nettoyage à Genève. MOMO répond aux demandes la nuit et le week-end — cela me donne une vraie tranquillité d'esprit. »",
+            "« MOMO répond aux demandes la nuit et le week-end — cela me donne une vraie tranquillité d'esprit. »",
         },
         {
           name: "David R.",
-          role: "Responsable · Service de déménagement",
+          role: "Entrepreneur de déménagement",
           quote:
             "« Depuis que nous utilisons MOMO, nous rédigeons des devis professionnels en quelques minutes. Cela fait gagner du temps et paraît bien plus sérieux aux clients. »",
         },
         {
           name: "Équipe Primemove",
-          role: "Entreprise de déménagement · Suisse",
+          role: "Primemove",
           quote:
             "« MOMO a complètement changé notre quotidien au bureau. Plus de temps, moins de stress, des clients satisfaits. »",
-          company: "Primemove",
-        },
-        {
-          name: "Julia W.",
-          role: "Propriétaire · Déménagement & nettoyage",
-          quote:
-            "« Je parle simplement ma demande dans le téléphone — MOMO s'occupe du reste. J'ai gagné au moins dix heures par semaine. »",
-        },
-        {
-          name: "Adrian S.",
-          role: "Directeur · Entreprise de transport",
-          quote:
-            "« Depuis PLANMOVE, je ne manque plus aucune demande. Même quand je suis en déplacement, MOMO répond immédiatement et professionnellement. »",
-        },
-        {
-          name: "Lena T.",
-          role: "Propriétaire · Service de nettoyage",
-          quote:
-            "« Enfin moins de stress au bureau. MOMO organise les rendez-vous, les factures et les relances — tout en un seul outil. »",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Avant PLANMOVE",
+      headingBefore: "Sans PLANMOVE",
       headingAfter: "Avec PLANMOVE",
       items: [
         { before: "L'allemand était un problème.", after: "Parlez simplement — MOMO écrit un allemand parfait." },
@@ -639,8 +603,8 @@ export const translations = {
           a: "Oui. Vous utilisez MOMO confortablement sur votre smartphone via WhatsApp ou un message vocal — au bureau, en déplacement ou sur le chantier.",
         },
         {
-          q: "Mes données sont-elles sécurisées ?",
-          a: "Oui. Nous utilisons des serveurs suisses, des connexions chiffrées et des processus conformes au RGPD. Vos données clients restent protégées.",
+          q: "Quelles langues parle MOMO ?",
+          a: "MOMO vous parle dans votre langue maternelle — peu importe laquelle. Et rédige des réponses professionnelles en allemand, français, italien ou dans la langue de votre client.",
         },
       ],
     },
@@ -662,11 +626,11 @@ export const translations = {
       paragraph:
         "Une courte conversation sur WhatsApp — personnelle, gratuite et sans engagement. Découvrez en cinq minutes comment MOMO transforme votre PME.",
       brandDescription:
-        "PLANMOVE est l'assistant intelligent des entreprises suisses de déménagement et de nettoyage. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
+        "MOMO est l'assistant IA pour les entreprises suisses de déménagement et de nettoyage. PLANMOVE est le logiciel. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
       contactHeading: "Contact",
       phone: "+41779800810",
       phoneAria: "Appeler PLANMOVE",
-      bottomNote: "Pour le déménagement & le nettoyage · Conforme au RGPD",
+      bottomNote: "",
     },
     phoneMockup: {
       newRequest: "Nouvelle demande",
@@ -735,7 +699,8 @@ export const translations = {
       headlines: ["Più clienti.", "Più tempo.", "Più soldi."],
       headlineHighlight: "Meno stress.",
       benefits: [
-        "Parli semplicemente nella Sua lingua madre — MOMO crea preventivi, fatture e risposte in tedesco perfetto o nella lingua desiderata.",
+        "MOMO crea preventivi, fatture e risposte — semplicemente con la voce o WhatsApp.",
+        "Parli semplicemente nella Sua lingua madre — MOMO scrive in tedesco perfetto o nella lingua del Suo cliente.",
         "E-mail e lettere risolte in pochi secondi — MOMO spiega il contenuto e crea immediatamente una risposta professionale.",
         "Non stare più in ufficio fino a tardi — MOMO risponde alle richieste e svolge il Suo lavoro d'ufficio per Lei.",
         "Nessun cliente viene più dimenticato — MOMO ricorda automaticamente ai clienti i preventivi aperti.",
@@ -900,63 +865,44 @@ export const translations = {
       items: [
         {
           name: "Marco H.",
-          role: "Titolare · Azienda di traslochi",
+          role: "Imprenditore di traslochi",
           quote:
             "«Prima, due ore di scartoffie dopo il lavoro. Oggi parlo per 40 secondi al telefono — fatto. Ho riavuto le mie serate.»",
         },
         {
           name: "Elena B.",
-          role: "Amministratrice · Servizio di pulizie",
+          role: "Imprenditrice di pulizie",
           quote:
             "«Sono cresciuta in Portogallo. MOMO capisce la mia lingua madre e scrive un tedesco impeccabile. I miei clienti notano la differenza.»",
         },
         {
           name: "Tommaso K.",
-          role: "Direttore · Traslochi & trasporti",
+          role: "Imprenditore di trasporti",
           quote:
             "«Il follow-up automatico mi ha salvato tre incarichi il mese scorso, che altrimenti avrei dimenticato. MOMO si ripaga più volte.»",
         },
         {
           name: "Sara M.",
-          role: "Titolare · Azienda di pulizie",
+          role: "Imprenditrice di pulizie",
           quote:
-            "«Dirigo un'azienda di pulizie a Ginevra. MOMO risponde alle richieste di notte e nel weekend — questo mi dà una vera tranquillità.»",
+            "«MOMO risponde alle richieste di notte e nel weekend — questo mi dà una vera tranquillità.»",
         },
         {
           name: "Davide R.",
-          role: "Responsabile · Servizio traslochi",
+          role: "Imprenditore di traslochi",
           quote:
             "«Da quando usiamo MOMO, scriviamo preventivi professionali in pochi minuti. Risparmiamo tempo e sembriamo molto più seri ai clienti.»",
         },
         {
           name: "Team Primemove",
-          role: "Azienda di traslochi · Svizzera",
+          role: "Primemove",
           quote:
             "«MOMO ha cambiato completamente la nostra routine in ufficio. Più tempo, meno stress, clienti soddisfatti.»",
-          company: "Primemove",
-        },
-        {
-          name: "Giulia W.",
-          role: "Titolare · Traslochi & pulizie",
-          quote:
-            "«Parlo semplicemente la richiesta al telefono — MOMO fa il resto. Ho guadagnato almeno dieci ore a settimana.»",
-        },
-        {
-          name: "Adrian S.",
-          role: "Direttore · Azienda di trasporti",
-          quote:
-            "«Da quando uso PLANMOVE non perdo più nessuna richiesta. Anche quando sono in giro, MOMO risponde subito in modo professionale.»",
-        },
-        {
-          name: "Lena T.",
-          role: "Titolare · Servizio di pulizie",
-          quote:
-            "«Finalmente meno stress in ufficio. MOMO organizza appuntamenti, fatture e solleciti — tutto in un unico strumento.»",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Prima di PLANMOVE",
+      headingBefore: "Senza PLANMOVE",
       headingAfter: "Con PLANMOVE",
       items: [
         { before: "Il tedesco era un problema.", after: "Parla semplicemente — MOMO scrive un tedesco perfetto." },
@@ -991,8 +937,8 @@ export const translations = {
           a: "Sì. Utilizza MOMO comodamente sul Suo smartphone tramite WhatsApp o un messaggio vocale — in ufficio, in viaggio o in cantiere.",
         },
         {
-          q: "I miei dati sono al sicuro?",
-          a: "Sì. Utilizziamo server svizzeri, connessioni crittografate e processi conformi al GDPR. I Suoi dati cliente restano protetti.",
+          q: "Quali lingue parla MOMO?",
+          a: "MOMO parla con Lei nella Sua lingua madre — qualunque essa sia. E scrive risposte professionali in tedesco, francese, italiano o nella lingua del Suo cliente.",
         },
       ],
     },
@@ -1014,11 +960,11 @@ export const translations = {
       paragraph:
         "Una breve conversazione su WhatsApp — personale, gratuita e senza impegno. Scopra in cinque minuti come MOMO trasforma la Sua PMI.",
       brandDescription:
-        "PLANMOVE è l'assistente intelligente per le aziende svizzere di traslochi e pulizie. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
+        "MOMO è l'assistente IA per le aziende svizzere di traslochi e pulizie. PLANMOVE è il software. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
       contactHeading: "Contatto",
       phone: "+41779800810",
       phoneAria: "Chiama PLANMOVE",
-      bottomNote: "Per traslochi & pulizie · Conforme al GDPR",
+      bottomNote: "",
     },
     phoneMockup: {
       newRequest: "Nuova richiesta",
@@ -1087,7 +1033,8 @@ export const translations = {
       headlines: ["Más clientes.", "Más tiempo.", "Más dinero."],
       headlineHighlight: "Menos estrés.",
       benefits: [
-        "Hable simplemente en su idioma materno — MOMO crea presupuestos, facturas y respuestas en alemán perfecto o en el idioma que desee.",
+        "MOMO crea presupuestos, facturas y respuestas — simplemente con la voz o WhatsApp.",
+        "Hable simplemente en su idioma materno — MOMO escribe en alemán perfecto o en el idioma de su cliente.",
         "Correos y cartas resueltos en segundos — MOMO explica el contenido y crea inmediatamente una respuesta profesional.",
         "No se quede más hasta tarde en la oficina — MOMO responde consultas y hace su trabajo de oficina por usted.",
         "Ningún cliente se olvida — MOMO recuerda automáticamente a los clientes los presupuestos pendientes.",
@@ -1252,63 +1199,44 @@ export const translations = {
       items: [
         {
           name: "Marco H.",
-          role: "Propietario · Empresa de mudanzas",
+          role: "Empresario de mudanzas",
           quote:
             "«Antes, dos horas de papeleo después del trabajo. Hoy hablo 40 segundos al móvil — listo. He recuperado mis tardes.»",
         },
         {
           name: "Elena B.",
-          role: "Directora · Servicio de limpieza",
+          role: "Empresaria de limpieza",
           quote:
             "«Crecí en Portugal. MOMO entiende mi idioma materno y escribe alemán impecable. Mis clientes notan la diferencia.»",
         },
         {
           name: "Tomás K.",
-          role: "Director · Mudanzas & transporte",
+          role: "Empresario de transportes",
           quote:
             "«El seguimiento automático me salvó tres encargos el mes pasado, que de otro modo habría olvidado. MOMO se paga solo.»",
         },
         {
           name: "Sara M.",
-          role: "Propietaria · Empresa de limpieza",
+          role: "Empresaria de limpieza",
           quote:
-            "«Dirijo una empresa de limpieza en Ginebra. MOMO responde consultas por la noche y los fines de semana — eso me da verdadera tranquilidad.»",
+            "«MOMO responde consultas por la noche y los fines de semana — eso me da verdadera tranquilidad.»",
         },
         {
           name: "David R.",
-          role: "Responsable · Servicio de mudanzas",
+          role: "Empresario de mudanzas",
           quote:
             "«Desde que usamos MOMO, escribimos presupuestos profesionales en minutos. Ahorramos tiempo y parecemos mucho más serios ante los clientes.»",
         },
         {
           name: "Equipo Primemove",
-          role: "Empresa de mudanzas · Suiza",
+          role: "Primemove",
           quote:
             "«MOMO ha cambiado completamente nuestra rutina de oficina. Más tiempo, menos estrés, clientes satisfechos.»",
-          company: "Primemove",
-        },
-        {
-          name: "Julia W.",
-          role: "Propietaria · Mudanzas & limpieza",
-          quote:
-            "«Hablo simplemente la consulta al móvil — MOMO hace el resto. He ganado al menos diez horas a la semana.»",
-        },
-        {
-          name: "Adrián S.",
-          role: "Director · Empresa de transportes",
-          quote:
-            "«Desde PLANMOVE no pierdo ninguna consulta. Incluso cuando estoy fuera, MOMO responde inmediatamente de forma profesional.»",
-        },
-        {
-          name: "Lena T.",
-          role: "Propietaria · Servicio de limpieza",
-          quote:
-            "«Por fin menos estrés en la oficina. MOMO organiza citas, facturas y seguimientos — todo en una sola herramienta.»",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Antes de PLANMOVE",
+      headingBefore: "Sin PLANMOVE",
       headingAfter: "Con PLANMOVE",
       items: [
         { before: "El alemán era un problema.", after: "Hable simplemente — MOMO escribe alemán perfecto." },
@@ -1343,8 +1271,8 @@ export const translations = {
           a: "Sí. Use MOMO cómodamente en su smartphone a través de WhatsApp o un mensaje de voz — en la oficina, de camino o en la obra.",
         },
         {
-          q: "¿Mis datos están seguros?",
-          a: "Sí. Utilizamos servidores suizos, conexiones cifradas y procesos conformes al RGPD. Los datos de sus clientes permanecen protegidos.",
+          q: "¿Qué idiomas habla MOMO?",
+          a: "MOMO habla con usted en su idioma materno — sea cual sea. Y escribe respuestas profesionales en alemán, francés, italiano o en el idioma de su cliente.",
         },
       ],
     },
@@ -1366,11 +1294,11 @@ export const translations = {
       paragraph:
         "Una breve conversación por WhatsApp — personal, gratuita y sin compromiso. Descubra en cinco minutos cómo MOMO transforma su PYME.",
       brandDescription:
-        "PLANMOVE es el asistente inteligente para empresas suizas de mudanzas y limpieza. Disponible 24/7. En todos los idiomas.",
+        "MOMO es el asistente de IA para empresas suizas de mudanzas y limpieza. PLANMOVE es el software. Disponible 24/7. En todos los idiomas.",
       contactHeading: "Contacto",
       phone: "+41779800810",
       phoneAria: "Llamar a PLANMOVE",
-      bottomNote: "Para mudanzas y limpieza · Conforme al RGPD",
+      bottomNote: "",
     },
     phoneMockup: {
       newRequest: "Nueva consulta",
@@ -1439,7 +1367,8 @@ export const translations = {
       headlines: ["Më shumë klientë.", "Më shumë kohë.", "Më shumë para."],
       headlineHighlight: "Më pak stres.",
       benefits: [
-        "Folni thjesht në gjuhën tuaj amtare — MOMO krijon oferta, fatura dhe përgjigje në gjermanisht të përsosur ose në gjuhën që dëshironi.",
+        "MOMO krijon oferta, fatura dhe përgjigje — thjesht me zë ose WhatsApp.",
+        "Folni thjesht në gjuhën tuaj amtare — MOMO shkruan gjermanisht të përsosur ose gjuhën e klientit tuaj.",
         "Emailet dhe letrat përfundojnë në sekonda — MOMO shpjegon përmbajtjen dhe krijon menjëherë një përgjigje profesionale.",
         "Mos rrini më vonë në zyrë — MOMO i përgjigjet pyetjeve dhe kryen punën tuaj të zyrës për ju.",
         "Asnjë klient nuk harrohet më — MOMO i kujton automatikisht klientëve ofertat e hapura.",
@@ -1604,63 +1533,44 @@ export const translations = {
       items: [
         {
           name: "Mark H.",
-          role: "Pronar · Kompania e zhvendosjeve",
+          role: "Pronar kompanie zhvendosjesh",
           quote:
             "«Më parë, dy orë punë zyre pas punës. Sot flas 40 sekonda në telefon — gati. E kam rimarrë mbrëmjen time.»",
         },
         {
           name: "Elena B.",
-          role: "Drejtore · Shërbimi pastrimit",
+          role: "Pronare kompanie pastrimi",
           quote:
             "«U rrita në Portugali. MOMO kupton gjuhën time amtare dhe shkruan gjermanisht të përsosur. Klientët e mi e shohin diferencën.»",
         },
         {
           name: "Tomas K.",
-          role: "Drejtues · Zhvendosje & transport",
+          role: "Pronar kompanie transporti",
           quote:
             "«Ndjekja automatike më shpëtoi tre punë muajin e kaluar, që përndryshe do t'i kisha harruar. MOMO paguhet vetë.»",
         },
         {
           name: "Sara M.",
-          role: "Pronare · Kompania e pastrimit",
+          role: "Pronare kompanie pastrimi",
           quote:
-            "«Udhëheq një kompani pastrimi në Gjenevë. MOMO i përgjigjet pyetjeve natën dhe në fundjavë — kjo më jep qetësi të vërtetë.»",
+            "«MOMO i përgjigjet pyetjeve natën dhe në fundjavë — kjo më jep qetësi të vërtetë.»",
         },
         {
           name: "David R.",
-          role: "Përgjegjës · Shërbimi i zhvendosjeve",
+          role: "Pronar kompanie zhvendosjesh",
           quote:
             "«Që kur përdorim MOMO, shkruajmë oferta profesionale në pak minuta. Kursim kohë dhe dukemi shumë më seriozë ndaj klientëve.»",
         },
         {
           name: "Ekipi Primemove",
-          role: "Kompania e zhvendosjeve · Zvicër",
+          role: "Primemove",
           quote:
             "«MOMO e ka ndryshuar krejtësisht rutinën tonë në zyrë. Më shumë kohë, më pak stres, klientë të kënaqur.»",
-          company: "Primemove",
-        },
-        {
-          name: "Julia W.",
-          role: "Pronare · Zhvendosje & pastrim",
-          quote:
-            "«Fola thjesht kërkesën në telefon — MOMO kryen pjesën tjetër. Kam fituar të paktën dhjetë orë në javë.»",
-        },
-        {
-          name: "Adrian S.",
-          role: "Drejtues · Kompania e transportit",
-          quote:
-            "«Që nga PLANMOVE nuk humbas më asnjë kërkesë. Edhe kur jam në lëvizje, MOMO përgjigjet menjëherë profesionalisht.»",
-        },
-        {
-          name: "Lena T.",
-          role: "Pronare · Shërbimi pastrimit",
-          quote:
-            "«Më në fund më pak stres në zyrë. MOMO organizon takime, fatura dhe kujtimet — gjithçka në një mjet.»",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Para PLANMOVE",
+      headingBefore: "Pa PLANMOVE",
       headingAfter: "Me PLANMOVE",
       items: [
         { before: "Gjermanishtja ishte problem.", after: "Fol thjesht — MOMO shkruan gjermanisht të përsosur." },
@@ -1695,8 +1605,8 @@ export const translations = {
           a: "Po. Përdorni MOMO lehtësisht në smartphone-in tuaj përmes WhatsApp ose një mesazhi zanor — në zyrë, në rrugë ose në ndërtim.",
         },
         {
-          q: "A janë të sigurta të dhënat e mia?",
-          a: "Po. Ne përdorim servera zviceranë, lidhje të koduara dhe procese në përputhje me GDPR. Të dhënat tuaja të klientëve mbeten të mbrojtura.",
+          q: "Çfarë gjuhësh flet MOMO?",
+          a: "MOMO flet me ju në gjuhën tuaj amtare — çfarëdo qoftë ajo. Dhe shkruan përgjigje profesionale në gjermanisht, frëngjisht, italisht ose në gjuhën e klientit tuaj.",
         },
       ],
     },
@@ -1718,11 +1628,11 @@ export const translations = {
       paragraph:
         "Një bisedë e shkurtër në WhatsApp — personale, falas dhe pa angazhim. Mësoni në pesë minuta se si MOMO transformon biznesin tuaj.",
       brandDescription:
-        "PLANMOVE është asistenti inteligjent për kompanitë zvicerane të zhvendosjeve dhe pastrimit. I arritshëm 24/7. Në çdo gjuhë.",
+        "MOMO është asistenti i IA-së për kompanitë zvicerane të zhvendosjeve dhe pastrimit. PLANMOVE është softueri. I arritshëm 24/7. Në çdo gjuhë.",
       contactHeading: "Kontakt",
       phone: "+41779800810",
       phoneAria: "Telefono PLANMOVE",
-      bottomNote: "Për zhvendosje & pastrim · Në përputhje me GDPR",
+      bottomNote: "",
     },
     phoneMockup: {
       newRequest: "Kërkesë e re",
@@ -1791,7 +1701,8 @@ export const translations = {
       headlines: ["Bêhtir xerîdar.", "Bêhtir dem.", "Bêhtir pere."],
       headlineHighlight: "Kêmtir stres.",
       benefits: [
-        "Hingê bi zimanê xwe yê dayikê biaxive — MOMO pêşniyar, fatûre û bersivên bi Almaniya bêkêmasî an bi zimanê ku hûn dixwazin çêdike.",
+        "MOMO pêşniyar, fatûre û bersivan çêdike — tenê bi deng an WhatsApp.",
+        "Hingê bi zimanê xwe yê dayikê biaxive — MOMO bi Almaniya bêkêmasî an bi zimanê xerîdarê we dinivîse.",
         "E-name û name di saniyeyan de temam dibin — MOMO naverokê rave dike û fûrbijarkî bersivekê çêdike.",
         "Ji niha şûnda heta êvarî li ofîsê rûnê — MOMO bersiva pirsan dide û karê ofîsê ji bo we dike.",
         "Tu xerîdar nayê jibîrkirin — MOMO bixwe xerîdarên ji bona pêşniyarên vekirî hişyar dike.",
@@ -1956,63 +1867,44 @@ export const translations = {
       items: [
         {
           name: "Mark H.",
-          role: "Xwedî · Şirketa koçberkirinê",
+          role: "Xwedî şirketa koçberkirinê",
           quote:
             "«Berî, du saetan piştî kar karê ofîsê. Îro 40 saniye li têlefonê diaxivim — qediya. Ez êvariya xwe dubare kir.»",
         },
         {
           name: "Elena B.",
-          role: "Rêveber · Xizmeta paqijkirinê",
+          role: "Xwedî şirketa paqijkirinê",
           quote:
             "«Min li Portekizê mezin bûye. MOMO zimanê min ê dayikê fêm dike û bi bêkêmasî Almanî dinivîse. Xerîdarên min ferqê dibînin.»",
         },
         {
           name: "Tomas K.",
-          role: "Rêveber · Koçberkirin & wergirtin",
+          role: "Xwedî şirketa wergirtinê",
           quote:
             "«Şopandina bixwe meha borî sê kar ji min xilas kir, ku ez ê ji bîr bikira. MOMO bi xwe xercê xwe dide.»",
         },
         {
           name: "Sara M.",
-          role: "Xwedî · Şirketa paqijkirinê",
+          role: "Xwedî şirketa paqijkirinê",
           quote:
-            "«Ez li Cenevreyê şirketek paqijkirinê birêve dibim. MOMO şev û dawiya hefteyê bersiva pirsan dide — ev ji rastî aramiyekê dide min.»",
+            "«MOMO şev û dawiya hefteyê bersiva pirsan dide — ev ji rastî aramiyekê dide min.»",
         },
         {
           name: "David R.",
-          role: "Berpirs · Xizmeta koçberkirinê",
+          role: "Xwedî şirketa koçberkirinê",
           quote:
             "«Ji dema ku MOMO bikar tînin, em pêşniyarên profesyonel di çend deqîqeyan de dinivîsin. Em demê xilas dikin û li ber xerîdaran bêhtir cidî xuya dibin.»",
         },
         {
           name: "Tîma Primemove",
-          role: "Şirketa koçberkirinê · Swîsre",
+          role: "Primemove",
           quote:
             "«MOMO rûtîna me ya ofîsê bi temamî guherand. Bêhtir dem, kêmtir stres, xerîdarên kêfxweş.»",
-          company: "Primemove",
-        },
-        {
-          name: "Julia W.",
-          role: "Xwedî · Koçberkirin & paqijkirin",
-          quote:
-            "«Ez tenê pirsê li têlefonê dibêjim — MOMO yê mayî dike. Min her hefteyê kêmî deh saetan qezenc kir.»",
-        },
-        {
-          name: "Adrian S.",
-          role: "Rêveber · Şirketa wergirtinê",
-          quote:
-            "«Ji PLANMOVE pê ve ez tu pirsên winda nakim. Hingê ku ez li rê me, MOMO rasterast bi awayekî profesyonel bersiv dide.»",
-        },
-        {
-          name: "Lena T.",
-          role: "Xwedî · Xizmeta paqijkirinê",
-          quote:
-            "«Di dawiyê de kêmtir stres li ofîsê. MOMO serdan, fatûre û bîrxistinan rêk dixe — her tişt li amûrekê.»",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Berî PLANMOVE",
+      headingBefore: "Bê PLANMOVE",
       headingAfter: "Bi PLANMOVE",
       items: [
         { before: "Almanî pirsgirêk bû.", after: "Hingê biaxive — MOMO bi bêkêmasî Almanî dinivîse." },
@@ -2047,8 +1939,8 @@ export const translations = {
           a: "Erê. Hûn MOMO bi hêsanî li ser smartphone-a xwe bi WhatsApp an peyamek dengî bikar tînin — di ofîsê de, rê de an li cihê kar.",
         },
         {
-          q: "Ma daneyên min ewle ne?",
-          a: "Erê. Em serverên Swîsreyî, girêdanên şîfrekirî û pêvajoyên li gorî GDPR bikar tînin. Daneyên xerîdarê we têne parastin.",
+          q: "MOMO bi çi zimanan diaxive?",
+          a: "MOMO bi we bi zimanê we yê dayikê diaxive — bila kijan be. Û bersivên profesyonel bi Almanî, Fransizî, Îtalî an bi zimanê xerîdarê we dinivîse.",
         },
       ],
     },
@@ -2070,11 +1962,11 @@ export const translations = {
       paragraph:
         "Gotûbajek kurt li WhatsAppê — şexsî, bêpere û bê berpirsiyarî. Di pênc deqîqeyan de bibînin ka MOMO çawa karsaziya we diguherîne.",
       brandDescription:
-        "PLANMOVE asîstana zîrek e ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê. 24/7 berdest. Bi her zimanî.",
+        "MOMO asîstana AI-ya ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê ye. PLANMOVE nivîsbar e. 24/7 berdest. Bi her zimanî.",
       contactHeading: "Têkilî",
       phone: "+41779800810",
       phoneAria: "PLANMOVE bi telefonê gazî bike",
-      bottomNote: "Ji bo koçberkirinê & paqijkirinê · Li gorî GDPR",
+      bottomNote: "",
     },
     phoneMockup: {
       newRequest: "Pirsa nû",

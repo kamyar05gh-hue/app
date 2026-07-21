@@ -63,7 +63,7 @@ export const Header = () => {
                 className="flex items-center gap-2 group"
                 aria-label="PLANMOVE"
               >
-                <Logo className="text-[24px] md:text-[27px]" showImage />
+                <Logo className="text-[26px] md:text-[30px]" showImage />
               </button>
 
               <div className="flex items-center gap-2 md:gap-3">

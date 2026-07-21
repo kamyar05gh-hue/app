@@ -6,8 +6,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const GlowTick = () => (
-  <span className="mt-0.5 grid place-items-center h-5 w-5 md:h-6 md:w-6 shrink-0 text-[#25D366]">
-    <Check className="h-5 w-5 md:h-6 md:w-6" strokeWidth={3} />
+  <span className="mt-0.5 grid place-items-center h-5 w-5 lg:h-[18px] lg:w-[18px] shrink-0 text-[#25D366]">
+    <Check className="h-5 w-5 lg:h-[18px] lg:w-[18px]" strokeWidth={3} />
   </span>
 );
 
@@ -16,7 +16,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] lg:min-h-[calc(100vh-24px)] pt-20 md:pt-28 lg:pt-32 pb-10 md:pb-20 lg:pb-24 overflow-hidden flex items-center"
+      className="relative min-h-[100svh] lg:min-h-[calc(100vh-24px)] pt-24 md:pt-32 lg:pt-36 pb-10 md:pb-20 lg:pb-24 overflow-hidden flex items-center"
       data-testid="hero-section"
     >
       <div
@@ -42,7 +42,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[11px] md:text-[14px] tracking-[0.08em] md:tracking-[0.1em] uppercase font-bold text-[#0047ff]"
+              className="text-[12px] md:text-[15px] tracking-[0.08em] md:tracking-[0.1em] uppercase font-bold text-[#0047ff]"
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
@@ -62,7 +62,7 @@ export const Hero = () => {
 
             <RevealText
               as="h1"
-              className="mt-4 md:mt-6 lg:mt-7 font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[54px] lg:text-[60px] leading-[0.9]"
+              className="mt-3 md:mt-5 lg:mt-6 font-display font-extrabold tracking-[-0.035em] text-[32px] sm:text-[42px] md:text-[54px] lg:text-[58px] leading-[0.9]"
               lines={[
                 ...t.hero.headlines.map((line, i) => (
                   <span key={`l${i}`}>{line}</span>
@@ -77,7 +77,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-2.5 md:mt-5 max-w-xl space-y-1 md:space-y-2 text-[12px] md:text-[15.5px] leading-relaxed text-black/75"
+              className="mt-2 md:mt-4 max-w-xl space-y-1 md:space-y-1.5 text-[12px] md:text-[15px] leading-snug md:leading-relaxed text-black/75"
               data-testid="hero-benefits-list"
             >
               {t.hero.benefits.map((line, i) => (
@@ -92,7 +92,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-4 md:mt-6 flex flex-col items-start gap-2.5 md:gap-3"
+              className="mt-3 md:mt-5 flex flex-col items-start gap-2 md:gap-2.5"
             >
               {/* Google Review chip */}
               <div

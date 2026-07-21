@@ -17,7 +17,7 @@ export const Logo = ({
         <img
           src="/images/logo.png"
           alt="PLANMOVE"
-          className={`h-[1.5em] w-auto object-contain ${filter}`}
+          className={`h-[1.65em] w-auto object-contain ${filter}`}
         />
       )}
     </span>
