@@ -6,7 +6,7 @@ export const LOGO_URL =
 export const WHATSAPP_URL =
   "https://wa.me/41780000000?text=" +
   encodeURIComponent(
-    "Hallo PLANMOVE! Ich möchte mehr über MOMO, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
+    "Hallo PLANMOVE! Ich möchte mehr über PLANMOVE KI, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
   );
 
 /**
@@ -17,7 +17,7 @@ export const WHATSAPP_URL =
 export const IMG = {
   hero: {
     src: "/images/hero-momo.jpg",
-    alt: "MOMO Assistent am Schreibtisch eines Unternehmers",
+    alt: "PLANMOVE KI Assistent am Schreibtisch eines Unternehmers",
   },
   problems: [
     {

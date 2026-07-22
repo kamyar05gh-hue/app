@@ -127,9 +127,9 @@ export default function PrivacyPage() {
                 Wenn Sie uns über WhatsApp kontaktieren, verarbeiten wir Ihre Telefonnummer und den Inhalt Ihrer Nachrichten, um Ihre Anfrage zu beantworten. Für die Nutzung von WhatsApp gelten zusätzlich die Datenschutzbestimmungen der WhatsApp Ireland Limited.
               </p>
 
-              <h3 className="text-white font-semibold mt-6 mb-2">4.5 PLANMOVE-Software (MOMO)</h3>
+              <h3 className="text-white font-semibold mt-6 mb-2">4.5 PLANMOVE-Software (PLANMOVE KI)</h3>
               <p>
-                Die durch PLANMOVE verarbeiteten Kundendaten verbleiben grundsätzlich in Ihrer Kontrolle und werden nur zur Erbringung der Dienstleistung genutzt. Sprachnachrichten, Offerten, Rechnungen und Kundenkommunikation, die Sie über MOMO erstellen, werden ausschliesslich zur Erbringung der vereinbarten Leistung verarbeitet und nicht an Dritte zu Werbezwecken weitergegeben.
+                Die durch PLANMOVE verarbeiteten Kundendaten verbleiben grundsätzlich in Ihrer Kontrolle und werden nur zur Erbringung der Dienstleistung genutzt. Sprachnachrichten, Offerten, Rechnungen und Kundenkommunikation, die Sie über PLANMOVE KI erstellen, werden ausschliesslich zur Erbringung der vereinbarten Leistung verarbeitet und nicht an Dritte zu Werbezwecken weitergegeben.
               </p>
             </section>
 

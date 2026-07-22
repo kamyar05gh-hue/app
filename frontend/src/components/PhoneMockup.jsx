@@ -2,7 +2,7 @@ import { Mic, Check, Send, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 /**
- * Static premium iPhone mockup with MOMO voice UI.
+ * Static premium iPhone mockup with PLANMOVE KI voice UI.
  * (Parallax removed — the image sits in one place.)
  */
 export const PhoneMockup = () => {

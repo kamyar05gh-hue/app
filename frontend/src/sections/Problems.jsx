@@ -24,15 +24,15 @@ const Segs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
     )
   );
 
-// Same as Segs, but inserts a desktop-only line break before each "MOMO".
+// Same as Segs, but inserts a desktop-only line break before each "PLANMOVE KI".
 const BodySegs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
   segs.map((s, i) => {
     if (typeof s === "string") {
-      const parts = s.split(/(MOMO)/g);
+      const parts = s.split(/(PLANMOVE KI)/g);
       return (
         <Fragment key={i}>
           {parts.map((part, j) =>
-            part === "MOMO" ? (
+            part === "PLANMOVE KI" ? (
               <Fragment key={j}>
                 <br className="hidden md:block" />
                 <br className="hidden md:block" />
@@ -46,11 +46,11 @@ const BodySegs = ({ segs, hlClass, bClass = "text-black font-bold" }) =>
       );
     }
     if (s.hl) {
-      const parts = s.hl.split(/(MOMO)/g);
+      const parts = s.hl.split(/(PLANMOVE KI)/g);
       return (
         <span key={i} className={hlClass}>
           {parts.map((part, j) =>
-            part === "MOMO" ? (
+            part === "PLANMOVE KI" ? (
               <Fragment key={j}>
                 <br className="hidden md:block" />
                 <br className="hidden md:block" />
@@ -184,7 +184,7 @@ const ClimaxCard = () => {
               <li className="flex items-start gap-3 rounded-xl bg-[#F5F4EF] px-3 py-2.5 md:px-3.5">
                 <Check className="mt-0.5 h-4 w-4 lg:h-3.5 lg:w-3.5 text-[#25D366] shrink-0" strokeWidth={3.5} />
                 <span className="text-[12.5px] md:text-[13.5px] font-medium text-black/85 leading-snug italic">
-                  MOMO erstellt Offerten, Rechnungen & Antworten
+                  PLANMOVE KI erstellt Offerten, Rechnungen & Antworten
                 </span>
               </li>
               {c.voiceCommands.map((text, i) => (
@@ -201,7 +201,7 @@ const ClimaxCard = () => {
             </ul>
           </div>
 
-          {/* RIGHT: MOMO Bot + services checklist */}
+          {/* RIGHT: PLANMOVE KI Bot + services checklist */}
           <div className="md:col-span-3 p-5 sm:p-8 md:p-10 flex flex-col items-center text-center md:items-start md:text-left justify-center bg-gradient-to-br from-[#F9FCF9] to-[#F5F4EF] relative">
             {/* Bot mascot */}
             <div className="relative self-center">

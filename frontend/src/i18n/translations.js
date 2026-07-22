@@ -1,5 +1,5 @@
 /**
- * All user-facing UI strings for PLANMOVE/MOMO, per language.
+ * All user-facing UI strings for PLANMOVE/PLANMOVE KI, per language.
  *
  * Structure notes:
  * - Strings that contain highlighted <span>s in JSX are split into
@@ -7,7 +7,7 @@
  *   { hl: "..." } are rendered inside the green highlight span,
  *   { b: "..." } are rendered inside a black bold span.
  * - Quote characters („…", «…») are part of the translated strings.
- * - Brand names "MOMO" and "PLANMOVE" stay untranslated.
+ * - Brand names "PLANMOVE KI" and "PLANMOVE" stay untranslated.
  */
 
 const waUrl = (text) =>
@@ -17,7 +17,7 @@ export const translations = {
   de: {
     whatsapp: {
       url: waUrl(
-        "Hallo PLANMOVE! Ich möchte mehr über MOMO, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
+        "Hallo PLANMOVE! Ich möchte mehr über PLANMOVE KI, den Assistenten für mein Umzugs-/Reinigungsunternehmen, erfahren."
       ),
     },
     whatsappButton: {
@@ -32,20 +32,20 @@ export const translations = {
       headlines: ["Mehr Kunden.", "Mehr Zeit.", "Mehr Geld."],
       headlineHighlight: "Weniger Stress.",
       benefits: [
-        "MOMO erstellt Offerten, Rechnungen & Antworten – einfach per Sprache oder WhatsApp.",
-        "Sprechen Sie einfach in Ihrer Muttersprache – MOMO schreibt perfektes Deutsch oder die Sprache Ihres Kunden.",
-        "E-Mails und Briefe in Sekunden erledigen – MOMO erklärt den Inhalt und erstellt sofort eine professionelle Antwort.",
-        "Nie wieder bis spät abends im Büro sitzen – MOMO beantwortet Anfragen und erledigt Ihre Büroarbeit für Sie.",
-        "Kein Kunde geht mehr vergessen – MOMO erinnert Kunden automatisch an offene Offerten.",
+        "PLANMOVE KI erstellt Offerten, Rechnungen & Antworten – einfach per Sprache oder WhatsApp.",
+        "Sprechen Sie einfach in Ihrer Muttersprache – PLANMOVE KI schreibt perfektes Deutsch oder die Sprache Ihres Kunden.",
+        "E-Mails und Briefe in Sekunden erledigen – PLANMOVE KI erklärt den Inhalt und erstellt sofort eine professionelle Antwort.",
+        "Nie wieder bis spät abends im Büro sitzen – PLANMOVE KI beantwortet Anfragen und erledigt Ihre Büroarbeit für Sie.",
+        "Kein Kunde geht mehr vergessen – PLANMOVE KI erinnert Kunden automatisch an offene Offerten.",
       ],
       starsAria: "4.9 von 5 Sternen",
       reviews: "120+ Bewertungen",
       visualAlt:
-        "MOMO Assistent antwortet auf Kundenanfragen am Schreibtisch eines Unternehmers",
+        "PLANMOVE KI Assistent antwortet auf Kundenanfragen am Schreibtisch eines Unternehmers",
     },
     trustBar: {
       items: [
-        "MOMO erstellt Offerten, Rechnungen & Antworten",
+        "PLANMOVE KI erstellt Offerten, Rechnungen & Antworten",
         "Keine Kunden verlieren",
         "Mehr Aufträge",
         "Einfach in Ihrer Muttersprache sprechen",
@@ -54,7 +54,7 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "Kennen Sie diese ",
+      headingA: "Kennst du diese ",
       headingHighlight: "7 Probleme",
       headingB: " aus Ihrem Alltag?",
       cards: [
@@ -71,7 +71,7 @@ export const translations = {
             { b: "Kunden warten nicht." },
             " Wenn Sie zu spät antworten, gehen sie zur ",
             { b: "Konkurrenz" },
-            ". MOMO antwortet ",
+            ". PLANMOVE KI antwortet ",
             { hl: "innerhalb weniger Sekunden" },
             " – ",
             { b: "24/7" },
@@ -87,7 +87,7 @@ export const translations = {
           ],
           body: [
             { b: "Sprechen Sie einfach in Ihrer Sprache." },
-            " MOMO schreibt ",
+            " PLANMOVE KI schreibt ",
             { hl: "professionelle E-Mails, Offerten und Nachrichten" },
             " auf ",
             { b: "perfektem Deutsch" },
@@ -107,7 +107,7 @@ export const translations = {
             { b: "bleiben bis spät wach" },
             ", nur um ",
             { b: "keine Anfrage zu verpassen" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "erledigt alles" },
             ".",
           ],
@@ -125,7 +125,7 @@ export const translations = {
             { b: "verlieren den Überblick" },
             " — und damit auch ",
             { b: "Kunden und Geld" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "erinnert automatisch nach" },
             " – per Nachricht oder Anruf.",
           ],
@@ -139,7 +139,7 @@ export const translations = {
             ", während Sie arbeiten.",
           ],
           body: [
-            "Sie können nicht rangehen? Kein Problem. MOMO ",
+            "Sie können nicht rangehen? Kein Problem. PLANMOVE KI ",
             { hl: "nimmt Anrufe entgegen" },
             ", ",
             { b: "sammelt alle Infos" },
@@ -155,7 +155,7 @@ export const translations = {
           body: [
             "WhatsApp, E-Mail, Telefon — ",
             { b: "alles kommt zur gleichen Zeit" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "beantwortet, organisiert und bringt alles an einen Ort zusammen" },
             ".",
           ],
@@ -163,7 +163,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "MOMO erledigt die Reinigung",
+        imageAlt: "PLANMOVE KI erledigt die Reinigung",
         titleA: "Vergessen Sie ",
         titleHighlight: "Papierkram",
         titleB: " und komplizierte Programme.",
@@ -172,26 +172,26 @@ export const translations = {
           { b: "Sagen Sie einfach:" },
         ],
         voiceCommands: [
-          "„MOMO, erstelle eine Offerte für Herr Müller.“",
+          "„PLANMOVE KI, erstelle eine Offerte für Herr Müller.“",
           "„Schick Frau Meier die Offerte per E-Mail.“",
           "„Schreibe dem Kunden auf WhatsApp, dass wir morgen um 08:00 Uhr kommen.“",
           "„Erstelle die Rechnung und sende sie an den Kunden.“",
         ],
-        momoRestA: "MOMO",
+        momoRestA: "PLANMOVE KI",
         momoRestB: " erledigt den Rest.",
         services: [
-          "MOMO erstellt Offerten, Rechnungen & Antworten",
+          "PLANMOVE KI erstellt Offerten, Rechnungen & Antworten",
           "Nachrichten",
           "Termine",
           "Anrufe",
           "Übersetzungen",
           "und vieles mehr…",
         ],
-        magic: "Die MOMO-Magie",
+        magic: "Die PLANMOVE-KI-Magie",
       },
     },
     testimonials: {
-      headingLine1: "Umzug & Reinigung",
+      headingLine1: "Umzug & Reinigung Unternehmen",
       headingLine2a: "mit ",
       headingLine2Highlight: "PLANMOVE.",
       items: [
@@ -205,43 +205,43 @@ export const translations = {
           name: "Elena B.",
           role: "Reinigungsunternehmerin",
           quote:
-            "„Ich bin in Portugal aufgewachsen. MOMO versteht meine Muttersprache und schreibt sauberes Deutsch. Meine Kunden merken den Unterschied.“",
+            "„Ich bin in Portugal aufgewachsen. PLANMOVE KI versteht meine Muttersprache und schreibt sauberes Deutsch. Meine Kunden merken den Unterschied.“",
         },
         {
           name: "Thomas K.",
           role: "Transportunternehmer",
           quote:
-            "„Der Auto-Follow-up hat mir letzten Monat drei Aufträge gerettet, die ich sonst vergessen hätte. MOMO zahlt sich mehrfach aus.“",
+            "„Der Auto-Follow-up hat mir letzten Monat drei Aufträge gerettet, die ich sonst vergessen hätte. PLANMOVE KI zahlt sich mehrfach aus.“",
         },
         {
           name: "Sara M.",
           role: "Reinigungsunternehmerin",
           quote:
-            "„MOMO beantwortet Anfragen nachts und am Wochenende — das gibt mir echte Ruhe.“",
+            "„PLANMOVE KI beantwortet Anfragen nachts und am Wochenende — das gibt mir echte Ruhe.“",
         },
         {
           name: "David R.",
           role: "Umzugsunternehmer",
           quote:
-            "„Seit wir MOMO nutzen, schreiben wir professionelle Offerten in Minutensache. Das spart Zeit und wirkt viel seriöser gegenüber Kunden.“",
+            "„Seit wir PLANMOVE KI nutzen, schreiben wir professionelle Offerten in Minutensache. Das spart Zeit und wirkt viel seriöser gegenüber Kunden.“",
         },
         {
           name: "Team Primemove",
           role: "Primemove",
           quote:
-            "„MOMO hat unseren Büroalltag komplett verändert. Mehr Zeit, weniger Stress, zufriedene Kunden.“",
+            "„PLANMOVE KI hat unseren Büroalltag komplett verändert. Mehr Zeit, weniger Stress, zufriedene Kunden.“",
         },
       ],
     },
     beforeAfter: {
-      headingBefore: "Ohne PLANMOVE",
-      headingAfter: "Mit PLANMOVE",
+      headingBefore: "Ohne PLANMOVE KI",
+      headingAfter: "Mit PLANMOVE KI",
       items: [
-        { before: "Deutsch war ein Problem.", after: "Einfach sprechen – MOMO schreibt perfektes Deutsch." },
+        { before: "Deutsch war ein Problem.", after: "Einfach sprechen – PLANMOVE KI schreibt perfektes Deutsch." },
         { before: "Offerten haben viel Zeit gekostet.", after: "Offerten in wenigen Sekunden." },
         { before: "Kunden nach Offerten vergessen.", after: "Automatische Erinnerung an Kunden." },
         { before: "Rechnungen manuell erstellen.", after: "Rechnungen automatisch erstellen." },
-        { before: "E-Mails & Briefe waren mühsam.", after: "MOMO erklärt und beantwortet alles." },
+        { before: "E-Mails & Briefe waren mühsam.", after: "PLANMOVE KI erklärt und beantwortet alles." },
         { before: "Bis spät abends Büroarbeit.", after: "Mehr Freizeit, weniger Büro." },
         { before: "Anfragen verpasst.", after: "Antworten – auch ausserhalb der Arbeitszeit." },
         { before: "Alles war unübersichtlich.", after: "Alles an einem Ort." },
@@ -253,24 +253,24 @@ export const translations = {
       heading: "Häufig gestellte Fragen",
       items: [
         {
-          q: "Was ist MOMO?",
-          a: "MOMO ist Ihr persönlicher KI-Assistent für Ihr Umzugs- oder Reinigungsunternehmen. Er beantwortet Anfragen, erstellt Offerten und Rechnungen, übersetzt Texte und erinnert Kunden automatisch — ganz einfach per Sprache oder WhatsApp.",
+          q: "Was ist PLANMOVE KI?",
+          a: "PLANMOVE KI ist Ihr persönlicher KI-Assistent für Ihr Umzugs- oder Reinigungsunternehmen. Er beantwortet Anfragen, erstellt Offerten und Rechnungen, übersetzt Texte und erinnert Kunden automatisch — ganz einfach per Sprache oder WhatsApp.",
         },
         {
           q: "Brauche ich Deutschkenntnisse?",
-          a: "Nein. Sprechen Sie einfach in Ihrer Muttersprache. MOMO versteht Sie und erstellt professionelle Antworten auf perfektem Deutsch oder in der Sprache Ihres Kunden.",
+          a: "Nein. Sprechen Sie einfach in Ihrer Muttersprache. PLANMOVE KI versteht Sie und erstellt professionelle Antworten auf perfektem Deutsch oder in der Sprache Ihres Kunden.",
         },
         {
-          q: "Wie schnell ist MOMO?",
-          a: "MOMO antwortet in Sekundenschnelle. Eine Offerte, eine E-Mail oder eine Kundenanfrage — alles wird sofort bearbeitet, auch ausserhalb der Bürozeiten.",
+          q: "Wie schnell ist PLANMOVE KI?",
+          a: "PLANMOVE KI antwortet in Sekundenschnelle. Eine Offerte, eine E-Mail oder eine Kundenanfrage — alles wird sofort bearbeitet, auch ausserhalb der Bürozeiten.",
         },
         {
-          q: "Funktioniert MOMO auch am Handy?",
-          a: "Ja. Sie nutzen MOMO bequem auf Ihrem Smartphone per WhatsApp oder Sprachnachricht — egal ob im Büro, unterwegs oder auf dem Bau.",
+          q: "Funktioniert PLANMOVE KI auch am Handy?",
+          a: "Ja. Sie nutzen PLANMOVE KI bequem auf Ihrem Smartphone per WhatsApp oder Sprachnachricht — egal ob im Büro, unterwegs oder auf dem Bau.",
         },
         {
-          q: "Welche Sprachen spricht MOMO?",
-          a: "MOMO spricht mit Ihnen in Ihrer Muttersprache — ganz egal, welche das ist. Und schreibt professionelle Antworten auf Deutsch, Französisch, Italienisch oder in der Sprache Ihres Kunden.",
+          q: "Welche Sprachen spricht PLANMOVE KI?",
+          a: "PLANMOVE KI spricht mit Ihnen in Ihrer Muttersprache — ganz egal, welche das ist. Und schreibt professionelle Antworten auf Deutsch, Französisch, Italienisch oder in der Sprache Ihres Kunden.",
         },
       ],
     },
@@ -286,7 +286,7 @@ export const translations = {
       headline2: "Mehr Zeit. Mehr Kunden.",
       headline3: "Mehr Umsatz.",
       paragraph:
-        "Erfahren Sie, wie MOMO Ihren Arbeitsalltag einfacher macht und sicherstellt, dass Ihnen keine Anfragen und Aufträge mehr entgehen.",
+        "Erfahren Sie, wie PLANMOVE KI Ihren Arbeitsalltag einfacher macht und sicherstellt, dass Ihnen keine Anfragen und Aufträge mehr entgehen.",
       subItems: ["Keine Verpflichtung", "Schnelle Antwort", "Persönliche Beratung"],
     },
     footer: {
@@ -295,9 +295,9 @@ export const translations = {
       headlineB: "mehr ",
       headlineHighlight: "Umsatz?",
       paragraph:
-        "Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne Verpflichtung. Erfahren Sie in fünf Minuten, wie MOMO Ihr KMU verändert.",
+        "Ein kurzes Gespräch auf WhatsApp — persönlich, kostenlos und ohne Verpflichtung. Erfahren Sie in fünf Minuten, wie PLANMOVE KI Ihr KMU verändert.",
       brandDescription:
-        "MOMO ist der KI-Assistent für Schweizer Umzugs- und Reinigungsunternehmen. PLANMOVE ist die Software. 24/7 erreichbar. In jeder Sprache.",
+        "PLANMOVE KI erledigt Offerten, Rechnungen und Kundenkommunikation für Schweizer Umzugs- und Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.",
       contactHeading: "Kontakt",
       phone: "+41779800810",
       phoneAria: "PLANMOVE anrufen",
@@ -306,7 +306,7 @@ export const translations = {
     phoneMockup: {
       newRequest: "Neue Anfrage",
       headline1: "Sprich einfach.",
-      headline2: "MOMO tippt.",
+      headline2: "PLANMOVE KI tippt.",
       recording: "Aufnahme läuft",
       transcript:
         "„Offerte für Familie Meier, Umzug 3-Zimmer, Zürich nach Winterthur, Freitag um acht…",
@@ -337,7 +337,7 @@ export const translations = {
       },
       followUp: {
         autoReminder: "Auto-Erinnerung",
-        momoFollowsUp: "MOMO fasst nach.",
+        momoFollowsUp: "PLANMOVE KI fasst nach.",
         reminders: [
           { name: "Herr Müller", detail: "Offerte · vor 3 Tagen" },
           { name: "Frau Meier", detail: "Umzug 3.5 Zi · vor 5 Tagen" },
@@ -347,7 +347,7 @@ export const translations = {
       anrufe: {
         incoming: "Eingehender Anruf",
         unknown: "Unbekannt",
-        handled: "wird von MOMO entgegengenommen…",
+        handled: "wird von PLANMOVE KI entgegengenommen…",
       },
     },
   },
@@ -355,7 +355,7 @@ export const translations = {
   fr: {
     whatsapp: {
       url: waUrl(
-        "Bonjour PLANMOVE ! J'aimerais en savoir plus sur MOMO, l'assistant pour mon entreprise de déménagement/nettoyage."
+        "Bonjour PLANMOVE ! J'aimerais en savoir plus sur PLANMOVE KI, l'assistant pour mon entreprise de déménagement/nettoyage."
       ),
     },
     whatsappButton: {
@@ -370,20 +370,20 @@ export const translations = {
       headlines: ["Plus de clients.", "Plus de temps.", "Plus d'argent."],
       headlineHighlight: "Moins de stress.",
       benefits: [
-        "MOMO crée des devis, factures et réponses — simplement par la voix ou WhatsApp.",
-        "Parlez simplement dans votre langue maternelle — MOMO écrit en allemand parfait ou dans la langue de votre client.",
-        "E-mails et lettres réglés en quelques secondes — MOMO explique le contenu et rédige immédiatement une réponse professionnelle.",
-        "Ne restez plus tard au bureau — MOMO répond aux demandes et fait votre travail de bureau pour vous.",
-        "Aucun client n'est oublié — MOMO rappelle automatiquement aux clients les devis en attente.",
+        "PLANMOVE KI crée des devis, factures et réponses — simplement par la voix ou WhatsApp.",
+        "Parlez simplement dans votre langue maternelle — PLANMOVE KI écrit en allemand parfait ou dans la langue de votre client.",
+        "E-mails et lettres réglés en quelques secondes — PLANMOVE KI explique le contenu et rédige immédiatement une réponse professionnelle.",
+        "Ne restez plus tard au bureau — PLANMOVE KI répond aux demandes et fait votre travail de bureau pour vous.",
+        "Aucun client n'est oublié — PLANMOVE KI rappelle automatiquement aux clients les devis en attente.",
       ],
       starsAria: "4,9 sur 5 étoiles",
       reviews: "120+ avis",
       visualAlt:
-        "L'assistant MOMO répond aux demandes des clients au bureau d'un entrepreneur",
+        "L'assistant PLANMOVE KI répond aux demandes des clients au bureau d'un entrepreneur",
     },
     trustBar: {
       items: [
-        "MOMO crée devis, factures & réponses",
+        "PLANMOVE KI crée devis, factures & réponses",
         "Ne perdez plus de clients",
         "Plus de mandats",
         "Parlez simplement dans votre langue",
@@ -409,7 +409,7 @@ export const translations = {
             { b: "Les clients n'attendent pas." },
             " Si vous répondez trop tard, ils vont chez la ",
             { b: "concurrence" },
-            ". MOMO répond ",
+            ". PLANMOVE KI répond ",
             { hl: "en quelques secondes" },
             " — ",
             { b: "24h/24 et 7j/7" },
@@ -426,7 +426,7 @@ export const translations = {
           ],
           body: [
             { b: "Parlez simplement dans votre langue." },
-            " MOMO rédige des ",
+            " PLANMOVE KI rédige des ",
             { hl: "e-mails, devis et messages professionnels" },
             " en ",
             { b: "allemand parfait" },
@@ -446,7 +446,7 @@ export const translations = {
             { b: "restent éveillés jusqu'à tard" },
             ", juste pour ",
             { b: "ne manquer aucune demande" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "s'occupe de tout" },
             ".",
           ],
@@ -464,7 +464,7 @@ export const translations = {
             { b: "perdent le fil" },
             " — et avec lui des ",
             { b: "clients et de l'argent" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "relance automatiquement" },
             " — par message ou par appel.",
           ],
@@ -478,7 +478,7 @@ export const translations = {
             " pendant que vous travaillez.",
           ],
           body: [
-            "Vous ne pouvez pas décrocher ? Aucun problème. MOMO ",
+            "Vous ne pouvez pas décrocher ? Aucun problème. PLANMOVE KI ",
             { hl: "prend les appels" },
             ", ",
             { b: "collecte toutes les informations" },
@@ -494,7 +494,7 @@ export const translations = {
           body: [
             "WhatsApp, e-mail, téléphone — ",
             { b: "tout arrive en même temps" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "répond, organise et rassemble tout au même endroit" },
             ".",
           ],
@@ -502,7 +502,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "MOMO s'occupe du nettoyage",
+        imageAlt: "PLANMOVE KI s'occupe du nettoyage",
         titleA: "Oubliez la ",
         titleHighlight: "paperasse",
         titleB: " et les programmes compliqués.",
@@ -511,22 +511,22 @@ export const translations = {
           { b: "Dites simplement :" },
         ],
         voiceCommands: [
-          "« MOMO, prépare un devis pour Monsieur Müller. »",
+          "« PLANMOVE KI, prépare un devis pour Monsieur Müller. »",
           "« Envoie le devis à Madame Meier par e-mail. »",
           "« Écris au client sur WhatsApp que nous arrivons demain à 08h00. »",
           "« Crée la facture et envoie-la au client. »",
         ],
-        momoRestA: "MOMO",
+        momoRestA: "PLANMOVE KI",
         momoRestB: " s'occupe du reste.",
         services: [
-          "MOMO crée devis, factures & réponses",
+          "PLANMOVE KI crée devis, factures & réponses",
           "Messages",
           "Rendez-vous",
           "Appels",
           "Traductions",
           "et bien plus…",
         ],
-        magic: "La magie MOMO",
+        magic: "La magie PLANMOVE KI",
       },
     },
     testimonials: {
@@ -544,31 +544,31 @@ export const translations = {
           name: "Elena B.",
           role: "Entrepreneure de nettoyage",
           quote:
-            "« J'ai grandi au Portugal. MOMO comprend ma langue maternelle et rédige un allemand impeccable. Mes clients voient la différence. »",
+            "« J'ai grandi au Portugal. PLANMOVE KI comprend ma langue maternelle et rédige un allemand impeccable. Mes clients voient la différence. »",
         },
         {
           name: "Thomas K.",
           role: "Entrepreneur de transport",
           quote:
-            "« La relance automatique m'a sauvé trois mandats le mois dernier, que j'aurais sinon oubliés. MOMO est largement rentabilisé. »",
+            "« La relance automatique m'a sauvé trois mandats le mois dernier, que j'aurais sinon oubliés. PLANMOVE KI est largement rentabilisé. »",
         },
         {
           name: "Sara M.",
           role: "Entrepreneure de nettoyage",
           quote:
-            "« MOMO répond aux demandes la nuit et le week-end — cela me donne une vraie tranquillité d'esprit. »",
+            "« PLANMOVE KI répond aux demandes la nuit et le week-end — cela me donne une vraie tranquillité d'esprit. »",
         },
         {
           name: "David R.",
           role: "Entrepreneur de déménagement",
           quote:
-            "« Depuis que nous utilisons MOMO, nous rédigeons des devis professionnels en quelques minutes. Cela fait gagner du temps et paraît bien plus sérieux aux clients. »",
+            "« Depuis que nous utilisons PLANMOVE KI, nous rédigeons des devis professionnels en quelques minutes. Cela fait gagner du temps et paraît bien plus sérieux aux clients. »",
         },
         {
           name: "Équipe Primemove",
           role: "Primemove",
           quote:
-            "« MOMO a complètement changé notre quotidien au bureau. Plus de temps, moins de stress, des clients satisfaits. »",
+            "« PLANMOVE KI a complètement changé notre quotidien au bureau. Plus de temps, moins de stress, des clients satisfaits. »",
         },
       ],
     },
@@ -576,11 +576,11 @@ export const translations = {
       headingBefore: "Sans PLANMOVE",
       headingAfter: "Avec PLANMOVE",
       items: [
-        { before: "L'allemand était un problème.", after: "Parlez simplement — MOMO écrit un allemand parfait." },
+        { before: "L'allemand était un problème.", after: "Parlez simplement — PLANMOVE KI écrit un allemand parfait." },
         { before: "Les devis prenaient beaucoup de temps.", after: "Des devis en quelques secondes." },
         { before: "Les clients oubliaient les devis.", after: "Rappel automatique des clients." },
         { before: "Créer les factures manuellement.", after: "Créer les factures automatiquement." },
-        { before: "E-mails et lettres étaient pénibles.", after: "MOMO explique et répond à tout." },
+        { before: "E-mails et lettres étaient pénibles.", after: "PLANMOVE KI explique et répond à tout." },
         { before: "Travail de bureau jusqu'à tard.", after: "Plus de temps libre, moins de bureau." },
         { before: "Demandes manquées.", after: "Réponses — même en dehors des heures de travail." },
         { before: "Tout était désorganisé.", after: "Tout au même endroit." },
@@ -592,24 +592,24 @@ export const translations = {
       heading: "Questions fréquentes",
       items: [
         {
-          q: "Qu'est-ce que MOMO ?",
-          a: "MOMO est votre assistant IA personnel pour votre entreprise de déménagement ou de nettoyage. Il répond aux demandes, crée des devis et factures, traduit des textes et rappelle automatiquement aux clients — simplement par la voix ou WhatsApp.",
+          q: "Qu'est-ce que PLANMOVE KI ?",
+          a: "PLANMOVE KI est votre assistant IA personnel pour votre entreprise de déménagement ou de nettoyage. Il répond aux demandes, crée des devis et factures, traduit des textes et rappelle automatiquement aux clients — simplement par la voix ou WhatsApp.",
         },
         {
           q: "Dois-je parler allemand ?",
-          a: "Non. Parlez simplement dans votre langue maternelle. MOMO vous comprend et rédige des réponses professionnelles en allemand parfait ou dans la langue de votre client.",
+          a: "Non. Parlez simplement dans votre langue maternelle. PLANMOVE KI vous comprend et rédige des réponses professionnelles en allemand parfait ou dans la langue de votre client.",
         },
         {
-          q: "Quelle est la rapidité de MOMO ?",
-          a: "MOMO répond en quelques secondes. Un devis, un e-mail ou une demande client — tout est traité immédiatement, même en dehors des heures de bureau.",
+          q: "Quelle est la rapidité de PLANMOVE KI ?",
+          a: "PLANMOVE KI répond en quelques secondes. Un devis, un e-mail ou une demande client — tout est traité immédiatement, même en dehors des heures de bureau.",
         },
         {
-          q: "MOMO fonctionne-t-il aussi sur mobile ?",
-          a: "Oui. Vous utilisez MOMO confortablement sur votre smartphone via WhatsApp ou un message vocal — au bureau, en déplacement ou sur le chantier.",
+          q: "PLANMOVE KI fonctionne-t-il aussi sur mobile ?",
+          a: "Oui. Vous utilisez PLANMOVE KI confortablement sur votre smartphone via WhatsApp ou un message vocal — au bureau, en déplacement ou sur le chantier.",
         },
         {
-          q: "Quelles langues parle MOMO ?",
-          a: "MOMO vous parle dans votre langue maternelle — peu importe laquelle. Et rédige des réponses professionnelles en allemand, français, italien ou dans la langue de votre client.",
+          q: "Quelles langues parle PLANMOVE KI ?",
+          a: "PLANMOVE KI vous parle dans votre langue maternelle — peu importe laquelle. Et rédige des réponses professionnelles en allemand, français, italien ou dans la langue de votre client.",
         },
       ],
     },
@@ -625,7 +625,7 @@ export const translations = {
       headline2: "Plus de temps. Plus de clients.",
       headline3: "Plus de chiffre d'affaires.",
       paragraph:
-        "Découvrez comment MOMO simplifie votre quotidien et veille à ce que vous ne manquiez plus aucune demande ni aucun mandat.",
+        "Découvrez comment PLANMOVE KI simplifie votre quotidien et veille à ce que vous ne manquiez plus aucune demande ni aucun mandat.",
       subItems: ["Sans engagement", "Réponse rapide", "Conseil personnalisé"],
     },
     footer: {
@@ -634,9 +634,9 @@ export const translations = {
       headlineB: "plus de ",
       headlineHighlight: "chiffre d'affaires ?",
       paragraph:
-        "Une courte conversation sur WhatsApp — personnelle, gratuite et sans engagement. Découvrez en cinq minutes comment MOMO transforme votre PME.",
+        "Une courte conversation sur WhatsApp — personnelle, gratuite et sans engagement. Découvrez en cinq minutes comment PLANMOVE KI transforme votre PME.",
       brandDescription:
-        "MOMO est l'assistant IA pour les entreprises suisses de déménagement et de nettoyage. PLANMOVE est le logiciel. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
+        "PLANMOVE KI est l'assistant IA pour les entreprises suisses de déménagement et de nettoyage. PLANMOVE est le logiciel. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
       contactHeading: "Contact",
       phone: "+41779800810",
       phoneAria: "Appeler PLANMOVE",
@@ -645,7 +645,7 @@ export const translations = {
     phoneMockup: {
       newRequest: "Nouvelle demande",
       headline1: "Parlez simplement.",
-      headline2: "MOMO tape.",
+      headline2: "PLANMOVE KI tape.",
       recording: "Enregistrement en cours",
       transcript:
         "« Devis pour la famille Meier, déménagement 3 pièces, de Zurich à Winterthour, vendredi à huit heures…",
@@ -676,7 +676,7 @@ export const translations = {
       },
       followUp: {
         autoReminder: "Rappel automatique",
-        momoFollowsUp: "MOMO relance.",
+        momoFollowsUp: "PLANMOVE KI relance.",
         reminders: [
           { name: "Monsieur Müller", detail: "Devis · il y a 3 jours" },
           { name: "Madame Meier", detail: "Déménagement 3,5 p. · il y a 5 jours" },
@@ -686,7 +686,7 @@ export const translations = {
       anrufe: {
         incoming: "Appel entrant",
         unknown: "Inconnu",
-        handled: "pris en charge par MOMO…",
+        handled: "pris en charge par PLANMOVE KI…",
       },
     },
   },
@@ -694,7 +694,7 @@ export const translations = {
   it: {
     whatsapp: {
       url: waUrl(
-        "Ciao PLANMOVE! Vorrei saperne di più su MOMO, l'assistente per la mia azienda di traslochi/pulizie."
+        "Ciao PLANMOVE! Vorrei saperne di più su PLANMOVE KI, l'assistente per la mia azienda di traslochi/pulizie."
       ),
     },
     whatsappButton: {
@@ -709,20 +709,20 @@ export const translations = {
       headlines: ["Più clienti.", "Più tempo.", "Più soldi."],
       headlineHighlight: "Meno stress.",
       benefits: [
-        "MOMO crea preventivi, fatture e risposte — semplicemente con la voce o WhatsApp.",
-        "Parli semplicemente nella Sua lingua madre — MOMO scrive in tedesco perfetto o nella lingua del Suo cliente.",
-        "E-mail e lettere risolte in pochi secondi — MOMO spiega il contenuto e crea immediatamente una risposta professionale.",
-        "Non stare più in ufficio fino a tardi — MOMO risponde alle richieste e svolge il Suo lavoro d'ufficio per Lei.",
-        "Nessun cliente viene più dimenticato — MOMO ricorda automaticamente ai clienti i preventivi aperti.",
+        "PLANMOVE KI crea preventivi, fatture e risposte — semplicemente con la voce o WhatsApp.",
+        "Parli semplicemente nella Sua lingua madre — PLANMOVE KI scrive in tedesco perfetto o nella lingua del Suo cliente.",
+        "E-mail e lettere risolte in pochi secondi — PLANMOVE KI spiega il contenuto e crea immediatamente una risposta professionale.",
+        "Non stare più in ufficio fino a tardi — PLANMOVE KI risponde alle richieste e svolge il Suo lavoro d'ufficio per Lei.",
+        "Nessun cliente viene più dimenticato — PLANMOVE KI ricorda automaticamente ai clienti i preventivi aperti.",
       ],
       starsAria: "4,9 su 5 stelle",
       reviews: "120+ recensioni",
       visualAlt:
-        "L'assistente MOMO risponde alle richieste dei clienti alla scrivania di un imprenditore",
+        "L'assistente PLANMOVE KI risponde alle richieste dei clienti alla scrivania di un imprenditore",
     },
     trustBar: {
       items: [
-        "MOMO crea preventivi, fatture e risposte",
+        "PLANMOVE KI crea preventivi, fatture e risposte",
         "Non perdere più clienti",
         "Più incarichi",
         "Parla semplicemente nella Tua lingua",
@@ -748,7 +748,7 @@ export const translations = {
             { b: "I clienti non aspettano." },
             " Se risponde troppo tardi, passano alla ",
             { b: "concorrenza" },
-            ". MOMO risponde ",
+            ". PLANMOVE KI risponde ",
             { hl: "in pochi secondi" },
             " — ",
             { b: "24 ore su 24, 7 giorni su 7" },
@@ -765,7 +765,7 @@ export const translations = {
           ],
           body: [
             { b: "Parli semplicemente nella Sua lingua." },
-            " MOMO scrive ",
+            " PLANMOVE KI scrive ",
             { hl: "e-mail, preventivi e messaggi professionali" },
             " in ",
             { b: "tedesco perfetto" },
@@ -785,7 +785,7 @@ export const translations = {
             { b: "restano svegli fino a tardi" },
             ", solo per ",
             { b: "non perdere nessuna richiesta" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "fa tutto" },
             ".",
           ],
@@ -803,7 +803,7 @@ export const translations = {
             { b: "perdono la visione d'insieme" },
             " — e con essa ",
             { b: "clienti e denaro" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "ricorda automaticamente" },
             " — tramite messaggio o chiamata.",
           ],
@@ -817,7 +817,7 @@ export const translations = {
             " mentre lavora.",
           ],
           body: [
-            "Non può rispondere? Nessun problema. MOMO ",
+            "Non può rispondere? Nessun problema. PLANMOVE KI ",
             { hl: "risponde alle chiamate" },
             ", ",
             { b: "raccoglie tutte le informazioni" },
@@ -833,7 +833,7 @@ export const translations = {
           body: [
             "WhatsApp, e-mail, telefono — ",
             { b: "tutto arriva contemporaneamente" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "risponde, organizza e riunisce tutto in un unico posto" },
             ".",
           ],
@@ -841,7 +841,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "MOMO si occupa della pulizia",
+        imageAlt: "PLANMOVE KI si occupa della pulizia",
         titleA: "Dimentichi la ",
         titleHighlight: "burocrazia",
         titleB: " e i programmi complicati.",
@@ -850,22 +850,22 @@ export const translations = {
           { b: "Dica semplicemente:" },
         ],
         voiceCommands: [
-          "«MOMO, crea un preventivo per il signor Müller.»",
+          "«PLANMOVE KI, crea un preventivo per il signor Müller.»",
           "«Invia il preventivo alla signora Meier via e-mail.»",
           "«Scrivi al cliente su WhatsApp che domani arriviamo alle 08:00.»",
           "«Crea la fattura e inviala al cliente.»",
         ],
-        momoRestA: "MOMO",
+        momoRestA: "PLANMOVE KI",
         momoRestB: " fa il resto.",
         services: [
-          "MOMO crea preventivi, fatture e risposte",
+          "PLANMOVE KI crea preventivi, fatture e risposte",
           "Messaggi",
           "Appuntamenti",
           "Chiamate",
           "Traduzioni",
           "e molto altro…",
         ],
-        magic: "La magia di MOMO",
+        magic: "La magia di PLANMOVE KI",
       },
     },
     testimonials: {
@@ -883,31 +883,31 @@ export const translations = {
           name: "Elena B.",
           role: "Imprenditrice di pulizie",
           quote:
-            "«Sono cresciuta in Portogallo. MOMO capisce la mia lingua madre e scrive un tedesco impeccabile. I miei clienti notano la differenza.»",
+            "«Sono cresciuta in Portogallo. PLANMOVE KI capisce la mia lingua madre e scrive un tedesco impeccabile. I miei clienti notano la differenza.»",
         },
         {
           name: "Tommaso K.",
           role: "Imprenditore di trasporti",
           quote:
-            "«Il follow-up automatico mi ha salvato tre incarichi il mese scorso, che altrimenti avrei dimenticato. MOMO si ripaga più volte.»",
+            "«Il follow-up automatico mi ha salvato tre incarichi il mese scorso, che altrimenti avrei dimenticato. PLANMOVE KI si ripaga più volte.»",
         },
         {
           name: "Sara M.",
           role: "Imprenditrice di pulizie",
           quote:
-            "«MOMO risponde alle richieste di notte e nel weekend — questo mi dà una vera tranquillità.»",
+            "«PLANMOVE KI risponde alle richieste di notte e nel weekend — questo mi dà una vera tranquillità.»",
         },
         {
           name: "Davide R.",
           role: "Imprenditore di traslochi",
           quote:
-            "«Da quando usiamo MOMO, scriviamo preventivi professionali in pochi minuti. Risparmiamo tempo e sembriamo molto più seri ai clienti.»",
+            "«Da quando usiamo PLANMOVE KI, scriviamo preventivi professionali in pochi minuti. Risparmiamo tempo e sembriamo molto più seri ai clienti.»",
         },
         {
           name: "Team Primemove",
           role: "Primemove",
           quote:
-            "«MOMO ha cambiato completamente la nostra routine in ufficio. Più tempo, meno stress, clienti soddisfatti.»",
+            "«PLANMOVE KI ha cambiato completamente la nostra routine in ufficio. Più tempo, meno stress, clienti soddisfatti.»",
         },
       ],
     },
@@ -915,11 +915,11 @@ export const translations = {
       headingBefore: "Senza PLANMOVE",
       headingAfter: "Con PLANMOVE",
       items: [
-        { before: "Il tedesco era un problema.", after: "Parla semplicemente — MOMO scrive un tedesco perfetto." },
+        { before: "Il tedesco era un problema.", after: "Parla semplicemente — PLANMOVE KI scrive un tedesco perfetto." },
         { before: "I preventivi richiedevano molto tempo.", after: "Preventivi in pochi secondi." },
         { before: "I clienti dimenticavano i preventivi.", after: "Promemoria automatico ai clienti." },
         { before: "Creare fatture manualmente.", after: "Creare fatture automaticamente." },
-        { before: "E-mail e lettere erano faticose.", after: "MOMO spiega e risponde a tutto." },
+        { before: "E-mail e lettere erano faticose.", after: "PLANMOVE KI spiega e risponde a tutto." },
         { before: "Lavoro d'ufficio fino a tardi.", after: "Più tempo libero, meno ufficio." },
         { before: "Richieste perse.", after: "Risposte — anche al di fuori dell'orario di lavoro." },
         { before: "Tutto era disordinato.", after: "Tutto in un unico posto." },
@@ -931,24 +931,24 @@ export const translations = {
       heading: "Domande frequenti",
       items: [
         {
-          q: "Cos'è MOMO?",
-          a: "MOMO è il Suo assistente IA personale per la Sua azienda di traslochi o pulizie. Risponde alle richieste, crea preventivi e fatture, traduce testi e ricorda automaticamente ai clienti — semplicemente con la voce o WhatsApp.",
+          q: "Cos'è PLANMOVE KI?",
+          a: "PLANMOVE KI è il Suo assistente IA personale per la Sua azienda di traslochi o pulizie. Risponde alle richieste, crea preventivi e fatture, traduce testi e ricorda automaticamente ai clienti — semplicemente con la voce o WhatsApp.",
         },
         {
           q: "Devo conoscere il tedesco?",
-          a: "No. Parli semplicemente nella Sua lingua madre. MOMO La capisce e redige risposte professionali in tedesco perfetto o nella lingua del Suo cliente.",
+          a: "No. Parli semplicemente nella Sua lingua madre. PLANMOVE KI La capisce e redige risposte professionali in tedesco perfetto o nella lingua del Suo cliente.",
         },
         {
-          q: "Quanto è veloce MOMO?",
-          a: "MOMO risponde in pochi secondi. Un preventivo, un'e-mail o una richiesta cliente — tutto viene elaborato immediatamente, anche al di fuori dell'orario d'ufficio.",
+          q: "Quanto è veloce PLANMOVE KI?",
+          a: "PLANMOVE KI risponde in pochi secondi. Un preventivo, un'e-mail o una richiesta cliente — tutto viene elaborato immediatamente, anche al di fuori dell'orario d'ufficio.",
         },
         {
-          q: "MOMO funziona anche sul cellulare?",
-          a: "Sì. Utilizza MOMO comodamente sul Suo smartphone tramite WhatsApp o un messaggio vocale — in ufficio, in viaggio o in cantiere.",
+          q: "PLANMOVE KI funziona anche sul cellulare?",
+          a: "Sì. Utilizza PLANMOVE KI comodamente sul Suo smartphone tramite WhatsApp o un messaggio vocale — in ufficio, in viaggio o in cantiere.",
         },
         {
-          q: "Quali lingue parla MOMO?",
-          a: "MOMO parla con Lei nella Sua lingua madre — qualunque essa sia. E scrive risposte professionali in tedesco, francese, italiano o nella lingua del Suo cliente.",
+          q: "Quali lingue parla PLANMOVE KI?",
+          a: "PLANMOVE KI parla con Lei nella Sua lingua madre — qualunque essa sia. E scrive risposte professionali in tedesco, francese, italiano o nella lingua del Suo cliente.",
         },
       ],
     },
@@ -964,7 +964,7 @@ export const translations = {
       headline2: "Più tempo. Più clienti.",
       headline3: "Più fatturato.",
       paragraph:
-        "Scopra come MOMO semplifica la Sua giornata lavorativa e fa in modo che non Le sfugga più nessuna richiesta né incarico.",
+        "Scopra come PLANMOVE KI semplifica la Sua giornata lavorativa e fa in modo che non Le sfugga più nessuna richiesta né incarico.",
       subItems: ["Nessun impegno", "Risposta rapida", "Consulenza personale"],
     },
     footer: {
@@ -973,9 +973,9 @@ export const translations = {
       headlineB: "più ",
       headlineHighlight: "fatturato?",
       paragraph:
-        "Una breve conversazione su WhatsApp — personale, gratuita e senza impegno. Scopra in cinque minuti come MOMO trasforma la Sua PMI.",
+        "Una breve conversazione su WhatsApp — personale, gratuita e senza impegno. Scopra in cinque minuti come PLANMOVE KI trasforma la Sua PMI.",
       brandDescription:
-        "MOMO è l'assistente IA per le aziende svizzere di traslochi e pulizie. PLANMOVE è il software. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
+        "PLANMOVE KI è l'assistente IA per le aziende svizzere di traslochi e pulizie. PLANMOVE è il software. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
       contactHeading: "Contatto",
       phone: "+41779800810",
       phoneAria: "Chiama PLANMOVE",
@@ -984,7 +984,7 @@ export const translations = {
     phoneMockup: {
       newRequest: "Nuova richiesta",
       headline1: "Parli pure.",
-      headline2: "MOMO scrive.",
+      headline2: "PLANMOVE KI scrive.",
       recording: "Registrazione in corso",
       transcript:
         "«Preventivo per la famiglia Meier, trasloco 3 stanze, da Zurigo a Winterthur, venerdì alle otto…",
@@ -1015,7 +1015,7 @@ export const translations = {
       },
       followUp: {
         autoReminder: "Promemoria automatico",
-        momoFollowsUp: "MOMO ricontatta.",
+        momoFollowsUp: "PLANMOVE KI ricontatta.",
         reminders: [
           { name: "Signor Müller", detail: "Preventivo · 3 giorni fa" },
           { name: "Signora Meier", detail: "Trasloco 3,5 loc. · 5 giorni fa" },
@@ -1025,7 +1025,7 @@ export const translations = {
       anrufe: {
         incoming: "Chiamata in arrivo",
         unknown: "Sconosciuto",
-        handled: "presa in carico da MOMO…",
+        handled: "presa in carico da PLANMOVE KI…",
       },
     },
   },
@@ -1033,7 +1033,7 @@ export const translations = {
   es: {
     whatsapp: {
       url: waUrl(
-        "Hola PLANMOVE. Me gustaría saber más sobre MOMO, el asistente para mi empresa de mudanzas/limpieza."
+        "Hola PLANMOVE. Me gustaría saber más sobre PLANMOVE KI, el asistente para mi empresa de mudanzas/limpieza."
       ),
     },
     whatsappButton: {
@@ -1048,20 +1048,20 @@ export const translations = {
       headlines: ["Más clientes.", "Más tiempo.", "Más dinero."],
       headlineHighlight: "Menos estrés.",
       benefits: [
-        "MOMO crea presupuestos, facturas y respuestas — simplemente con la voz o WhatsApp.",
-        "Hable simplemente en su idioma materno — MOMO escribe en alemán perfecto o en el idioma de su cliente.",
-        "Correos y cartas resueltos en segundos — MOMO explica el contenido y crea inmediatamente una respuesta profesional.",
-        "No se quede más hasta tarde en la oficina — MOMO responde consultas y hace su trabajo de oficina por usted.",
-        "Ningún cliente se olvida — MOMO recuerda automáticamente a los clientes los presupuestos pendientes.",
+        "PLANMOVE KI crea presupuestos, facturas y respuestas — simplemente con la voz o WhatsApp.",
+        "Hable simplemente en su idioma materno — PLANMOVE KI escribe en alemán perfecto o en el idioma de su cliente.",
+        "Correos y cartas resueltos en segundos — PLANMOVE KI explica el contenido y crea inmediatamente una respuesta profesional.",
+        "No se quede más hasta tarde en la oficina — PLANMOVE KI responde consultas y hace su trabajo de oficina por usted.",
+        "Ningún cliente se olvida — PLANMOVE KI recuerda automáticamente a los clientes los presupuestos pendientes.",
       ],
       starsAria: "4,9 de 5 estrellas",
       reviews: "120+ opiniones",
       visualAlt:
-        "El asistente MOMO responde consultas de clientes en el escritorio de un empresario",
+        "El asistente PLANMOVE KI responde consultas de clientes en el escritorio de un empresario",
     },
     trustBar: {
       items: [
-        "MOMO crea presupuestos, facturas y respuestas",
+        "PLANMOVE KI crea presupuestos, facturas y respuestas",
         "No perder clientes",
         "Más encargos",
         "Hable simplemente en su idioma",
@@ -1087,7 +1087,7 @@ export const translations = {
             { b: "Los clientes no esperan." },
             " Si responde tarde, se van a la ",
             { b: "competencia" },
-            ". MOMO responde ",
+            ". PLANMOVE KI responde ",
             { hl: "en pocos segundos" },
             " — ",
             { b: "24/7" },
@@ -1104,7 +1104,7 @@ export const translations = {
           ],
           body: [
             { b: "Hable simplemente en su idioma." },
-            " MOMO escribe ",
+            " PLANMOVE KI escribe ",
             { hl: "correos, presupuestos y mensajes profesionales" },
             " en ",
             { b: "alemán perfecto" },
@@ -1124,7 +1124,7 @@ export const translations = {
             { b: "se quedan despiertos hasta tarde" },
             " solo para ",
             { b: "no perder ninguna consulta" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "lo hace todo" },
             ".",
           ],
@@ -1142,7 +1142,7 @@ export const translations = {
             { b: "pierden el control" },
             " — y con él ",
             { b: "clientes y dinero" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "recuerda automáticamente" },
             " — por mensaje o llamada.",
           ],
@@ -1156,7 +1156,7 @@ export const translations = {
             " mientras trabaja.",
           ],
           body: [
-            "¿No puede atender? No hay problema. MOMO ",
+            "¿No puede atender? No hay problema. PLANMOVE KI ",
             { hl: "atiende las llamadas" },
             ", ",
             { b: "recopila toda la información" },
@@ -1172,7 +1172,7 @@ export const translations = {
           body: [
             "WhatsApp, correo, teléfono — ",
             { b: "todo llega a la vez" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "responde, organiza y reúne todo en un solo lugar" },
             ".",
           ],
@@ -1180,7 +1180,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "MOMO se encarga de la limpieza",
+        imageAlt: "PLANMOVE KI se encarga de la limpieza",
         titleA: "Olvídese del ",
         titleHighlight: "papeleo",
         titleB: " y los programas complicados.",
@@ -1189,22 +1189,22 @@ export const translations = {
           { b: "Diga simplemente:" },
         ],
         voiceCommands: [
-          "«MOMO, prepara un presupuesto para el señor Müller.»",
+          "«PLANMOVE KI, prepara un presupuesto para el señor Müller.»",
           "«Envía el presupuesto a la señora Meier por correo.»",
           "«Escribe al cliente por WhatsApp que mañana llegamos a las 08:00.»",
           "«Crea la factura y envíasela al cliente.»",
         ],
-        momoRestA: "MOMO",
+        momoRestA: "PLANMOVE KI",
         momoRestB: " hace el resto.",
         services: [
-          "MOMO crea presupuestos, facturas y respuestas",
+          "PLANMOVE KI crea presupuestos, facturas y respuestas",
           "Mensajes",
           "Citas",
           "Llamadas",
           "Traducciones",
           "y mucho más…",
         ],
-        magic: "La magia de MOMO",
+        magic: "La magia de PLANMOVE KI",
       },
     },
     testimonials: {
@@ -1222,31 +1222,31 @@ export const translations = {
           name: "Elena B.",
           role: "Empresaria de limpieza",
           quote:
-            "«Crecí en Portugal. MOMO entiende mi idioma materno y escribe alemán impecable. Mis clientes notan la diferencia.»",
+            "«Crecí en Portugal. PLANMOVE KI entiende mi idioma materno y escribe alemán impecable. Mis clientes notan la diferencia.»",
         },
         {
           name: "Tomás K.",
           role: "Empresario de transportes",
           quote:
-            "«El seguimiento automático me salvó tres encargos el mes pasado, que de otro modo habría olvidado. MOMO se paga solo.»",
+            "«El seguimiento automático me salvó tres encargos el mes pasado, que de otro modo habría olvidado. PLANMOVE KI se paga solo.»",
         },
         {
           name: "Sara M.",
           role: "Empresaria de limpieza",
           quote:
-            "«MOMO responde consultas por la noche y los fines de semana — eso me da verdadera tranquilidad.»",
+            "«PLANMOVE KI responde consultas por la noche y los fines de semana — eso me da verdadera tranquilidad.»",
         },
         {
           name: "David R.",
           role: "Empresario de mudanzas",
           quote:
-            "«Desde que usamos MOMO, escribimos presupuestos profesionales en minutos. Ahorramos tiempo y parecemos mucho más serios ante los clientes.»",
+            "«Desde que usamos PLANMOVE KI, escribimos presupuestos profesionales en minutos. Ahorramos tiempo y parecemos mucho más serios ante los clientes.»",
         },
         {
           name: "Equipo Primemove",
           role: "Primemove",
           quote:
-            "«MOMO ha cambiado completamente nuestra rutina de oficina. Más tiempo, menos estrés, clientes satisfechos.»",
+            "«PLANMOVE KI ha cambiado completamente nuestra rutina de oficina. Más tiempo, menos estrés, clientes satisfechos.»",
         },
       ],
     },
@@ -1254,11 +1254,11 @@ export const translations = {
       headingBefore: "Sin PLANMOVE",
       headingAfter: "Con PLANMOVE",
       items: [
-        { before: "El alemán era un problema.", after: "Hable simplemente — MOMO escribe alemán perfecto." },
+        { before: "El alemán era un problema.", after: "Hable simplemente — PLANMOVE KI escribe alemán perfecto." },
         { before: "Los presupuestos tardaban mucho.", after: "Presupuestos en pocos segundos." },
         { before: "Se olvidaban los presupuestos de los clientes.", after: "Recordatorio automático a los clientes." },
         { before: "Crear facturas manualmente.", after: "Crear facturas automáticamente." },
-        { before: "Correos y cartas eran tediosos.", after: "MOMO explica y responde todo." },
+        { before: "Correos y cartas eran tediosos.", after: "PLANMOVE KI explica y responde todo." },
         { before: "Trabajo de oficina hasta tarde.", after: "Más tiempo libre, menos oficina." },
         { before: "Consultas perdidas.", after: "Respuestas — incluso fuera del horario laboral." },
         { before: "Todo era confuso.", after: "Todo en un solo lugar." },
@@ -1270,24 +1270,24 @@ export const translations = {
       heading: "Preguntas frecuentes",
       items: [
         {
-          q: "¿Qué es MOMO?",
-          a: "MOMO es su asistente de IA personal para su empresa de mudanzas o limpieza. Responde consultas, crea presupuestos y facturas, traduce textos y recuerda automáticamente a los clientes — simplemente con la voz o WhatsApp.",
+          q: "¿Qué es PLANMOVE KI?",
+          a: "PLANMOVE KI es su asistente de IA personal para su empresa de mudanzas o limpieza. Responde consultas, crea presupuestos y facturas, traduce textos y recuerda automáticamente a los clientes — simplemente con la voz o WhatsApp.",
         },
         {
           q: "¿Necesito saber alemán?",
-          a: "No. Hable simplemente en su idioma materno. MOMO le entiende y redacta respuestas profesionales en alemán perfecto o en el idioma de su cliente.",
+          a: "No. Hable simplemente en su idioma materno. PLANMOVE KI le entiende y redacta respuestas profesionales en alemán perfecto o en el idioma de su cliente.",
         },
         {
-          q: "¿Qué tan rápido es MOMO?",
-          a: "MOMO responde en segundos. Un presupuesto, un correo o una consulta de cliente — todo se procesa inmediatamente, incluso fuera del horario de oficina.",
+          q: "¿Qué tan rápido es PLANMOVE KI?",
+          a: "PLANMOVE KI responde en segundos. Un presupuesto, un correo o una consulta de cliente — todo se procesa inmediatamente, incluso fuera del horario de oficina.",
         },
         {
-          q: "¿MOMO también funciona en el móvil?",
-          a: "Sí. Use MOMO cómodamente en su smartphone a través de WhatsApp o un mensaje de voz — en la oficina, de camino o en la obra.",
+          q: "¿PLANMOVE KI también funciona en el móvil?",
+          a: "Sí. Use PLANMOVE KI cómodamente en su smartphone a través de WhatsApp o un mensaje de voz — en la oficina, de camino o en la obra.",
         },
         {
-          q: "¿Qué idiomas habla MOMO?",
-          a: "MOMO habla con usted en su idioma materno — sea cual sea. Y escribe respuestas profesionales en alemán, francés, italiano o en el idioma de su cliente.",
+          q: "¿Qué idiomas habla PLANMOVE KI?",
+          a: "PLANMOVE KI habla con usted en su idioma materno — sea cual sea. Y escribe respuestas profesionales en alemán, francés, italiano o en el idioma de su cliente.",
         },
       ],
     },
@@ -1303,7 +1303,7 @@ export const translations = {
       headline2: "Más tiempo. Más clientes.",
       headline3: "Más facturación.",
       paragraph:
-        "Descubra cómo MOMO simplifica su día a día y se asegura de que no se le escape ninguna consulta ni encargo.",
+        "Descubra cómo PLANMOVE KI simplifica su día a día y se asegura de que no se le escape ninguna consulta ni encargo.",
       subItems: ["Sin compromiso", "Respuesta rápida", "Asesoramiento personal"],
     },
     footer: {
@@ -1312,9 +1312,9 @@ export const translations = {
       headlineB: "más ",
       headlineHighlight: "facturación?",
       paragraph:
-        "Una breve conversación por WhatsApp — personal, gratuita y sin compromiso. Descubra en cinco minutos cómo MOMO transforma su PYME.",
+        "Una breve conversación por WhatsApp — personal, gratuita y sin compromiso. Descubra en cinco minutos cómo PLANMOVE KI transforma su PYME.",
       brandDescription:
-        "MOMO es el asistente de IA para empresas suizas de mudanzas y limpieza. PLANMOVE es el software. Disponible 24/7. En todos los idiomas.",
+        "PLANMOVE KI es el asistente de IA para empresas suizas de mudanzas y limpieza. PLANMOVE es el software. Disponible 24/7. En todos los idiomas.",
       contactHeading: "Contacto",
       phone: "+41779800810",
       phoneAria: "Llamar a PLANMOVE",
@@ -1323,7 +1323,7 @@ export const translations = {
     phoneMockup: {
       newRequest: "Nueva consulta",
       headline1: "Hable simple.",
-      headline2: "MOMO escribe.",
+      headline2: "PLANMOVE KI escribe.",
       recording: "Grabación en curso",
       transcript:
         "«Presupuesto para la familia Meier, mudanza de 3 habitaciones, de Zúrich a Winterthur, viernes a las ocho…",
@@ -1354,7 +1354,7 @@ export const translations = {
       },
       followUp: {
         autoReminder: "Recordatorio automático",
-        momoFollowsUp: "MOMO hace seguimiento.",
+        momoFollowsUp: "PLANMOVE KI hace seguimiento.",
         reminders: [
           { name: "Señor Müller", detail: "Presupuesto · hace 3 días" },
           { name: "Señora Meier", detail: "Mudanza 3.5 hab · hace 5 días" },
@@ -1364,7 +1364,7 @@ export const translations = {
       anrufe: {
         incoming: "Llamada entrante",
         unknown: "Desconocido",
-        handled: "atendido por MOMO…",
+        handled: "atendido por PLANMOVE KI…",
       },
     },
   },
@@ -1372,7 +1372,7 @@ export const translations = {
   sq: {
     whatsapp: {
       url: waUrl(
-        "Përshëndetje PLANMOVE. Do të doja të dija më shumë për MOMO, asistentin për kompaninë time të zhvendosjeve/pastrimit."
+        "Përshëndetje PLANMOVE. Do të doja të dija më shumë për PLANMOVE KI, asistentin për kompaninë time të zhvendosjeve/pastrimit."
       ),
     },
     whatsappButton: {
@@ -1387,20 +1387,20 @@ export const translations = {
       headlines: ["Më shumë klientë.", "Më shumë kohë.", "Më shumë para."],
       headlineHighlight: "Më pak stres.",
       benefits: [
-        "MOMO krijon oferta, fatura dhe përgjigje — thjesht me zë ose WhatsApp.",
-        "Folni thjesht në gjuhën tuaj amtare — MOMO shkruan gjermanisht të përsosur ose gjuhën e klientit tuaj.",
-        "Emailet dhe letrat përfundojnë në sekonda — MOMO shpjegon përmbajtjen dhe krijon menjëherë një përgjigje profesionale.",
-        "Mos rrini më vonë në zyrë — MOMO i përgjigjet pyetjeve dhe kryen punën tuaj të zyrës për ju.",
-        "Asnjë klient nuk harrohet më — MOMO i kujton automatikisht klientëve ofertat e hapura.",
+        "PLANMOVE KI krijon oferta, fatura dhe përgjigje — thjesht me zë ose WhatsApp.",
+        "Folni thjesht në gjuhën tuaj amtare — PLANMOVE KI shkruan gjermanisht të përsosur ose gjuhën e klientit tuaj.",
+        "Emailet dhe letrat përfundojnë në sekonda — PLANMOVE KI shpjegon përmbajtjen dhe krijon menjëherë një përgjigje profesionale.",
+        "Mos rrini më vonë në zyrë — PLANMOVE KI i përgjigjet pyetjeve dhe kryen punën tuaj të zyrës për ju.",
+        "Asnjë klient nuk harrohet më — PLANMOVE KI i kujton automatikisht klientëve ofertat e hapura.",
       ],
       starsAria: "4.9 nga 5 yje",
       reviews: "120+ vlerësime",
       visualAlt:
-        "Asistenti MOMO i përgjigjet pyetjeve të klientëve në tavolinën e një sipërmarrësi",
+        "Asistenti PLANMOVE KI i përgjigjet pyetjeve të klientëve në tavolinën e një sipërmarrësi",
     },
     trustBar: {
       items: [
-        "MOMO krijon oferta, fatura dhe përgjigje",
+        "PLANMOVE KI krijon oferta, fatura dhe përgjigje",
         "Mos humb klientë",
         "Më shumë punë",
         "Fol thjesht në gjuhën tënde",
@@ -1426,7 +1426,7 @@ export const translations = {
             { b: "Klientët nuk presin." },
             " Nëse përgjigjeni vonë, shkojnë te ",
             { b: "konkurrenca" },
-            ". MOMO përgjigjet ",
+            ". PLANMOVE KI përgjigjet ",
             { hl: "brenda pak sekondash" },
             " — ",
             { b: "24/7" },
@@ -1443,7 +1443,7 @@ export const translations = {
           ],
           body: [
             { b: "Folni thjesht në gjuhën tuaj." },
-            " MOMO shkruan ",
+            " PLANMOVE KI shkruan ",
             { hl: "email, oferta dhe mesazhe profesionale" },
             " në ",
             { b: "gjermanisht të përsosur" },
@@ -1463,7 +1463,7 @@ export const translations = {
             { b: "qëndrojnë zgjuar deri vonë" },
             ", vetëm për të ",
             { b: "mos humbur asnjë kërkesë" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "bën gjithçka" },
             ".",
           ],
@@ -1481,7 +1481,7 @@ export const translations = {
             { b: "humbasin kontrollin" },
             " — dhe me të ",
             { b: "klientë dhe para" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "kujton automatikisht" },
             " — me mesazh ose telefonatë.",
           ],
@@ -1495,7 +1495,7 @@ export const translations = {
             " ndërsa punoni.",
           ],
           body: [
-            "Nuk mund të përgjigjeni? Nuk ka problem. MOMO ",
+            "Nuk mund të përgjigjeni? Nuk ka problem. PLANMOVE KI ",
             { hl: "merret me telefonatat" },
             ", ",
             { b: "mbledh të gjitha informacionet" },
@@ -1511,7 +1511,7 @@ export const translations = {
           body: [
             "WhatsApp, email, telefon — ",
             { b: "gjithçka vjen njëkohësisht" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "përgjigjet, organizon dhe i bashkon gjithçka në një vend" },
             ".",
           ],
@@ -1519,7 +1519,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "MOMO merret me pastrimin",
+        imageAlt: "PLANMOVE KI merret me pastrimin",
         titleA: "Harroni ",
         titleHighlight: "burokracinë",
         titleB: " dhe programet e ndërlikuara.",
@@ -1528,22 +1528,22 @@ export const translations = {
           { b: "Thjesht thuaj:" },
         ],
         voiceCommands: [
-          "«MOMO, krijo një ofertë për zotin Müller.»",
+          "«PLANMOVE KI, krijo një ofertë për zotin Müller.»",
           "«Dërgo ofertën zonjës Meier me email.»",
           "«Shkruaju klientit në WhatsApp që nesër vijnë në orën 08:00.»",
           "«Krijo faturën dhe dërgoja klientit.»",
         ],
-        momoRestA: "MOMO",
+        momoRestA: "PLANMOVE KI",
         momoRestB: " kryen pjesën tjetër.",
         services: [
-          "MOMO krijon oferta, fatura dhe përgjigje",
+          "PLANMOVE KI krijon oferta, fatura dhe përgjigje",
           "Mesazhe",
           "Takime",
           "Telefonata",
           "Përkthime",
           "dhe shumë më tepër…",
         ],
-        magic: "Magjia e MOMO",
+        magic: "Magjia e PLANMOVE KI",
       },
     },
     testimonials: {
@@ -1561,31 +1561,31 @@ export const translations = {
           name: "Elena B.",
           role: "Pronare kompanie pastrimi",
           quote:
-            "«U rrita në Portugali. MOMO kupton gjuhën time amtare dhe shkruan gjermanisht të përsosur. Klientët e mi e shohin diferencën.»",
+            "«U rrita në Portugali. PLANMOVE KI kupton gjuhën time amtare dhe shkruan gjermanisht të përsosur. Klientët e mi e shohin diferencën.»",
         },
         {
           name: "Tomas K.",
           role: "Pronar kompanie transporti",
           quote:
-            "«Ndjekja automatike më shpëtoi tre punë muajin e kaluar, që përndryshe do t'i kisha harruar. MOMO paguhet vetë.»",
+            "«Ndjekja automatike më shpëtoi tre punë muajin e kaluar, që përndryshe do t'i kisha harruar. PLANMOVE KI paguhet vetë.»",
         },
         {
           name: "Sara M.",
           role: "Pronare kompanie pastrimi",
           quote:
-            "«MOMO i përgjigjet pyetjeve natën dhe në fundjavë — kjo më jep qetësi të vërtetë.»",
+            "«PLANMOVE KI i përgjigjet pyetjeve natën dhe në fundjavë — kjo më jep qetësi të vërtetë.»",
         },
         {
           name: "David R.",
           role: "Pronar kompanie zhvendosjesh",
           quote:
-            "«Që kur përdorim MOMO, shkruajmë oferta profesionale në pak minuta. Kursim kohë dhe dukemi shumë më seriozë ndaj klientëve.»",
+            "«Që kur përdorim PLANMOVE KI, shkruajmë oferta profesionale në pak minuta. Kursim kohë dhe dukemi shumë më seriozë ndaj klientëve.»",
         },
         {
           name: "Ekipi Primemove",
           role: "Primemove",
           quote:
-            "«MOMO e ka ndryshuar krejtësisht rutinën tonë në zyrë. Më shumë kohë, më pak stres, klientë të kënaqur.»",
+            "«PLANMOVE KI e ka ndryshuar krejtësisht rutinën tonë në zyrë. Më shumë kohë, më pak stres, klientë të kënaqur.»",
         },
       ],
     },
@@ -1593,11 +1593,11 @@ export const translations = {
       headingBefore: "Pa PLANMOVE",
       headingAfter: "Me PLANMOVE",
       items: [
-        { before: "Gjermanishtja ishte problem.", after: "Fol thjesht — MOMO shkruan gjermanisht të përsosur." },
+        { before: "Gjermanishtja ishte problem.", after: "Fol thjesht — PLANMOVE KI shkruan gjermanisht të përsosur." },
         { before: "Ofertat kushtonin shumë kohë.", after: "Oferta në pak sekonda." },
         { before: "Harroheshin ofertat e klientëve.", after: "Kujtesë automatike për klientët." },
         { before: "Faturat krijoheshin dorazi.", after: "Faturat krijohen automatikisht." },
-        { before: "Emailat & letrat ishin të vështira.", after: "MOMO i shpjegon dhe i përgjigjet gjithçkaje." },
+        { before: "Emailat & letrat ishin të vështira.", after: "PLANMOVE KI i shpjegon dhe i përgjigjet gjithçkaje." },
         { before: "Punë zyre deri vonë.", after: "Më shumë kohë të lirë, më pak zyrë." },
         { before: "Kërkesa të humbura.", after: "Përgjigje — edhe jashtë orarit të punës." },
         { before: "Gjithçka ishte e paorganizuar.", after: "Gjithçka në një vend." },
@@ -1609,24 +1609,24 @@ export const translations = {
       heading: "Pyetje të shpeshta",
       items: [
         {
-          q: "Çfarë është MOMO?",
-          a: "MOMO është asistenti juaj personal i IA për kompaninë tuaj të zhvendosjeve ose pastrimit. I përgjigjet pyetjeve, krijon oferta dhe fatura, përkthen tekste dhe i kujton automatikisht klientëve — thjesht me zë ose WhatsApp.",
+          q: "Çfarë është PLANMOVE KI?",
+          a: "PLANMOVE KI është asistenti juaj personal i IA për kompaninë tuaj të zhvendosjeve ose pastrimit. I përgjigjet pyetjeve, krijon oferta dhe fatura, përkthen tekste dhe i kujton automatikisht klientëve — thjesht me zë ose WhatsApp.",
         },
         {
           q: "A kam nevojë të di gjermanisht?",
-          a: "Jo. Folni thjesht në gjuhën tuaj amtare. MOMO ju kupton dhe redakton përgjigje profesionale në gjermanisht të përsosur ose në gjuhën e klientit tuaj.",
+          a: "Jo. Folni thjesht në gjuhën tuaj amtare. PLANMOVE KI ju kupton dhe redakton përgjigje profesionale në gjermanisht të përsosur ose në gjuhën e klientit tuaj.",
         },
         {
-          q: "Sa i shpejtë është MOMO?",
-          a: "MOMO përgjigjet brenda sekondash. Një ofertë, një email ose një pyetje klienti — gjithçka përpunohet menjëherë, edhe jashtë orarit të punës.",
+          q: "Sa i shpejtë është PLANMOVE KI?",
+          a: "PLANMOVE KI përgjigjet brenda sekondash. Një ofertë, një email ose një pyetje klienti — gjithçka përpunohet menjëherë, edhe jashtë orarit të punës.",
         },
         {
-          q: "A funksionon MOMO edhe në celular?",
-          a: "Po. Përdorni MOMO lehtësisht në smartphone-in tuaj përmes WhatsApp ose një mesazhi zanor — në zyrë, në rrugë ose në ndërtim.",
+          q: "A funksionon PLANMOVE KI edhe në celular?",
+          a: "Po. Përdorni PLANMOVE KI lehtësisht në smartphone-in tuaj përmes WhatsApp ose një mesazhi zanor — në zyrë, në rrugë ose në ndërtim.",
         },
         {
-          q: "Çfarë gjuhësh flet MOMO?",
-          a: "MOMO flet me ju në gjuhën tuaj amtare — çfarëdo qoftë ajo. Dhe shkruan përgjigje profesionale në gjermanisht, frëngjisht, italisht ose në gjuhën e klientit tuaj.",
+          q: "Çfarë gjuhësh flet PLANMOVE KI?",
+          a: "PLANMOVE KI flet me ju në gjuhën tuaj amtare — çfarëdo qoftë ajo. Dhe shkruan përgjigje profesionale në gjermanisht, frëngjisht, italisht ose në gjuhën e klientit tuaj.",
         },
       ],
     },
@@ -1642,7 +1642,7 @@ export const translations = {
       headline2: "Më shumë kohë. Më shumë klientë.",
       headline3: "Më shumë fitim.",
       paragraph:
-        "Mësoni se si MOMO e thjeshton ditën tuaj të punës dhe siguron që të mos humbisni më asnjë kërkesë ose punë.",
+        "Mësoni se si PLANMOVE KI e thjeshton ditën tuaj të punës dhe siguron që të mos humbisni më asnjë kërkesë ose punë.",
       subItems: ["Pa angazhim", "Përgjigje e shpejtë", "Këshillim personal"],
     },
     footer: {
@@ -1651,9 +1651,9 @@ export const translations = {
       headlineB: "më shumë ",
       headlineHighlight: "fitim?",
       paragraph:
-        "Një bisedë e shkurtër në WhatsApp — personale, falas dhe pa angazhim. Mësoni në pesë minuta se si MOMO transformon biznesin tuaj.",
+        "Një bisedë e shkurtër në WhatsApp — personale, falas dhe pa angazhim. Mësoni në pesë minuta se si PLANMOVE KI transformon biznesin tuaj.",
       brandDescription:
-        "MOMO është asistenti i IA-së për kompanitë zvicerane të zhvendosjeve dhe pastrimit. PLANMOVE është softueri. I arritshëm 24/7. Në çdo gjuhë.",
+        "PLANMOVE KI është asistenti i IA-së për kompanitë zvicerane të zhvendosjeve dhe pastrimit. PLANMOVE është softueri. I arritshëm 24/7. Në çdo gjuhë.",
       contactHeading: "Kontakt",
       phone: "+41779800810",
       phoneAria: "Telefono PLANMOVE",
@@ -1662,7 +1662,7 @@ export const translations = {
     phoneMockup: {
       newRequest: "Kërkesë e re",
       headline1: "Fol thjesht.",
-      headline2: "MOMO shkruan.",
+      headline2: "PLANMOVE KI shkruan.",
       recording: "Po regjistrohet",
       transcript:
         "«Ofertë për familjen Meier, zhvendosje 3-dhomëshe, nga Cyrihu në Winterthur, e premte në tetë…",
@@ -1693,7 +1693,7 @@ export const translations = {
       },
       followUp: {
         autoReminder: "Kujtesë automatike",
-        momoFollowsUp: "MOMO ndjek.",
+        momoFollowsUp: "PLANMOVE KI ndjek.",
         reminders: [
           { name: "Zoti Müller", detail: "Ofertë · para 3 ditësh" },
           { name: "Zonja Meier", detail: "Zhvendosje 3.5 dh · para 5 ditësh" },
@@ -1703,7 +1703,7 @@ export const translations = {
       anrufe: {
         incoming: "Telefonatë hyrëse",
         unknown: "I panjohur",
-        handled: "merret nga MOMO…",
+        handled: "merret nga PLANMOVE KI…",
       },
     },
   },
@@ -1711,7 +1711,7 @@ export const translations = {
   ku: {
     whatsapp: {
       url: waUrl(
-        "Slav PLANMOVE. Ez dixwazim li ser MOMO, asîstana ji bo şirketa min a koçberkirinê/paqijkirinê, bêtir bizanim."
+        "Slav PLANMOVE. Ez dixwazim li ser PLANMOVE KI, asîstana ji bo şirketa min a koçberkirinê/paqijkirinê, bêtir bizanim."
       ),
     },
     whatsappButton: {
@@ -1726,20 +1726,20 @@ export const translations = {
       headlines: ["Bêhtir xerîdar.", "Bêhtir dem.", "Bêhtir pere."],
       headlineHighlight: "Kêmtir stres.",
       benefits: [
-        "MOMO pêşniyar, fatûre û bersivan çêdike — tenê bi deng an WhatsApp.",
-        "Hingê bi zimanê xwe yê dayikê biaxive — MOMO bi Almaniya bêkêmasî an bi zimanê xerîdarê we dinivîse.",
-        "E-name û name di saniyeyan de temam dibin — MOMO naverokê rave dike û fûrbijarkî bersivekê çêdike.",
-        "Ji niha şûnda heta êvarî li ofîsê rûnê — MOMO bersiva pirsan dide û karê ofîsê ji bo we dike.",
-        "Tu xerîdar nayê jibîrkirin — MOMO bixwe xerîdarên ji bona pêşniyarên vekirî hişyar dike.",
+        "PLANMOVE KI pêşniyar, fatûre û bersivan çêdike — tenê bi deng an WhatsApp.",
+        "Hingê bi zimanê xwe yê dayikê biaxive — PLANMOVE KI bi Almaniya bêkêmasî an bi zimanê xerîdarê we dinivîse.",
+        "E-name û name di saniyeyan de temam dibin — PLANMOVE KI naverokê rave dike û fûrbijarkî bersivekê çêdike.",
+        "Ji niha şûnda heta êvarî li ofîsê rûnê — PLANMOVE KI bersiva pirsan dide û karê ofîsê ji bo we dike.",
+        "Tu xerîdar nayê jibîrkirin — PLANMOVE KI bixwe xerîdarên ji bona pêşniyarên vekirî hişyar dike.",
       ],
       starsAria: "4.9 ji 5 stêrkan",
       reviews: "120+ nirxandin",
       visualAlt:
-        "Asîstana MOMO li ser maseya karsazekî bersiva pirsên xerîdaran dide",
+        "Asîstana PLANMOVE KI li ser maseya karsazekî bersiva pirsên xerîdaran dide",
     },
     trustBar: {
       items: [
-        "MOMO pêşniyar, fatûre û bersivan çêdike",
+        "PLANMOVE KI pêşniyar, fatûre û bersivan çêdike",
         "Xerîdar winda neke",
         "Bêhtir kar",
         "Hingê bi zimanê xwe biaxive",
@@ -1765,7 +1765,7 @@ export const translations = {
             { b: "Xerîdar li bendê nabin." },
             " Heke hûn dereng bersiv bidin, diçin ser ",
             { b: "reqabetê" },
-            ". MOMO di ",
+            ". PLANMOVE KI di ",
             { hl: "çend saniyeyan de" },
             " bersiv dide — ",
             { b: "24/7" },
@@ -1782,7 +1782,7 @@ export const translations = {
           ],
           body: [
             { b: "Hingê bi zimanê xwe biaxive." },
-            " MOMO ",
+            " PLANMOVE KI ",
             { hl: "e-name, pêşniyar û peyamanên profesyonel" },
             " bi ",
             { b: "Almaniya bêkêmasî" },
@@ -1802,7 +1802,7 @@ export const translations = {
             { b: "heya dereng şevê hişk in" },
             ", tenê ji bona ku ",
             { b: "tu pirs winda nebe" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "her tiştî dike" },
             ".",
           ],
@@ -1820,7 +1820,7 @@ export const translations = {
             { b: "kontrolê ji dest didin" },
             " — û bi wê re ",
             { b: "xerîdar û pere" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "bixwe hişyar dike" },
             " — bi peyam an jî telefonê.",
           ],
@@ -1834,7 +1834,7 @@ export const translations = {
             " di dema kar de li te diçe.",
           ],
           body: [
-            "Nikarî bersiv bidî? Pirsgirêk nîne. MOMO ",
+            "Nikarî bersiv bidî? Pirsgirêk nîne. PLANMOVE KI ",
             { hl: "telefonan digire" },
             ", ",
             { b: "hemû agahiyan kom dike" },
@@ -1850,7 +1850,7 @@ export const translations = {
           body: [
             "WhatsApp, e-name, telefon — ",
             { b: "hemû tişt di heman demê de tên" },
-            ". MOMO ",
+            ". PLANMOVE KI ",
             { hl: "bersiv dide, rêk dixe û hemû tiştî li cihekê kom dike" },
             ".",
           ],
@@ -1858,7 +1858,7 @@ export const translations = {
         },
       ],
       climax: {
-        imageAlt: "MOMO paqijkirinê dike",
+        imageAlt: "PLANMOVE KI paqijkirinê dike",
         titleA: "",
         titleHighlight: "Burokrasî",
         titleB: " û bernameyên tevlihev ji bîr bike.",
@@ -1867,22 +1867,22 @@ export const translations = {
           { b: "Tenê bibêje:" },
         ],
         voiceCommands: [
-          "«MOMO, ji bo birêz Müller pêşniyarekê çêke.»",
+          "«PLANMOVE KI, ji bo birêz Müller pêşniyarekê çêke.»",
           "«Pêşniyarê bi e-nameyê ji bo xanim Meier bişîne.»",
           "«Ji xerîdar re li WhatsAppê binivîse ku sibê saet 08:00 de tên.»",
           "«Fatûreyê çêke û ji xerîdar re bişîne.»",
         ],
-        momoRestA: "MOMO",
+        momoRestA: "PLANMOVE KI",
         momoRestB: " yê mayî dike.",
         services: [
-          "MOMO pêşniyar, fatûre û bersivan çêdike",
+          "PLANMOVE KI pêşniyar, fatûre û bersivan çêdike",
           "Peyam",
           "Serdan",
           "Telefon",
           "Wergerran",
           "û bêhtir…",
         ],
-        magic: "Sêrûbiniya MOMO",
+        magic: "Sêrûbiniya PLANMOVE KI",
       },
     },
     testimonials: {
@@ -1900,31 +1900,31 @@ export const translations = {
           name: "Elena B.",
           role: "Xwedî şirketa paqijkirinê",
           quote:
-            "«Min li Portekizê mezin bûye. MOMO zimanê min ê dayikê fêm dike û bi bêkêmasî Almanî dinivîse. Xerîdarên min ferqê dibînin.»",
+            "«Min li Portekizê mezin bûye. PLANMOVE KI zimanê min ê dayikê fêm dike û bi bêkêmasî Almanî dinivîse. Xerîdarên min ferqê dibînin.»",
         },
         {
           name: "Tomas K.",
           role: "Xwedî şirketa wergirtinê",
           quote:
-            "«Şopandina bixwe meha borî sê kar ji min xilas kir, ku ez ê ji bîr bikira. MOMO bi xwe xercê xwe dide.»",
+            "«Şopandina bixwe meha borî sê kar ji min xilas kir, ku ez ê ji bîr bikira. PLANMOVE KI bi xwe xercê xwe dide.»",
         },
         {
           name: "Sara M.",
           role: "Xwedî şirketa paqijkirinê",
           quote:
-            "«MOMO şev û dawiya hefteyê bersiva pirsan dide — ev ji rastî aramiyekê dide min.»",
+            "«PLANMOVE KI şev û dawiya hefteyê bersiva pirsan dide — ev ji rastî aramiyekê dide min.»",
         },
         {
           name: "David R.",
           role: "Xwedî şirketa koçberkirinê",
           quote:
-            "«Ji dema ku MOMO bikar tînin, em pêşniyarên profesyonel di çend deqîqeyan de dinivîsin. Em demê xilas dikin û li ber xerîdaran bêhtir cidî xuya dibin.»",
+            "«Ji dema ku PLANMOVE KI bikar tînin, em pêşniyarên profesyonel di çend deqîqeyan de dinivîsin. Em demê xilas dikin û li ber xerîdaran bêhtir cidî xuya dibin.»",
         },
         {
           name: "Tîma Primemove",
           role: "Primemove",
           quote:
-            "«MOMO rûtîna me ya ofîsê bi temamî guherand. Bêhtir dem, kêmtir stres, xerîdarên kêfxweş.»",
+            "«PLANMOVE KI rûtîna me ya ofîsê bi temamî guherand. Bêhtir dem, kêmtir stres, xerîdarên kêfxweş.»",
         },
       ],
     },
@@ -1932,11 +1932,11 @@ export const translations = {
       headingBefore: "Bê PLANMOVE",
       headingAfter: "Bi PLANMOVE",
       items: [
-        { before: "Almanî pirsgirêk bû.", after: "Hingê biaxive — MOMO bi bêkêmasî Almanî dinivîse." },
+        { before: "Almanî pirsgirêk bû.", after: "Hingê biaxive — PLANMOVE KI bi bêkêmasî Almanî dinivîse." },
         { before: "Pêşniyar demek zêde digirt.", after: "Pêşniyar di çend saniyeyan de." },
         { before: "Xerîdar ji bona pêşniyaran ji bîr dikirin.", after: "Hişyarkirina bixwe ya xerîdan." },
         { before: "Fatûre bi destan çêdikirin.", after: "Fatûre bi bixwe çêdibin." },
-        { before: "E-name û name zehmet bûn.", after: "MOMO her tiştî rave dike û bersiv dide." },
+        { before: "E-name û name zehmet bûn.", after: "PLANMOVE KI her tiştî rave dike û bersiv dide." },
         { before: "Heta êvarî karê ofîsê.", after: "Bêhtir dema azad, kêmtir ofîs." },
         { before: "Pirsên ji dest ketî.", after: "Bersiv — heta derveyî dema kar jî." },
         { before: "Her tişt beliq bû.", after: "Her tişt li cihekê ye." },
@@ -1948,24 +1948,24 @@ export const translations = {
       heading: "Pirsên frequent",
       items: [
         {
-          q: "MOMO çi ye?",
-          a: "MOMO asîstana AI-ya şexsî ya we ye ji bo şirketa we ya koçberkirinê an paqijkirinê. Bersiva pirsan dide, pêşniyar û fatûre çêdike, nivîsan wergerîne û bixwe xerîdar hişyar dike — tenê bi deng an WhatsApp.",
+          q: "PLANMOVE KI çi ye?",
+          a: "PLANMOVE KI asîstana AI-ya şexsî ya we ye ji bo şirketa we ya koçberkirinê an paqijkirinê. Bersiva pirsan dide, pêşniyar û fatûre çêdike, nivîsan wergerîne û bixwe xerîdar hişyar dike — tenê bi deng an WhatsApp.",
         },
         {
           q: "Ma ez hewceyê zanîna Almanî me?",
-          a: "Na. Hingê bi zimanê xwe yê dayikê biaxive. MOMO we fêm dike û bersivên profesyonel bi Almaniya bêkêmasî an bi zimanê xerîdarê we çêdike.",
+          a: "Na. Hingê bi zimanê xwe yê dayikê biaxive. PLANMOVE KI we fêm dike û bersivên profesyonel bi Almaniya bêkêmasî an bi zimanê xerîdarê we çêdike.",
         },
         {
-          q: "MOMO çiqas lez e?",
-          a: "MOMO di saniyeyan de bersiv dide. Pêşniyarek, e-name an pirsê xerîdarek — hemû tişt dûrrekt tê pêvajoy kirin, heta derveyî dema kar jî.",
+          q: "PLANMOVE KI çiqas lez e?",
+          a: "PLANMOVE KI di saniyeyan de bersiv dide. Pêşniyarek, e-name an pirsê xerîdarek — hemû tişt dûrrekt tê pêvajoy kirin, heta derveyî dema kar jî.",
         },
         {
-          q: "Ma MOMO li ser mobîlê jî dixebite?",
-          a: "Erê. Hûn MOMO bi hêsanî li ser smartphone-a xwe bi WhatsApp an peyamek dengî bikar tînin — di ofîsê de, rê de an li cihê kar.",
+          q: "Ma PLANMOVE KI li ser mobîlê jî dixebite?",
+          a: "Erê. Hûn PLANMOVE KI bi hêsanî li ser smartphone-a xwe bi WhatsApp an peyamek dengî bikar tînin — di ofîsê de, rê de an li cihê kar.",
         },
         {
-          q: "MOMO bi çi zimanan diaxive?",
-          a: "MOMO bi we bi zimanê we yê dayikê diaxive — bila kijan be. Û bersivên profesyonel bi Almanî, Fransizî, Îtalî an bi zimanê xerîdarê we dinivîse.",
+          q: "PLANMOVE KI bi çi zimanan diaxive?",
+          a: "PLANMOVE KI bi we bi zimanê we yê dayikê diaxive — bila kijan be. Û bersivên profesyonel bi Almanî, Fransizî, Îtalî an bi zimanê xerîdarê we dinivîse.",
         },
       ],
     },
@@ -1981,7 +1981,7 @@ export const translations = {
       headline2: "Bêhtir dem. Bêhtir xerîdar.",
       headline3: "Bêhtir dahat.",
       paragraph:
-        "Bibînin ka MOMO çawa roja we ya kar hêsan dike û bawer dike ku tu pirs an kar ji we nayê windakirin.",
+        "Bibînin ka PLANMOVE KI çawa roja we ya kar hêsan dike û bawer dike ku tu pirs an kar ji we nayê windakirin.",
       subItems: ["Bê berpirsiyarî", "Bersiva lez", "Şêwirmendiya şexsî"],
     },
     footer: {
@@ -1990,9 +1990,9 @@ export const translations = {
       headlineB: "bêhtir ",
       headlineHighlight: "dahat?",
       paragraph:
-        "Gotûbajek kurt li WhatsAppê — şexsî, bêpere û bê berpirsiyarî. Di pênc deqîqeyan de bibînin ka MOMO çawa karsaziya we diguherîne.",
+        "Gotûbajek kurt li WhatsAppê — şexsî, bêpere û bê berpirsiyarî. Di pênc deqîqeyan de bibînin ka PLANMOVE KI çawa karsaziya we diguherîne.",
       brandDescription:
-        "MOMO asîstana AI-ya ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê ye. PLANMOVE nivîsbar e. 24/7 berdest. Bi her zimanî.",
+        "PLANMOVE KI asîstana AI-ya ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê ye. PLANMOVE nivîsbar e. 24/7 berdest. Bi her zimanî.",
       contactHeading: "Têkilî",
       phone: "+41779800810",
       phoneAria: "PLANMOVE bi telefonê gazî bike",
@@ -2001,7 +2001,7 @@ export const translations = {
     phoneMockup: {
       newRequest: "Pirsa nû",
       headline1: "Hingê biaxive.",
-      headline2: "MOMO dinivîse.",
+      headline2: "PLANMOVE KI dinivîse.",
       recording: "Tomarkirin diçe",
       transcript:
         "«Pêşniyar ji bo malbata Meier, koçberkirina 3-odayan, ji Zürichê ber bi Winterthurê, în roja înê saet 8…",
@@ -2032,7 +2032,7 @@ export const translations = {
       },
       followUp: {
         autoReminder: "Hişyarkirina bixwe",
-        momoFollowsUp: "MOMO şopandina dike.",
+        momoFollowsUp: "PLANMOVE KI şopandina dike.",
         reminders: [
           { name: "Birêz Müller", detail: "Pêşniyar · berî 3 rojan" },
           { name: "Xanim Meier", detail: "Koçberkirina 3.5 od. · berî 5 rojan" },
@@ -2042,7 +2042,7 @@ export const translations = {
       anrufe: {
         incoming: "Telefona tê",
         unknown: "Nenas",
-        handled: "ji aliyê MOMO ve tê girtin…",
+        handled: "ji aliyê PLANMOVE KI ve tê girtin…",
       },
     },
   },

@@ -12,16 +12,16 @@ const MEMBERS = [
   {
     initials: "L",
     name: "Livia",
-    role: "Co-CEO",
+    role: "Administrator",
     image: "https://i.imgur.com/tsxABsf.jpg",
   },
   {
     initials: "A",
     name: "Alex",
-    role: "Lead Manager",
+    role: "AI Expert",
     image: "https://i.imgur.com/PiOi9FF.jpg",
   },
-  { initials: "M", name: "Mohamamd", role: "Software Manager" },
+  { initials: "M", name: "Mohie", role: "AI & Software Engineer" },
 ];
 
 export const Team = () => {
@@ -29,7 +29,7 @@ export const Team = () => {
   return (
     <section
       id="team"
-      className="relative py-16 md:py-28 bg-[#F5F4EF]"
+      className="relative pt-0 pb-16 md:pb-28 bg-[#F5F4EF]"
       data-testid="team-section"
     >
       <div className="mx-auto max-w-[1200px] px-5 md:px-10">
