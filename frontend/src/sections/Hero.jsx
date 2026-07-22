@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const GlowTick = () => (
-  <span className="mt-0.5 grid place-items-center h-5 w-5 lg:h-[18px] lg:w-[18px] shrink-0 text-[#25D366]">
+  <span className="mt-0.5 grid place-items-center h-5 w-5 lg:h-[18px] lg:w-[18px] shrink-0 text-black">
     <Check className="h-5 w-5 lg:h-[18px] lg:w-[18px]" strokeWidth={3} />
   </span>
 );
