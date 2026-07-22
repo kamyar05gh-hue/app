@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Logo } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
@@ -37,14 +36,11 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" data-testid="site-header">
-      <AnimatePresence>
-        {mounted && (
-          <motion.div
-            initial={{ y: -60, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto max-w-[1400px] px-4 md:px-10 mt-2 md:mt-2.5"
-          >
+      <div
+        className={`mx-auto max-w-[1400px] px-4 md:px-10 mt-2 md:mt-2.5 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-[60px]"
+        }`}
+      >
             <div
               className={`relative flex items-center justify-between rounded-full px-4 md:px-6 py-2 border border-white/40 bg-white/90 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-500`}
             >
@@ -70,9 +66,7 @@ export const Header = () => {
                 <LanguageSwitcher />
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </div>
     </header>
   );
 };

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import RevealText from "@/components/RevealText";
 import HeroVisual from "@/components/HeroVisual";
@@ -38,11 +37,9 @@ export const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* LEFT — Copy */}
           <div className="lg:col-span-6 relative z-10">
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[12px] md:text-[15px] tracking-[0.08em] md:tracking-[0.1em] uppercase font-bold text-[#0047ff]"
+            <p
+              className="pm-fade-up text-[12px] md:text-[15px] tracking-[0.08em] md:tracking-[0.1em] uppercase font-bold text-[#0047ff]"
+              style={{ animationDelay: "0.2s", animationDuration: "0.6s" }}
               data-testid="hero-tagline"
             >
               <span className="inline-flex items-center gap-2">
@@ -58,7 +55,7 @@ export const Hero = () => {
                 </span>
                 <span>{t.hero.tagline}</span>
               </span>
-            </motion.p>
+            </p>
 
             <RevealText
               as="h1"
@@ -73,11 +70,9 @@ export const Hero = () => {
               ]}
             />
 
-            <motion.ul
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.05, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-4 md:mt-4 max-w-xl space-y-2 md:space-y-1.5 text-[13px] md:text-[15px] leading-relaxed md:leading-relaxed text-black/75 font-semibold"
+            <ul
+              className="pm-fade-up mt-4 md:mt-4 max-w-xl space-y-2 md:space-y-1.5 text-[13px] md:text-[15px] leading-relaxed md:leading-relaxed text-black/75 font-semibold"
+              style={{ animationDelay: "1.05s" }}
               data-testid="hero-benefits-list"
             >
               {t.hero.benefits.map((line, i) => (
@@ -86,13 +81,11 @@ export const Hero = () => {
                   <span>{line}</span>
                 </li>
               ))}
-            </motion.ul>
+            </ul>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-5 md:mt-5 flex flex-col items-start gap-3 md:gap-2.5"
+            <div
+              className="pm-fade-up mt-5 md:mt-5 flex flex-col items-start gap-3 md:gap-2.5"
+              style={{ animationDelay: "1.25s" }}
             >
               {/* Google Review chip */}
               <div className="relative inline-flex">
@@ -144,7 +137,7 @@ export const Hero = () => {
               </div>
 
               <WhatsAppButton size="lg" testId="hero-cta-button" />
-            </motion.div>
+            </div>
           </div>
 
           {/* RIGHT — Hero composite visual (desktop only) */}

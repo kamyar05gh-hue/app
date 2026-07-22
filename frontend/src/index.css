@@ -85,6 +85,27 @@ html.lenis body {
     margin-top: -0.08em;
 }
 
+/* RevealText inner line slide-up (mount reveal, replaces framer-motion) */
+.pm-reveal-text-line {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Hero mount fade-up (replaces framer-motion mount animations) */
+@keyframes pmFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.pm-fade-up {
+    animation: pmFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* Custom cursor accent for CTA */
 .pm-btn {
     position: relative;
