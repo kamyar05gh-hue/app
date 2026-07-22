@@ -274,6 +274,11 @@ export const translations = {
         },
       ],
     },
+    team: {
+      kicker: "Unser Team",
+      heading: "Die Menschen hinter PLANMOVE",
+      sub: "Ein kleines Team mit einem grossen Ziel: weniger Büro, mehr Zeit und mehr Kunden für Schweizer Umzugs- und Reinigungsunternehmen.",
+    },
     finalCta: {
       chipMoving: "Umzug",
       chipCleaning: "Reinigung",
@@ -607,6 +612,11 @@ export const translations = {
           a: "MOMO vous parle dans votre langue maternelle — peu importe laquelle. Et rédige des réponses professionnelles en allemand, français, italien ou dans la langue de votre client.",
         },
       ],
+    },
+    team: {
+      kicker: "Notre équipe",
+      heading: "L'équipe derrière PLANMOVE",
+      sub: "Une petite équipe avec un grand objectif : moins de bureau, plus de temps et plus de clients pour les entreprises suisses de déménagement et de nettoyage.",
     },
     finalCta: {
       chipMoving: "Déménagement",
@@ -942,6 +952,11 @@ export const translations = {
         },
       ],
     },
+    team: {
+      kicker: "Il nostro team",
+      heading: "Le persone dietro PLANMOVE",
+      sub: "Un piccolo team con un grande obiettivo: meno ufficio, più tempo e più clienti per le aziende svizzere di traslochi e pulizie.",
+    },
     finalCta: {
       chipMoving: "Traslochi",
       chipCleaning: "Pulizie",
@@ -1275,6 +1290,11 @@ export const translations = {
           a: "MOMO habla con usted en su idioma materno — sea cual sea. Y escribe respuestas profesionales en alemán, francés, italiano o en el idioma de su cliente.",
         },
       ],
+    },
+    team: {
+      kicker: "Nuestro equipo",
+      heading: "Las personas detrás de PLANMOVE",
+      sub: "Un equipo pequeño con un gran objetivo: menos oficina, más tiempo y más clientes para las empresas suizas de mudanzas y limpieza.",
     },
     finalCta: {
       chipMoving: "Mudanzas",
@@ -1610,6 +1630,11 @@ export const translations = {
         },
       ],
     },
+    team: {
+      kicker: "Ekipi ynë",
+      heading: "Njerëzit pas PLANMOVE",
+      sub: "Një ekip i vogël me një qëllim të madh: më pak zyrë, më shumë kohë dhe më shumë klientë për kompanitë zvicerane të zhvendosjeve dhe pastrimit.",
+    },
     finalCta: {
       chipMoving: "Zhvendosje",
       chipCleaning: "Pastrim",
@@ -1943,6 +1968,11 @@ export const translations = {
           a: "MOMO bi we bi zimanê we yê dayikê diaxive — bila kijan be. Û bersivên profesyonel bi Almanî, Fransizî, Îtalî an bi zimanê xerîdarê we dinivîse.",
         },
       ],
+    },
+    team: {
+      kicker: "Tîma me",
+      heading: "Ekîba li pişt PLANMOVE",
+      sub: "Tîmeke biçûk bi armanceke mezin: kêmtir ofîs, bêhtir dem û bêhtir xerîdar ji bo şirketên Swîsre yên koçberkirinê û paqijkirinê.",
     },
     finalCta: {
       chipMoving: "Koçberkirin",

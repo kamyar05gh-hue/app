@@ -9,6 +9,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const Problems = lazy(() => import("@/sections/Problems"));
 const Testimonials = lazy(() => import("@/sections/Testimonials"));
 const FAQ = lazy(() => import("@/sections/FAQ"));
+const Team = lazy(() => import("@/sections/Team"));
 const FinalCTA = lazy(() => import("@/sections/FinalCTA"));
 const Footer = lazy(() => import("@/sections/Footer"));
 
@@ -22,6 +23,7 @@ export default function Landing() {
         <Problems />
         <Testimonials />
         <FAQ />
+        <Team />
         <FinalCTA />
         <Footer />
       </Suspense>

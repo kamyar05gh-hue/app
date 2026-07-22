@@ -28,7 +28,7 @@ export default function PrivacyPage() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-24">
         <div className="mx-auto max-w-[900px] px-5 md:px-10">
           <p className="text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-white/50 mb-4">
-            Zuletzt aktualisiert am 18.07.2025
+            Zuletzt aktualisiert am 21.07.2026
           </p>
           <h1 className="font-display font-extrabold tracking-[-0.03em] text-[32px] sm:text-[42px] md:text-[56px] leading-[1.05] mb-10 md:mb-14">
             Datenschutzerklärung
@@ -43,16 +43,19 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-[18px] md:text-[22px] font-display font-bold text-white mb-4">1. Welche Dienste wir nutzen</h2>
+              <p className="mb-4">
+                Für den Betrieb unserer Website und der PLANMOVE-Software setzen wir ausschliesslich die folgenden Dienste ein:
+              </p>
               <ul className="list-disc pl-5 space-y-1.5">
-                <li>Google Ads & Google Ads Conversion Tracking</li>
-                <li>Meta Ads</li>
-                <li>TikTok Pixel</li>
-                <li>Google Analytics</li>
-                <li>Google Tag Manager</li>
-                <li>Calendly</li>
-                <li>Google My Business</li>
-                <li>Wix</li>
+                <li>Vercel (Hosting und Bereitstellung der Website)</li>
+                <li>PostHog (Produktanalyse und Nutzungsstatistiken)</li>
+                <li>Google Fonts (Schriftarten für die Darstellung der Website)</li>
+                <li>WhatsApp (Kommunikation mit Interessenten und Kunden)</li>
+                <li>MongoDB (Datenbank für die PLANMOVE-Software)</li>
               </ul>
+              <p className="mt-4">
+                Wir nutzen keine Werbenetzwerke und setzen keinerlei Tracking- oder Werbe-Cookies von Drittanbietern ein.
+              </p>
             </section>
 
             <section>
@@ -83,7 +86,7 @@ export default function PrivacyPage() {
 
               <h3 className="text-white font-semibold mt-4 mb-2">3.3 Weitergabe an Dritte</h3>
               <p>
-                Wir können Daten an Auftragsverarbeiter weitergeben (z.B. IT-Dienstleister, Zahlungsdienstleister, Werbe- und Analysedienste). Dabei stellen wir sicher, dass diese den Datenschutz einhalten. Eine Übermittlung ins Ausland kann vorkommen; dafür sorgen wir vertraglich für den gleichen Schutz wie in der Schweiz.
+                Wir können Daten an Auftragsverarbeiter weitergeben (z.B. Hosting-Anbieter, IT-Dienstleister und Analysedienste). Dabei stellen wir sicher, dass diese den Datenschutz einhalten. Eine Übermittlung ins Ausland kann vorkommen; dafür sorgen wir vertraglich für den gleichen Schutz wie in der Schweiz. Wir verkaufen keine Daten und geben keine Daten zu Werbezwecken an Dritte weiter.
               </p>
 
               <h3 className="text-white font-semibold mt-4 mb-2">3.4 Aufbewahrungsdauer</h3>
@@ -103,8 +106,30 @@ export default function PrivacyPage() {
               <p>
                 Beim Besuch unserer Website und bei der Nutzung der PLANMOVE-Software werden automatisch bestimmte Daten zu Zwecken der Systemadministration, Statistik und Sicherheit gespeichert (z.B. IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs).
               </p>
-              <p className="mt-4">
-                Für die von uns eingesetzten Drittdienste (Google Ads, Meta Ads, TikTok Pixel, Google Analytics, Google Tag Manager, Calendly, Google My Business, Wix) gelten die Datenschutzrichtlinien der jeweiligen Anbieter. Die durch PLANMOVE verarbeiteten Kundendaten verbleiben grundsätzlich in Ihrer Kontrolle und werden nur zur Erbringung der Dienstleistung genutzt.
+
+              <h3 className="text-white font-semibold mt-6 mb-2">4.1 Hosting (Vercel)</h3>
+              <p>
+                Unsere Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, gehostet. Beim Aufruf der Website verarbeitet Vercel automatisch Verbindungsdaten (z.B. IP-Adresse, Datum und Uhrzeit des Zugriffs), um die Website auszuliefern und die Sicherheit der Systeme zu gewährleisten.
+              </p>
+
+              <h3 className="text-white font-semibold mt-6 mb-2">4.2 PostHog (Produktanalyse)</h3>
+              <p>
+                Wir verwenden PostHog, einen Analysedienst der PostHog Inc., um die Nutzung unserer Website und Software besser zu verstehen (z.B. besuchte Seiten und Interaktionen). Die Auswertung dient ausschliesslich der Verbesserung unseres Angebots. Personen werden dabei nicht persönlich identifiziert. Sie können die Datenerfassung durch entsprechende Browser-Einstellungen (z.B. Deaktivierung von Cookies oder Do-Not-Track) verhindern.
+              </p>
+
+              <h3 className="text-white font-semibold mt-6 mb-2">4.3 Google Fonts</h3>
+              <p>
+                Zur einheitlichen Darstellung unserer Website laden wir Schriftarten von Google Fonts (Google LLC, USA). Beim Aufruf der Website wird dabei eine Verbindung zu Servern von Google hergestellt, wobei Ihre IP-Adresse übermittelt wird.
+              </p>
+
+              <h3 className="text-white font-semibold mt-6 mb-2">4.4 WhatsApp</h3>
+              <p>
+                Wenn Sie uns über WhatsApp kontaktieren, verarbeiten wir Ihre Telefonnummer und den Inhalt Ihrer Nachrichten, um Ihre Anfrage zu beantworten. Für die Nutzung von WhatsApp gelten zusätzlich die Datenschutzbestimmungen der WhatsApp Ireland Limited.
+              </p>
+
+              <h3 className="text-white font-semibold mt-6 mb-2">4.5 PLANMOVE-Software (MOMO)</h3>
+              <p>
+                Die durch PLANMOVE verarbeiteten Kundendaten verbleiben grundsätzlich in Ihrer Kontrolle und werden nur zur Erbringung der Dienstleistung genutzt. Sprachnachrichten, Offerten, Rechnungen und Kundenkommunikation, die Sie über MOMO erstellen, werden ausschliesslich zur Erbringung der vereinbarten Leistung verarbeitet und nicht an Dritte zu Werbezwecken weitergegeben.
               </p>
             </section>
 
