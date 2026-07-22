@@ -10,14 +10,19 @@ import { Toaster } from "@/components/ui/sonner";
 
 function useLenis() {
   useEffect(() => {
-    const isMobile = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
+    // Skip Lenis entirely on touch devices: syncTouch re-interpolates native
+    // touch scrolling every frame, which feels slow/laggy on phones, and the
+    // rAF loop drains battery. Native touch scrolling is GPU-accelerated.
+    const isMobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(pointer: coarse)").matches;
+    if (isMobile) return;
     const lenis = new Lenis({
-      duration: isMobile ? 0.75 : 0.95,
+      duration: 0.95,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
       wheelMultiplier: 1.15,
-      touchMultiplier: isMobile ? 1.15 : 1.35,
-      syncTouch: isMobile,
+      touchMultiplier: 1.35,
       lerp: 0.08,
     });
     // Expose for programmatic scroll (nav clicks, testing)
