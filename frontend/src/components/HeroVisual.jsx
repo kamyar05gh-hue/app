@@ -2,8 +2,8 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import SmoothImage from "@/components/SmoothImage";
 
 /**
- * Hero visual — vertical split-scene stock photo (moving + cleaning).
- * Portrait ratio, slightly wider frame for desktop impact.
+ * Hero visual — PLANMOVE KI robot photo.
+ * 4:3 frame matching the image so nothing is cropped.
  */
 export const HeroVisual = () => {
   const { t } = useLanguage();
@@ -19,14 +19,14 @@ export const HeroVisual = () => {
         }}
       />
 
-      {/* Photo canvas — vertical 4:5 ratio, wider max-width */}
-      <div className="relative w-full max-w-[540px] md:max-w-[620px] lg:max-w-[680px] aspect-[4/5]">
+      {/* Photo canvas — 4:3 ratio matching the hero image so nothing is cropped */}
+      <div className="relative w-full max-w-[540px] md:max-w-[620px] lg:max-w-[680px] aspect-[4/3]">
         <div className="relative h-full w-full rounded-[1.75rem] md:rounded-[2rem] overflow-hidden bg-[#E9E4DA] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.25)]">
           <SmoothImage
             src="/images/hero-stock.jpg"
             alt={t.hero.visualAlt}
-            width="1200"
-            height="1500"
+            width="1448"
+            height="1086"
             loading="eager"
             decoding="async"
             fetchpriority="high"

@@ -115,12 +115,12 @@ export const Footer = () => {
                 </p>
               </div>
               <a
-                href="tel:+41798000810"
+                href="tel:+41794880011"
                 data-testid="footer-phone"
                 aria-label={t.footer.phoneAria}
                 className="text-[15px] md:text-[16px] font-medium text-white/90 hover:text-white transition-colors duration-300"
               >
-                <span className="leading-none whitespace-nowrap">+41 79 800 08 10</span>
+                <span className="leading-none whitespace-nowrap">+41 79 488 00 11</span>
               </a>
             </div>
           </div>

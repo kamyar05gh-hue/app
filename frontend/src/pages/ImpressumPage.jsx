@@ -46,7 +46,7 @@ export default function ImpressumPage() {
 
             <h2 className="text-[20px] md:text-[24px] mt-10 mb-4">Kontakt</h2>
             <p>
-              Tel.: <a href="tel:+41798000810">+41 79 800 08 10</a><br />
+              Tel.: <a href="tel:+41794880011">+41 79 488 00 11</a><br />
               E-Mail: <a href="mailto:info@planmove.ch">info@planmove.ch</a>
             </p>
 

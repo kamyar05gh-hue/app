@@ -3,7 +3,7 @@ import { ChevronDown, Check } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 /**
- * Slick language switcher — DE (default), IT, ES, SQ, KU.
+ * Slick language switcher — DE (default), IT, ES, SQ, KU, TR, PT, FA.
  * Wired to LanguageContext: selection translates the whole site and
  * persists to localStorage (pm_lang).
  * Responsive: pill on desktop, compact icon-only on mobile.
@@ -14,6 +14,9 @@ const LANGS = [
   { code: "ES", label: "Español", flagBg: "#AA151B", flagText: "ES" },
   { code: "SQ", label: "Shqip", flagBg: "#E41E20", flagText: "AL" },
   { code: "KU", label: "Kurdî", flagBg: "#ED2024", flagText: "KU" },
+  { code: "TR", label: "Türkçe", flagBg: "#E30A17", flagText: "TR" },
+  { code: "PT", label: "Português", flagBg: "#046A38", flagText: "PT" },
+  { code: "FA", label: "فارسی", flagBg: "#239F40", flagText: "FA" },
 ];
 
 const SwissFlag = () => (
@@ -79,12 +82,49 @@ const KurdishFlag = () => (
   </span>
 );
 
+const TurkishFlag = () => (
+  <span
+    className="inline-grid place-items-center h-4 w-5 overflow-hidden rounded-[3px] border border-black/10 bg-[#E30A17]"
+    aria-hidden
+  >
+    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="white">
+      <circle cx="10" cy="12" r="6" />
+      <circle cx="11.8" cy="12" r="4.8" fill="#E30A17" />
+      <path d="M16.5 9.5l.8 1.9 2 .1-1.6 1.3.6 2-1.8-1.2-1.8 1.2.6-2-1.6-1.3 2-.1z" />
+    </svg>
+  </span>
+);
+
+const PortugueseFlag = () => (
+  <span
+    className="inline-flex h-4 w-5 overflow-hidden rounded-[3px] border border-black/10"
+    aria-hidden
+  >
+    <span className="h-full w-2/5 bg-[#046A38]" />
+    <span className="h-full w-3/5 bg-[#DA291C]" />
+  </span>
+);
+
+const PersianFlag = () => (
+  <span
+    className="inline-flex flex-col h-4 w-5 overflow-hidden rounded-[3px] border border-black/10"
+    aria-hidden
+  >
+    <span className="h-1/3 w-full bg-[#239F40]" />
+    <span className="h-1/3 w-full bg-white" />
+    <span className="h-1/3 w-full bg-[#DA0000]" />
+  </span>
+);
+
 const FLAG_ICONS = {
   DE: <SwissFlag />,
   IT: <ItalianFlag />,
   ES: <SpanishFlag />,
   SQ: <AlbanianFlag />,
   KU: <KurdishFlag />,
+  TR: <TurkishFlag />,
+  PT: <PortugueseFlag />,
+  FA: <PersianFlag />,
 };
 
 export const LanguageSwitcher = () => {

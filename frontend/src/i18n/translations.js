@@ -10,8 +10,12 @@
  * - Brand names "PLANMOVE KI" and "PLANMOVE" stay untranslated.
  */
 
+import { fa } from "./translations.fa";
+import { tr } from "./translations.tr";
+import { pt } from "./translations.pt";
+
 const waUrl = (text) =>
-  "https://wa.me/41779800810?text=" + encodeURIComponent(text);
+  "https://wa.me/41794880011?text=" + encodeURIComponent(text);
 
 export const translations = {
   de: {
@@ -299,7 +303,7 @@ export const translations = {
       brandDescription:
         "PLANMOVE KI erledigt Offerten, Rechnungen und Kundenkommunikation für Schweizer Umzugs- und Reinigungsunternehmen. 24/7 erreichbar. In jeder Sprache.",
       contactHeading: "Kontakt",
-      phone: "+41779800810",
+      phone: "+41794880011",
       phoneAria: "PLANMOVE anrufen",
       bottomNote: "",
     },
@@ -638,7 +642,7 @@ export const translations = {
       brandDescription:
         "PLANMOVE KI est l'assistant IA pour les entreprises suisses de déménagement et de nettoyage. PLANMOVE est le logiciel. Disponible 24h/24 et 7j/7. Dans toutes les langues.",
       contactHeading: "Contact",
-      phone: "+41779800810",
+      phone: "+41794880011",
       phoneAria: "Appeler PLANMOVE",
       bottomNote: "",
     },
@@ -977,7 +981,7 @@ export const translations = {
       brandDescription:
         "PLANMOVE KI è l'assistente IA per le aziende svizzere di traslochi e pulizie. PLANMOVE è il software. Disponibile 24 ore su 24, 7 giorni su 7. In ogni lingua.",
       contactHeading: "Contatto",
-      phone: "+41779800810",
+      phone: "+41794880011",
       phoneAria: "Chiama PLANMOVE",
       bottomNote: "",
     },
@@ -1316,7 +1320,7 @@ export const translations = {
       brandDescription:
         "PLANMOVE KI es el asistente de IA para empresas suizas de mudanzas y limpieza. PLANMOVE es el software. Disponible 24/7. En todos los idiomas.",
       contactHeading: "Contacto",
-      phone: "+41779800810",
+      phone: "+41794880011",
       phoneAria: "Llamar a PLANMOVE",
       bottomNote: "",
     },
@@ -1655,7 +1659,7 @@ export const translations = {
       brandDescription:
         "PLANMOVE KI është asistenti i IA-së për kompanitë zvicerane të zhvendosjeve dhe pastrimit. PLANMOVE është softueri. I arritshëm 24/7. Në çdo gjuhë.",
       contactHeading: "Kontakt",
-      phone: "+41779800810",
+      phone: "+41794880011",
       phoneAria: "Telefono PLANMOVE",
       bottomNote: "",
     },
@@ -1994,7 +1998,7 @@ export const translations = {
       brandDescription:
         "PLANMOVE KI asîstana AI-ya ji bo şirketên Swîsreyî yên koçberkirinê û paqijkirinê ye. PLANMOVE nivîsbar e. 24/7 berdest. Bi her zimanî.",
       contactHeading: "Têkilî",
-      phone: "+41779800810",
+      phone: "+41794880011",
       phoneAria: "PLANMOVE bi telefonê gazî bike",
       bottomNote: "",
     },
@@ -2046,6 +2050,9 @@ export const translations = {
       },
     },
   },
+  fa,
+  tr,
+  pt,
 };
 
 export default translations;
