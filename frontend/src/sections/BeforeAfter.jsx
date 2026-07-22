@@ -31,7 +31,7 @@ export const BeforeAfter = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-10 md:mb-14"
+          className="text-center mb-10 md:mb-14 hidden md:block"
         >
           <h2 className="font-display font-extrabold tracking-[-0.03em] text-[28px] sm:text-[38px] md:text-[52px] leading-[1.05] text-black">
             {data.headingBefore}

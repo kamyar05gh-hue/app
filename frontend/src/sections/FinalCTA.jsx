@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { Check, Truck, SprayCan } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Reveal from "@/components/Reveal";
@@ -6,6 +7,23 @@ import { useLanguage } from "@/i18n/LanguageContext";
 export const FinalCTA = () => {
   const { t } = useLanguage();
   const subItems = t.finalCta.subItems;
+  const videoRef = useRef(null);
+
+  // iOS Safari requires a .play() call (not just the autoPlay attribute)
+  // and the video must be muted + playsInline for it to work.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.play().catch(() => {
+        // Autoplay blocked (e.g. Low Power Mode) — play on first touch
+        const resume = () => {
+          v.play().catch(() => {});
+          document.removeEventListener("touchstart", resume);
+        };
+        document.addEventListener("touchstart", resume, { once: true });
+      });
+    }
+  }, []);
 
   return (
     <section
@@ -15,6 +33,7 @@ export const FinalCTA = () => {
     >
       {/* Background video */}
       <video
+        ref={videoRef}
         aria-hidden
         className="absolute inset-0 h-full w-full object-cover pointer-events-none"
         src="/videos/final-cta-bg.mp4"
@@ -22,7 +41,8 @@ export const FinalCTA = () => {
         muted
         loop
         playsInline
-        preload="metadata"
+        webkit-playsinline="true"
+        preload="auto"
       />
       {/* Dark overlay for readability */}
       <div
