@@ -33,24 +33,6 @@ export const FinalCTA = () => {
             "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.60) 100%)",
         }}
       />
-      {/* Feather: fade in from previous section (Team, light) at top */}
-      <div
-        aria-hidden
-        className="absolute top-0 left-0 right-0 h-24 md:h-36 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom, #F5F4EF 0%, rgba(245,244,239,0) 100%)",
-        }}
-      />
-      {/* Feather: fade out to next section (Footer, dark) at bottom */}
-      <div
-        aria-hidden
-        className="absolute bottom-0 left-0 right-0 h-24 md:h-36 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(10,10,10,0) 0%, #0A0A0A 100%)",
-        }}
-      />
       <div
         aria-hidden
         className="absolute -top-24 left-1/2 -translate-x-1/2 h-[420px] w-[420px] rounded-full blur-3xl pointer-events-none opacity-60"
