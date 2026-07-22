@@ -3,10 +3,25 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 // Names and roles are brand-level and stay identical across languages.
 const MEMBERS = [
-  { initials: "E", name: "Elais", role: "CEO & Founder" },
-  { initials: "L", name: "Livia", role: "Co-CEO" },
-  { initials: "A", name: "Alex", role: "Lead Manager" },
-  { initials: "M", name: "Mohommad", role: "Software Manager" },
+  {
+    initials: "E",
+    name: "Elias",
+    role: "CEO & Founder",
+    image: "https://i.imgur.com/9pjdi6d.jpg",
+  },
+  {
+    initials: "L",
+    name: "Livia",
+    role: "Co-CEO",
+    image: "https://i.imgur.com/tsxABsf.jpg",
+  },
+  {
+    initials: "A",
+    name: "Alex",
+    role: "Lead Manager",
+    image: "https://i.imgur.com/PiOi9FF.jpg",
+  },
+  { initials: "M", name: "Mohamamd", role: "Software Manager" },
 ];
 
 export const Team = () => {
@@ -41,9 +56,17 @@ export const Team = () => {
                 className="group flex flex-col items-center text-center rounded-[1.5rem] border border-black/[0.06] bg-[#F5F4EF] p-7 md:p-8 h-full transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_25px_50px_-25px_rgba(0,0,0,0.15)]"
                 data-testid={`team-member-${m.name.toLowerCase()}`}
               >
-                <div className="grid place-items-center h-20 w-20 md:h-24 md:w-24 rounded-full bg-[#0A0A0C] text-[#25D366] font-display font-extrabold text-[26px] md:text-[30px] shadow-[0_15px_30px_-12px_rgba(0,0,0,0.35)]">
-                  {m.initials}
-                </div>
+                {m.image ? (
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    className="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-[0_15px_30px_-12px_rgba(0,0,0,0.35)]"
+                  />
+                ) : (
+                  <div className="grid place-items-center h-20 w-20 md:h-24 md:w-24 rounded-full bg-[#0A0A0C] text-[#25D366] font-display font-extrabold text-[26px] md:text-[30px] shadow-[0_15px_30px_-12px_rgba(0,0,0,0.35)]">
+                    {m.initials}
+                  </div>
+                )}
                 <h3 className="mt-5 font-display font-bold tracking-tight text-[19px] md:text-[21px] text-black">
                   {m.name}
                 </h3>
