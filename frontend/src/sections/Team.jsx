@@ -32,7 +32,7 @@ export const Team = () => {
       className="relative py-16 md:py-28 bg-[#F5F4EF]"
       data-testid="team-section"
     >
-      <div className="mx-auto max-w-[1100px] px-5 md:px-10">
+      <div className="mx-auto max-w-[1200px] px-5 md:px-10">
         <Reveal>
           <p className="text-[11px] md:text-[12px] uppercase tracking-[0.22em] font-semibold text-[#1EB955] text-center">
             {t.team.kicker}
@@ -53,7 +53,7 @@ export const Team = () => {
           {MEMBERS.map((m, i) => (
             <Reveal key={m.name} delay={i * 80}>
               <div
-                className="group relative flex flex-col items-center text-center rounded-2xl md:rounded-3xl border border-[#25D366]/15 bg-[#0a120d] p-7 md:p-8 h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[#25D366]/40 hover:shadow-[0_30px_60px_-30px_rgba(37,211,102,0.25)]"
+                className="group relative flex flex-col items-center text-center rounded-2xl md:rounded-3xl border border-[#25D366]/15 bg-[#0a120d] p-8 md:p-10 h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[#25D366]/40 hover:shadow-[0_30px_60px_-30px_rgba(37,211,102,0.25)]"
                 data-testid={`team-member-${m.name.toLowerCase()}`}
               >
                 {/* Top accent line — mirrors the testimonial cards */}
@@ -70,15 +70,15 @@ export const Team = () => {
                     <img
                       src={m.image}
                       alt={m.name}
-                      className="relative h-28 w-28 md:h-32 md:w-32 rounded-full object-cover ring-2 ring-[#25D366]/25 shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="relative h-32 w-32 md:h-40 md:w-40 rounded-full object-cover ring-2 ring-[#25D366]/25 shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   ) : (
-                    <div className="relative grid place-items-center h-28 w-28 md:h-32 md:w-32 rounded-full bg-[#0a1f12] border border-[#25D366]/30 text-white font-display font-extrabold text-[34px] md:text-[38px] shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]">
+                    <div className="relative grid place-items-center h-32 w-32 md:h-40 md:w-40 rounded-full bg-[#0a1f12] border border-[#25D366]/30 text-white font-display font-extrabold text-[38px] md:text-[44px] shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]">
                       {m.initials}
                     </div>
                   )}
                 </div>
-                <h3 className="mt-5 font-display font-bold tracking-tight text-[19px] md:text-[21px] text-white">
+                <h3 className="mt-6 font-display font-bold tracking-tight text-[20px] md:text-[22px] text-white">
                   {m.name}
                 </h3>
                 <p className="mt-2.5 inline-flex items-center rounded-full bg-[#25D366]/10 px-3 py-1 text-[12px] md:text-[13px] font-semibold text-[#25D366]">

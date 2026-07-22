@@ -95,10 +95,21 @@ export const Hero = () => {
               className="mt-5 md:mt-5 flex flex-col items-start gap-3 md:gap-2.5"
             >
               {/* Google Review chip */}
-              <div
-                className="group relative inline-flex items-center gap-3.5 rounded-2xl border border-white/60 bg-white/70 pl-2.5 pr-4 py-2 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.18)] overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-14px_rgba(0,0,0,0.25)]"
-                data-testid="hero-google-review"
-              >
+              <div className="relative inline-flex">
+                {/* Deep green glow accent */}
+                <span
+                  aria-hidden
+                  className="absolute -inset-2.5 rounded-[1.25rem] pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(37,211,102,0.45) 0%, rgba(37,211,102,0.15) 55%, transparent 75%)",
+                    filter: "blur(8px)",
+                  }}
+                />
+                <div
+                  className="group relative inline-flex items-center gap-3.5 rounded-2xl border border-white/60 bg-white/70 pl-2.5 pr-4 py-2 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.18)] overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-14px_rgba(0,0,0,0.25)]"
+                  data-testid="hero-google-review"
+                >
                 {/* Liquid-glass glossy highlight */}
                 <div
                   aria-hidden
@@ -129,6 +140,7 @@ export const Hero = () => {
                     Google · {t.hero.reviews}
                   </span>
                 </span>
+                </div>
               </div>
 
               <WhatsAppButton size="lg" testId="hero-cta-button" />
