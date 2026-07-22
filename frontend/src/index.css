@@ -349,6 +349,12 @@ html.lenis body {
     }
 }
 
+/* Composite big decorative glows once instead of re-rasterizing on scroll */
+.blur-3xl,
+.blur-2xl {
+    will-change: transform;
+}
+
 /* Accordion smooth */
 [data-state="open"] .acc-icon {
     transform: rotate(45deg);

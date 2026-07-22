@@ -46,7 +46,7 @@ export const Header = () => {
             className="mx-auto max-w-[1400px] px-4 md:px-10 mt-2 md:mt-2.5"
           >
             <div
-              className={`relative flex items-center justify-between rounded-full px-4 md:px-6 py-2 border border-white/40 backdrop-blur-xl bg-white/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-500`}
+              className={`relative flex items-center justify-between rounded-full px-4 md:px-6 py-2 border border-white/40 bg-white/90 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-500`}
             >
               {/* Liquid-glass glossy highlight */}
               <div
