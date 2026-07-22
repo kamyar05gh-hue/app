@@ -29,7 +29,7 @@ export const Team = () => {
   return (
     <section
       id="team"
-      className="relative py-16 md:py-28 bg-white"
+      className="relative py-16 md:py-28 bg-[#F5F4EF]"
       data-testid="team-section"
     >
       <div className="mx-auto max-w-[1100px] px-5 md:px-10">
@@ -53,24 +53,30 @@ export const Team = () => {
           {MEMBERS.map((m, i) => (
             <Reveal key={m.name} delay={i * 80}>
               <div
-                className="group flex flex-col items-center text-center rounded-[1.5rem] border border-black/[0.06] bg-[#F5F4EF] p-7 md:p-8 h-full transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_25px_50px_-25px_rgba(0,0,0,0.15)]"
+                className="group flex flex-col items-center text-center rounded-[1.75rem] border border-black/[0.06] bg-white p-7 md:p-8 h-full transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-25px_rgba(0,0,0,0.18)]"
                 data-testid={`team-member-${m.name.toLowerCase()}`}
               >
-                {m.image ? (
-                  <img
-                    src={m.image}
-                    alt={m.name}
-                    className="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-[0_15px_30px_-12px_rgba(0,0,0,0.35)]"
+                <div className="relative">
+                  <div
+                    aria-hidden
+                    className="absolute -inset-3 rounded-full bg-gradient-to-br from-[#25D366]/25 to-transparent blur-lg opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   />
-                ) : (
-                  <div className="grid place-items-center h-20 w-20 md:h-24 md:w-24 rounded-full bg-[#0A0A0C] text-[#25D366] font-display font-extrabold text-[26px] md:text-[30px] shadow-[0_15px_30px_-12px_rgba(0,0,0,0.35)]">
-                    {m.initials}
-                  </div>
-                )}
+                  {m.image ? (
+                    <img
+                      src={m.image}
+                      alt={m.name}
+                      className="relative h-28 w-28 md:h-32 md:w-32 rounded-full object-cover ring-4 ring-white shadow-[0_18px_35px_-15px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div className="relative grid place-items-center h-28 w-28 md:h-32 md:w-32 rounded-full bg-[#0A0A0C] text-[#25D366] font-display font-extrabold text-[34px] md:text-[38px] ring-4 ring-white shadow-[0_18px_35px_-15px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:scale-[1.04]">
+                      {m.initials}
+                    </div>
+                  )}
+                </div>
                 <h3 className="mt-5 font-display font-bold tracking-tight text-[19px] md:text-[21px] text-black">
                   {m.name}
                 </h3>
-                <p className="mt-1.5 text-[13px] md:text-[14px] font-medium text-black/55">
+                <p className="mt-2.5 inline-flex items-center rounded-full bg-[#25D366]/10 px-3 py-1 text-[12px] md:text-[13px] font-semibold text-[#1EB955]">
                   {m.role}
                 </p>
               </div>

@@ -54,9 +54,9 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "Die ",
-      headingHighlight: "7 grössten Probleme",
-      headingB: " im Alltag von Umzug & Reinigung Unternehmern.",
+      headingA: "Kennen Sie diese ",
+      headingHighlight: "7 Probleme",
+      headingB: " aus Ihrem Alltag?",
       cards: [
         {
           tag: "Reaktionszeit",
@@ -392,9 +392,9 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "Les ",
-      headingHighlight: "7 plus grands problèmes",
-      headingB: " du quotidien des entrepreneurs du déménagement & du nettoyage.",
+      headingA: "Connaissez-vous ces ",
+      headingHighlight: "7 problèmes",
+      headingB: " du quotidien ?",
       cards: [
         {
           tag: "Réactivité",
@@ -731,9 +731,9 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "I ",
-      headingHighlight: "7 problemi più grandi",
-      headingB: " nella vita quotidiana degli imprenditori di traslochi & pulizie.",
+      headingA: "Conosce questi ",
+      headingHighlight: "7 problemi",
+      headingB: " del Suo lavoro quotidiano?",
       cards: [
         {
           tag: "Tempi di risposta",
@@ -1070,9 +1070,9 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "Los ",
-      headingHighlight: "7 problemas más grandes",
-      headingB: " en el día a día de los empresarios de mudanzas y limpieza.",
+      headingA: "¿Conoce estos ",
+      headingHighlight: "7 problemas",
+      headingB: " del día a día?",
       cards: [
         {
           tag: "Tiempo de respuesta",
@@ -1409,9 +1409,9 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "",
-      headingHighlight: "7 problemët më të mëdha",
-      headingB: " në jetën e përditshme të sipërmarrësve të zhvendosjeve & pastrimit.",
+      headingA: "A i njihni këto ",
+      headingHighlight: "7 probleme",
+      headingB: " nga jeta juaj e përditshme?",
       cards: [
         {
           tag: "Koha e përgjigjes",
@@ -1748,9 +1748,9 @@ export const translations = {
       ],
     },
     problems: {
-      headingA: "",
-      headingHighlight: "7 pirsgirêkên mezin",
-      headingB: " di jiyana rojane ya karsazên koçberkirinê & paqijkirinê de.",
+      headingA: "Ma tu van ",
+      headingHighlight: "7 pirsgirêkan",
+      headingB: " ji jiyana xwe ya rojane nas dikî?",
       cards: [
         {
           tag: "Dema bersivê",
