@@ -96,20 +96,24 @@ export const Hero = () => {
             >
               {/* Google Review chip */}
               <div
-                className="group relative inline-flex items-center gap-3.5 rounded-2xl border border-[#25D366]/20 bg-[#0a120d] pl-2.5 pr-4 py-2.5 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-[#25D366]/40 hover:shadow-[0_20px_40px_-18px_rgba(37,211,102,0.35)]"
+                className="group relative inline-flex items-center gap-3.5 rounded-2xl border border-white/60 bg-white/70 pl-2.5 pr-4 py-2 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.18)] overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-14px_rgba(0,0,0,0.25)]"
                 data-testid="hero-google-review"
               >
-                {/* Top accent line — mirrors the testimonial cards */}
+                {/* Liquid-glass glossy highlight */}
                 <div
                   aria-hidden
-                  className="absolute top-0 left-5 right-5 h-[2px] bg-gradient-to-r from-transparent via-[#25D366] to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 pointer-events-none rounded-2xl"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 60%)",
+                  }}
                 />
-                <span className="relative grid place-items-center h-9 w-9 md:h-10 md:w-10 rounded-xl bg-white shadow-[0_2px_10px_-2px_rgba(0,0,0,0.4)]">
+                <span className="relative grid place-items-center h-9 w-9 md:h-10 md:w-10 rounded-xl bg-white border border-black/[0.04] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.15)]">
                   <GoogleGIcon className="h-[18px] w-[18px] md:h-5 md:w-5" />
                 </span>
                 <span className="relative flex flex-col gap-1">
                   <span className="flex items-center gap-1.5">
-                    <span className="font-display font-extrabold text-[15px] md:text-[16px] leading-none text-white">
+                    <span className="font-display font-extrabold text-[15px] md:text-[16px] leading-none text-black">
                       4.9
                     </span>
                     <span className="flex items-center gap-0.5 text-[#FBBF24]" aria-label={t.hero.starsAria}>
@@ -121,19 +125,10 @@ export const Hero = () => {
                       ))}
                     </span>
                   </span>
-                  <span className="text-[11px] md:text-[12px] font-medium leading-none text-white/50">
+                  <span className="text-[11px] md:text-[12px] font-medium leading-none text-black/50">
                     Google · {t.hero.reviews}
                   </span>
                 </span>
-                {/* Subtle green glow on hover */}
-                <div
-                  aria-hidden
-                  className="absolute -bottom-10 -right-10 h-24 w-24 rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(37,211,102,0.25), transparent 65%)",
-                  }}
-                />
               </div>
 
               <WhatsAppButton size="lg" testId="hero-cta-button" />

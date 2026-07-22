@@ -53,9 +53,14 @@ export const Team = () => {
           {MEMBERS.map((m, i) => (
             <Reveal key={m.name} delay={i * 80}>
               <div
-                className="group flex flex-col items-center text-center rounded-[1.75rem] border border-black/[0.06] bg-white p-7 md:p-8 h-full transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-25px_rgba(0,0,0,0.18)]"
+                className="group relative flex flex-col items-center text-center rounded-2xl md:rounded-3xl border border-[#25D366]/15 bg-[#0a120d] p-7 md:p-8 h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[#25D366]/40 hover:shadow-[0_30px_60px_-30px_rgba(37,211,102,0.25)]"
                 data-testid={`team-member-${m.name.toLowerCase()}`}
               >
+                {/* Top accent line — mirrors the testimonial cards */}
+                <div
+                  aria-hidden
+                  className="absolute top-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#25D366] to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+                />
                 <div className="relative">
                   <div
                     aria-hidden
@@ -65,18 +70,18 @@ export const Team = () => {
                     <img
                       src={m.image}
                       alt={m.name}
-                      className="relative h-28 w-28 md:h-32 md:w-32 rounded-full object-cover ring-4 ring-white shadow-[0_18px_35px_-15px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="relative h-28 w-28 md:h-32 md:w-32 rounded-full object-cover ring-2 ring-[#25D366]/25 shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   ) : (
-                    <div className="relative grid place-items-center h-28 w-28 md:h-32 md:w-32 rounded-full bg-[#0A0A0C] text-[#25D366] font-display font-extrabold text-[34px] md:text-[38px] ring-4 ring-white shadow-[0_18px_35px_-15px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:scale-[1.04]">
+                    <div className="relative grid place-items-center h-28 w-28 md:h-32 md:w-32 rounded-full bg-[#0a1f12] border border-[#25D366]/30 text-white font-display font-extrabold text-[34px] md:text-[38px] shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]">
                       {m.initials}
                     </div>
                   )}
                 </div>
-                <h3 className="mt-5 font-display font-bold tracking-tight text-[19px] md:text-[21px] text-black">
+                <h3 className="mt-5 font-display font-bold tracking-tight text-[19px] md:text-[21px] text-white">
                   {m.name}
                 </h3>
-                <p className="mt-2.5 inline-flex items-center rounded-full bg-[#25D366]/10 px-3 py-1 text-[12px] md:text-[13px] font-semibold text-[#1EB955]">
+                <p className="mt-2.5 inline-flex items-center rounded-full bg-[#25D366]/10 px-3 py-1 text-[12px] md:text-[13px] font-semibold text-[#25D366]">
                   {m.role}
                 </p>
               </div>
