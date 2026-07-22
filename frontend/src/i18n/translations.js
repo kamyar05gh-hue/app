@@ -60,7 +60,7 @@ export const translations = {
     problems: {
       headingA: "Kennst du diese ",
       headingHighlight: "7 Probleme",
-      headingB: " aus Ihrem Alltag?",
+      headingB: " aus deinem Alltag?",
       cards: [
         {
           tag: "Reaktionszeit",
