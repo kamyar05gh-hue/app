@@ -33,6 +33,24 @@ export const FinalCTA = () => {
             "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.60) 100%)",
         }}
       />
+      {/* Feather: fade in from previous section (Team, light) at top */}
+      <div
+        aria-hidden
+        className="absolute top-0 left-0 right-0 h-24 md:h-36 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, #F5F4EF 0%, rgba(245,244,239,0) 100%)",
+        }}
+      />
+      {/* Feather: fade out to next section (Footer, dark) at bottom */}
+      <div
+        aria-hidden
+        className="absolute bottom-0 left-0 right-0 h-24 md:h-36 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(10,10,10,0) 0%, #0A0A0A 100%)",
+        }}
+      />
       <div
         aria-hidden
         className="absolute -top-24 left-1/2 -translate-x-1/2 h-[420px] w-[420px] rounded-full blur-3xl pointer-events-none opacity-60"
@@ -41,12 +59,12 @@ export const FinalCTA = () => {
 
       <div className="relative mx-auto max-w-[1200px] px-5 md:px-10 text-center">
         <Reveal className="flex items-center justify-center gap-3 mb-4 md:mb-6">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-[0.22em] text-white/80">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-[0.22em] text-white">
             <Truck className="h-3.5 w-3.5" strokeWidth={2} />
             {t.finalCta.chipMoving}
           </span>
           <span className="h-1 w-1 rounded-full bg-white/40" />
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-[0.22em] text-white/80">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-mono-pm uppercase tracking-[0.22em] text-white">
             <SprayCan className="h-3.5 w-3.5" strokeWidth={2} />
             {t.finalCta.chipCleaning}
           </span>
@@ -62,7 +80,7 @@ export const FinalCTA = () => {
           </h2>
         </Reveal>
 
-        <Reveal delay={260} as="p" className="mt-5 md:mt-6 max-w-xl mx-auto text-[14px] md:text-[18px] leading-relaxed text-white/75">
+        <Reveal delay={260} as="p" className="mt-5 md:mt-6 max-w-xl mx-auto text-[14px] md:text-[18px] leading-relaxed text-white">
           {t.finalCta.paragraph}
         </Reveal>
 
@@ -70,7 +88,7 @@ export const FinalCTA = () => {
           <WhatsAppButton size="lg" testId="final-cta-button" />
         </Reveal>
 
-        <Reveal delay={500} as="ul" className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] font-medium text-white/75">
+        <Reveal delay={500} as="ul" className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] font-medium text-white">
           {subItems.map((s, i) => (
             <li key={i} className="inline-flex items-center gap-2">
               <span className="grid place-items-center h-6 w-6 rounded-full bg-[#25D366]/20 text-[#25D366]">
