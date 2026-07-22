@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Lenis from "lenis";
 import Landing from "@/pages/Landing";
 import ImpressumPage from "@/pages/ImpressumPage";
 import PrivacyPage from "@/pages/PrivacyPage";
@@ -17,26 +16,37 @@ function useLenis() {
       typeof window !== "undefined" &&
       window.matchMedia("(pointer: coarse)").matches;
     if (isMobile) return;
-    const lenis = new Lenis({
-      duration: 0.95,
-      easing: (t) => 1 - Math.pow(1 - t, 3),
-      smoothWheel: true,
-      wheelMultiplier: 1.15,
-      touchMultiplier: 1.35,
-      lerp: 0.08,
-    });
-    // Expose for programmatic scroll (nav clicks, testing)
-    if (typeof window !== "undefined") window.__lenis = lenis;
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    const id = requestAnimationFrame(raf);
+    let lenis;
+    let rafId;
+    let cancelled = false;
+
+    // Dynamic import keeps Lenis out of the initial bundle — phones never
+    // download it, and desktop parses it asynchronously after first paint.
+    import("lenis").then(({ default: Lenis }) => {
+      if (cancelled) return;
+      lenis = new Lenis({
+        duration: 0.95,
+        easing: (t) => 1 - Math.pow(1 - t, 3),
+        smoothWheel: true,
+        wheelMultiplier: 1.15,
+        touchMultiplier: 1.35,
+        lerp: 0.08,
+      });
+      // Expose for programmatic scroll (nav clicks, testing)
+      if (typeof window !== "undefined") window.__lenis = lenis;
+
+      const raf = (time) => {
+        lenis.raf(time);
+        rafId = requestAnimationFrame(raf);
+      };
+      rafId = requestAnimationFrame(raf);
+    });
 
     return () => {
-      cancelAnimationFrame(id);
-      lenis.destroy();
+      cancelled = true;
+      if (rafId) cancelAnimationFrame(rafId);
+      if (lenis) lenis.destroy();
       if (typeof window !== "undefined") delete window.__lenis;
     };
   }, []);

@@ -3,9 +3,11 @@ import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import TrustBar from "@/sections/TrustBar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import LazySection from "@/components/LazySection";
 
 // Below-the-fold sections are code-split so the initial bundle parses faster,
-// especially on mobile connections.
+// especially on mobile connections. LazySection delays each chunk's download
+// until the user scrolls near it.
 const Problems = lazy(() => import("@/sections/Problems"));
 const Testimonials = lazy(() => import("@/sections/Testimonials"));
 const FAQ = lazy(() => import("@/sections/FAQ"));
@@ -20,12 +22,24 @@ export default function Landing() {
       <Hero />
       <TrustBar />
       <Suspense fallback={null}>
-        <Problems />
-        <Testimonials />
-        <FAQ />
-        <Team />
-        <FinalCTA />
-        <Footer />
+        <LazySection minHeight={1400}>
+          <Problems />
+        </LazySection>
+        <LazySection minHeight={700}>
+          <Testimonials />
+        </LazySection>
+        <LazySection minHeight={600}>
+          <FAQ />
+        </LazySection>
+        <LazySection minHeight={600}>
+          <Team />
+        </LazySection>
+        <LazySection minHeight={500}>
+          <FinalCTA />
+        </LazySection>
+        <LazySection minHeight={600}>
+          <Footer />
+        </LazySection>
       </Suspense>
       <FloatingWhatsApp />
     </main>

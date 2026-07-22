@@ -70,6 +70,8 @@ export const Team = () => {
                     <img
                       src={m.image}
                       alt={m.name}
+                      loading="lazy"
+                      decoding="async"
                       className="relative h-32 w-32 md:h-40 md:w-40 rounded-full object-cover ring-2 ring-[#25D366]/25 shadow-[0_18px_35px_-15px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   ) : (
