@@ -96,24 +96,29 @@ export const Hero = () => {
             >
               {/* Google Review chip */}
               <div
-                className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 pl-2 pr-3.5 py-1.5"
+                className="group inline-flex items-center gap-3.5 rounded-2xl border border-black/[0.06] bg-white pl-2.5 pr-4 py-2 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-14px_rgba(0,0,0,0.22)]"
                 data-testid="hero-google-review"
               >
-                <span className="grid place-items-center h-7 w-7 rounded-full bg-white shadow-[0_2px_6px_-2px_rgba(0,0,0,0.25)]">
-                  <GoogleGIcon />
+                <span className="grid place-items-center h-9 w-9 md:h-10 md:w-10 rounded-xl bg-white border border-black/[0.06] shadow-[0_2px_8px_-2px_rgba(0,0,0,0.12)]">
+                  <GoogleGIcon className="h-[18px] w-[18px] md:h-5 md:w-5" />
                 </span>
-                <span className="flex items-center gap-0.5" aria-label={t.hero.starsAria}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-3.5 w-3.5 pm-star-gold"
-                    />
-                  ))}
-                </span>
-                <span className="font-helvetica text-[11px] md:text-[12px] tracking-[0.04em] text-black/70">
-                  <span className="font-bold text-black">4.9/5</span>
-                  <span className="text-black/40"> · </span>
-                  {t.hero.reviews}
+                <span className="flex flex-col gap-1">
+                  <span className="flex items-center gap-1.5">
+                    <span className="font-display font-extrabold text-[15px] md:text-[16px] leading-none text-black">
+                      4.9
+                    </span>
+                    <span className="flex items-center gap-0.5" aria-label={t.hero.starsAria}>
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-3 w-3 md:h-3.5 md:w-3.5 pm-star-gold"
+                        />
+                      ))}
+                    </span>
+                  </span>
+                  <span className="text-[11px] md:text-[12px] font-medium leading-none text-black/50">
+                    Google · {t.hero.reviews}
+                  </span>
                 </span>
               </div>
 
@@ -131,8 +136,8 @@ export const Hero = () => {
   );
 };
 
-const GoogleGIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden focusable="false">
+const GoogleGIcon = ({ className = "h-4 w-4" }) => (
+  <svg viewBox="0 0 24 24" className={className} aria-hidden focusable="false">
     <path
       d="M22.5 12.27c0-.86-.08-1.7-.22-2.5H12v4.72h5.9a5.05 5.05 0 0 1-2.2 3.32v2.75h3.55c2.08-1.92 3.25-4.75 3.25-8.29z"
       fill="#4285F4"
