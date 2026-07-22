@@ -310,16 +310,42 @@ html.lenis body {
     .pm-card-dark {
         box-shadow: 0 20px 40px -20px rgba(37, 211, 102, 0.25);
     }
-    /* Reduce expensive backdrop-blur on mobile */
+    /* Disable expensive backdrop-blur on mobile (repaints every scroll frame) */
     .backdrop-blur-xl,
     .backdrop-blur-md,
     .backdrop-blur-sm {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    /* Hide oversized decorative glow layers on mobile */
+    .blur-3xl,
+    .blur-2xl {
+        display: none;
+    }
+    /* Stop always-on infinite animations on mobile */
+    .voice-bar,
+    .animate-ping-slow,
+    .animate-pulse {
+        animation: none;
+    }
+    [style*="ripple"] {
+        animation: none !important;
     }
     /* Disable grain texture on mobile for perf */
     .grain::after {
         display: none;
+    }
+}
+
+/* Respect OS-level reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 

@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://customer-assets-jt897jd0.emergentagent.net" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
             rel="stylesheet"
         />
         <!--
@@ -106,14 +106,24 @@
                     }),
                     (e.__SV = 1));
             })(document, window.posthog || []);
-            posthog.init("phc_DbsPb39SRc8z3EiQ6Dhj6ikv4H4rTKcht9d4sZSesceP", {
-                api_host: "https://ap.emergent.sh",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
-                session_recording: {
-                    recordCrossOriginIframes: true,
-                    capturePerformance: false,
-                },
-            });
+            posthog.init(
+                "phc_DbsPb39SRc8z3EiQ6Dhj6ikv4H4rTKcht9d4sZSesceP",
+                Object.assign(
+                    {
+                        api_host: "https://ap.emergent.sh",
+                        person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+                    },
+                    // Session recording is CPU/battery-heavy on phones — keep it desktop-only.
+                    window.matchMedia("(max-width: 767px), (pointer: coarse)").matches
+                        ? { disable_session_recording: true }
+                        : {
+                              session_recording: {
+                                  recordCrossOriginIframes: true,
+                                  capturePerformance: false,
+                              },
+                          },
+                ),
+            );
         </script>
     </body>
 </html>
