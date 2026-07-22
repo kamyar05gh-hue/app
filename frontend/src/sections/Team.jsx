@@ -64,7 +64,7 @@ export const Team = () => {
                 <div className="relative">
                   <div
                     aria-hidden
-                    className="absolute -inset-3 rounded-full bg-gradient-to-br from-[#25D366]/25 to-transparent blur-lg opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    className="absolute -inset-4 rounded-full bg-gradient-to-br from-[#25D366]/40 to-transparent blur-lg opacity-60 transition-opacity duration-500 group-hover:opacity-100"
                   />
                   {m.image ? (
                     <img

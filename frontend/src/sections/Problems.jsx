@@ -82,10 +82,21 @@ const problems = [
 // ---------- Problem Card (image top + text bottom) ----------
 const ProblemCard = ({ p, card }) => {
   return (
-    <article
-      data-testid={`problem-card-0${p.n}`}
-      className="pm-card group relative rounded-[1.5rem] md:rounded-[1.75rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] flex flex-col h-full"
-    >
+    <div className="group relative h-full">
+      {/* Deep green glow accent */}
+      <span
+        aria-hidden
+        className="absolute -inset-2 rounded-[2rem] pointer-events-none opacity-30 transition-opacity duration-500 group-hover:opacity-60"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(37,211,102,0.4) 0%, rgba(37,211,102,0.12) 55%, transparent 75%)",
+          filter: "blur(10px)",
+        }}
+      />
+      <article
+        data-testid={`problem-card-0${p.n}`}
+        className="pm-card relative rounded-[1.5rem] md:rounded-[1.75rem] border border-black/[0.06] bg-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] flex flex-col h-full"
+      >
       {/* Image */}
       <div className="relative aspect-[16/9] overflow-hidden bg-[#0F1013]">
         <SmoothImage
@@ -117,7 +128,8 @@ const ProblemCard = ({ p, card }) => {
           <BodySegs segs={card.body} hlClass="text-[#1EB955] font-semibold" />
         </p>
       </div>
-    </article>
+      </article>
+    </div>
   );
 };
 

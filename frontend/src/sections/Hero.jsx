@@ -99,11 +99,11 @@ export const Hero = () => {
                 {/* Deep green glow accent */}
                 <span
                   aria-hidden
-                  className="absolute -inset-2.5 rounded-[1.25rem] pointer-events-none"
+                  className="absolute -inset-3.5 rounded-[1.5rem] pointer-events-none"
                   style={{
                     background:
-                      "radial-gradient(circle at 50% 50%, rgba(37,211,102,0.45) 0%, rgba(37,211,102,0.15) 55%, transparent 75%)",
-                    filter: "blur(8px)",
+                      "radial-gradient(circle at 50% 50%, rgba(37,211,102,0.6) 0%, rgba(37,211,102,0.25) 55%, transparent 78%)",
+                    filter: "blur(12px)",
                   }}
                 />
                 <div
