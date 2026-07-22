@@ -282,6 +282,12 @@ export const translations = {
       kicker: "Unser Team",
       heading: "Die Menschen hinter PLANMOVE",
       sub: "Ein kleines Team mit einem grossen Ziel: weniger Büro, mehr Zeit und mehr Kunden für Schweizer Umzugs- und Reinigungsunternehmen.",
+      roles: {
+        Elias: "CEO & Founder",
+        Livia: "Administratorin",
+        Alex: "AI Expert",
+        Mohie: "AI & Software Engineer",
+      },
     },
     finalCta: {
       chipMoving: "Umzug",

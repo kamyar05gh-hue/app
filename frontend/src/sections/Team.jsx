@@ -84,7 +84,7 @@ export const Team = () => {
                   {m.name}
                 </h3>
                 <p className="mt-2.5 inline-flex items-center rounded-full bg-[#25D366]/10 px-3 py-1 text-[12px] md:text-[13px] font-semibold text-[#25D366]">
-                  {m.role}
+                  {t.team.roles?.[m.name] ?? m.role}
                 </p>
               </div>
             </Reveal>
