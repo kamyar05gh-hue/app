@@ -21,7 +21,7 @@ const MEMBERS = [
     role: "AI Expert",
     image: "https://i.imgur.com/PiOi9FF.jpg",
   },
-  { initials: "M", name: "Mohie", role: "AI & Software Engineer" },
+  { initials: "M", name: "Mohie", role: "AI & Software Engineer", image: "/images/team-mohie.jpg" },
 ];
 
 export const Team = () => {
